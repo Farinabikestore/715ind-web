@@ -1,0 +1,21 @@
+---
+// Imagen optimizada: usa las versiones reducidas generadas al compilar y carga diferida.
+import { srcset, variant, isLocalUpload } from '../lib/img.js';
+const { src, alt = '', sizes = '100vw', eager = false, class: cls, width, height } = Astro.props;
+const set = srcset(src);
+const fallback = isLocalUpload(src) ? variant(src, 960) : src;
+---
+{src && (
+  <img
+    src={fallback}
+    srcset={set}
+    sizes={set ? sizes : undefined}
+    alt={alt}
+    class={cls}
+    width={width}
+    height={height}
+    loading={eager ? 'eager' : 'lazy'}
+    fetchpriority={eager ? 'high' : undefined}
+    decoding="async"
+  />
+)}

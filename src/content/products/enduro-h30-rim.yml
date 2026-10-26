@@ -1,0 +1,270 @@
+es:
+  title: Llanta Enduro H30
+  slug: enduro-h30-rim
+  category: rims
+  order: 40
+  featured: true
+  builder: true
+  tagline: 30 mm internos para el terreno más complejo.
+  summary: Llanta tubeless ready de 30 mm internos y 610 g en 29", disponible en 27,5" y 29", 28 o 32 hoyos.
+  images:
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-3.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-4.webp
+  colors:
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - name: Plata
+    hex: '#c6c9c8'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  specs:
+  - label: Tamaño de rueda
+    value: 27,5" / 29"
+  - label: Hoyos
+    value: 28 / 32
+  - label: Ancho interno
+    value: 30 mm
+  - label: Ancho externo
+    value: 35,4 mm
+  - label: Alto de perfil
+    value: 20 mm
+  - label: Peso
+    value: 610 g (29")
+  - label: Válvula
+    value: Presta
+  - label: Tubeless
+    value: Sí, tubeless ready
+  body: |
+    La H30 está hecha para quienes quieren ir más allá en cada salida. Sus 30 mm de ancho interno dan buen apoyo a neumáticos de enduro y su perfil de 20 mm mantiene la rueda cómoda en terreno roto.
+
+    Tubeless ready, para válvula Presta, en negro o plata.
+en:
+  title: Enduro H30 rim
+  slug: enduro-h30-rim
+  category: rims
+  order: 40
+  featured: true
+  builder: true
+  tagline: 30 mm inside for the roughest terrain.
+  summary: Tubeless-ready rim, 30 mm internal and 610 g in 29", available in 27.5" and 29", 28 or 32 holes.
+  images:
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-3.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-4.webp
+  colors:
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - name: Silver
+    hex: '#c6c9c8'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  specs:
+  - label: Wheel size
+    value: 27,5" / 29"
+  - label: Spoke holes
+    value: 28 / 32
+  - label: Internal width
+    value: 30 mm
+  - label: External width
+    value: 35,4 mm
+  - label: Profile depth
+    value: 20 mm
+  - label: Weight
+    value: 610 g (29")
+  - label: Valve
+    value: Presta
+  - label: Tubeless
+    value: Tubeless ready
+  body: |
+    The H30 is made for riders who want to push further every ride. Its 30 mm internal width supports enduro tyres well, and the 20 mm profile keeps the wheel compliant on rough ground.
+
+    Tubeless ready, Presta drilled, in black or silver.
+pt:
+  title: Aro Enduro H30
+  slug: enduro-h30-rim
+  category: rims
+  order: 40
+  featured: true
+  builder: true
+  tagline: 30 mm internos para o terreno mais difícil.
+  summary: Aro tubeless ready de 30 mm internos e 610 g no 29", disponível em 27,5" e 29", 28 ou 32 furos.
+  images:
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-3.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-4.webp
+  colors:
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - name: Prata
+    hex: '#c6c9c8'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  specs:
+  - label: Tamanho da roda
+    value: 27,5" / 29"
+  - label: Furos
+    value: 28 / 32
+  - label: Largura interna
+    value: 30 mm
+  - label: Largura externa
+    value: 35,4 mm
+  - label: Altura do perfil
+    value: 20 mm
+  - label: Peso
+    value: 610 g (29")
+  - label: Válvula
+    value: Presta
+  - label: Tubeless
+    value: Sim, tubeless ready
+  body: |
+    O H30 é feito para quem quer ir mais longe em cada saída. Os 30 mm de largura interna dão bom apoio a pneus de enduro e o perfil de 20 mm mantém a roda confortável em terreno quebrado.
+
+    Tubeless ready, para válvula Presta, em preto ou prata.
+de:
+  title: Enduro H30 Felge
+  slug: enduro-h30-rim
+  category: rims
+  order: 40
+  featured: true
+  builder: true
+  tagline: 30 mm Innenweite für das gröbste Gelände.
+  summary: Tubeless-ready-Felge, 30 mm innen und 610 g in 29", erhältlich in 27,5" und 29", 28 oder 32 Loch.
+  images:
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-3.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-4.webp
+  colors:
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - name: Silber
+    hex: '#c6c9c8'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  specs:
+  - label: Laufradgröße
+    value: 27,5" / 29"
+  - label: Speichenlöcher
+    value: 28 / 32
+  - label: Innenweite
+    value: 30 mm
+  - label: Außenbreite
+    value: 35,4 mm
+  - label: Profilhöhe
+    value: 20 mm
+  - label: Gewicht
+    value: 610 g (29")
+  - label: Ventil
+    value: Presta
+  - label: Tubeless
+    value: Tubeless ready
+  body: |
+    Die H30 ist für alle gemacht, die bei jeder Ausfahrt weiter gehen wollen. 30 mm Innenweite stützen Enduro-Reifen gut ab, das 20-mm-Profil hält das Laufrad auf ruppigem Untergrund komfortabel.
+
+    Tubeless ready, für Presta-Ventil, in Schwarz oder Silber.
+fr:
+  title: Jante Enduro H30
+  slug: enduro-h30-rim
+  category: rims
+  order: 40
+  featured: true
+  builder: true
+  tagline: 30 mm intérieurs pour les terrains les plus durs.
+  summary: Jante tubeless ready, 30 mm intérieurs et 610 g en 29", disponible en 27,5" et 29", 28 ou 32 trous.
+  images:
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-3.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-4.webp
+  colors:
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - name: Argent
+    hex: '#c6c9c8'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  specs:
+  - label: Taille de roue
+    value: 27,5" / 29"
+  - label: Trous
+    value: 28 / 32
+  - label: Largeur interne
+    value: 30 mm
+  - label: Largeur externe
+    value: 35,4 mm
+  - label: Hauteur de profil
+    value: 20 mm
+  - label: Poids
+    value: 610 g (29")
+  - label: Valve
+    value: Presta
+  - label: Tubeless
+    value: Oui, tubeless ready
+  body: |
+    La H30 est faite pour ceux qui veulent aller plus loin à chaque sortie. Ses 30 mm de largeur interne soutiennent bien les pneus d'enduro et son profil de 20 mm garde la roue confortable sur terrain cassant.
+
+    Tubeless ready, perçage Presta, en noir ou argent.
+it:
+  title: Cerchio Enduro H30
+  slug: enduro-h30-rim
+  category: rims
+  order: 40
+  featured: true
+  builder: true
+  tagline: 30 mm interni per i terreni più duri.
+  summary: Cerchio tubeless ready, 30 mm interni e 610 g in 29", disponibile in 27,5" e 29", 28 o 32 fori.
+  images:
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-3.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-2.webp
+  - /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-4.webp
+  colors:
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-1.webp
+  - name: Argento
+    hex: '#c6c9c8'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-1.webp
+  specs:
+  - label: Misura ruota
+    value: 27,5" / 29"
+  - label: Fori
+    value: 28 / 32
+  - label: Larghezza interna
+    value: 30 mm
+  - label: Larghezza esterna
+    value: 35,4 mm
+  - label: Altezza profilo
+    value: 20 mm
+  - label: Peso
+    value: 610 g (29")
+  - label: Valvola
+    value: Presta
+  - label: Tubeless
+    value: Sì, tubeless ready
+  body: |
+    L'H30 è fatto per chi vuole spingersi oltre a ogni uscita. I 30 mm di larghezza interna sostengono bene le gomme da enduro e il profilo da 20 mm mantiene la ruota confortevole sul terreno rotto.
+
+    Tubeless ready, foratura Presta, nero o argento.

@@ -1,0 +1,252 @@
+es:
+  title: Tee Ultra 35
+  slug: ultra-35-stem
+  category: cockpit
+  order: 100
+  featured: true
+  builder: false
+  tagline: 100% CNC. 120 gramos.
+  summary: Tee de 35 mm mecanizada al 100% en aluminio 6061, para manillares de 35 mm, en negro, plata o naranja.
+  images:
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-3.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-4.webp
+  colors:
+  - name: Naranja
+    hex: '#f26b1d'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - name: Plata
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  specs:
+  - label: Material
+    value: Al 6061 CNC
+  - label: Largo
+    value: 35 mm
+  - label: Abrazadera
+    value: 35 mm
+  - label: Peso
+    value: 120 g
+  - label: Pernos
+    value: Acero con recubrimiento de zinc
+  body: |
+    La Ultra está mecanizada al 100% en aluminio 6061 y ofrece una relación rigidez-peso excepcional. Sus pernos de acero con recubrimiento de zinc mantienen la dirección firme en las líneas más agresivas.
+
+    Es una pieza que se nota en el cockpit, en tres anodizados.
+en:
+  title: Ultra 35 stem
+  slug: ultra-35-stem
+  category: cockpit
+  order: 100
+  featured: true
+  builder: false
+  tagline: 100% CNC. 120 grams.
+  summary: 35 mm stem fully CNC machined from 6061 aluminium, for 35 mm bars, in black, silver or orange.
+  images:
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-3.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-4.webp
+  colors:
+  - name: Orange
+    hex: '#f26b1d'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - name: Silver
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  specs:
+  - label: Material
+    value: Al 6061 CNC
+  - label: Length
+    value: 35 mm
+  - label: Clamp
+    value: 35 mm
+  - label: Weight
+    value: 120 g
+  - label: Bolts
+    value: Zinc-coated steel
+  body: |
+    The Ultra is fully CNC machined from 6061 aluminium for an outstanding stiffness-to-weight ratio. Zinc-coated steel bolts keep the front end locked in on the most aggressive lines.
+
+    A statement piece for your cockpit, in three anodized finishes.
+pt:
+  title: Mesa Ultra 35
+  slug: ultra-35-stem
+  category: cockpit
+  order: 100
+  featured: true
+  builder: false
+  tagline: 100% CNC. 120 gramas.
+  summary: Mesa de 35 mm 100% usinada em alumínio 6061, para guidões de 35 mm, em preto, prata ou laranja.
+  images:
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-3.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-4.webp
+  colors:
+  - name: Laranja
+    hex: '#f26b1d'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - name: Prata
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  specs:
+  - label: Material
+    value: Al 6061 CNC
+  - label: Comprimento
+    value: 35 mm
+  - label: Abraçadeira
+    value: 35 mm
+  - label: Peso
+    value: 120 g
+  - label: Parafusos
+    value: Aço com revestimento de zinco
+  body: |
+    A Ultra é 100% usinada em alumínio 6061 e oferece uma relação rigidez-peso excepcional. Os parafusos de aço com revestimento de zinco mantêm a direção firme nas linhas mais agressivas.
+
+    Uma peça que aparece no cockpit, em três anodizações.
+de:
+  title: Ultra 35 Vorbau
+  slug: ultra-35-stem
+  category: cockpit
+  order: 100
+  featured: true
+  builder: false
+  tagline: 100% CNC. 120 Gramm.
+  summary: 35-mm-Vorbau, komplett CNC-gefräst aus 6061-Aluminium, für 35-mm-Lenker, in Schwarz, Silber oder Orange.
+  images:
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-3.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-4.webp
+  colors:
+  - name: Orange
+    hex: '#f26b1d'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - name: Silber
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  specs:
+  - label: Material
+    value: Al 6061 CNC
+  - label: Länge
+    value: 35 mm
+  - label: Klemmung
+    value: 35 mm
+  - label: Gewicht
+    value: 120 g
+  - label: Schrauben
+    value: Verzinkter Stahl
+  body: |
+    Der Ultra ist komplett aus 6061-Aluminium gefräst und bietet ein hervorragendes Steifigkeits-Gewichts-Verhältnis. Verzinkte Stahlschrauben halten die Front auch auf den härtesten Linien fest.
+
+    Ein Blickfang im Cockpit, in drei Eloxalfarben.
+fr:
+  title: Potence Ultra 35
+  slug: ultra-35-stem
+  category: cockpit
+  order: 100
+  featured: true
+  builder: false
+  tagline: 100 % CNC. 120 grammes.
+  summary: Potence de 35 mm entièrement usinée CNC en aluminium 6061, pour cintres 35 mm, en noir, argent ou orange.
+  images:
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-3.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-4.webp
+  colors:
+  - name: Orange
+    hex: '#f26b1d'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - name: Argent
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  specs:
+  - label: Matériau
+    value: Al 6061 CNC
+  - label: Longueur
+    value: 35 mm
+  - label: Serrage
+    value: 35 mm
+  - label: Poids
+    value: 120 g
+  - label: Vis
+    value: Acier zingué
+  body: |
+    L'Ultra est entièrement usinée dans l'aluminium 6061 pour un rapport rigidité-poids exceptionnel. Ses vis en acier zingué gardent l'avant bien verrouillé sur les lignes les plus engagées.
+
+    Une pièce qui se remarque sur le poste de pilotage, en trois anodisations.
+it:
+  title: Attacco Ultra 35
+  slug: ultra-35-stem
+  category: cockpit
+  order: 100
+  featured: true
+  builder: false
+  tagline: 100% CNC. 120 grammi.
+  summary: Attacco da 35 mm interamente lavorato CNC in alluminio 6061, per manubri da 35 mm, nero, argento o arancione.
+  images:
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-orange-3.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - /uploads/products/ultra-35-stem/35-35mm-blk-2.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  - /uploads/products/ultra-35-stem/ultra-35-35mm-silver-4.webp
+  colors:
+  - name: Arancione
+    hex: '#f26b1d'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-orange-1.webp
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-35-stem/35-35mm-blk-1.webp
+  - name: Argento
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-35-stem/ultra-35-35mm-silver-1.webp
+  specs:
+  - label: Materiale
+    value: Al 6061 CNC
+  - label: Lunghezza
+    value: 35 mm
+  - label: Diametro
+    value: 35 mm
+  - label: Peso
+    value: 120 g
+  - label: Viti
+    value: Acciaio zincato
+  body: |
+    L'Ultra è interamente lavorato in alluminio 6061 per un rapporto rigidità-peso eccezionale. Le viti in acciaio zincato tengono l'avantreno saldo sulle linee più aggressive.
+
+    Un pezzo che si fa notare sul cockpit, in tre anodizzazioni.

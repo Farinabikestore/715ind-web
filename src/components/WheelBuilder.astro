@@ -1,0 +1,387 @@
+---
+// Armador de ruedas en modo catálogo: no muestra precios ni carro.
+// Al final guarda la configuración y abre el formulario de contacto con ella adjunta.
+import Img from './Img.astro';
+import { t, clientStrings } from '../i18n/ui.js';
+import { getBuilder } from '../lib/content.js';
+
+const { lang } = Astro.props;
+const data = getBuilder();
+const colorName = (c) => {
+  const k = `color.${c.id}`;
+  const v = t(lang, k);
+  return v === k ? c.name : v;
+};
+const strings = clientStrings(lang, ['builder.', 'color.']);
+const types = ['pair', 'rear', 'front'];
+---
+<div class="builder" data-builder data-lang={lang}>
+  <form class="builder__steps" data-form novalidate>
+    <section class="step" data-step="type">
+      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.type')}</h2>
+      <fieldset class="choices">
+        <legend class="visually-hidden">{t(lang, 'builder.type')}</legend>
+        {types.map((v, i) => (
+          <label class="choice"><input type="radio" name="type" value={v} checked={i === 0} /><span>{t(lang, `builder.type.${v}`)}</span></label>
+        ))}
+      </fieldset>
+    </section>
+
+    <section class="step" data-step="size">
+      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.size')}</h2>
+      <fieldset class="choices">
+        <legend class="visually-hidden">{t(lang, 'builder.size')}</legend>
+        {(data.sizes || []).map((s, i) => (
+          <label class="choice"><input type="radio" name="size" value={s} checked={i === 0} /><span>{s}"</span></label>
+        ))}
+      </fieldset>
+    </section>
+
+    <section class="step" data-step="rim">
+      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.rim')}</h2>
+      <fieldset class="part-cards">
+        <legend class="visually-hidden">{t(lang, 'builder.rim')}</legend>
+        {(data.rims || []).map((r, i) => (
+          <label class="part" data-rim={r.id}>
+            <input type="radio" name="rim" value={r.id} checked={i === 0} />
+            <span class="part__box">
+              <Img src={r.colors?.[0]?.image} alt="" sizes="220px" />
+              <span class="part__body"><span class="part__name">{r.name}</span><br /><span class="part__note">{r.note}</span></span>
+            </span>
+          </label>
+        ))}
+      </fieldset>
+      <h3 class="step__sub">{t(lang, 'builder.rimColor')}</h3>
+      <fieldset class="choices" data-colors="rimColor"><legend class="visually-hidden">{t(lang, 'builder.rimColor')}</legend></fieldset>
+      <h3 class="step__sub">{t(lang, 'builder.holes')}</h3>
+      <fieldset class="choices" data-holes><legend class="visually-hidden">{t(lang, 'builder.holes')}</legend></fieldset>
+    </section>
+
+    <section class="step" data-step="frontHub">
+      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.frontHub')}</h2>
+      <fieldset class="part-cards">
+        <legend class="visually-hidden">{t(lang, 'builder.frontHub')}</legend>
+        {(data.front_hubs || []).map((h, i) => (
+          <label class="part" data-hub={h.id}>
+            <input type="radio" name="frontHub" value={h.id} checked={i === 0} />
+            <span class="part__box">
+              <Img src={h.colors?.[0]?.image} alt="" sizes="220px" />
+              <span class="part__body"><span class="part__name">{h.name}</span><br /><span class="part__note">{h.note}</span><br /><span class="part__note" data-na hidden>{t(lang, 'builder.unavailable')}</span></span>
+            </span>
+          </label>
+        ))}
+      </fieldset>
+      <h3 class="step__sub">{t(lang, 'builder.hubColor')}</h3>
+      <fieldset class="choices" data-colors="frontHubColor"><legend class="visually-hidden">{t(lang, 'builder.hubColor')}</legend></fieldset>
+    </section>
+
+    <section class="step" data-step="rearHub">
+      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.rearHub')}</h2>
+      <fieldset class="part-cards">
+        <legend class="visually-hidden">{t(lang, 'builder.rearHub')}</legend>
+        {(data.rear_hubs || []).map((h, i) => (
+          <label class="part" data-hub={h.id}>
+            <input type="radio" name="rearHub" value={h.id} checked={i === 0} />
+            <span class="part__box">
+              <Img src={h.colors?.[0]?.image} alt="" sizes="220px" />
+              <span class="part__body"><span class="part__name">{h.name}</span><br /><span class="part__note">{h.note}</span><br /><span class="part__note" data-na hidden>{t(lang, 'builder.unavailable')}</span></span>
+            </span>
+          </label>
+        ))}
+      </fieldset>
+      <h3 class="step__sub">{t(lang, 'builder.hubColor')}</h3>
+      <fieldset class="choices" data-colors="rearHubColor"><legend class="visually-hidden">{t(lang, 'builder.hubColor')}</legend></fieldset>
+      <h3 class="step__sub">{t(lang, 'builder.freehub')}</h3>
+      <fieldset class="choices" data-freehubs><legend class="visually-hidden">{t(lang, 'builder.freehub')}</legend></fieldset>
+    </section>
+
+    <section class="step" data-step="spokes">
+      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.spokes')}</h2>
+      <p class="part__note">{data.spoke}, {data.nipple}</p>
+      <h3 class="step__sub">{t(lang, 'builder.spokeColor')}</h3>
+      <fieldset class="choices" data-colors="spokeColor"><legend class="visually-hidden">{t(lang, 'builder.spokeColor')}</legend></fieldset>
+      <h3 class="step__sub">{t(lang, 'builder.nippleColor')}</h3>
+      <fieldset class="choices" data-colors="nippleColor"><legend class="visually-hidden">{t(lang, 'builder.nippleColor')}</legend></fieldset>
+    </section>
+  </form>
+
+  <a class="btn btn--dark builder__jump" href="#builder-summary">{t(lang, 'builder.summary')}</a>
+
+  <aside class="summary" id="builder-summary" aria-live="polite">
+    <h2>{t(lang, 'builder.summary')}</h2>
+    <div class="wheel-svg" data-wheel role="img" aria-label={t(lang, 'builder.preview')}></div>
+    <div data-summary></div>
+    <button class="btn btn--primary" type="button" data-request>{t(lang, 'builder.request')}</button>
+    <p class="summary__note" data-msg role="status"></p>
+    <p class="summary__note">{t(lang, 'builder.note')}</p>
+    <button class="link-reset" type="button" data-reset>{t(lang, 'builder.reset')}</button>
+  </aside>
+</div>
+
+<script type="application/json" id="builder-data" set:html={JSON.stringify({ data, strings, contact: `/${lang}/contact/?from=builder` }).replace(/</g, '\\u003c')} />
+
+<script>
+  type Color = { id: string; name: string; hex?: string; image?: string };
+  type Part = { id: string; name: string; note?: string; product?: string; holes?: number[]; sizes?: string[]; freehubs?: string[]; colors?: Color[] };
+
+  const el = document.querySelector<HTMLElement>('[data-builder]');
+  const raw = document.getElementById('builder-data');
+  if (el && raw) {
+    const { data, strings, contact } = JSON.parse(raw.textContent || '{}');
+    const S = (k: string) => strings[k] ?? k;
+    const cname = (c?: Color) => (c ? strings[`color.${c.id}`] ?? c.name : '');
+    const form = el.querySelector<HTMLFormElement>('[data-form]')!;
+    const KEY = '715-builder-state';
+    const rims: Part[] = data.rims || [];
+    const fronts: Part[] = data.front_hubs || [];
+    const rears: Part[] = data.rear_hubs || [];
+    const freehubs: { id: string; name: string }[] = data.freehubs || [];
+
+    const val = (name: string) => (form.querySelector<HTMLInputElement>(`input[name="${name}"]:checked`)?.value) || '';
+    const find = (list: Part[], id: string) => list.find((x) => x.id === id);
+    const inter = (...lists: (number[] | undefined)[]) => {
+      const valid = lists.filter((l): l is number[] => Array.isArray(l) && l.length > 0);
+      if (!valid.length) return [];
+      return valid.reduce((a, b) => a.filter((x) => b.includes(x)));
+    };
+
+    // Dibuja botones de opción (colores, hoyos, núcleos) dentro de un fieldset.
+    function renderChoices(box: HTMLElement, name: string, items: { value: string; label: string; hex?: string }[], keep: string) {
+      const legend = box.querySelector('legend');
+      box.innerHTML = '';
+      if (legend) box.appendChild(legend);
+      const chosen = items.some((i) => i.value === keep) ? keep : items[0]?.value;
+      for (const it of items) {
+        const label = document.createElement('label');
+        label.className = 'choice';
+        const input = document.createElement('input');
+        input.type = 'radio';
+        input.name = name;
+        input.value = it.value;
+        input.checked = it.value === chosen;
+        const span = document.createElement('span');
+        if (it.hex) {
+          const dot = document.createElement('i');
+          if (/^#[0-9a-f]{3,8}$/i.test(it.hex)) dot.style.background = it.hex;
+          span.appendChild(dot);
+        }
+        span.appendChild(document.createTextNode(it.label));
+        label.append(input, span);
+        box.appendChild(label);
+      }
+    }
+    const colorItems = (cols?: Color[]) => (cols || []).map((c) => ({ value: c.id, label: cname(c), hex: c.hex }));
+
+    function lengths(rim: string, size: string, hub: string, holes: number) {
+      const r = (data.spoke_lengths || []).find((x: any) => x.rim === rim && String(x.size) === String(size) && x.hub === hub && Number(x.holes) === Number(holes));
+      return r ? `${r.left} / ${r.right} mm` : S('builder.lengthsNA');
+    }
+
+    function update(changed?: string) {
+      const type = val('type');
+      const showFront = type !== 'rear';
+      const showRear = type !== 'front';
+      el!.querySelector<HTMLElement>('[data-step="frontHub"]')!.hidden = !showFront;
+      el!.querySelector<HTMLElement>('[data-step="rearHub"]')!.hidden = !showRear;
+
+      // Numeración de pasos visibles
+      let n = 0;
+      el!.querySelectorAll<HTMLElement>('.step').forEach((s) => {
+        const num = s.querySelector('[data-num]');
+        if (!s.hidden && num) num.textContent = String(++n);
+      });
+
+      const size = val('size');
+      // Llantas disponibles en el tamaño elegido
+      el!.querySelectorAll<HTMLElement>('[data-rim]').forEach((lab) => {
+        const r = find(rims, lab.dataset.rim!);
+        const input = lab.querySelector('input')!;
+        input.disabled = !!(r?.sizes?.length && !r.sizes.includes(size));
+      });
+      let rimId = val('rim');
+      if (!rimId || form.querySelector<HTMLInputElement>(`input[name="rim"][value="${rimId}"]`)?.disabled) {
+        const firstOk = form.querySelector<HTMLInputElement>('input[name="rim"]:not(:disabled)');
+        if (firstOk) { firstOk.checked = true; rimId = firstOk.value; }
+      }
+      const rim = find(rims, rimId);
+
+      // Mazas: se marcan como no disponibles si no comparten hoyos con la llanta
+      const markHubs = (list: Part[], name: string) => {
+        el!.querySelectorAll<HTMLElement>(`[data-step="${name}"] [data-hub]`).forEach((lab) => {
+          const h = find(list, lab.dataset.hub!);
+          const ok = inter(rim?.holes, h?.holes).length > 0;
+          lab.querySelector('input')!.disabled = !ok;
+          lab.querySelector<HTMLElement>('[data-na]')!.hidden = ok;
+        });
+        let id = val(name);
+        if (!id || form.querySelector<HTMLInputElement>(`input[name="${name}"][value="${id}"]`)?.disabled) {
+          const f = form.querySelector<HTMLInputElement>(`input[name="${name}"]:not(:disabled)`);
+          if (f) { f.checked = true; id = f.value; }
+        }
+        return find(list, id);
+      };
+      const front = showFront ? markHubs(fronts, 'frontHub') : undefined;
+      const rear = showRear ? markHubs(rears, 'rearHub') : undefined;
+
+      // Hoyos posibles para la combinación
+      const holes = inter(rim?.holes, front?.holes, rear?.holes);
+      if (changed !== 'holes') renderChoices(el!.querySelector('[data-holes]')!, 'holes', holes.map((h) => ({ value: String(h), label: `${h}H` })), val('holes'));
+      if (changed !== 'rimColor') renderChoices(el!.querySelector('[data-colors="rimColor"]')!, 'rimColor', colorItems(rim?.colors), val('rimColor'));
+      if (front && changed !== 'frontHubColor') renderChoices(el!.querySelector('[data-colors="frontHubColor"]')!, 'frontHubColor', colorItems(front.colors), val('frontHubColor'));
+      if (rear && changed !== 'rearHubColor') renderChoices(el!.querySelector('[data-colors="rearHubColor"]')!, 'rearHubColor', colorItems(rear.colors), val('rearHubColor'));
+      if (rear && changed !== 'freehub') renderChoices(el!.querySelector('[data-freehubs]')!, 'freehub', freehubs.filter((f) => !rear.freehubs || rear.freehubs.includes(f.id)).map((f) => ({ value: f.id, label: f.name })), val('freehub'));
+      if (changed !== 'spokeColor') renderChoices(el!.querySelector('[data-colors="spokeColor"]')!, 'spokeColor', colorItems(data.spoke_colors), val('spokeColor'));
+      if (changed !== 'nippleColor') renderChoices(el!.querySelector('[data-colors="nippleColor"]')!, 'nippleColor', colorItems(data.nipple_colors), val('nippleColor'));
+
+      const ho = Number(val('holes'));
+      const rc = rim?.colors?.find((c) => c.id === val('rimColor'));
+      const fc = front?.colors?.find((c) => c.id === val('frontHubColor'));
+      const bc = rear?.colors?.find((c) => c.id === val('rearHubColor'));
+      const sc = (data.spoke_colors || []).find((c: Color) => c.id === val('spokeColor'));
+      const nc = (data.nipple_colors || []).find((c: Color) => c.id === val('nippleColor'));
+      const fh = freehubs.find((f) => f.id === val('freehub'));
+
+      // Resumen
+      const rows: [string, string][] = [
+        [S('builder.type'), S(`builder.type.${type}`)],
+        [S('builder.size'), `${size}"`],
+        [S('builder.rim'), [rim?.name, cname(rc)].filter(Boolean).join(', ')],
+        [S('builder.holes'), ho ? `${ho}H` : '—'],
+      ];
+      if (front) rows.push([S('builder.frontHub'), [front.name, cname(fc)].filter(Boolean).join(', ')]);
+      if (rear) rows.push([S('builder.rearHub'), [rear.name, cname(bc)].filter(Boolean).join(', ')], [S('builder.freehub'), fh?.name || '—']);
+      rows.push([S('builder.spokes'), [cname(sc), cname(nc)].filter(Boolean).join(' / ')]);
+      const lens: [string, string][] = [];
+      if (rim && ho && front) lens.push([S('builder.type.front'), lengths(rim.id, size, front.id, ho)]);
+      if (rim && ho && rear) lens.push([S('builder.type.rear'), lengths(rim.id, size, rear.id, ho)]);
+
+      const box = el!.querySelector<HTMLElement>('[data-summary]')!;
+      box.innerHTML = '';
+      const dl = document.createElement('dl');
+      const add = (target: HTMLElement, k: string, v: string) => {
+        const dt = document.createElement('dt'); dt.textContent = k;
+        const dd = document.createElement('dd'); dd.textContent = v;
+        target.append(dt, dd);
+      };
+      rows.forEach(([k, v]) => add(dl, k, v));
+      box.appendChild(dl);
+      if (lens.length) {
+        const g = document.createElement('p'); g.className = 'summary__group'; g.textContent = `${S('builder.lengths')} (${S('builder.left')} / ${S('builder.right')})`;
+        const dl2 = document.createElement('dl');
+        lens.forEach(([k, v]) => add(dl2, k, v));
+        box.append(g, dl2);
+      }
+
+      const complete = !!(rim && ho && rc && (!showFront || front) && (!showRear || (rear && fh)));
+      const req = el!.querySelector<HTMLButtonElement>('[data-request]')!;
+      req.setAttribute('aria-disabled', String(!complete));
+      req.title = complete ? '' : S('builder.incomplete');
+
+      // Texto que viaja al formulario de contacto
+      const text = [...rows, ...lens.map(([k, v]) => [`${S('builder.lengths')} ${k.toLowerCase()}`, v])].map(([k, v]) => `${k}: ${v}`).join('\n');
+      el!.dataset.config = complete ? text : '';
+      if (complete) el!.querySelector<HTMLElement>('[data-msg]')!.textContent = '';
+
+      drawWheel({
+        rim: rc?.hex || '#1d1f1f',
+        hub: (showRear ? bc?.hex : fc?.hex) || '#1d1f1f',
+        spoke: sc?.hex || '#1d1f1f',
+        nipple: nc?.hex || '#1d1f1f',
+        holes: ho || 32,
+        rear: showRear,
+      }, changed !== undefined && changed !== 'init');
+      save();
+    }
+
+    // Vista previa de la rueda en SVG (colores y número de rayos reales)
+    function drawWheel(o: { rim: string; hub: string; spoke: string; nipple: string; holes: number; rear: boolean }, animate: boolean) {
+      const hex = (v: string) => (/^#[0-9a-f]{3,8}$/i.test(v) ? v : '#1d1f1f');
+      o = { ...o, rim: hex(o.rim), hub: hex(o.hub), spoke: hex(o.spoke), nipple: hex(o.nipple), holes: Math.max(8, Math.min(48, Math.round(o.holes) || 32)) };
+      const box = el!.querySelector<HTMLElement>('[data-wheel]')!;
+      const c = 200, Rr = 158, hubR = o.rear ? 30 : 24, flR = o.rear ? 44 : 38;
+      const n = o.holes;
+      let spokes = '', nipples = '';
+      for (let i = 0; i < n; i++) {
+        const a = (i / n) * Math.PI * 2;
+        const side = i % 2 === 0 ? 1 : -1;
+        const hubA = a + side * ((Math.PI * 2) / n) * 3; // patrón cruzado
+        const x1 = c + Math.cos(hubA) * flR, y1 = c + Math.sin(hubA) * flR;
+        const x2 = c + Math.cos(a) * (Rr - 6), y2 = c + Math.sin(a) * (Rr - 6);
+        spokes += `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${o.spoke}" stroke-width="1.6" stroke-linecap="round" opacity="${side > 0 ? 1 : 0.7}"/>`;
+        nipples += `<circle cx="${(c + Math.cos(a) * (Rr - 5)).toFixed(1)}" cy="${(c + Math.sin(a) * (Rr - 5)).toFixed(1)}" r="2.6" fill="${o.nipple}"/>`;
+      }
+      const rimStroke = o.rim;
+      box.innerHTML = `<svg viewBox="0 0 400 400" aria-hidden="true">
+        <circle cx="200" cy="200" r="184" fill="none" stroke="#2b2f2d" stroke-width="22"/>
+        <circle cx="200" cy="200" r="194" fill="none" stroke="#1f2221" stroke-width="3" stroke-dasharray="4 6"/>
+        <g class="spin">
+          <circle cx="200" cy="200" r="${Rr + 6}" fill="none" stroke="${rimStroke}" stroke-width="14"/>
+          ${spokes}${nipples}
+          <circle cx="200" cy="200" r="${flR + 4}" fill="none" stroke="${o.hub}" stroke-width="6"/>
+          <circle cx="200" cy="200" r="${hubR}" fill="${o.hub}"/>
+          <circle cx="200" cy="200" r="${hubR * 0.45}" fill="#161817" opacity=".55"/>
+          ${o.rear ? `<g fill="${o.hub}" opacity=".9">${Array.from({ length: 6 }, (_, k) => { const a = (k / 6) * Math.PI * 2; return `<circle cx="${(200 + Math.cos(a) * (flR - 8)).toFixed(1)}" cy="${(200 + Math.sin(a) * (flR - 8)).toFixed(1)}" r="3"/>`; }).join('')}</g>` : ''}
+        </g>
+      </svg>`;
+      if (animate) {
+        box.classList.remove('is-changed');
+        void box.offsetWidth;
+        box.classList.add('is-changed');
+      }
+    }
+
+    function save() {
+      try {
+        const st: Record<string, string> = {};
+        new FormData(form).forEach((v, k) => (st[k] = String(v)));
+        sessionStorage.setItem(KEY, JSON.stringify(st));
+      } catch {}
+    }
+    function restore() {
+      try {
+        const st = JSON.parse(sessionStorage.getItem(KEY) || '{}');
+        for (const k of ['type', 'size', 'rim', 'frontHub', 'rearHub']) {
+          const i = form.querySelector<HTMLInputElement>(`input[name="${k}"][value="${CSS.escape(st[k] || '')}"]`);
+          if (i) i.checked = true;
+        }
+        return st;
+      } catch { return {}; }
+    }
+
+    const st = restore();
+    update('init');
+    // Restaura también las opciones dinámicas (colores, hoyos, núcleo)
+    for (const k of ['holes', 'rimColor', 'frontHubColor', 'rearHubColor', 'freehub', 'spokeColor', 'nippleColor']) {
+      const i = st[k] && form.querySelector<HTMLInputElement>(`input[name="${k}"][value="${CSS.escape(st[k])}"]`);
+      if (i) i.checked = true;
+    }
+    update('init');
+
+    form.addEventListener('change', (e) => {
+      const name = (e.target as HTMLInputElement).name;
+      update(name);
+    });
+
+    el.querySelector('[data-reset]')!.addEventListener('click', () => {
+      try { sessionStorage.removeItem(KEY); } catch {}
+      form.reset();
+      update('reset');
+    });
+
+    el.querySelector('[data-request]')!.addEventListener('click', () => {
+      const cfg = el.dataset.config;
+      const msg = el.querySelector<HTMLElement>('[data-msg]')!;
+      if (!cfg) {
+        msg.textContent = S('builder.incomplete');
+        return;
+      }
+      msg.textContent = '';
+      try {
+        sessionStorage.setItem('715-config', cfg);
+        location.href = contact;
+      } catch {
+        location.href = `${contact}&cfg=${encodeURIComponent(cfg)}`;
+      }
+    });
+  }
+</script>

@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import Blocks from '../../components/Blocks.astro';
+import { LOCALES } from '../../i18n/ui.js';
+import { getPage } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const page = getPage('about', lang);
+---
+<Base lang={lang} title={page.title} description={page.seo_description} path="/about/">
+  <Blocks blocks={page.blocks} lang={lang} short />
+</Base>

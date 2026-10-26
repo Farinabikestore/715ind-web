@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import { LOCALES, t } from '../../i18n/ui.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+---
+<Base lang={lang} title={t(lang, 'thanks.title')} path="/thanks/" noindex>
+  <section class="wrap simple">
+    <h1>{t(lang, 'thanks.title')}</h1>
+    <p class="lead">{t(lang, 'thanks.text')}</p>
+    <div class="btn-row" style="margin-top:28px">
+      <a class="btn btn--dark" href={`/${lang}/`}>{t(lang, 'thanks.home')}</a>
+      <a class="btn btn--ghost" href={`/${lang}/products/`}>{t(lang, 'thanks.products')}</a>
+    </div>
+  </section>
+</Base>

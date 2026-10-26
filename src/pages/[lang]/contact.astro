@@ -1,0 +1,235 @@
+---
+import Base from '../../layouts/Base.astro';
+import { LOCALES, t, clientStrings } from '../../i18n/ui.js';
+import { getPage, getSettings } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const page = getPage('contact', lang);
+const settings = getSettings(lang);
+// Clave pública de Cloudflare Turnstile. Sin ella se usa la clave de prueba (siempre aprueba).
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x00000000000000000000AA';
+if (!import.meta.env.PUBLIC_TURNSTILE_SITE_KEY && import.meta.env.PROD) {
+  console.warn('\n[715IND] Falta PUBLIC_TURNSTILE_SITE_KEY: el formulario usa la clave de PRUEBA y no enviará correos en producción.\n');
+}
+const strings = clientStrings(lang, ['contact.']);
+const privacyLink = `<a href="/${lang}/privacy/">${t(lang, 'contact.privacy')}</a>`;
+---
+<Base lang={lang} title={page.title} description={page.intro} path="/contact/">
+  <script slot="head" src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <header class="wrap page-head">
+    <h1>{page.title}</h1>
+    <p class="lead">{page.intro}</p>
+  </header>
+
+  <div class="wrap contact">
+    <aside class="contact__aside">
+      <h2>{page.distributor_heading}</h2>
+      <ul>{(page.distributor_points || []).map((x) => <li>{x}</li>)}</ul>
+      <h2>{page.dealer_heading}</h2>
+      <ul>{(page.dealer_points || []).map((x) => <li>{x}</li>)}</ul>
+      {page.response_note && <p class="field__hint" style="margin-top:20px">{page.response_note}</p>}
+      {settings.public_email && <p><a href={`mailto:${settings.public_email}`}>{settings.public_email}</a></p>}
+    </aside>
+
+    <form class="form" method="post" action="/api/contact" data-contact novalidate>
+      <input type="hidden" name="lang" value={lang} />
+      <input type="hidden" name="config" value="" data-config-input />
+
+      <fieldset class="field full">
+        <legend>{t(lang, 'contact.type')}</legend>
+        <div class="choices">
+          {['distributor', 'dealer', 'other'].map((v, i) => (
+            <label class="choice"><input type="radio" name="type" value={v} checked={i === 0} required /><span>{t(lang, `contact.type.${v}`)}</span></label>
+          ))}
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="f-name">{t(lang, 'contact.name')}</label>
+        <input id="f-name" name="name" autocomplete="name" required maxlength="120" aria-describedby="e-name" />
+        <p class="field__error" id="e-name"></p>
+      </div>
+      <div class="field">
+        <label for="f-company">{t(lang, 'contact.company')}</label>
+        <input id="f-company" name="company" autocomplete="organization" required maxlength="160" aria-describedby="e-company" />
+        <p class="field__error" id="e-company"></p>
+      </div>
+      <div class="field">
+        <label for="f-country">{t(lang, 'contact.country')}</label>
+        <input id="f-country" name="country" autocomplete="country-name" required maxlength="80" aria-describedby="e-country" />
+        <p class="field__error" id="e-country"></p>
+      </div>
+      <div class="field">
+        <label for="f-city">{t(lang, 'contact.city')} <small>({t(lang, 'contact.optional')})</small></label>
+        <input id="f-city" name="city" autocomplete="address-level2" maxlength="80" />
+      </div>
+      <div class="field">
+        <label for="f-email">{t(lang, 'contact.email')}</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160" aria-describedby="e-email" />
+        <p class="field__error" id="e-email"></p>
+      </div>
+      <div class="field">
+        <label for="f-phone">{t(lang, 'contact.phone')} <small>({t(lang, 'contact.optional')})</small></label>
+        <input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
+      </div>
+      <div class="field">
+        <label for="f-website">{t(lang, 'contact.website')} <small>({t(lang, 'contact.optional')})</small></label>
+        <input id="f-website" name="website" maxlength="200" />
+      </div>
+      <div class="field">
+        <label for="f-product">{t(lang, 'contact.product')} <small>({t(lang, 'contact.optional')})</small></label>
+        <input id="f-product" name="product" maxlength="120" data-product-input />
+      </div>
+
+      <div class="field full" data-config-wrap hidden>
+        <div class="config-box">
+          <div class="config-box__head"><span>{t(lang, 'contact.config')}</span><button type="button" data-config-remove>{t(lang, 'contact.removeConfig')}</button></div>
+          <div data-config-text></div>
+        </div>
+      </div>
+
+      <div class="field full">
+        <label for="f-message">{t(lang, 'contact.message')}</label>
+        <textarea id="f-message" name="message" required maxlength="4000" aria-describedby="h-message e-message"></textarea>
+        <p class="field__hint" id="h-message">{t(lang, 'contact.messageHint')}</p>
+        <p class="field__error" id="e-message"></p>
+      </div>
+
+      <!-- Trampa para bots: los humanos no ven este campo -->
+      <div class="hp" aria-hidden="true">
+        <label for="f-hp">No completar</label>
+        <input id="f-hp" name="hp_x" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <div class="field full">
+        <label class="consent">
+          <input type="checkbox" name="consent" value="yes" required aria-describedby="e-consent" />
+          <span set:html={t(lang, 'contact.consent', { link: privacyLink })} />
+        </label>
+        <p class="field__error" id="e-consent"></p>
+      </div>
+
+      <div class="field full">
+        <div class="cf-turnstile" data-sitekey={siteKey} data-language={lang} data-theme="light" data-action="contact"></div>
+      </div>
+
+      <div class="full">
+        <p class="form-status" data-status role="alert"></p>
+        <button class="btn btn--primary" type="submit" data-submit>{t(lang, 'contact.submit')}</button>
+      </div>
+    </form>
+  </div>
+</Base>
+
+<script type="application/json" id="contact-strings" set:html={JSON.stringify({ strings, thanks: `/${lang}/thanks/` }).replace(/</g, '\\u003c')} />
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-contact]');
+  const raw = document.getElementById('contact-strings');
+  if (form && raw) {
+    const { strings, thanks } = JSON.parse(raw.textContent || '{}');
+    const S = (k: string) => strings[k] ?? k;
+    const params = new URLSearchParams(location.search);
+
+    // Producto desde la ficha (?product=...)
+    const product = params.get('product');
+    const productInput = form.querySelector<HTMLInputElement>('[data-product-input]');
+    if (product && productInput) productInput.value = product.slice(0, 120);
+
+    // Configuración del armador
+    let cfg = '';
+    try { cfg = sessionStorage.getItem('715-config') || ''; } catch {}
+    if (!cfg && params.get('from') === 'builder' && params.get('cfg')) cfg = params.get('cfg') || '';
+    const cfgWrap = form.querySelector<HTMLElement>('[data-config-wrap]')!;
+    const cfgInput = form.querySelector<HTMLInputElement>('[data-config-input]')!;
+    if (cfg) {
+      cfg = cfg.slice(0, 1500);
+      cfgInput.value = cfg;
+      form.querySelector<HTMLElement>('[data-config-text]')!.textContent = cfg;
+      cfgWrap.hidden = false;
+    }
+    form.querySelector('[data-config-remove]')?.addEventListener('click', () => {
+      cfgInput.value = '';
+      cfgWrap.hidden = true;
+      try { sessionStorage.removeItem('715-config'); } catch {}
+    });
+
+    const status = form.querySelector<HTMLElement>('[data-status]')!;
+    // Error devuelto por el servidor cuando se envía sin JavaScript (?error=...)
+    const urlErr = params.get('error');
+    if (urlErr && ['form', 'captcha', 'rate', 'generic'].includes(urlErr)) {
+      status.textContent = S(`contact.err.${urlErr}`);
+      status.classList.add('form-status--error');
+    }
+    const submit = form.querySelector<HTMLButtonElement>('[data-submit]')!;
+    const setErr = (name: string, msg: string) => {
+      const input = form.querySelector<HTMLInputElement>(`[name="${name}"]`);
+      const err = document.getElementById(`e-${name}`);
+      if (input) input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+      if (err) err.textContent = msg;
+    };
+
+    function validate() {
+      let firstBad: HTMLElement | null = null;
+      for (const name of ['name', 'company', 'country', 'email', 'message']) {
+        const input = form!.querySelector<HTMLInputElement>(`[name="${name}"]`)!;
+        const v = input.value.trim();
+        let msg = '';
+        if (!v) msg = S('contact.err.required');
+        else if (name === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) msg = S('contact.err.email');
+        setErr(name, msg);
+        if (msg && !firstBad) firstBad = input;
+      }
+      const consent = form!.querySelector<HTMLInputElement>('[name="consent"]')!;
+      setErr('consent', consent.checked ? '' : S('contact.err.consent'));
+      if (!consent.checked && !firstBad) firstBad = consent;
+      return firstBad;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = '';
+      status.className = 'form-status';
+      const bad = validate();
+      if (bad) {
+        status.textContent = S('contact.err.form');
+        status.classList.add('form-status--error');
+        bad.focus();
+        return;
+      }
+      const token = (form.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]')?.value) || '';
+      if (!token) {
+        status.textContent = S('contact.err.captcha');
+        status.classList.add('form-status--error');
+        return;
+      }
+      submit.disabled = true;
+      const label = submit.textContent;
+      submit.textContent = S('contact.sending');
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        const json = await res.json().catch(() => ({}));
+        if (res.ok && json.ok) {
+          try { sessionStorage.removeItem('715-config'); sessionStorage.removeItem('715-builder-state'); } catch {}
+          location.href = thanks;
+          return;
+        }
+        const code = json.error || 'generic';
+        if (json.fields) for (const f of json.fields) setErr(f, f === 'email' ? S('contact.err.email') : S('contact.err.required'));
+        status.textContent = S(`contact.err.${code}`) || S('contact.err.generic');
+        status.classList.add('form-status--error');
+        // Turnstile entrega un token por intento: se renueva tras un error.
+        (window as any).turnstile?.reset();
+      } catch {
+        status.textContent = S('contact.err.generic');
+        status.classList.add('form-status--error');
+      } finally {
+        submit.disabled = false;
+        submit.textContent = label;
+      }
+    });
+  }
+</script>

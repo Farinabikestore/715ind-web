@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import Blocks from '../../components/Blocks.astro';
+import { LOCALES } from '../../i18n/ui.js';
+import { getPage, getSettings } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const page = getPage('home', lang);
+const settings = getSettings(lang);
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: settings.brand_name,
+  legalName: settings.legal_name,
+  url: new URL(`/${lang}/`, Astro.site).href,
+  description: settings.seo_description,
+  sameAs: [settings.instagram, settings.facebook, settings.youtube].filter(Boolean),
+};
+---
+<Base lang={lang} title={page.seo_title} description={page.seo_description} path="/" jsonld={jsonld}>
+  <Blocks blocks={page.blocks} lang={lang} />
+</Base>

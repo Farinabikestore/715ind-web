@@ -1,0 +1,233 @@
+sizes:
+- '29'
+- '27.5'
+rims:
+- id: enduro-h30
+  name: Enduro H30
+  product: enduro-h30-rim
+  note: 30 mm, 610 g
+  sizes:
+  - '29'
+  - '27.5'
+  holes:
+  - 28
+  - 32
+  colors:
+  - id: black
+    name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-2.webp
+  - id: silver
+    name: Silver
+    hex: '#c6c9c8'
+    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-28h-silver-2.webp
+- id: e30-ultra
+  name: E30 Ultra
+  product: e30-ultra-rim
+  note: 30 mm, Hollow Tech
+  sizes:
+  - '29'
+  - '27.5'
+  holes:
+  - 28
+  - 32
+  colors:
+  - id: black
+    name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/e30-ultra-rim/e30-ultra-29er-2.webp
+front_hubs:
+- id: front-15x110
+  name: Front 15x110
+  product: front-hub-15x110
+  note: 15x110 Boost, 155 g
+  holes:
+  - 32
+  colors:
+  - id: black
+    name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - id: silver
+    name: Silver
+    hex: '#c6c9c8'
+    image: /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+rear_hubs:
+- id: ultra
+  name: Ultra
+  product: ultra-rear-hub
+  note: 612 POE, 0.55°
+  holes:
+  - 28
+  - 32
+  freehubs:
+  - HG
+  - MS
+  - XD
+  colors:
+  - id: black
+    name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - id: silver
+    name: Silver
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+- id: trail
+  name: Trail
+  product: trail-rear-hub
+  note: 36 POE
+  holes:
+  - 28
+  - 32
+  freehubs:
+  - HG
+  - MS
+  - XD
+  colors:
+  - id: black
+    name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - id: silver
+    name: Silver
+    hex: '#c6c9c8'
+    image: /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+freehubs:
+- id: HG
+  name: Shimano HG
+- id: MS
+  name: Shimano Micro Spline
+- id: XD
+  name: SRAM XD
+spoke: Richman SR14 J-bend
+spoke_colors:
+- id: black
+  name: Black
+  hex: '#1d1f1f'
+nipple: Pillar 14G
+nipple_colors:
+- id: black
+  name: Black
+  hex: '#1d1f1f'
+spoke_lengths:
+- rim: enduro-h30
+  size: '29'
+  hub: front-15x110
+  holes: 32
+  left: 288
+  right: 288
+- rim: enduro-h30
+  size: '27.5'
+  hub: front-15x110
+  holes: 32
+  left: 270
+  right: 270
+- rim: e30-ultra
+  size: '29'
+  hub: front-15x110
+  holes: 32
+  left: 288
+  right: 288
+- rim: e30-ultra
+  size: '27.5'
+  hub: front-15x110
+  holes: 32
+  left: 270
+  right: 270
+- rim: enduro-h30
+  size: '29'
+  hub: ultra
+  holes: 28
+  left: 294
+  right: 292
+- rim: enduro-h30
+  size: '29'
+  hub: ultra
+  holes: 32
+  left: 288
+  right: 288
+- rim: enduro-h30
+  size: '29'
+  hub: trail
+  holes: 28
+  left: 294
+  right: 292
+- rim: enduro-h30
+  size: '29'
+  hub: trail
+  holes: 32
+  left: 288
+  right: 288
+- rim: enduro-h30
+  size: '27.5'
+  hub: ultra
+  holes: 28
+  left: 274
+  right: 274
+- rim: enduro-h30
+  size: '27.5'
+  hub: ultra
+  holes: 32
+  left: 270
+  right: 270
+- rim: enduro-h30
+  size: '27.5'
+  hub: trail
+  holes: 28
+  left: 274
+  right: 274
+- rim: enduro-h30
+  size: '27.5'
+  hub: trail
+  holes: 32
+  left: 270
+  right: 270
+- rim: e30-ultra
+  size: '29'
+  hub: ultra
+  holes: 28
+  left: 294
+  right: 292
+- rim: e30-ultra
+  size: '29'
+  hub: ultra
+  holes: 32
+  left: 288
+  right: 288
+- rim: e30-ultra
+  size: '29'
+  hub: trail
+  holes: 28
+  left: 294
+  right: 292
+- rim: e30-ultra
+  size: '29'
+  hub: trail
+  holes: 32
+  left: 288
+  right: 288
+- rim: e30-ultra
+  size: '27.5'
+  hub: ultra
+  holes: 28
+  left: 274
+  right: 274
+- rim: e30-ultra
+  size: '27.5'
+  hub: ultra
+  holes: 32
+  left: 270
+  right: 270
+- rim: e30-ultra
+  size: '27.5'
+  hub: trail
+  holes: 28
+  left: 276
+  right: 274
+- rim: e30-ultra
+  size: '27.5'
+  hub: trail
+  holes: 32
+  left: 272
+  right: 270

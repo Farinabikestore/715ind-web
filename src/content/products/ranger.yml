@@ -1,0 +1,192 @@
+es:
+  title: Ranger
+  slug: ranger
+  category: frames
+  order: 65
+  featured: true
+  builder: false
+  tagline: La primera doble suspensión de 715IND.
+  summary: Doble suspensión de enduro y all mountain, como cuadro, kit de cuadro o bicicleta completa.
+  images:
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-2.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-3.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-4.webp
+  - /uploads/products/ranger/bike-ranger-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-preventa-6.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-5.webp
+  colors:
+  - name: Verde
+    hex: '#2f7d32'
+    image: /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  specs:
+  - label: Uso
+    value: Enduro, All Mountain
+  - label: Suspensión
+    value: Doble suspensión
+  - label: Versiones
+    value: Cuadro, kit de cuadro o bicicleta completa
+  body: |
+    La Ranger nace para dominar los descensos técnicos sin perder eficiencia cuando el sendero sube. Su geometría moderna busca estabilidad y control en el terreno más exigente.
+
+    Es el inicio de una nueva etapa para 715IND: una plataforma pensada para enduro y all mountain.
+en:
+  title: Ranger
+  slug: ranger
+  category: frames
+  order: 65
+  featured: true
+  builder: false
+  tagline: The first 715IND full suspension.
+  summary: Enduro and all-mountain full suspension, as frame only, frame kit or complete bike.
+  images:
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-2.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-3.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-4.webp
+  - /uploads/products/ranger/bike-ranger-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-preventa-6.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-5.webp
+  colors:
+  - name: Green
+    hex: '#2f7d32'
+    image: /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  specs:
+  - label: Riding style
+    value: Enduro, All Mountain
+  - label: Suspension
+    value: Full suspension
+  - label: Versions
+    value: Frame only, frame kit or complete bike
+  body: |
+    The Ranger is built to dominate technical descents without losing efficiency when the trail points up. Its modern geometry is tuned for stability and control on demanding terrain.
+
+    It marks a new chapter for 715IND: a platform designed for enduro and all-mountain riding.
+pt:
+  title: Ranger
+  slug: ranger
+  category: frames
+  order: 65
+  featured: true
+  builder: false
+  tagline: A primeira full suspension da 715IND.
+  summary: Full suspension de enduro e all mountain, como quadro, kit de quadro ou bicicleta completa.
+  images:
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-2.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-3.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-4.webp
+  - /uploads/products/ranger/bike-ranger-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-preventa-6.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-5.webp
+  colors:
+  - name: Verde
+    hex: '#2f7d32'
+    image: /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  specs:
+  - label: Uso
+    value: Enduro, All Mountain
+  - label: Suspensão
+    value: Full suspension
+  - label: Versões
+    value: Quadro, kit de quadro ou bicicleta completa
+  body: |
+    A Ranger nasce para dominar descidas técnicas sem perder eficiência quando a trilha sobe. A geometria moderna busca estabilidade e controle no terreno mais exigente.
+
+    É o início de uma nova fase para a 715IND: uma plataforma pensada para enduro e all mountain.
+de:
+  title: Ranger
+  slug: ranger
+  category: frames
+  order: 65
+  featured: true
+  builder: false
+  tagline: Das erste Fully von 715IND.
+  summary: Enduro- und All-Mountain-Fully, als Rahmen, Rahmenkit oder Komplettrad.
+  images:
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-2.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-3.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-4.webp
+  - /uploads/products/ranger/bike-ranger-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-preventa-6.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-5.webp
+  colors:
+  - name: Grün
+    hex: '#2f7d32'
+    image: /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  specs:
+  - label: Einsatzbereich
+    value: Enduro, All Mountain
+  - label: Federung
+    value: Vollgefedert
+  - label: Versionen
+    value: Rahmen, Rahmenkit oder Komplettrad
+  body: |
+    Die Ranger ist gebaut, um technische Abfahrten zu beherrschen, ohne bergauf an Effizienz zu verlieren. Die moderne Geometrie setzt auf Stabilität und Kontrolle im anspruchsvollsten Gelände.
+
+    Sie markiert ein neues Kapitel für 715IND: eine Plattform für Enduro und All Mountain.
+fr:
+  title: Ranger
+  slug: ranger
+  category: frames
+  order: 65
+  featured: true
+  builder: false
+  tagline: Le premier tout-suspendu 715IND.
+  summary: Tout-suspendu enduro et all mountain, en cadre seul, kit cadre ou vélo complet.
+  images:
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-2.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-3.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-4.webp
+  - /uploads/products/ranger/bike-ranger-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-preventa-6.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-5.webp
+  colors:
+  - name: Vert
+    hex: '#2f7d32'
+    image: /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  specs:
+  - label: Pratique
+    value: Enduro, All Mountain
+  - label: Suspension
+    value: Tout-suspendu
+  - label: Versions
+    value: Cadre seul, kit cadre ou vélo complet
+  body: |
+    Le Ranger est conçu pour dominer les descentes techniques sans perdre en efficacité quand le sentier remonte. Sa géométrie moderne vise stabilité et contrôle sur les terrains les plus exigeants.
+
+    C'est un nouveau chapitre pour 715IND : une plateforme pensée pour l'enduro et l'all mountain.
+it:
+  title: Ranger
+  slug: ranger
+  category: frames
+  order: 65
+  featured: true
+  builder: false
+  tagline: La prima biammortizzata 715IND.
+  summary: Biammortizzata enduro e all mountain, come telaio, kit telaio o bici completa.
+  images:
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-2.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-3.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-4.webp
+  - /uploads/products/ranger/bike-ranger-preventa-1.webp
+  - /uploads/products/ranger/bike-ranger-preventa-6.webp
+  - /uploads/products/ranger/bike-ranger-frame-only-preventa-5.webp
+  colors:
+  - name: Verde
+    hex: '#2f7d32'
+    image: /uploads/products/ranger/bike-ranger-frame-only-preventa-1.webp
+  specs:
+  - label: Utilizzo
+    value: Enduro, All Mountain
+  - label: Sospensione
+    value: Biammortizzata
+  - label: Versioni
+    value: Telaio, kit telaio o bici completa
+  body: |
+    La Ranger nasce per dominare le discese tecniche senza perdere efficienza quando il sentiero sale. La geometria moderna punta su stabilità e controllo nei terreni più impegnativi.
+
+    Segna un nuovo capitolo per 715IND: una piattaforma pensata per enduro e all mountain.

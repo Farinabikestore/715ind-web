@@ -1,0 +1,59 @@
+---
+import { LOCALES, LANG_NAMES, t } from '../i18n/ui.js';
+import { CATEGORIES, safeUrl } from '../lib/content.js';
+const { lang, path, settings } = Astro.props;
+const year = new Date().getFullYear();
+const social = [
+  ['Instagram', settings.instagram],
+  ['Facebook', settings.facebook],
+  ['YouTube', settings.youtube],
+  ['WhatsApp', settings.whatsapp ? `https://wa.me/${String(settings.whatsapp).replace(/\D/g, '')}` : ''],
+].map(([n, url]) => [n, /^https?:/i.test(safeUrl(url)) ? safeUrl(url) : '']).filter(([, url]) => url);
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-note">{settings.tagline}.</p>
+        {settings.location && <p class="footer-note">{settings.location}</p>}
+        {settings.public_email && <p><a href={`mailto:${settings.public_email}`}>{settings.public_email}</a></p>}
+      </div>
+      <div>
+        <h2>{t(lang, 'nav.products')}</h2>
+        <ul>
+          {CATEGORIES.map((c) => <li><a href={`/${lang}/products/#${c}`}>{t(lang, `cat.${c}`)}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <h2>{t(lang, 'nav.menu')}</h2>
+        <ul>
+          <li><a href={`/${lang}/wheel-builder/`}>{t(lang, 'nav.builder')}</a></li>
+          <li><a href={`/${lang}/about/`}>{t(lang, 'nav.about')}</a></li>
+          <li><a href={`/${lang}/contact/`}>{t(lang, 'nav.contact')}</a></li>
+          <li><a href={`/${lang}/privacy/`}>{t(lang, 'footer.privacy')}</a></li>
+        </ul>
+        {social.length > 0 && (
+          <>
+            <h2 class="footer-follow">{t(lang, 'footer.follow')}</h2>
+            <ul>
+              {social.map(([name, url]) => <li><a href={url} rel="noopener noreferrer" target="_blank">{name}</a></li>)}
+            </ul>
+          </>
+        )}
+      </div>
+      <div>
+        <h2>{t(lang, 'nav.language')}</h2>
+        <ul>
+          {LOCALES.map((l) => <li><a href={`/${l}${path}`} hreflang={l} lang={l}>{LANG_NAMES[l]}</a></li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="wrap"><p class="footer-mark" aria-hidden="true">{settings.brand_name}</p></div>
+  <div class="footer-legal">
+    <div class="wrap">
+      <span>© {year} {settings.legal_name || settings.brand_name}. {t(lang, 'footer.rights')}</span>
+      <span>{settings.footer_note}</span>
+    </div>
+  </div>
+</footer>

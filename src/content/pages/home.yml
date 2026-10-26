@@ -1,0 +1,306 @@
+es:
+  seo_title: 715IND | Componentes MTB diseñados en Chile
+  seo_description: ''
+  blocks:
+  - type: hero
+    heading: Componentes de montaña diseñados en Chile.
+    text: Mazas, llantas, ruedas, cuadros y cockpit probados en los cerros de los Andes y fabricados en Taiwán.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    cta_label: Ver productos
+    cta_link: /products/
+    cta2_label: Quiero distribuir 715IND
+    cta2_link: /contact/
+  - type: categories
+    heading: Línea de productos
+  - type: feature
+    theme: dark
+    image_side: left
+    heading: 'Ultra: 612 puntos de enganche'
+    text: |
+      Seis trinquetes y un ángulo de enganche de 0,55°. La potencia llega a la rueda apenas tocas el pedal.
+
+      Cuerpo de aluminio 7075-T6, eje Boost 12x148 y núcleos HG, Micro Spline y XD.
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    cta_label: Ver la maza Ultra
+    cta_link: /products/ultra-rear-hub/
+  - type: products
+    mode: featured
+    category: ''
+    limit: 8
+    heading: Destacados
+    text: ''
+  - type: builder_cta
+    heading: Arma tu rueda
+    text: Elige llanta, maza, núcleo y colores. Te enviamos la cotización y la armamos a mano.
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    cta_label: Abrir el armador
+    cta_link: /wheel-builder/
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Enduro HT V3.1
+    text: |
+      Rígida de enduro con 63° de dirección, tubos delanteros 2 mm más gruesos y doble soldadura en la pipa. Compatible con UDH y SRAM Transmission.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    cta_label: Ver el cuadro
+    cta_link: /products/enduro-ht-v31/
+  - type: dealer_cta
+    heading: Lleva 715IND a tu país
+    text: Buscamos distribuidores internacionales y tiendas en Chile. Te enviamos catálogo, precios y condiciones.
+    cta_label: Contactar al equipo comercial
+    cta_link: /contact/
+en:
+  seo_title: 715IND | MTB components designed in Chile
+  seo_description: ''
+  blocks:
+  - type: hero
+    heading: Mountain bike parts designed in Chile.
+    text: Hubs, rims, wheels, frames and cockpit parts tested on Andean trails and made in Taiwan.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    cta_label: See products
+    cta_link: /products/
+    cta2_label: Distribute 715IND
+    cta2_link: /contact/
+  - type: categories
+    heading: Product line
+  - type: feature
+    theme: dark
+    image_side: left
+    heading: 'Ultra: 612 engagement points'
+    text: |
+      Six pawls and a 0.55° engagement angle. Power reaches the wheel the moment you touch the pedal.
+
+      7075-T6 aluminium shell, 12x148 Boost axle and HG, Micro Spline and XD freehubs.
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    cta_label: See the Ultra hub
+    cta_link: /products/ultra-rear-hub/
+  - type: products
+    mode: featured
+    category: ''
+    limit: 8
+    heading: Featured
+    text: ''
+  - type: builder_cta
+    heading: Build your wheel
+    text: Choose rim, hub, freehub and colours. We send you a quote and build it by hand.
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    cta_label: Open the wheel builder
+    cta_link: /wheel-builder/
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Enduro HT V3.1
+    text: |
+      Enduro hardtail with a 63° head angle, 2 mm thicker front tubes and a double weld at the head tube. UDH and SRAM Transmission ready.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    cta_label: See the frame
+    cta_link: /products/enduro-ht-v31/
+  - type: dealer_cta
+    heading: Bring 715IND to your country
+    text: We are looking for international distributors and dealers in Chile. We will send you our catalogue, pricing and terms.
+    cta_label: Contact our sales team
+    cta_link: /contact/
+pt:
+  seo_title: 715IND | Componentes de MTB projetados no Chile
+  seo_description: ''
+  blocks:
+  - type: hero
+    heading: Peças de mountain bike projetadas no Chile.
+    text: Cubos, aros, rodas, quadros e cockpit testados nas trilhas dos Andes e fabricados em Taiwan.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    cta_label: Ver produtos
+    cta_link: /products/
+    cta2_label: Quero distribuir 715IND
+    cta2_link: /contact/
+  - type: categories
+    heading: Linha de produtos
+  - type: feature
+    theme: dark
+    image_side: left
+    heading: 'Ultra: 612 pontos de engate'
+    text: |
+      Seis linguetas e ângulo de engate de 0,55°. A força chega à roda assim que você toca o pedal.
+
+      Corpo de alumínio 7075-T6, eixo Boost 12x148 e cubos livres HG, Micro Spline e XD.
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    cta_label: Ver o cubo Ultra
+    cta_link: /products/ultra-rear-hub/
+  - type: products
+    mode: featured
+    category: ''
+    limit: 8
+    heading: Destaques
+    text: ''
+  - type: builder_cta
+    heading: Monte a sua roda
+    text: Escolha aro, cubo, cubo livre e cores. Enviamos o orçamento e montamos à mão.
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    cta_label: Abrir o configurador
+    cta_link: /wheel-builder/
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Enduro HT V3.1
+    text: |
+      Hardtail de enduro com 63° de direção, tubos dianteiros 2 mm mais grossos e solda dupla na caixa de direção. Compatível com UDH e SRAM Transmission.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    cta_label: Ver o quadro
+    cta_link: /products/enduro-ht-v31/
+  - type: dealer_cta
+    heading: Leve a 715IND ao seu país
+    text: Procuramos distribuidores internacionais e lojas no Chile. Enviamos catálogo, preços e condições.
+    cta_label: Falar com o comercial
+    cta_link: /contact/
+de:
+  seo_title: 715IND | MTB-Komponenten aus Chile
+  seo_description: ''
+  blocks:
+  - type: hero
+    heading: Mountainbike-Teile aus Chile.
+    text: Naben, Felgen, Laufräder, Rahmen und Cockpit, getestet auf den Trails der Anden und gefertigt in Taiwan.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    cta_label: Produkte ansehen
+    cta_link: /products/
+    cta2_label: 715IND vertreiben
+    cta2_link: /contact/
+  - type: categories
+    heading: Produktlinie
+  - type: feature
+    theme: dark
+    image_side: left
+    heading: 'Ultra: 612 Eingriffspunkte'
+    text: |
+      Sechs Sperrklinken und 0,55° Eingriffswinkel. Die Kraft ist sofort am Laufrad, sobald du das Pedal berührst.
+
+      Gehäuse aus 7075-T6-Aluminium, 12x148 Boost und Freiläufe HG, Micro Spline und XD.
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    cta_label: Ultra Nabe ansehen
+    cta_link: /products/ultra-rear-hub/
+  - type: products
+    mode: featured
+    category: ''
+    limit: 8
+    heading: Highlights
+    text: ''
+  - type: builder_cta
+    heading: Stell dein Laufrad zusammen
+    text: Wähle Felge, Nabe, Freilauf und Farben. Wir schicken dir ein Angebot und bauen es von Hand.
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    cta_label: Konfigurator öffnen
+    cta_link: /wheel-builder/
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Enduro HT V3.1
+    text: |
+      Enduro-Hardtail mit 63° Lenkwinkel, 2 mm stärkeren Frontrohren und doppelter Schweißnaht am Steuerrohr. UDH- und SRAM-Transmission-kompatibel.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    cta_label: Rahmen ansehen
+    cta_link: /products/enduro-ht-v31/
+  - type: dealer_cta
+    heading: Bring 715IND in dein Land
+    text: Wir suchen internationale Distributoren und Händler in Chile. Wir schicken dir Katalog, Preise und Konditionen.
+    cta_label: Vertrieb kontaktieren
+    cta_link: /contact/
+fr:
+  seo_title: 715IND | Composants VTT conçus au Chili
+  seo_description: ''
+  blocks:
+  - type: hero
+    heading: Des pièces VTT conçues au Chili.
+    text: Moyeux, jantes, roues, cadres et poste de pilotage testés sur les sentiers des Andes et fabriqués à Taïwan.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    cta_label: Voir les produits
+    cta_link: /products/
+    cta2_label: Distribuer 715IND
+    cta2_link: /contact/
+  - type: categories
+    heading: Gamme de produits
+  - type: feature
+    theme: dark
+    image_side: left
+    heading: 'Ultra : 612 points d''engagement'
+    text: |
+      Six cliquets et un angle d'engagement de 0,55°. La puissance arrive à la roue dès que vous touchez la pédale.
+
+      Corps en aluminium 7075-T6, axe Boost 12x148 et corps HG, Micro Spline et XD.
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    cta_label: Voir le moyeu Ultra
+    cta_link: /products/ultra-rear-hub/
+  - type: products
+    mode: featured
+    category: ''
+    limit: 8
+    heading: À la une
+    text: ''
+  - type: builder_cta
+    heading: Configurez votre roue
+    text: Choisissez jante, moyeu, corps de roue libre et couleurs. Nous vous envoyons un devis et la montons à la main.
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    cta_label: Ouvrir le configurateur
+    cta_link: /wheel-builder/
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Enduro HT V3.1
+    text: |
+      Semi-rigide enduro à 63° de direction, tubes avant 2 mm plus épais et double soudure à la douille. Compatible UDH et SRAM Transmission.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    cta_label: Voir le cadre
+    cta_link: /products/enduro-ht-v31/
+  - type: dealer_cta
+    heading: Amenez 715IND dans votre pays
+    text: Nous recherchons des distributeurs internationaux et des revendeurs au Chili. Nous vous envoyons catalogue, tarifs et conditions.
+    cta_label: Contacter l'équipe commerciale
+    cta_link: /contact/
+it:
+  seo_title: 715IND | Componenti MTB progettati in Cile
+  seo_description: ''
+  blocks:
+  - type: hero
+    heading: Componenti MTB progettati in Cile.
+    text: Mozzi, cerchi, ruote, telai e cockpit testati sui sentieri delle Ande e prodotti a Taiwan.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    cta_label: Vedi prodotti
+    cta_link: /products/
+    cta2_label: Distribuire 715IND
+    cta2_link: /contact/
+  - type: categories
+    heading: Linea prodotti
+  - type: feature
+    theme: dark
+    image_side: left
+    heading: 'Ultra: 612 punti di innesto'
+    text: |
+      Sei cricchetti e un angolo di innesto di 0,55°. La potenza arriva alla ruota appena tocchi il pedale.
+
+      Corpo in alluminio 7075-T6, asse Boost 12x148 e corpetti HG, Micro Spline e XD.
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    cta_label: Vedi il mozzo Ultra
+    cta_link: /products/ultra-rear-hub/
+  - type: products
+    mode: featured
+    category: ''
+    limit: 8
+    heading: In evidenza
+    text: ''
+  - type: builder_cta
+    heading: Configura la tua ruota
+    text: Scegli cerchio, mozzo, corpetto e colori. Ti inviamo il preventivo e la montiamo a mano.
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    cta_label: Apri il configuratore
+    cta_link: /wheel-builder/
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Enduro HT V3.1
+    text: |
+      Front enduro con 63° di sterzo, tubi anteriori più spessi di 2 mm e doppia saldatura al tubo sterzo. Compatibile UDH e SRAM Transmission.
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    cta_label: Vedi il telaio
+    cta_link: /products/enduro-ht-v31/
+  - type: dealer_cta
+    heading: Porta 715IND nel tuo paese
+    text: Cerchiamo distributori internazionali e negozi in Cile. Ti inviamo catalogo, prezzi e condizioni.
+    cta_label: Contatta il commerciale
+    cta_link: /contact/

@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import { LOCALES } from '../../i18n/ui.js';
+import { getPage, getSettings, md } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const page = getPage('privacy', lang);
+const settings = getSettings(lang);
+---
+<Base lang={lang} title={page.title} path="/privacy/">
+  <section class="wrap simple">
+    <h1>{page.title}</h1>
+    <div class="prose" set:html={md(page.body)} />
+    {settings.legal_name && <p class="field__hint">{settings.legal_name}</p>}
+  </section>
+</Base>

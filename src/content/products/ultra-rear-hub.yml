@@ -1,0 +1,270 @@
+es:
+  title: Maza trasera Ultra
+  slug: ultra-rear-hub
+  category: hubs
+  order: 10
+  featured: true
+  builder: true
+  tagline: 612 puntos de enganche. Respuesta casi instantánea.
+  summary: 'Nuestra maza premium: 6 trinquetes, 612 puntos de enganche y 0,55° de ángulo, mecanizada en aluminio 7075-T6.'
+  images:
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-3.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  colors:
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - name: Plata
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  specs:
+  - label: Trinquetes
+    value: '6'
+  - label: Puntos de enganche
+    value: '612'
+  - label: Ángulo de enganche
+    value: 0,55°
+  - label: Material
+    value: Al 7075-T6
+  - label: Eje
+    value: 12x148 mm Boost
+  - label: Hoyos
+    value: 28 / 32
+  - label: Núcleo
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Anclaje de disco
+    value: 6 pernos
+  body: |
+    La Ultra es la maza que usamos en nuestras propias ruedas. Su mecanismo de 6 trinquetes engancha cada 0,55°, así la potencia llega a la rueda apenas empiezas a pedalear, incluso en subidas técnicas.
+
+    El cuerpo está mecanizado en aluminio 7075-T6 y lleva rodamientos de alta precisión. Acepta núcleos Shimano HG, Shimano Micro Spline y SRAM XD.
+en:
+  title: Ultra rear hub
+  slug: ultra-rear-hub
+  category: hubs
+  order: 10
+  featured: true
+  builder: true
+  tagline: 612 engagement points. Near-instant pickup.
+  summary: 'Our premium hub: 6 pawls, 612 engagement points and 0.55° pickup, machined from 7075-T6 aluminium.'
+  images:
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-3.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  colors:
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - name: Silver
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  specs:
+  - label: Pawls
+    value: '6'
+  - label: Engagement points
+    value: '612'
+  - label: Engagement angle
+    value: 0,55°
+  - label: Material
+    value: Al 7075-T6
+  - label: Axle
+    value: 12x148 mm Boost
+  - label: Spoke holes
+    value: 28 / 32
+  - label: Freehub
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Rotor mount
+    value: 6-bolt
+  body: |
+    The Ultra is the hub we lace into our own wheels. Its 6-pawl mechanism engages every 0.55°, so power reaches the wheel the moment you start pedalling, even on technical climbs.
+
+    The shell is machined from 7075-T6 aluminium and runs high-precision bearings. It takes Shimano HG, Shimano Micro Spline and SRAM XD freehubs.
+pt:
+  title: Cubo traseiro Ultra
+  slug: ultra-rear-hub
+  category: hubs
+  order: 10
+  featured: true
+  builder: true
+  tagline: 612 pontos de engate. Resposta quase instantânea.
+  summary: 'O nosso cubo premium: 6 linguetas, 612 pontos de engate e 0,55° de ângulo, usinado em alumínio 7075-T6.'
+  images:
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-3.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  colors:
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - name: Prata
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  specs:
+  - label: Linguetas
+    value: '6'
+  - label: Pontos de engate
+    value: '612'
+  - label: Ângulo de engate
+    value: 0,55°
+  - label: Material
+    value: Al 7075-T6
+  - label: Eixo
+    value: 12x148 mm Boost
+  - label: Furos
+    value: 28 / 32
+  - label: Cubo livre
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Fixação do disco
+    value: 6 parafusos
+  body: |
+    O Ultra é o cubo que usamos nas nossas próprias rodas. O mecanismo de 6 linguetas engata a cada 0,55°, e a força chega à roda assim que você começa a pedalar, mesmo em subidas técnicas.
+
+    O corpo é usinado em alumínio 7075-T6 e usa rolamentos de alta precisão. Aceita cubos livres Shimano HG, Shimano Micro Spline e SRAM XD.
+de:
+  title: Ultra Hinterradnabe
+  slug: ultra-rear-hub
+  category: hubs
+  order: 10
+  featured: true
+  builder: true
+  tagline: 612 Eingriffspunkte. Nahezu sofortiger Antritt.
+  summary: 'Unsere Premium-Nabe: 6 Sperrklinken, 612 Eingriffspunkte und 0,55° Eingriffswinkel, gefräst aus 7075-T6-Aluminium.'
+  images:
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-3.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  colors:
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - name: Silber
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  specs:
+  - label: Sperrklinken
+    value: '6'
+  - label: Eingriffspunkte
+    value: '612'
+  - label: Eingriffswinkel
+    value: 0,55°
+  - label: Material
+    value: Al 7075-T6
+  - label: Achse
+    value: 12x148 mm Boost
+  - label: Speichenlöcher
+    value: 28 / 32
+  - label: Freilauf
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Bremsscheibenaufnahme
+    value: 6-Loch
+  body: |
+    Die Ultra ist die Nabe, die wir in unsere eigenen Laufräder einspeichen. Der Mechanismus mit 6 Sperrklinken greift alle 0,55°, so kommt die Kraft sofort am Laufrad an, auch in technischen Anstiegen.
+
+    Das Gehäuse ist aus 7075-T6-Aluminium gefräst und läuft auf Präzisionslagern. Passend für Shimano HG, Shimano Micro Spline und SRAM XD Freiläufe.
+fr:
+  title: Moyeu arrière Ultra
+  slug: ultra-rear-hub
+  category: hubs
+  order: 10
+  featured: true
+  builder: true
+  tagline: 612 points d'engagement. Réponse quasi instantanée.
+  summary: 'Notre moyeu haut de gamme : 6 cliquets, 612 points d''engagement et 0,55° d''angle, usiné dans l''aluminium 7075-T6.'
+  images:
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-3.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  colors:
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - name: Argent
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  specs:
+  - label: Cliquets
+    value: '6'
+  - label: Points d'engagement
+    value: '612'
+  - label: Angle d'engagement
+    value: 0,55°
+  - label: Matériau
+    value: Al 7075-T6
+  - label: Axe
+    value: 12x148 mm Boost
+  - label: Trous
+    value: 28 / 32
+  - label: Corps de roue libre
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Fixation du disque
+    value: 6 trous
+  body: |
+    L'Ultra est le moyeu que nous montons sur nos propres roues. Son mécanisme à 6 cliquets s'engage tous les 0,55° : la puissance arrive à la roue dès le premier coup de pédale, même dans les montées techniques.
+
+    Le corps est usiné dans l'aluminium 7075-T6 et tourne sur des roulements de haute précision. Compatible corps Shimano HG, Shimano Micro Spline et SRAM XD.
+it:
+  title: Mozzo posteriore Ultra
+  slug: ultra-rear-hub
+  category: hubs
+  order: 10
+  featured: true
+  builder: true
+  tagline: 612 punti di innesto. Risposta quasi istantanea.
+  summary: 'Il nostro mozzo premium: 6 cricchetti, 612 punti di innesto e 0,55° di angolo, lavorato in alluminio 7075-T6.'
+  images:
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-3.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
+  - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+  - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  colors:
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-1.webp
+  - name: Argento
+    hex: '#c6c9c8'
+    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  specs:
+  - label: Cricchetti
+    value: '6'
+  - label: Punti di innesto
+    value: '612'
+  - label: Angolo di innesto
+    value: 0,55°
+  - label: Materiale
+    value: Al 7075-T6
+  - label: Asse
+    value: 12x148 mm Boost
+  - label: Fori
+    value: 28 / 32
+  - label: Corpetto
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Attacco disco
+    value: 6 fori
+  body: |
+    L'Ultra è il mozzo che montiamo sulle nostre ruote. Il meccanismo a 6 cricchetti innesta ogni 0,55°, così la potenza arriva alla ruota appena inizi a pedalare, anche nelle salite tecniche.
+
+    Il corpo è lavorato in alluminio 7075-T6 e monta cuscinetti di alta precisione. Compatibile con corpetti Shimano HG, Shimano Micro Spline e SRAM XD.

@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import WheelBuilder from '../../components/WheelBuilder.astro';
+import { LOCALES, t } from '../../i18n/ui.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+---
+<Base lang={lang} title={t(lang, 'builder.title')} description={t(lang, 'builder.intro')} path="/wheel-builder/" image="/uploads/products/ultra-wheelset/wheelset-715-ind-1.webp">
+  <header class="wrap page-head">
+    <h1>{t(lang, 'builder.title')}</h1>
+    <p class="lead">{t(lang, 'builder.intro')}</p>
+  </header>
+  <div class="wrap">
+    <WheelBuilder lang={lang} />
+  </div>
+</Base>

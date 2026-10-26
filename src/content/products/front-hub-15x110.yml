@@ -1,0 +1,192 @@
+es:
+  title: Maza delantera 15x110
+  slug: front-hub-15x110
+  category: hubs
+  order: 30
+  featured: false
+  builder: true
+  tagline: 155 gramos, eje Boost y anodizado de calidad.
+  summary: Maza delantera Boost de 155 g, 32 hoyos y anclaje de 6 pernos, en negro o plata.
+  images:
+  - /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  colors:
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - name: Plata
+    hex: '#c6c9c8'
+    image: /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  specs:
+  - label: Eje
+    value: 15x110 mm Boost
+  - label: Hoyos
+    value: '32'
+  - label: Anclaje de disco
+    value: 6 pernos
+  - label: Peso
+    value: 155 g
+  body: |
+    La pareja natural de nuestras mazas traseras. Rueda suave, pesa 155 gramos y viene en los mismos anodizados que la Ultra y la Trail, para que el par se vea igual.
+
+    Diseñada en Chile y fabricada en Taiwán.
+en:
+  title: Front hub 15x110
+  slug: front-hub-15x110
+  category: hubs
+  order: 30
+  featured: false
+  builder: true
+  tagline: 155 grams, Boost axle, quality anodizing.
+  summary: A 155 g Boost front hub with 32 holes and 6-bolt mount, in black or silver.
+  images:
+  - /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  colors:
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - name: Silver
+    hex: '#c6c9c8'
+    image: /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  specs:
+  - label: Axle
+    value: 15x110 mm Boost
+  - label: Spoke holes
+    value: '32'
+  - label: Rotor mount
+    value: 6-bolt
+  - label: Weight
+    value: 155 g
+  body: |
+    The natural partner for our rear hubs. It spins smoothly, weighs 155 grams and comes in the same anodized finishes as the Ultra and Trail, so your wheelset matches.
+
+    Designed in Chile, made in Taiwan.
+pt:
+  title: Cubo dianteiro 15x110
+  slug: front-hub-15x110
+  category: hubs
+  order: 30
+  featured: false
+  builder: true
+  tagline: 155 gramas, eixo Boost e anodização de qualidade.
+  summary: Cubo dianteiro Boost de 155 g, 32 furos e fixação de 6 parafusos, em preto ou prata.
+  images:
+  - /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  colors:
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - name: Prata
+    hex: '#c6c9c8'
+    image: /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  specs:
+  - label: Eixo
+    value: 15x110 mm Boost
+  - label: Furos
+    value: '32'
+  - label: Fixação do disco
+    value: 6 parafusos
+  - label: Peso
+    value: 155 g
+  body: |
+    O par natural dos nossos cubos traseiros. Gira suave, pesa 155 gramas e vem nas mesmas anodizações do Ultra e do Trail, para o par combinar.
+
+    Projetado no Chile e fabricado em Taiwan.
+de:
+  title: Vorderradnabe 15x110
+  slug: front-hub-15x110
+  category: hubs
+  order: 30
+  featured: false
+  builder: true
+  tagline: 155 Gramm, Boost-Achse, hochwertig eloxiert.
+  summary: Boost-Vorderradnabe mit 155 g, 32 Löchern und 6-Loch-Aufnahme, in Schwarz oder Silber.
+  images:
+  - /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  colors:
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - name: Silber
+    hex: '#c6c9c8'
+    image: /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  specs:
+  - label: Achse
+    value: 15x110 mm Boost
+  - label: Speichenlöcher
+    value: '32'
+  - label: Bremsscheibenaufnahme
+    value: 6-Loch
+  - label: Gewicht
+    value: 155 g
+  body: |
+    Das passende Gegenstück zu unseren Hinterradnaben. Läuft leicht, wiegt 155 Gramm und kommt in denselben Eloxalfarben wie Ultra und Trail, damit der Laufradsatz zusammenpasst.
+
+    Entwickelt in Chile, gefertigt in Taiwan.
+fr:
+  title: Moyeu avant 15x110
+  slug: front-hub-15x110
+  category: hubs
+  order: 30
+  featured: false
+  builder: true
+  tagline: 155 grammes, axe Boost, anodisation de qualité.
+  summary: Moyeu avant Boost de 155 g, 32 trous et fixation 6 trous, en noir ou argent.
+  images:
+  - /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  colors:
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - name: Argent
+    hex: '#c6c9c8'
+    image: /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  specs:
+  - label: Axe
+    value: 15x110 mm Boost
+  - label: Trous
+    value: '32'
+  - label: Fixation du disque
+    value: 6 trous
+  - label: Poids
+    value: 155 g
+  body: |
+    Le complément naturel de nos moyeux arrière. Il tourne en douceur, pèse 155 grammes et reprend les mêmes anodisations que l'Ultra et le Trail, pour une paire assortie.
+
+    Conçu au Chili, fabriqué à Taïwan.
+it:
+  title: Mozzo anteriore 15x110
+  slug: front-hub-15x110
+  category: hubs
+  order: 30
+  featured: false
+  builder: true
+  tagline: 155 grammi, asse Boost, anodizzazione di qualità.
+  summary: Mozzo anteriore Boost da 155 g, 32 fori e attacco a 6 fori, nero o argento.
+  images:
+  - /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  colors:
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/front-hub-15x110/front-15x110-black-32h-new-1.webp
+  - name: Argento
+    hex: '#c6c9c8'
+    image: /uploads/products/front-hub-15x110/front-15x110-silver-32h-new-1.webp
+  specs:
+  - label: Asse
+    value: 15x110 mm Boost
+  - label: Fori
+    value: '32'
+  - label: Attacco disco
+    value: 6 fori
+  - label: Peso
+    value: 155 g
+  body: |
+    Il compagno naturale dei nostri mozzi posteriori. Scorre fluido, pesa 155 grammi e ha le stesse anodizzazioni di Ultra e Trail, così la coppia è abbinata.
+
+    Progettato in Cile, prodotto a Taiwan.

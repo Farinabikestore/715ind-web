@@ -1,0 +1,360 @@
+es:
+  title: Enduro HT V3.1
+  slug: enduro-ht-v31
+  category: frames
+  order: 70
+  featured: true
+  builder: false
+  tagline: Rígida de enduro con 63° de dirección.
+  summary: Cuadro rígido de enduro 29" con UDH, tubos delanteros 2 mm más gruesos y doble cordón de soldadura en la pipa.
+  images:
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-4.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-5.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-7.webp
+  - /uploads/products/enduro-ht-v31/bike-v3-preventa-1.webp
+  colors:
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - name: Azul
+    hex: '#1f5fc4'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - name: Blanco
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  specs:
+  - label: Uso
+    value: Enduro
+  - label: Ángulo de dirección
+    value: 63°
+  - label: Tallas
+    value: S1 reach 440 mm (160–165 cm), S2 reach 470 mm (165–185 cm), S3 reach 490 mm (180–190 cm)
+  - label: Configuración
+    value: 29", 27,5" o mullet
+  - label: Eje trasero
+    value: 12x148 mm Boost
+  - label: Patilla
+    value: UDH, compatible con SRAM Transmission T-Type
+  - label: Caja pedalera
+    value: BSA 68/73
+  - label: Dirección
+    value: ZS44 / ZS56
+  - label: Tubo de sillín
+    value: 31,6 mm
+  - label: Cableado
+    value: Interno
+  - label: Neumático máximo
+    value: 2,6"
+  - label: Versiones
+    value: Cuadro o bicicleta completa
+  body: |
+    La V3.1 lleva el enduro rígido a otro nivel. Sumamos 2 mm de espesor en los tubos delanteros y doble cordón de soldadura en la pipa, una de las zonas más exigidas del cuadro.
+
+    Con 63° de dirección baja rápido y con control. Es compatible con UDH y SRAM Transmission T-Type, y se puede armar en 29", 27,5" o mullet. Disponible como cuadro o bicicleta completa.
+en:
+  title: Enduro HT V3.1
+  slug: enduro-ht-v31
+  category: frames
+  order: 70
+  featured: true
+  builder: false
+  tagline: Enduro hardtail with a 63° head angle.
+  summary: 29" enduro hardtail frame with UDH, 2 mm thicker front tubes and a double weld bead at the head tube.
+  images:
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-4.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-5.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-7.webp
+  - /uploads/products/enduro-ht-v31/bike-v3-preventa-1.webp
+  colors:
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - name: Blue
+    hex: '#1f5fc4'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - name: White
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  specs:
+  - label: Riding style
+    value: Enduro
+  - label: Head angle
+    value: 63°
+  - label: Sizes
+    value: S1 reach 440 mm (160–165 cm), S2 reach 470 mm (165–185 cm), S3 reach 490 mm (180–190 cm)
+  - label: Wheel setup
+    value: 29", 27.5" or mullet
+  - label: Rear axle
+    value: 12x148 mm Boost
+  - label: Derailleur hanger
+    value: UDH, SRAM Transmission T-Type ready
+  - label: Bottom bracket
+    value: BSA 68/73
+  - label: Headset
+    value: ZS44 / ZS56
+  - label: Seatpost
+    value: 31,6 mm
+  - label: Cable routing
+    value: Internal
+  - label: Max tire
+    value: 2,6"
+  - label: Versions
+    value: Frame or complete bike
+  body: |
+    The V3.1 takes the enduro hardtail further. We added 2 mm of wall thickness to the front tubes and a double weld bead at the head tube, one of the most stressed areas of the frame.
+
+    A 63° head angle keeps it fast and controlled downhill. It is UDH and SRAM Transmission T-Type ready, and builds as 29", 27.5" or mullet. Available as a frame or complete bike.
+pt:
+  title: Enduro HT V3.1
+  slug: enduro-ht-v31
+  category: frames
+  order: 70
+  featured: true
+  builder: false
+  tagline: Hardtail de enduro com 63° de direção.
+  summary: Quadro hardtail de enduro 29" com UDH, tubos dianteiros 2 mm mais grossos e cordão duplo de solda na caixa de direção.
+  images:
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-4.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-5.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-7.webp
+  - /uploads/products/enduro-ht-v31/bike-v3-preventa-1.webp
+  colors:
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - name: Azul
+    hex: '#1f5fc4'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - name: Branco
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  specs:
+  - label: Uso
+    value: Enduro
+  - label: Ângulo de direção
+    value: 63°
+  - label: Tamanhos
+    value: S1 reach 440 mm (160–165 cm), S2 reach 470 mm (165–185 cm), S3 reach 490 mm (180–190 cm)
+  - label: Configuração
+    value: 29", 27,5" ou mullet
+  - label: Eixo traseiro
+    value: 12x148 mm Boost
+  - label: Gancheira
+    value: UDH, compatível com SRAM Transmission T-Type
+  - label: Movimento central
+    value: BSA 68/73
+  - label: Caixa de direção
+    value: ZS44 / ZS56
+  - label: Canote
+    value: 31,6 mm
+  - label: Cabeamento
+    value: Interno
+  - label: Pneu máximo
+    value: 2,6"
+  - label: Versões
+    value: Quadro ou bicicleta completa
+  body: |
+    A V3.1 leva o hardtail de enduro a outro nível. Somamos 2 mm de espessura nos tubos dianteiros e cordão duplo de solda na caixa de direção, uma das zonas mais exigidas do quadro.
+
+    Com 63° de direção desce rápido e com controle. É compatível com UDH e SRAM Transmission T-Type, e monta em 29", 27,5" ou mullet. Disponível como quadro ou bicicleta completa.
+de:
+  title: Enduro HT V3.1
+  slug: enduro-ht-v31
+  category: frames
+  order: 70
+  featured: true
+  builder: false
+  tagline: Enduro-Hardtail mit 63° Lenkwinkel.
+  summary: 29"-Enduro-Hardtail-Rahmen mit UDH, 2 mm stärkeren Fronttrohren und doppelter Schweißnaht am Steuerrohr.
+  images:
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-4.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-5.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-7.webp
+  - /uploads/products/enduro-ht-v31/bike-v3-preventa-1.webp
+  colors:
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - name: Blau
+    hex: '#1f5fc4'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - name: Weiß
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  specs:
+  - label: Einsatzbereich
+    value: Enduro
+  - label: Lenkwinkel
+    value: 63°
+  - label: Größen
+    value: S1 reach 440 mm (160–165 cm), S2 reach 470 mm (165–185 cm), S3 reach 490 mm (180–190 cm)
+  - label: Laufradkonfiguration
+    value: 29", 27,5" oder Mullet
+  - label: Hinterachse
+    value: 12x148 mm Boost
+  - label: Schaltauge
+    value: UDH, kompatibel mit SRAM Transmission T-Type
+  - label: Tretlager
+    value: BSA 68/73
+  - label: Steuersatz
+    value: ZS44 / ZS56
+  - label: Sattelstütze
+    value: 31,6 mm
+  - label: Zugführung
+    value: Intern
+  - label: Max. Reifenbreite
+    value: 2,6"
+  - label: Versionen
+    value: Rahmen oder Komplettrad
+  body: |
+    Die V3.1 bringt das Enduro-Hardtail weiter. 2 mm mehr Wandstärke an den Frontrohren und eine doppelte Schweißnaht am Steuerrohr, einer der am stärksten belasteten Stellen.
+
+    Mit 63° Lenkwinkel bleibt sie bergab schnell und kontrolliert. UDH- und SRAM-Transmission-T-Type-kompatibel, aufbaubar als 29", 27,5" oder Mullet. Als Rahmen oder Komplettrad erhältlich.
+fr:
+  title: Enduro HT V3.1
+  slug: enduro-ht-v31
+  category: frames
+  order: 70
+  featured: true
+  builder: false
+  tagline: Semi-rigide enduro à 63° de direction.
+  summary: Cadre semi-rigide enduro 29" avec UDH, tubes avant 2 mm plus épais et double cordon de soudure à la douille.
+  images:
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-4.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-5.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-7.webp
+  - /uploads/products/enduro-ht-v31/bike-v3-preventa-1.webp
+  colors:
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - name: Bleu
+    hex: '#1f5fc4'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - name: Blanc
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  specs:
+  - label: Pratique
+    value: Enduro
+  - label: Angle de direction
+    value: 63°
+  - label: Tailles
+    value: S1 reach 440 mm (160–165 cm), S2 reach 470 mm (165–185 cm), S3 reach 490 mm (180–190 cm)
+  - label: Configuration
+    value: 29", 27,5" ou mulet
+  - label: Axe arrière
+    value: 12x148 mm Boost
+  - label: Patte de dérailleur
+    value: UDH, compatible SRAM Transmission T-Type
+  - label: Boîtier de pédalier
+    value: BSA 68/73
+  - label: Jeu de direction
+    value: ZS44 / ZS56
+  - label: Tige de selle
+    value: 31,6 mm
+  - label: Passage des câbles
+    value: Interne
+  - label: Pneu maximum
+    value: 2,6"
+  - label: Versions
+    value: Cadre ou vélo complet
+  body: |
+    La V3.1 pousse le semi-rigide enduro plus loin. Nous avons ajouté 2 mm d'épaisseur aux tubes avant et un double cordon de soudure à la douille, l'une des zones les plus sollicitées du cadre.
+
+    Avec 63° de direction, elle reste rapide et maîtrisée en descente. Compatible UDH et SRAM Transmission T-Type, montage 29", 27,5" ou mulet. Disponible en cadre ou vélo complet.
+it:
+  title: Enduro HT V3.1
+  slug: enduro-ht-v31
+  category: frames
+  order: 70
+  featured: true
+  builder: false
+  tagline: Front enduro con 63° di sterzo.
+  summary: Telaio front enduro 29" con UDH, tubi anteriori più spessi di 2 mm e doppio cordone di saldatura al tubo sterzo.
+  images:
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-4.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-2.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-5.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+  - /uploads/products/enduro-ht-v31/enduro-ht-v3-black-7.webp
+  - /uploads/products/enduro-ht-v31/bike-v3-preventa-1.webp
+  colors:
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-1.webp
+  - name: Blu
+    hex: '#1f5fc4'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-blue-udh-1.webp
+  - name: Bianco
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-1.webp
+  specs:
+  - label: Utilizzo
+    value: Enduro
+  - label: Angolo sterzo
+    value: 63°
+  - label: Taglie
+    value: S1 reach 440 mm (160–165 cm), S2 reach 470 mm (165–185 cm), S3 reach 490 mm (180–190 cm)
+  - label: Configurazione
+    value: 29", 27,5" o mullet
+  - label: Asse posteriore
+    value: 12x148 mm Boost
+  - label: Forcellino
+    value: UDH, compatibile SRAM Transmission T-Type
+  - label: Movimento centrale
+    value: BSA 68/73
+  - label: Serie sterzo
+    value: ZS44 / ZS56
+  - label: Reggisella
+    value: 31,6 mm
+  - label: Passaggio cavi
+    value: Interno
+  - label: Copertone max
+    value: 2,6"
+  - label: Versioni
+    value: Telaio o bici completa
+  body: |
+    La V3.1 porta la front enduro a un altro livello. Abbiamo aggiunto 2 mm di spessore ai tubi anteriori e un doppio cordone di saldatura al tubo sterzo, una delle zone più sollecitate del telaio.
+
+    Con 63° di sterzo resta veloce e controllata in discesa. Compatibile UDH e SRAM Transmission T-Type, montabile 29", 27,5" o mullet. Disponibile come telaio o bici completa.

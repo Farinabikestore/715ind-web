@@ -1,0 +1,84 @@
+es:
+  title: Distribuidores y dealers
+  intro: ¿Tienes una tienda o distribuyes componentes MTB? Cuéntanos sobre tu negocio y te respondemos con catálogo, precios y condiciones.
+  distributor_heading: Distribuidores internacionales
+  distributor_points:
+  - Catálogo completo y precios de distribución
+  - Fotos de producto y material gráfico
+  - Soporte técnico y repuestos
+  dealer_heading: Tiendas y talleres en Chile
+  dealer_points:
+  - Precios mayoristas
+  - Despacho a todo Chile
+  - Ruedas armadas a pedido
+  response_note: Respondemos en 2 días hábiles.
+en:
+  title: Distributors and dealers
+  intro: Do you run a shop or distribute MTB components? Tell us about your business and we will reply with our catalogue, pricing and terms.
+  distributor_heading: International distributors
+  distributor_points:
+  - Full catalogue and distributor pricing
+  - Product photos and marketing assets
+  - Technical support and spare parts
+  dealer_heading: Shops and workshops in Chile
+  dealer_points:
+  - Wholesale pricing
+  - Shipping across Chile
+  - Wheels built to order
+  response_note: We reply within 2 business days.
+pt:
+  title: Distribuidores e lojistas
+  intro: Tem uma loja ou distribui componentes de MTB? Conte sobre o seu negócio e respondemos com catálogo, preços e condições.
+  distributor_heading: Distribuidores internacionais
+  distributor_points:
+  - Catálogo completo e preços de distribuição
+  - Fotos de produto e material gráfico
+  - Suporte técnico e peças de reposição
+  dealer_heading: Lojas e oficinas no Chile
+  dealer_points:
+  - Preços de atacado
+  - Envio para todo o Chile
+  - Rodas montadas sob encomenda
+  response_note: Respondemos em até 2 dias úteis.
+de:
+  title: Distributoren und Händler
+  intro: Du hast einen Shop oder vertreibst MTB-Komponenten? Erzähl uns von deinem Geschäft, wir antworten mit Katalog, Preisen und Konditionen.
+  distributor_heading: Internationale Distributoren
+  distributor_points:
+  - Kompletter Katalog und Distributorenpreise
+  - Produktfotos und Marketingmaterial
+  - Technischer Support und Ersatzteile
+  dealer_heading: Shops und Werkstätten in Chile
+  dealer_points:
+  - Großhandelspreise
+  - Versand in ganz Chile
+  - Laufräder auf Bestellung
+  response_note: Wir antworten innerhalb von 2 Werktagen.
+fr:
+  title: Distributeurs et revendeurs
+  intro: Vous avez une boutique ou distribuez des composants VTT ? Parlez-nous de votre activité et nous vous répondrons avec catalogue, tarifs et conditions.
+  distributor_heading: Distributeurs internationaux
+  distributor_points:
+  - Catalogue complet et tarifs distributeur
+  - Photos produit et supports marketing
+  - Support technique et pièces détachées
+  dealer_heading: Boutiques et ateliers au Chili
+  dealer_points:
+  - Tarifs de gros
+  - Livraison dans tout le Chili
+  - Roues montées sur commande
+  response_note: Nous répondons sous 2 jours ouvrés.
+it:
+  title: Distributori e rivenditori
+  intro: Hai un negozio o distribuisci componenti MTB? Raccontaci della tua attività e ti rispondiamo con catalogo, prezzi e condizioni.
+  distributor_heading: Distributori internazionali
+  distributor_points:
+  - Catalogo completo e prezzi per distributori
+  - Foto prodotto e materiale grafico
+  - Supporto tecnico e ricambi
+  dealer_heading: Negozi e officine in Cile
+  dealer_points:
+  - Prezzi all'ingrosso
+  - Spedizione in tutto il Cile
+  - Ruote montate su ordinazione
+  response_note: Rispondiamo entro 2 giorni lavorativi.

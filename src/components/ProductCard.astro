@@ -1,0 +1,24 @@
+---
+import Img from './Img.astro';
+import { t } from '../i18n/ui.js';
+const { product: p, lang, showCategory = false, eager = false } = Astro.props;
+const [first, second] = p.images;
+---
+<a class="card" href={`/${lang}/products/${p.slug}/`}>
+  <div class="card__media">
+    <Img src={first} alt={p.title} sizes="(max-width: 600px) 92vw, (max-width: 1100px) 45vw, 330px" eager={eager} />
+    {second && <Img src={second} alt="" sizes="(max-width: 600px) 92vw, (max-width: 1100px) 45vw, 330px" />}
+  </div>
+  <div>
+    <div class="card__meta">
+      <span class="card__title">{p.title}</span>
+      {p.colors.length > 1 && (
+        <span class="swatches" aria-label={`${t(lang, 'product.colors')}: ${p.colors.map((c) => c.name).join(', ')}`}>
+          {p.colors.slice(0, 5).map((c) => <span class="swatch-dot" style={`background:${c.hex || '#999'}`}></span>)}
+        </span>
+      )}
+    </div>
+    {showCategory && <div class="card__cat">{t(lang, `cat.${p.category}`)}</div>}
+    {p.tagline && <div class="card__tag">{p.tagline}</div>}
+  </div>
+</a>

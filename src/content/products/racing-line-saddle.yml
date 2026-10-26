@@ -1,0 +1,228 @@
+es:
+  title: Sillín Racing Line
+  slug: racing-line-saddle
+  category: saddles
+  order: 110
+  featured: true
+  builder: false
+  tagline: Perfil clásico, largo moderno.
+  summary: Sillín 2026 con cola levemente elevada, largo más corto, base brillante y rieles de acero.
+  images:
+  - /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - /uploads/products/racing-line-saddle/racing-orange-3.webp
+  - /uploads/products/racing-line-saddle/racing-orange-4.webp
+  - /uploads/products/racing-line-saddle/racing-black-1.webp
+  - /uploads/products/racing-line-saddle/racing-black-2.webp
+  - /uploads/products/racing-line-saddle/racing-white-1.webp
+  - /uploads/products/racing-line-saddle/racing-white-4.webp
+  colors:
+  - name: Naranja
+    hex: '#f26b1d'
+    image: /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/racing-line-saddle/racing-black-1.webp
+  - name: Blanco
+    hex: '#f2f2ef'
+    image: /uploads/products/racing-line-saddle/racing-white-1.webp
+  specs:
+  - label: Rieles
+    value: Acero
+  - label: Acabado
+    value: Base brillante
+  - label: Forma
+    value: Cola levemente elevada
+  body: |
+    Tomamos un perfil de confort probado y lo adaptamos al MTB actual. Mantiene la leve elevación trasera que da un punto de apoyo extra al pedalear, ahora más corto y con líneas más limpias para las geometrías modernas.
+
+    La edición Racing Line tiene base brillante, rieles de acero y gráfica serigrafiada en negro, blanco o naranja.
+en:
+  title: Racing Line saddle
+  slug: racing-line-saddle
+  category: saddles
+  order: 110
+  featured: true
+  builder: false
+  tagline: Classic profile, modern length.
+  summary: 2026 saddle with a slightly raised tail, shorter length, gloss base and steel rails.
+  images:
+  - /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - /uploads/products/racing-line-saddle/racing-orange-3.webp
+  - /uploads/products/racing-line-saddle/racing-orange-4.webp
+  - /uploads/products/racing-line-saddle/racing-black-1.webp
+  - /uploads/products/racing-line-saddle/racing-black-2.webp
+  - /uploads/products/racing-line-saddle/racing-white-1.webp
+  - /uploads/products/racing-line-saddle/racing-white-4.webp
+  colors:
+  - name: Orange
+    hex: '#f26b1d'
+    image: /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/racing-line-saddle/racing-black-1.webp
+  - name: White
+    hex: '#f2f2ef'
+    image: /uploads/products/racing-line-saddle/racing-white-1.webp
+  specs:
+  - label: Rails
+    value: Steel
+  - label: Finish
+    value: Gloss base
+  - label: Shape
+    value: Slightly raised tail
+  body: |
+    We took a proven comfort profile and adapted it to modern mountain biking. It keeps the slight raised tail that gives you extra support when pedalling, now shorter and cleaner for current geometries.
+
+    The Racing Line edition has a gloss base, steel rails and screen-printed graphics in black, white or orange.
+pt:
+  title: Selim Racing Line
+  slug: racing-line-saddle
+  category: saddles
+  order: 110
+  featured: true
+  builder: false
+  tagline: Perfil clássico, comprimento moderno.
+  summary: Selim 2026 com traseira levemente elevada, comprimento menor, base brilhante e trilhos de aço.
+  images:
+  - /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - /uploads/products/racing-line-saddle/racing-orange-3.webp
+  - /uploads/products/racing-line-saddle/racing-orange-4.webp
+  - /uploads/products/racing-line-saddle/racing-black-1.webp
+  - /uploads/products/racing-line-saddle/racing-black-2.webp
+  - /uploads/products/racing-line-saddle/racing-white-1.webp
+  - /uploads/products/racing-line-saddle/racing-white-4.webp
+  colors:
+  - name: Laranja
+    hex: '#f26b1d'
+    image: /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/racing-line-saddle/racing-black-1.webp
+  - name: Branco
+    hex: '#f2f2ef'
+    image: /uploads/products/racing-line-saddle/racing-white-1.webp
+  specs:
+  - label: Trilhos
+    value: Aço
+  - label: Acabamento
+    value: Base brilhante
+  - label: Formato
+    value: Traseira levemente elevada
+  body: |
+    Pegamos um perfil de conforto comprovado e adaptamos ao MTB atual. Mantém a leve elevação traseira que dá apoio extra ao pedalar, agora mais curto e com linhas mais limpas para as geometrias modernas.
+
+    A edição Racing Line tem base brilhante, trilhos de aço e grafismo serigrafado em preto, branco ou laranja.
+de:
+  title: Racing Line Sattel
+  slug: racing-line-saddle
+  category: saddles
+  order: 110
+  featured: true
+  builder: false
+  tagline: Klassisches Profil, moderne Länge.
+  summary: Sattel 2026 mit leicht erhöhtem Heck, kürzerer Länge, glänzender Schale und Stahlstreben.
+  images:
+  - /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - /uploads/products/racing-line-saddle/racing-orange-3.webp
+  - /uploads/products/racing-line-saddle/racing-orange-4.webp
+  - /uploads/products/racing-line-saddle/racing-black-1.webp
+  - /uploads/products/racing-line-saddle/racing-black-2.webp
+  - /uploads/products/racing-line-saddle/racing-white-1.webp
+  - /uploads/products/racing-line-saddle/racing-white-4.webp
+  colors:
+  - name: Orange
+    hex: '#f26b1d'
+    image: /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/racing-line-saddle/racing-black-1.webp
+  - name: Weiß
+    hex: '#f2f2ef'
+    image: /uploads/products/racing-line-saddle/racing-white-1.webp
+  specs:
+  - label: Streben
+    value: Stahl
+  - label: Oberfläche
+    value: Glänzende Schale
+  - label: Form
+    value: Leicht erhöhtes Heck
+  body: |
+    Wir haben ein bewährtes Komfortprofil an das moderne MTB angepasst. Das leicht erhöhte Heck gibt beim Treten zusätzlichen Halt, jetzt kürzer und mit klareren Linien für aktuelle Geometrien.
+
+    Die Racing-Line-Edition hat eine glänzende Schale, Stahlstreben und Siebdruckgrafik in Schwarz, Weiß oder Orange.
+fr:
+  title: Selle Racing Line
+  slug: racing-line-saddle
+  category: saddles
+  order: 110
+  featured: true
+  builder: false
+  tagline: Profil classique, longueur moderne.
+  summary: Selle 2026 à arrière légèrement relevé, longueur réduite, coque brillante et rails acier.
+  images:
+  - /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - /uploads/products/racing-line-saddle/racing-orange-3.webp
+  - /uploads/products/racing-line-saddle/racing-orange-4.webp
+  - /uploads/products/racing-line-saddle/racing-black-1.webp
+  - /uploads/products/racing-line-saddle/racing-black-2.webp
+  - /uploads/products/racing-line-saddle/racing-white-1.webp
+  - /uploads/products/racing-line-saddle/racing-white-4.webp
+  colors:
+  - name: Orange
+    hex: '#f26b1d'
+    image: /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/racing-line-saddle/racing-black-1.webp
+  - name: Blanc
+    hex: '#f2f2ef'
+    image: /uploads/products/racing-line-saddle/racing-white-1.webp
+  specs:
+  - label: Rails
+    value: Acier
+  - label: Finition
+    value: Coque brillante
+  - label: Forme
+    value: Arrière légèrement relevé
+  body: |
+    Nous avons repris un profil de confort éprouvé et l'avons adapté au VTT actuel. Il garde l'arrière légèrement relevé qui offre un appui supplémentaire au pédalage, désormais plus court et aux lignes plus nettes pour les géométries modernes.
+
+    L'édition Racing Line a une coque brillante, des rails en acier et un graphisme sérigraphié noir, blanc ou orange.
+it:
+  title: Sella Racing Line
+  slug: racing-line-saddle
+  category: saddles
+  order: 110
+  featured: true
+  builder: false
+  tagline: Profilo classico, lunghezza moderna.
+  summary: Sella 2026 con coda leggermente rialzata, lunghezza ridotta, scocca lucida e telaio in acciaio.
+  images:
+  - /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - /uploads/products/racing-line-saddle/racing-orange-3.webp
+  - /uploads/products/racing-line-saddle/racing-orange-4.webp
+  - /uploads/products/racing-line-saddle/racing-black-1.webp
+  - /uploads/products/racing-line-saddle/racing-black-2.webp
+  - /uploads/products/racing-line-saddle/racing-white-1.webp
+  - /uploads/products/racing-line-saddle/racing-white-4.webp
+  colors:
+  - name: Arancione
+    hex: '#f26b1d'
+    image: /uploads/products/racing-line-saddle/racing-orange-1.webp
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/racing-line-saddle/racing-black-1.webp
+  - name: Bianco
+    hex: '#f2f2ef'
+    image: /uploads/products/racing-line-saddle/racing-white-1.webp
+  specs:
+  - label: Telaio
+    value: Acciaio
+  - label: Finitura
+    value: Scocca lucida
+  - label: Forma
+    value: Coda leggermente rialzata
+  body: |
+    Abbiamo preso un profilo di comfort collaudato e l'abbiamo adattato alla MTB di oggi. Mantiene la coda leggermente rialzata che dà un appoggio extra in pedalata, ora più corta e con linee più pulite per le geometrie moderne.
+
+    L'edizione Racing Line ha scocca lucida, telaio in acciaio e grafica serigrafata nero, bianco o arancione.

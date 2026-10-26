@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { LOCALES, LANG_NAMES, t } from '../i18n/ui.js';
+const lang = 'en';
+---
+<Base lang={lang} title={t(lang, 'notfound.title')} path="/" noindex>
+  <section class="wrap simple">
+    <h1>{t('es', 'notfound.title')} / {t('en', 'notfound.title')}</h1>
+    <p class="lead">{t('es', 'notfound.text')}</p>
+    <p class="lead">{t('en', 'notfound.text')}</p>
+    <ul class="lang-pick">
+      {LOCALES.map((l) => <li><a href={`/${l}/`} hreflang={l} lang={l}>{LANG_NAMES[l]} <span>{l.toUpperCase()}</span></a></li>)}
+    </ul>
+  </section>
+</Base>

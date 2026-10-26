@@ -1,0 +1,38 @@
+---
+// Página raíz. En Cloudflare, functions/index.js redirige antes según el idioma del navegador.
+// Esta página queda como respaldo (sin JavaScript también funciona).
+import '../styles/global.css';
+import { LOCALES, LANG_NAMES, DEFAULT_LOCALE, t } from '../i18n/ui.js';
+import { getSettings, typeAttrs } from '../lib/content.js';
+const settings = getSettings(DEFAULT_LOCALE);
+const abs = (p) => new URL(p, Astro.site).href;
+const { type, kase, style } = typeAttrs(settings);
+---
+<!doctype html>
+<html lang="es" data-type={type} data-case={kase} style={style}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{settings.brand_name}</title>
+  <meta name="description" content={settings.seo_description} />
+  <link rel="canonical" href={abs(`/${DEFAULT_LOCALE}/`)} />
+  {LOCALES.map((l) => <link rel="alternate" hreflang={l} href={abs(`/${l}/`)} />)}
+  <link rel="alternate" hreflang="x-default" href={abs('/en/')} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <main class="wrap simple">
+    <p class="wordmark root-mark">{settings.brand_name}</p>
+    <h1>{LOCALES.map((l) => t(l, 'root.choose')).slice(0, 2).join(' / ')}</h1>
+    <ul class="lang-pick">
+      {LOCALES.map((l) => <li><a href={`/${l}/`} hreflang={l} lang={l}>{LANG_NAMES[l]} <span>{l.toUpperCase()}</span></a></li>)}
+    </ul>
+  </main>
+  <script>
+    const supported = ['es', 'en', 'pt', 'de', 'fr', 'it'];
+    const prefs = (navigator.languages || [navigator.language || 'en']).map((x) => x.slice(0, 2).toLowerCase());
+    const pick = prefs.find((p) => supported.includes(p)) || 'en';
+    location.replace(`/${pick}/`);
+  </script>
+</body>
+</html>

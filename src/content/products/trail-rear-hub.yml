@@ -1,0 +1,270 @@
+es:
+  title: Maza trasera Trail
+  slug: trail-rear-hub
+  category: hubs
+  order: 20
+  featured: false
+  builder: true
+  tagline: Resistente, simple y con sonido propio.
+  summary: Maza de 4 trinquetes y 36 puntos de enganche en aluminio 7075-T6, pensada para durar.
+  images:
+  - /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - /uploads/products/trail-rear-hub/trail-blk-2.webp
+  - /uploads/products/trail-rear-hub/trail-blk-3.webp
+  - /uploads/products/trail-rear-hub/trail-blk-4.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-2.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-3.webp
+  colors:
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - name: Plata
+    hex: '#c6c9c8'
+    image: /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  specs:
+  - label: Trinquetes
+    value: '4'
+  - label: Puntos de enganche
+    value: '36'
+  - label: Material
+    value: Al 7075-T6
+  - label: Rodamientos
+    value: Sellados de acero inoxidable
+  - label: Eje
+    value: 12x148 mm Boost
+  - label: Hoyos
+    value: 28 / 32
+  - label: Núcleo
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Anclaje de disco
+    value: 6 pernos
+  body: |
+    La Trail es la maza para quien quiere confiabilidad sin pagar de más. Su sistema de 36 puntos de enganche responde rápido y transfiere la fuerza sin pérdidas.
+
+    Cuerpo en aluminio 7075-T6 y rodamientos sellados de acero inoxidable. Su zumbido es parte de la identidad de la marca.
+en:
+  title: Trail rear hub
+  slug: trail-rear-hub
+  category: hubs
+  order: 20
+  featured: false
+  builder: true
+  tagline: Tough, simple and loud in the right way.
+  summary: 4-pawl, 36-point hub in 7075-T6 aluminium, built to last.
+  images:
+  - /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - /uploads/products/trail-rear-hub/trail-blk-2.webp
+  - /uploads/products/trail-rear-hub/trail-blk-3.webp
+  - /uploads/products/trail-rear-hub/trail-blk-4.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-2.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-3.webp
+  colors:
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - name: Silver
+    hex: '#c6c9c8'
+    image: /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  specs:
+  - label: Pawls
+    value: '4'
+  - label: Engagement points
+    value: '36'
+  - label: Material
+    value: Al 7075-T6
+  - label: Bearings
+    value: Sealed stainless steel
+  - label: Axle
+    value: 12x148 mm Boost
+  - label: Spoke holes
+    value: 28 / 32
+  - label: Freehub
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Rotor mount
+    value: 6-bolt
+  body: |
+    The Trail is the hub for riders who want reliability without overspending. Its 36-point engagement responds quickly and transfers power cleanly.
+
+    7075-T6 aluminium shell and sealed stainless steel bearings. Its buzz has become part of the brand.
+pt:
+  title: Cubo traseiro Trail
+  slug: trail-rear-hub
+  category: hubs
+  order: 20
+  featured: false
+  builder: true
+  tagline: Resistente, simples e com som próprio.
+  summary: Cubo de 4 linguetas e 36 pontos de engate em alumínio 7075-T6, feito para durar.
+  images:
+  - /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - /uploads/products/trail-rear-hub/trail-blk-2.webp
+  - /uploads/products/trail-rear-hub/trail-blk-3.webp
+  - /uploads/products/trail-rear-hub/trail-blk-4.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-2.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-3.webp
+  colors:
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - name: Prata
+    hex: '#c6c9c8'
+    image: /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  specs:
+  - label: Linguetas
+    value: '4'
+  - label: Pontos de engate
+    value: '36'
+  - label: Material
+    value: Al 7075-T6
+  - label: Rolamentos
+    value: Selados de aço inoxidável
+  - label: Eixo
+    value: 12x148 mm Boost
+  - label: Furos
+    value: 28 / 32
+  - label: Cubo livre
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Fixação do disco
+    value: 6 parafusos
+  body: |
+    O Trail é o cubo para quem quer confiabilidade sem gastar demais. O sistema de 36 pontos de engate responde rápido e transmite a força sem perdas.
+
+    Corpo em alumínio 7075-T6 e rolamentos selados de aço inoxidável. O seu zumbido virou parte da identidade da marca.
+de:
+  title: Trail Hinterradnabe
+  slug: trail-rear-hub
+  category: hubs
+  order: 20
+  featured: false
+  builder: true
+  tagline: Robust, simpel und mit eigenem Sound.
+  summary: Nabe mit 4 Sperrklinken und 36 Eingriffspunkten aus 7075-T6-Aluminium, gebaut für lange Haltbarkeit.
+  images:
+  - /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - /uploads/products/trail-rear-hub/trail-blk-2.webp
+  - /uploads/products/trail-rear-hub/trail-blk-3.webp
+  - /uploads/products/trail-rear-hub/trail-blk-4.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-2.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-3.webp
+  colors:
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - name: Silber
+    hex: '#c6c9c8'
+    image: /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  specs:
+  - label: Sperrklinken
+    value: '4'
+  - label: Eingriffspunkte
+    value: '36'
+  - label: Material
+    value: Al 7075-T6
+  - label: Lager
+    value: Gedichtet, Edelstahl
+  - label: Achse
+    value: 12x148 mm Boost
+  - label: Speichenlöcher
+    value: 28 / 32
+  - label: Freilauf
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Bremsscheibenaufnahme
+    value: 6-Loch
+  body: |
+    Die Trail ist die Nabe für alle, die Zuverlässigkeit ohne Aufpreis wollen. Das System mit 36 Eingriffspunkten spricht schnell an und überträgt die Kraft verlustfrei.
+
+    Gehäuse aus 7075-T6-Aluminium und gedichtete Edelstahllager. Ihr Sound ist Teil der Marke geworden.
+fr:
+  title: Moyeu arrière Trail
+  slug: trail-rear-hub
+  category: hubs
+  order: 20
+  featured: false
+  builder: true
+  tagline: Robuste, simple et avec un son bien à lui.
+  summary: Moyeu 4 cliquets et 36 points d'engagement en aluminium 7075-T6, conçu pour durer.
+  images:
+  - /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - /uploads/products/trail-rear-hub/trail-blk-2.webp
+  - /uploads/products/trail-rear-hub/trail-blk-3.webp
+  - /uploads/products/trail-rear-hub/trail-blk-4.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-2.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-3.webp
+  colors:
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - name: Argent
+    hex: '#c6c9c8'
+    image: /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  specs:
+  - label: Cliquets
+    value: '4'
+  - label: Points d'engagement
+    value: '36'
+  - label: Matériau
+    value: Al 7075-T6
+  - label: Roulements
+    value: Étanches en acier inoxydable
+  - label: Axe
+    value: 12x148 mm Boost
+  - label: Trous
+    value: 28 / 32
+  - label: Corps de roue libre
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Fixation du disque
+    value: 6 trous
+  body: |
+    Le Trail est le moyeu pour ceux qui veulent de la fiabilité sans surpayer. Son système à 36 points d'engagement réagit vite et transmet la puissance sans perte.
+
+    Corps en aluminium 7075-T6 et roulements étanches en acier inoxydable. Son bourdonnement fait partie de l'identité de la marque.
+it:
+  title: Mozzo posteriore Trail
+  slug: trail-rear-hub
+  category: hubs
+  order: 20
+  featured: false
+  builder: true
+  tagline: Robusto, semplice e con un suono tutto suo.
+  summary: Mozzo a 4 cricchetti e 36 punti di innesto in alluminio 7075-T6, fatto per durare.
+  images:
+  - /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - /uploads/products/trail-rear-hub/trail-blk-2.webp
+  - /uploads/products/trail-rear-hub/trail-blk-3.webp
+  - /uploads/products/trail-rear-hub/trail-blk-4.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-2.webp
+  - /uploads/products/trail-rear-hub/trail-silver-12x148-32h-3.webp
+  colors:
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/trail-rear-hub/trail-blk-1.webp
+  - name: Argento
+    hex: '#c6c9c8'
+    image: /uploads/products/trail-rear-hub/trail-silver-12x148-32h-1.webp
+  specs:
+  - label: Cricchetti
+    value: '4'
+  - label: Punti di innesto
+    value: '36'
+  - label: Materiale
+    value: Al 7075-T6
+  - label: Cuscinetti
+    value: Sigillati in acciaio inox
+  - label: Asse
+    value: 12x148 mm Boost
+  - label: Fori
+    value: 28 / 32
+  - label: Corpetto
+    value: Shimano HG, Shimano Micro Spline, SRAM XD
+  - label: Attacco disco
+    value: 6 fori
+  body: |
+    Il Trail è il mozzo per chi vuole affidabilità senza spendere troppo. Il sistema a 36 punti di innesto risponde rapido e trasmette la forza senza dispersioni.
+
+    Corpo in alluminio 7075-T6 e cuscinetti sigillati in acciaio inox. Il suo ronzio è ormai parte del marchio.

@@ -1,0 +1,187 @@
+---
+// Dibuja la lista de bloques que se arma (y reordena arrastrando) en el panel.
+import Img from './Img.astro';
+import ProductCard from './ProductCard.astro';
+import { t } from '../i18n/ui.js';
+import { getProducts, CATEGORIES, md, link } from '../lib/content.js';
+
+const { blocks = [], lang, short = false } = Astro.props;
+const products = getProducts(lang);
+const themeClass = (th) => (th === 'dark' ? 'theme-dark' : th === 'sage' ? 'theme-sage' : 'theme-light');
+const ytId = (v) => {
+  if (!v) return '';
+  const m = String(v).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);
+  return m ? m[1] : /^[\w-]{11}$/.test(v) ? v : '';
+};
+const catImage = (c) => {
+  const p = products.find((x) => x.category === c && x.images.length);
+  return p ? p.images[0] : '';
+};
+const catCount = (c) => products.filter((x) => x.category === c).length;
+const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>';
+---
+{blocks.filter(Boolean).map((b, i) => {
+  const first = i === 0;
+  switch (b.type) {
+    case 'hero':
+      return (
+        <section class:list={['hero', { 'hero--short': short || b.size === 'short' }]}>
+          {b.image && (
+            <div class="hero__media">
+              <Img src={b.image} alt="" sizes="100vw" eager={first} />
+            </div>
+          )}
+          <div class="wrap hero__body">
+            {first ? <h1>{b.heading}</h1> : <h2 class="h1">{b.heading}</h2>}
+            {b.text && <p>{b.text}</p>}
+            {(b.cta_label || b.cta2_label) && (
+              <div class="btn-row">
+                {b.cta_label && b.cta_link && <a class="btn btn--primary" href={link(b.cta_link, lang)}>{b.cta_label}</a>}
+                {b.cta2_label && b.cta2_link && <a class="btn btn--ghost" href={link(b.cta2_link, lang)}>{b.cta2_label}</a>}
+              </div>
+            )}
+          </div>
+        </section>
+      );
+
+    case 'categories':
+      return (
+        <section class="block">
+          <div class="wrap">
+            {b.heading && <div class="block__head"><h2>{b.heading}</h2></div>}
+            <div class="cat-grid">
+              {CATEGORIES.filter((c) => catCount(c) > 0).map((c) => (
+                <a class="cat-tile" href={`/${lang}/products/#${c}`}>
+                  <span class="cat-tile__media"><Img src={catImage(c)} alt="" sizes="(max-width: 700px) 42vw, 200px" /></span>
+                  <span class="cat-tile__label">{t(lang, `cat.${c}`)} <span>{catCount(c)}</span></span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+
+    case 'feature':
+      return (
+        <section class:list={['block', themeClass(b.theme)]}>
+          <div class:list={['wrap', 'feature', { 'feature--img-right': b.image_side === 'right' }]}>
+            <div class="feature__media">
+              <Img src={b.image} alt="" sizes="(max-width: 820px) 92vw, 50vw" />
+            </div>
+            <div class="feature__text">
+              <h2>{b.heading}</h2>
+              <div class="prose" set:html={md(b.text)} />
+              {b.cta_label && b.cta_link && (
+                <a class:list={['btn', b.theme === 'dark' ? 'btn--primary' : 'btn--dark']} href={link(b.cta_link, lang)}>{b.cta_label}</a>
+              )}
+            </div>
+          </div>
+        </section>
+      );
+
+    case 'products': {
+      let list = b.mode === 'category' && b.category ? products.filter((p) => p.category === b.category) : products.filter((p) => p.featured);
+      if (!list.length) list = products;
+      list = list.slice(0, Number(b.limit) || 8);
+      return (
+        <section class="block">
+          <div class="wrap">
+            <div class="block__head">
+              <h2>{b.heading}</h2>
+              {b.text && <p>{b.text}</p>}
+              <a class="btn btn--ghost" href={`/${lang}/products/`}>{t(lang, 'products.seeAll')}</a>
+            </div>
+            <div class="product-grid">
+              {list.map((p) => <ProductCard product={p} lang={lang} showCategory />)}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    case 'builder_cta':
+      return (
+        <section class="block theme-dark">
+          <div class="wrap band">
+            <div>
+              <h2>{b.heading}</h2>
+              {b.text && <p class="lead">{b.text}</p>}
+              <a class="btn btn--primary" href={link(b.cta_link || '/wheel-builder/', lang)}>{b.cta_label || t(lang, 'nav.builder')}</a>
+            </div>
+            <div class="band__media">
+              <Img src={b.image} alt="" sizes="(max-width: 820px) 92vw, 45vw" />
+            </div>
+          </div>
+        </section>
+      );
+
+    case 'dealer_cta':
+      return (
+        <section class="block dealer">
+          <div class="wrap">
+            <h2>{b.heading}</h2>
+            <div>
+              {b.text && <p>{b.text}</p>}
+              <a class="btn btn--dark" href={link(b.cta_link || '/contact/', lang)}>{b.cta_label || t(lang, 'nav.contact')}</a>
+            </div>
+          </div>
+        </section>
+      );
+
+    case 'gallery':
+      return (
+        <section class="block">
+          <div class="wrap">
+            {b.heading && <div class="block__head"><h2>{b.heading}</h2></div>}
+            <div class="gallery-grid">
+              {(b.images || []).map((src) => <Img src={src} alt="" sizes="(max-width: 700px) 92vw, 33vw" />)}
+            </div>
+          </div>
+        </section>
+      );
+
+    case 'video': {
+      const id = ytId(b.youtube);
+      if (!id) return null;
+      return (
+        <section class="block">
+          <div class="wrap">
+            {b.heading && <div class="block__head"><h2>{b.heading}</h2></div>}
+            <button class="video-facade" type="button" data-yt={id} aria-label={b.heading || 'Video'}>
+              {b.poster ? <Img src={b.poster} alt="" sizes="100vw" /> : <img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt="" loading="lazy" />}
+              <span class="video-facade__play" set:html={playIcon} />
+            </button>
+          </div>
+        </section>
+      );
+    }
+
+    case 'text':
+      return (
+        <section class:list={['block', themeClass(b.theme)]}>
+          <div class="wrap">
+            {b.heading && <h2 class="block-title">{b.heading}</h2>}
+            <div class="prose" set:html={md(b.body)} />
+          </div>
+        </section>
+      );
+
+    default:
+      return null;
+  }
+})}
+
+<script>
+  // Los videos de YouTube se cargan solo al hacer clic (la página queda más liviana).
+  document.querySelectorAll<HTMLButtonElement>('.video-facade[data-yt]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.className = 'video-frame';
+      f.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.yt}?autoplay=1&rel=0`;
+      f.title = btn.getAttribute('aria-label') || 'Video';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.setAttribute('allowfullscreen', '');
+      btn.replaceWith(f);
+    });
+  });
+</script>

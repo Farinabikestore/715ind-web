@@ -1,0 +1,370 @@
+# Configuración del panel de edición (Sveltia CMS) del sitio 715IND.
+# Lo único que debes cambiar antes de publicar es "repo" (tu usuario de GitHub / nombre del repositorio)
+# y "site_url" (tu dominio).
+
+backend:
+  name: github
+  repo: Farinabikestore/715ind-web
+  branch: main
+  commit_messages:
+    create: 'Crear {{collection}} "{{slug}}"'
+    update: 'Actualizar {{collection}} "{{slug}}"'
+    delete: 'Eliminar {{collection}} "{{slug}}"'
+    uploadMedia: 'Subir "{{path}}"'
+    deleteMedia: 'Eliminar "{{path}}"'
+  # Opcional: botón "Ingresar con GitHub" sin token (ver guía, sección "Ingreso con botón").
+  # base_url: https://sveltia-cms-auth.TU_SUBDOMINIO.workers.dev
+
+site_url: https://715ind.pages.dev
+logo:
+  src: /favicon.svg
+
+media_folder: /public/uploads
+public_folder: /uploads
+
+# Toda foto que subas se convierte a WebP y se limita a 1600 px: el sitio carga rápido aunque subas fotos pesadas.
+media_libraries:
+  default:
+    config:
+      max_file_size: 20000000
+      transformations:
+        raster_image:
+          format: webp
+          quality: 82
+          width: 1600
+          height: 1600
+
+i18n:
+  structure: single_file
+  locales: [es, en, pt, de, fr, it]
+  default_locale: es
+  initial_locales: all
+
+# ---------------------------------------------------------------------------
+# Bloques de página (se agregan, quitan y reordenan arrastrando)
+# ---------------------------------------------------------------------------
+collections:
+  # -------------------------------------------------------------------------
+  - name: products
+    label: Productos
+    label_singular: Producto
+    description: Productos que se muestran en el sitio. No hay precios ni carro de compra.
+    folder: src/content/products
+    extension: yml
+    format: yaml
+    create: true
+    delete: true
+    i18n: true
+    identifier_field: title
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [order, title, category]
+    view_groups:
+      - { label: Categoría, field: category }
+    media_folder: /public/uploads/products
+    public_folder: /uploads/products
+    fields:
+      - { label: Nombre, name: title, widget: string, i18n: true }
+      - label: Dirección web (URL)
+        name: slug
+        widget: string
+        i18n: duplicate
+        hint: 'Solo minúsculas, números y guiones, ej: ultra-rear-hub. No la cambies después de publicar.'
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Usa solo minúsculas, números y guiones']
+      - label: Categoría
+        name: category
+        widget: select
+        i18n: duplicate
+        options: [{ label: Mazas, value: hubs }, { label: Llantas, value: rims }, { label: Ruedas, value: wheels }, { label: Cuadros y bicicletas, value: frames }, { label: Cockpit, value: cockpit }, { label: Sillines, value: saddles }, { label: Ropa, value: apparel }]
+      - { label: Orden, name: order, widget: number, value_type: int, default: 100, i18n: duplicate, hint: 'Número menor aparece primero.' }
+      - { label: Destacado en portada, name: featured, widget: boolean, default: false, i18n: duplicate }
+      - { label: Mostrar botón "Usar en el armador", name: builder, widget: boolean, default: false, i18n: duplicate }
+      - { label: Ocultar del sitio, name: hidden, widget: boolean, default: false, required: false, i18n: duplicate }
+      - { label: Frase corta, name: tagline, widget: string, required: false, i18n: true }
+      - { label: Resumen (tarjetas y Google), name: summary, widget: text, required: false, i18n: true }
+      - label: Fotos
+        name: images
+        widget: list
+        i18n: duplicate
+        hint: 'Arrastra para ordenar. La primera es la foto principal.'
+        field: { label: Foto, name: image, widget: image }
+      - label: Colores
+        name: colors
+        widget: list
+        required: false
+        i18n: duplicate
+        summary: '{{fields.name}}'
+        fields:
+          - { label: Nombre del color, name: name, widget: string, i18n: true }
+          - { label: Tono, name: hex, widget: color, required: false, i18n: duplicate }
+          - { label: Foto de este color, name: image, widget: image, required: false, i18n: duplicate, hint: 'Al hacer clic en el color se muestra esta foto.' }
+      - label: Especificaciones
+        name: specs
+        widget: list
+        required: false
+        i18n: duplicate
+        summary: '{{fields.label}}: {{fields.value}}'
+        fields:
+          - { label: Dato, name: label, widget: string, i18n: true }
+          - { label: Valor, name: value, widget: string, i18n: true }
+      - { label: Descripción, name: body, widget: markdown, required: false, i18n: true, buttons: [bold, italic, link, bulleted-list, numbered-list] }
+
+  # -------------------------------------------------------------------------
+  - name: pages
+    label: Páginas
+    description: Contenido de la portada y demás páginas. Los bloques se reordenan arrastrando.
+    i18n: true
+    files:
+      - name: home
+        label: Portada
+        file: src/content/pages/home.yml
+        i18n: true
+        fields:
+          - { label: Título para Google, name: seo_title, widget: string, required: false, i18n: true }
+          - { label: Descripción para Google, name: seo_description, widget: text, required: false, i18n: true }
+          - label: Bloques
+            name: blocks
+            widget: list
+            i18n: duplicate
+            hint: 'Arrastra los bloques para cambiar el orden. Agrega bloques con el botón +.'
+            types: &block_types
+              - label: Portada (foto grande)
+                name: hero
+                widget: object
+                summary: '{{fields.heading}}'
+                fields:
+                  - { label: Título, name: heading, widget: string, i18n: true }
+                  - { label: Texto, name: text, widget: text, required: false, i18n: true }
+                  - { label: Foto de fondo, name: image, widget: image, required: false, i18n: duplicate }
+                  - { label: Alto, name: size, widget: select, required: false, i18n: duplicate, default: normal, options: [{ label: Pantalla completa, value: normal }, { label: Más bajo, value: short }] }
+                  - { label: Botón principal (texto), name: cta_label, widget: string, required: false, i18n: true }
+                  - { label: Botón principal (enlace), name: cta_link, widget: string, required: false, i18n: duplicate, hint: &link_hint 'Enlace interno sin idioma, ej: /products/  /wheel-builder/  /contact/  /products/ultra-rear-hub/ o una dirección completa https://...' }
+                  - { label: Botón secundario (texto), name: cta2_label, widget: string, required: false, i18n: true }
+                  - { label: Botón secundario (enlace), name: cta2_link, widget: string, required: false, i18n: duplicate, hint: *link_hint }
+              - label: Categorías de productos
+                name: categories
+                widget: object
+                summary: '{{fields.heading}}'
+                fields:
+                  - { label: Título, name: heading, widget: string, required: false, i18n: true }
+              - label: Destacado (foto + texto)
+                name: feature
+                widget: object
+                summary: '{{fields.heading}}'
+                fields:
+                  - { label: Fondo, name: theme, widget: select, i18n: duplicate, default: light, options: [{ label: Claro, value: light }, { label: Oscuro, value: dark }, { label: Salvia, value: sage }] }
+                  - { label: Foto a la, name: image_side, widget: select, i18n: duplicate, default: left, options: [{ label: Izquierda, value: left }, { label: Derecha, value: right }] }
+                  - { label: Título, name: heading, widget: string, i18n: true }
+                  - { label: Texto, name: text, widget: markdown, required: false, i18n: true, buttons: [bold, italic, link, bulleted-list] }
+                  - { label: Foto, name: image, widget: image, i18n: duplicate }
+                  - { label: Botón (texto), name: cta_label, widget: string, required: false, i18n: true }
+                  - { label: Botón (enlace), name: cta_link, widget: string, required: false, i18n: duplicate, hint: *link_hint }
+              - label: Grilla de productos
+                name: products
+                widget: object
+                summary: '{{fields.heading}}'
+                fields:
+                  - { label: Título, name: heading, widget: string, i18n: true }
+                  - { label: Texto, name: text, widget: string, required: false, i18n: true }
+                  - { label: Mostrar, name: mode, widget: select, i18n: duplicate, default: featured, options: [{ label: Productos destacados, value: featured }, { label: Una categoría, value: category }] }
+                  - { label: Categoría (si eliges "Una categoría"), name: category, widget: select, required: false, i18n: duplicate, options: [{ label: Mazas, value: hubs }, { label: Llantas, value: rims }, { label: Ruedas, value: wheels }, { label: Cuadros y bicicletas, value: frames }, { label: Cockpit, value: cockpit }, { label: Sillines, value: saddles }, { label: Ropa, value: apparel }] }
+                  - { label: Cantidad máxima, name: limit, widget: number, value_type: int, min: 1, max: 24, default: 8, i18n: duplicate }
+              - label: Banda armador de ruedas
+                name: builder_cta
+                widget: object
+                summary: '{{fields.heading}}'
+                fields:
+                  - { label: Título, name: heading, widget: string, i18n: true }
+                  - { label: Texto, name: text, widget: text, required: false, i18n: true }
+                  - { label: Foto, name: image, widget: image, required: false, i18n: duplicate }
+                  - { label: Botón (texto), name: cta_label, widget: string, required: false, i18n: true }
+                  - { label: Botón (enlace), name: cta_link, widget: string, required: false, i18n: duplicate, default: /wheel-builder/, hint: *link_hint }
+              - label: Llamado a distribuidores
+                name: dealer_cta
+                widget: object
+                summary: '{{fields.heading}}'
+                fields:
+                  - { label: Título, name: heading, widget: string, i18n: true }
+                  - { label: Texto, name: text, widget: text, required: false, i18n: true }
+                  - { label: Botón (texto), name: cta_label, widget: string, required: false, i18n: true }
+                  - { label: Botón (enlace), name: cta_link, widget: string, required: false, i18n: duplicate, default: /contact/, hint: *link_hint }
+              - label: Galería de fotos
+                name: gallery
+                widget: object
+                summary: '{{fields.heading}}'
+                fields:
+                  - { label: Título, name: heading, widget: string, required: false, i18n: true }
+                  - { label: Fotos, name: images, widget: list, i18n: duplicate, field: { label: Foto, name: image, widget: image } }
+              - label: Video de YouTube
+                name: video
+                widget: object
+                summary: '{{fields.heading}}'
+                fields:
+                  - { label: Título, name: heading, widget: string, required: false, i18n: true }
+                  - { label: Enlace de YouTube, name: youtube, widget: string, i18n: duplicate, hint: 'Pega el enlace del video, ej: https://youtu.be/XXXXXXXXXXX' }
+                  - { label: Imagen de portada (opcional), name: poster, widget: image, required: false, i18n: duplicate }
+              - label: Texto
+                name: text
+                widget: object
+                summary: '{{fields.heading}}'
+                fields:
+                  - { label: Fondo, name: theme, widget: select, i18n: duplicate, default: light, options: [{ label: Claro, value: light }, { label: Oscuro, value: dark }, { label: Salvia, value: sage }] }
+                  - { label: Título, name: heading, widget: string, required: false, i18n: true }
+                  - { label: Texto, name: body, widget: markdown, i18n: true }
+      - name: about
+        label: Nosotros
+        file: src/content/pages/about.yml
+        i18n: true
+        fields:
+          - { label: Título de la página, name: title, widget: string, i18n: true }
+          - { label: Descripción para Google, name: seo_description, widget: text, required: false, i18n: true }
+          - { label: Bloques, name: blocks, widget: list, i18n: duplicate, types: *block_types }
+      - name: contact
+        label: Distribuidores (contacto)
+        file: src/content/pages/contact.yml
+        i18n: true
+        fields:
+          - { label: Título, name: title, widget: string, i18n: true }
+          - { label: Introducción, name: intro, widget: text, i18n: true }
+          - { label: Título distribuidores, name: distributor_heading, widget: string, i18n: true }
+          - { label: Beneficios distribuidores, name: distributor_points, widget: list, i18n: true, field: { label: Punto, name: point, widget: string } }
+          - { label: Título tiendas en Chile, name: dealer_heading, widget: string, i18n: true }
+          - { label: Beneficios tiendas, name: dealer_points, widget: list, i18n: true, field: { label: Punto, name: point, widget: string } }
+          - { label: Nota de plazo de respuesta, name: response_note, widget: string, required: false, i18n: true }
+      - name: privacy
+        label: Privacidad
+        file: src/content/pages/privacy.yml
+        i18n: true
+        fields:
+          - { label: Título, name: title, widget: string, i18n: true }
+          - { label: Texto, name: body, widget: markdown, i18n: true }
+
+  # -------------------------------------------------------------------------
+  - name: settings
+    label: Configuración general
+    i18n: true
+    files:
+      - name: site
+        label: Marca, redes y textos generales
+        file: src/content/settings.yml
+        i18n: true
+        fields:
+          - { label: Nombre de la marca, name: brand_name, widget: string, i18n: duplicate }
+          - label: Tipografía
+            name: font_style
+            widget: select
+            i18n: duplicate
+            default: pnw
+            hint: 'Cambia la letra de todo el sitio. Se ve publicada en 1 a 2 minutos.'
+            options:
+              - { label: 'Estilo PNW: condensada en mayúsculas (Barlow Condensed + Barlow)', value: pnw }
+              - { label: 'Expandida gruesa (Archivo)', value: archivo }
+              - { label: 'Técnica angosta (Saira)', value: saira }
+              - { label: 'Clásica condensada (Oswald + Barlow)', value: oswald }
+          - label: Títulos en mayúsculas
+            name: titles_case
+            widget: select
+            i18n: duplicate
+            default: auto
+            options:
+              - { label: 'Según la tipografía', value: auto }
+              - { label: 'Siempre en mayúsculas', value: upper }
+              - { label: 'Nunca en mayúsculas', value: normal }
+          - { label: Color de acento (botones y destacados), name: accent_color, widget: color, i18n: duplicate, default: '#f26b1d', hint: 'Naranja 715 por defecto. El color del texto sobre el botón se ajusta solo.' }
+          - { label: 'Logo (opcional, reemplaza el nombre en el menú)', name: logo, widget: image, required: false, i18n: duplicate }
+          - { label: Frase de la marca, name: tagline, widget: string, i18n: true }
+          - { label: Descripción para Google, name: seo_description, widget: text, i18n: true }
+          - { label: Imagen al compartir en redes, name: og_image, widget: image, required: false, i18n: duplicate }
+          - { label: Aviso superior (vacío = no se muestra), name: announcement, widget: string, required: false, i18n: true }
+          - { label: Enlace del aviso, name: announcement_link, widget: string, required: false, i18n: duplicate, hint: *link_hint }
+          - { label: Correo público (opcional), name: public_email, widget: string, required: false, i18n: duplicate, hint: 'Se muestra en el sitio. Los formularios llegan al correo configurado en Cloudflare.' }
+          - { label: WhatsApp (con código de país), name: whatsapp, widget: string, required: false, i18n: duplicate, hint: 'Ej: +56912345678' }
+          - { label: Instagram (enlace), name: instagram, widget: string, required: false, i18n: duplicate }
+          - { label: Facebook (enlace), name: facebook, widget: string, required: false, i18n: duplicate }
+          - { label: YouTube (enlace), name: youtube, widget: string, required: false, i18n: duplicate }
+          - { label: Ubicación, name: location, widget: string, required: false, i18n: true }
+          - { label: Nota del pie de página, name: footer_note, widget: string, required: false, i18n: true }
+          - { label: Razón social, name: legal_name, widget: string, required: false, i18n: duplicate }
+
+  # -------------------------------------------------------------------------
+  - name: builder
+    label: Armador de ruedas
+    description: Piezas, colores y largos de rayo del armador. No se traduce (los nombres de color se traducen solos).
+    files:
+      - name: builder
+        label: Piezas del armador
+        file: src/content/builder.yml
+        fields:
+          - { label: Tamaños de rueda, name: sizes, widget: list, field: { label: Tamaño, name: size, widget: string }, hint: 'Ej: 29 y 27.5' }
+          - label: Llantas
+            name: rims
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - { label: Código interno, name: id, widget: string, hint: 'Sin espacios, ej: enduro-h30. Se usa en la tabla de largos de rayo.' }
+              - { label: Nombre, name: name, widget: string }
+              - { label: Producto relacionado (URL), name: product, widget: string, required: false }
+              - { label: Nota corta, name: note, widget: string, required: false, hint: 'Ej: 30 mm, 610 g' }
+              - { label: Tamaños disponibles, name: sizes, widget: list, field: { label: Tamaño, name: size, widget: string } }
+              - { label: Hoyos disponibles, name: holes, widget: list, field: { label: Hoyos, name: h, widget: number, value_type: int } }
+              - { label: Colores, name: colors, widget: list, summary: '{{fields.name}}', fields: &color_fields [{ label: Color, name: id, widget: select, options: &color_ids [{ label: Negro, value: black }, { label: Plata, value: silver }, { label: Naranja, value: orange }, { label: Blanco, value: white }, { label: Azul, value: blue }, { label: Gris, value: gray }, { label: Rojo, value: red }, { label: Dorado, value: gold }, { label: Verde, value: green }, { label: Morado, value: purple }], hint: 'El nombre se traduce solo a cada idioma.' }, { label: Nombre (respaldo), name: name, widget: string }, { label: Tono, name: hex, widget: color }, { label: Foto, name: image, widget: image, required: false }] }
+          - label: Mazas delanteras
+            name: front_hubs
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - { label: Código interno, name: id, widget: string }
+              - { label: Nombre, name: name, widget: string }
+              - { label: Producto relacionado (URL), name: product, widget: string, required: false }
+              - { label: Nota corta, name: note, widget: string, required: false }
+              - { label: Hoyos disponibles, name: holes, widget: list, field: { label: Hoyos, name: h, widget: number, value_type: int } }
+              - { label: Colores, name: colors, widget: list, summary: '{{fields.name}}', fields: *color_fields }
+          - label: Mazas traseras
+            name: rear_hubs
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - { label: Código interno, name: id, widget: string }
+              - { label: Nombre, name: name, widget: string }
+              - { label: Producto relacionado (URL), name: product, widget: string, required: false }
+              - { label: Nota corta, name: note, widget: string, required: false }
+              - { label: Hoyos disponibles, name: holes, widget: list, field: { label: Hoyos, name: h, widget: number, value_type: int } }
+              - { label: Núcleos compatibles (códigos), name: freehubs, widget: list, field: { label: Núcleo, name: f, widget: string }, hint: 'Usa los códigos de la lista "Núcleos", ej: HG, MS, XD' }
+              - { label: Colores, name: colors, widget: list, summary: '{{fields.name}}', fields: *color_fields }
+          - label: Núcleos
+            name: freehubs
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - { label: Código, name: id, widget: string }
+              - { label: Nombre, name: name, widget: string }
+          - { label: Rayos (nombre), name: spoke, widget: string }
+          - label: Colores de rayo
+            name: spoke_colors
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - { label: Color, name: id, widget: select, options: *color_ids }
+              - { label: Nombre (respaldo), name: name, widget: string }
+              - { label: Tono, name: hex, widget: color }
+          - { label: Niples (nombre), name: nipple, widget: string }
+          - label: Colores de niple
+            name: nipple_colors
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - { label: Color, name: id, widget: select, options: *color_ids }
+              - { label: Nombre (respaldo), name: name, widget: string }
+              - { label: Tono, name: hex, widget: color }
+          - label: Largos de rayo
+            name: spoke_lengths
+            widget: list
+            summary: '{{fields.rim}} {{fields.size}} {{fields.hub}} {{fields.holes}}H: {{fields.left}}/{{fields.right}}'
+            hint: 'Si una combinación no está, el sitio muestra "Lo calculamos al armar".'
+            fields:
+              - { label: Llanta (código), name: rim, widget: string }
+              - { label: Tamaño, name: size, widget: string }
+              - { label: Maza (código), name: hub, widget: string }
+              - { label: Hoyos, name: holes, widget: number, value_type: int }
+              - { label: Izquierdo (mm), name: left, widget: number, value_type: int }
+              - { label: Derecho (mm), name: right, widget: number, value_type: int }

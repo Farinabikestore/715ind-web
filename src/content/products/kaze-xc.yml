@@ -1,0 +1,312 @@
+es:
+  title: Kaze XC
+  slug: kaze-xc
+  category: frames
+  order: 80
+  featured: true
+  builder: false
+  tagline: Nacida para el XC.
+  summary: Cuadro XC 29" en aluminio 6061 con geometría actualizada y UDH, también como bicicleta completa.
+  images:
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
+  colors:
+  - name: Azul
+    hex: '#1f5fc4'
+    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - name: Blanco
+    hex: '#f2f2ef'
+    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  specs:
+  - label: Uso
+    value: XC
+  - label: Material
+    value: Al 6061
+  - label: Tamaño de rueda
+    value: 29"
+  - label: Patilla
+    value: UDH
+  - label: Horquilla
+    value: X-Fusion XC 32, 15x110 (bicicleta completa)
+  - label: Transmisión
+    value: Microshift MX 11v
+  - label: Neumáticos
+    value: Maxxis Rekon Race EXO TR
+  - label: Frenos
+    value: Tektro 2 pistones
+  - label: Versiones
+    value: Cuadro o bicicleta completa
+  body: |
+    La Kaze combina un cuadro liviano y eficiente con una geometría de dirección más relajada y reach más largo, para ganar estabilidad en las bajadas sin perder agilidad.
+
+    La bicicleta completa monta horquilla X-Fusion XC 32 con eje 15x110, transmisión Microshift MX de 11 velocidades, neumáticos Maxxis Rekon Race y frenos Tektro de 2 pistones, más componentes 715IND.
+en:
+  title: Kaze XC
+  slug: kaze-xc
+  category: frames
+  order: 80
+  featured: true
+  builder: false
+  tagline: Born for cross-country.
+  summary: 29" XC frame in 6061 aluminium with updated geometry and UDH, also available as a complete bike.
+  images:
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
+  colors:
+  - name: Blue
+    hex: '#1f5fc4'
+    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - name: White
+    hex: '#f2f2ef'
+    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  specs:
+  - label: Riding style
+    value: XC
+  - label: Material
+    value: Al 6061
+  - label: Wheel size
+    value: 29"
+  - label: Derailleur hanger
+    value: UDH
+  - label: Fork
+    value: X-Fusion XC 32, 15x110 (complete bike)
+  - label: Drivetrain
+    value: Microshift MX 11v
+  - label: Tires
+    value: Maxxis Rekon Race EXO TR
+  - label: Brakes
+    value: Tektro 2-piston
+  - label: Versions
+    value: Frame or complete bike
+  body: |
+    The Kaze pairs a light, efficient frame with a slacker head angle and longer reach, adding stability downhill without losing agility.
+
+    The complete bike runs an X-Fusion XC 32 fork with 15x110 axle, Microshift MX 11-speed drivetrain, Maxxis Rekon Race tyres and Tektro 2-piston brakes, plus 715IND components.
+pt:
+  title: Kaze XC
+  slug: kaze-xc
+  category: frames
+  order: 80
+  featured: true
+  builder: false
+  tagline: Nascida para o XC.
+  summary: Quadro XC 29" em alumínio 6061 com geometria atualizada e UDH, também como bicicleta completa.
+  images:
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
+  colors:
+  - name: Azul
+    hex: '#1f5fc4'
+    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - name: Branco
+    hex: '#f2f2ef'
+    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  specs:
+  - label: Uso
+    value: XC
+  - label: Material
+    value: Al 6061
+  - label: Tamanho da roda
+    value: 29"
+  - label: Gancheira
+    value: UDH
+  - label: Suspensão dianteira
+    value: X-Fusion XC 32, 15x110 (bicicleta completa)
+  - label: Transmissão
+    value: Microshift MX 11v
+  - label: Pneus
+    value: Maxxis Rekon Race EXO TR
+  - label: Freios
+    value: Tektro 2 pistões
+  - label: Versões
+    value: Quadro ou bicicleta completa
+  body: |
+    A Kaze combina um quadro leve e eficiente com ângulo de direção mais aberto e reach mais longo, ganhando estabilidade nas descidas sem perder agilidade.
+
+    A bicicleta completa usa suspensão X-Fusion XC 32 com eixo 15x110, transmissão Microshift MX de 11 velocidades, pneus Maxxis Rekon Race e freios Tektro de 2 pistões, além de componentes 715IND.
+de:
+  title: Kaze XC
+  slug: kaze-xc
+  category: frames
+  order: 80
+  featured: true
+  builder: false
+  tagline: Gebaut für Cross-Country.
+  summary: 29"-XC-Rahmen aus 6061-Aluminium mit moderner Geometrie und UDH, auch als Komplettrad.
+  images:
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
+  colors:
+  - name: Blau
+    hex: '#1f5fc4'
+    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - name: Weiß
+    hex: '#f2f2ef'
+    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  specs:
+  - label: Einsatzbereich
+    value: XC
+  - label: Material
+    value: Al 6061
+  - label: Laufradgröße
+    value: 29"
+  - label: Schaltauge
+    value: UDH
+  - label: Gabel
+    value: X-Fusion XC 32, 15x110 (Komplettrad)
+  - label: Antrieb
+    value: Microshift MX 11v
+  - label: Reifen
+    value: Maxxis Rekon Race EXO TR
+  - label: Bremsen
+    value: Tektro 2-Kolben
+  - label: Versionen
+    value: Rahmen oder Komplettrad
+  body: |
+    Die Kaze kombiniert einen leichten, effizienten Rahmen mit flacherem Lenkwinkel und längerem Reach, für mehr Stabilität bergab ohne Verlust an Agilität.
+
+    Das Komplettrad fährt eine X-Fusion XC 32 Gabel mit 15x110-Achse, Microshift MX 11-fach, Maxxis Rekon Race Reifen und Tektro 2-Kolben-Bremsen, dazu 715IND-Komponenten.
+fr:
+  title: Kaze XC
+  slug: kaze-xc
+  category: frames
+  order: 80
+  featured: true
+  builder: false
+  tagline: Née pour le cross-country.
+  summary: Cadre XC 29" en aluminium 6061 à géométrie actualisée et UDH, aussi en vélo complet.
+  images:
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
+  colors:
+  - name: Bleu
+    hex: '#1f5fc4'
+    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - name: Blanc
+    hex: '#f2f2ef'
+    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  specs:
+  - label: Pratique
+    value: XC
+  - label: Matériau
+    value: Al 6061
+  - label: Taille de roue
+    value: 29"
+  - label: Patte de dérailleur
+    value: UDH
+  - label: Fourche
+    value: X-Fusion XC 32, 15x110 (vélo complet)
+  - label: Transmission
+    value: Microshift MX 11v
+  - label: Pneus
+    value: Maxxis Rekon Race EXO TR
+  - label: Freins
+    value: Tektro 2 pistons
+  - label: Versions
+    value: Cadre ou vélo complet
+  body: |
+    Le Kaze associe un cadre léger et efficace à un angle de direction plus ouvert et un reach plus long, pour gagner en stabilité en descente sans perdre en agilité.
+
+    Le vélo complet reçoit une fourche X-Fusion XC 32 axe 15x110, une transmission Microshift MX 11 vitesses, des pneus Maxxis Rekon Race et des freins Tektro 2 pistons, plus des composants 715IND.
+it:
+  title: Kaze XC
+  slug: kaze-xc
+  category: frames
+  order: 80
+  featured: true
+  builder: false
+  tagline: Nata per il cross country.
+  summary: Telaio XC 29" in alluminio 6061 con geometria aggiornata e UDH, anche come bici completa.
+  images:
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
+  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
+  colors:
+  - name: Blu
+    hex: '#1f5fc4'
+    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+  - name: Bianco
+    hex: '#f2f2ef'
+    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+  specs:
+  - label: Utilizzo
+    value: XC
+  - label: Materiale
+    value: Al 6061
+  - label: Misura ruota
+    value: 29"
+  - label: Forcellino
+    value: UDH
+  - label: Forcella
+    value: X-Fusion XC 32, 15x110 (bici completa)
+  - label: Trasmissione
+    value: Microshift MX 11v
+  - label: Copertoni
+    value: Maxxis Rekon Race EXO TR
+  - label: Freni
+    value: Tektro 2 pistoni
+  - label: Versioni
+    value: Telaio o bici completa
+  body: |
+    La Kaze unisce un telaio leggero ed efficiente a un angolo sterzo più aperto e un reach più lungo, per più stabilità in discesa senza perdere agilità.
+
+    La bici completa monta forcella X-Fusion XC 32 con asse 15x110, trasmissione Microshift MX 11 velocità, gomme Maxxis Rekon Race e freni Tektro a 2 pistoni, più componenti 715IND.

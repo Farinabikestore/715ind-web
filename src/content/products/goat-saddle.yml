@@ -1,0 +1,210 @@
+es:
+  title: Sillín Goat
+  slug: goat-saddle
+  category: saddles
+  order: 120
+  featured: false
+  builder: false
+  tagline: Edición Evil, base mate.
+  summary: El mismo perfil 2026 con base mate, rieles de acero y gráfica Evil, en negro o cuero.
+  images:
+  - /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-evil-black-4.webp
+  - /uploads/products/goat-saddle/goat-evil-black-5.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-4.webp
+  colors:
+  - name: Evil negro
+    hex: '#1d1f1f'
+    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - name: Evil cuero
+    hex: '#a0532d'
+    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  specs:
+  - label: Rieles
+    value: Acero
+  - label: Acabado
+    value: Base mate
+  - label: Forma
+    value: Cola levemente elevada
+  body: |
+    El Goat comparte el perfil del Racing Line: cola levemente elevada, largo corto y líneas limpias. La edición Evil suma base mate y una gráfica serigrafiada que no pasa desapercibida.
+
+    Disponible en negro y en terminación cuero.
+en:
+  title: Goat saddle
+  slug: goat-saddle
+  category: saddles
+  order: 120
+  featured: false
+  builder: false
+  tagline: Evil edition, matte base.
+  summary: The same 2026 profile with a matte base, steel rails and Evil graphics, in black or leather.
+  images:
+  - /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-evil-black-4.webp
+  - /uploads/products/goat-saddle/goat-evil-black-5.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-4.webp
+  colors:
+  - name: Evil black
+    hex: '#1d1f1f'
+    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - name: Evil leather
+    hex: '#a0532d'
+    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  specs:
+  - label: Rails
+    value: Steel
+  - label: Finish
+    value: Matte base
+  - label: Shape
+    value: Slightly raised tail
+  body: |
+    The Goat shares the Racing Line profile: slightly raised tail, short length and clean lines. The Evil edition adds a matte base and screen-printed graphics that stand out.
+
+    Available in black and in a leather finish.
+pt:
+  title: Selim Goat
+  slug: goat-saddle
+  category: saddles
+  order: 120
+  featured: false
+  builder: false
+  tagline: Edição Evil, base fosca.
+  summary: O mesmo perfil 2026 com base fosca, trilhos de aço e grafismo Evil, em preto ou couro.
+  images:
+  - /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-evil-black-4.webp
+  - /uploads/products/goat-saddle/goat-evil-black-5.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-4.webp
+  colors:
+  - name: Evil preto
+    hex: '#1d1f1f'
+    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - name: Evil couro
+    hex: '#a0532d'
+    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  specs:
+  - label: Trilhos
+    value: Aço
+  - label: Acabamento
+    value: Base fosca
+  - label: Formato
+    value: Traseira levemente elevada
+  body: |
+    O Goat compartilha o perfil do Racing Line: traseira levemente elevada, comprimento curto e linhas limpas. A edição Evil soma base fosca e grafismo serigrafado que não passa despercebido.
+
+    Disponível em preto e em acabamento couro.
+de:
+  title: Goat Sattel
+  slug: goat-saddle
+  category: saddles
+  order: 120
+  featured: false
+  builder: false
+  tagline: Evil Edition, matte Schale.
+  summary: Dasselbe Profil 2026 mit matter Schale, Stahlstreben und Evil-Grafik, in Schwarz oder Leder.
+  images:
+  - /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-evil-black-4.webp
+  - /uploads/products/goat-saddle/goat-evil-black-5.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-4.webp
+  colors:
+  - name: Evil Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - name: Evil Leder
+    hex: '#a0532d'
+    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  specs:
+  - label: Streben
+    value: Stahl
+  - label: Oberfläche
+    value: Matte Schale
+  - label: Form
+    value: Leicht erhöhtes Heck
+  body: |
+    Der Goat teilt das Profil des Racing Line: leicht erhöhtes Heck, kurze Länge, klare Linien. Die Evil Edition bringt eine matte Schale und auffällige Siebdruckgrafik.
+
+    Erhältlich in Schwarz und mit Lederoptik.
+fr:
+  title: Selle Goat
+  slug: goat-saddle
+  category: saddles
+  order: 120
+  featured: false
+  builder: false
+  tagline: Édition Evil, coque mate.
+  summary: Le même profil 2026 avec coque mate, rails acier et graphisme Evil, en noir ou cuir.
+  images:
+  - /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-evil-black-4.webp
+  - /uploads/products/goat-saddle/goat-evil-black-5.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-4.webp
+  colors:
+  - name: Evil noir
+    hex: '#1d1f1f'
+    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - name: Evil cuir
+    hex: '#a0532d'
+    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  specs:
+  - label: Rails
+    value: Acier
+  - label: Finition
+    value: Coque mate
+  - label: Forme
+    value: Arrière légèrement relevé
+  body: |
+    Le Goat partage le profil de la Racing Line : arrière légèrement relevé, longueur courte et lignes nettes. L'édition Evil ajoute une coque mate et un graphisme sérigraphié qui ne passe pas inaperçu.
+
+    Disponible en noir et en finition cuir.
+it:
+  title: Sella Goat
+  slug: goat-saddle
+  category: saddles
+  order: 120
+  featured: false
+  builder: false
+  tagline: Edizione Evil, scocca opaca.
+  summary: Lo stesso profilo 2026 con scocca opaca, telaio in acciaio e grafica Evil, nero o pelle.
+  images:
+  - /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-evil-black-4.webp
+  - /uploads/products/goat-saddle/goat-evil-black-5.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-evil-leather-4.webp
+  colors:
+  - name: Evil nero
+    hex: '#1d1f1f'
+    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+  - name: Evil pelle
+    hex: '#a0532d'
+    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+  specs:
+  - label: Telaio
+    value: Acciaio
+  - label: Finitura
+    value: Scocca opaca
+  - label: Forma
+    value: Coda leggermente rialzata
+  body: |
+    La Goat condivide il profilo della Racing Line: coda leggermente rialzata, lunghezza corta e linee pulite. L'edizione Evil aggiunge scocca opaca e una grafica serigrafata che non passa inosservata.
+
+    Disponibile nera e in finitura pelle.

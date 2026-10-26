@@ -1,0 +1,26 @@
+{
+  "name": "715ind-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/check-content.mjs && astro build && node scripts/make-variants.mjs",
+    "preview": "astro preview",
+    "check-content": "node scripts/check-content.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/oswald": "^5.3.0",
+    "@fontsource-variable/saira": "^5.3.0",
+    "@fontsource/barlow": "^5.3.0",
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "astro": "^7.4.2",
+    "js-yaml": "^4.1.0",
+    "marked": "^18.1.2",
+    "sharp": "^0.35.5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

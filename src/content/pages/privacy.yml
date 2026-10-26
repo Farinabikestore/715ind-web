@@ -1,0 +1,48 @@
+es:
+  title: Privacidad
+  body: |
+    Este sitio no usa cookies de seguimiento ni publicidad.
+
+    Cuando nos escribes por el formulario, usamos tu nombre, empresa, país, correo, teléfono y mensaje solo para responder tu consulta comercial. No vendemos ni compartimos esos datos con terceros. El envío del formulario usa Cloudflare Turnstile para bloquear bots y Resend para entregarnos el correo.
+
+    Puedes pedir que borremos tus datos escribiéndonos por el mismo formulario.
+en:
+  title: Privacy
+  body: |
+    This site does not use tracking or advertising cookies.
+
+    When you write to us through the form, we use your name, company, country, email, phone and message only to answer your business enquiry. We do not sell or share that data with third parties. The form uses Cloudflare Turnstile to block bots and Resend to deliver the email to us.
+
+    You can ask us to delete your data by writing to us through the same form.
+pt:
+  title: Privacidade
+  body: |
+    Este site não usa cookies de rastreamento nem de publicidade.
+
+    Quando você escreve pelo formulário, usamos seu nome, empresa, país, e-mail, telefone e mensagem apenas para responder à sua consulta comercial. Não vendemos nem compartilhamos esses dados com terceiros. O formulário usa Cloudflare Turnstile para bloquear bots e Resend para nos entregar o e-mail.
+
+    Você pode pedir a exclusão dos seus dados escrevendo pelo mesmo formulário.
+de:
+  title: Datenschutz
+  body: |
+    Diese Website verwendet keine Tracking- oder Werbe-Cookies.
+
+    Wenn du uns über das Formular schreibst, verwenden wir Name, Firma, Land, E-Mail, Telefon und Nachricht nur, um deine geschäftliche Anfrage zu beantworten. Wir verkaufen oder teilen diese Daten nicht mit Dritten. Das Formular nutzt Cloudflare Turnstile gegen Bots und Resend für die Zustellung der E-Mail an uns.
+
+    Du kannst die Löschung deiner Daten über dasselbe Formular verlangen.
+fr:
+  title: Confidentialité
+  body: |
+    Ce site n'utilise pas de cookies de suivi ni de publicité.
+
+    Lorsque vous nous écrivez via le formulaire, nous utilisons vos nom, entreprise, pays, e-mail, téléphone et message uniquement pour répondre à votre demande commerciale. Nous ne vendons ni ne partageons ces données avec des tiers. Le formulaire utilise Cloudflare Turnstile contre les robots et Resend pour nous transmettre l'e-mail.
+
+    Vous pouvez demander la suppression de vos données via le même formulaire.
+it:
+  title: Privacy
+  body: |
+    Questo sito non usa cookie di tracciamento né pubblicitari.
+
+    Quando ci scrivi tramite il modulo, usiamo nome, azienda, paese, email, telefono e messaggio solo per rispondere alla tua richiesta commerciale. Non vendiamo né condividiamo questi dati con terzi. Il modulo usa Cloudflare Turnstile per bloccare i bot e Resend per recapitarci l'email.
+
+    Puoi chiedere la cancellazione dei tuoi dati scrivendoci tramite lo stesso modulo.

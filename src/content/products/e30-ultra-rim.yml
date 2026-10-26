@@ -1,0 +1,222 @@
+es:
+  title: Llanta E30 Ultra
+  slug: e30-ultra-rim
+  category: rims
+  order: 50
+  featured: false
+  builder: true
+  tagline: Perfil Hollow Tech contra impactos.
+  summary: Llanta de 30 mm internos con perfil alto Hollow Tech, pensada para evitar llantazos y rajaduras de neumático.
+  images:
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-2.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-3.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-4.webp
+  colors:
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  specs:
+  - label: Tamaño de rueda
+    value: 27,5" / 29"
+  - label: Hoyos
+    value: 28 / 32
+  - label: Ancho interno
+    value: 30 mm
+  - label: Ancho externo
+    value: 38,3 mm
+  - label: Alto de perfil
+    value: 36,8 mm
+  - label: Material
+    value: Aluminio
+  - label: Tubeless
+    value: Sí, tubeless ready
+  body: |
+    La E30 Ultra es para ciclistas que bajan fuerte por terreno rocoso. Su perfil Hollow Tech y su ancho están diseñados para soportar impactos y proteger el neumático.
+
+    Fabricada en aluminio, tubeless ready, en 27,5" y 29".
+en:
+  title: E30 Ultra rim
+  slug: e30-ultra-rim
+  category: rims
+  order: 50
+  featured: false
+  builder: true
+  tagline: Hollow Tech profile, built for impacts.
+  summary: 30 mm internal rim with a deep Hollow Tech profile, designed to resist rim strikes and tyre cuts.
+  images:
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-2.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-3.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-4.webp
+  colors:
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  specs:
+  - label: Wheel size
+    value: 27,5" / 29"
+  - label: Spoke holes
+    value: 28 / 32
+  - label: Internal width
+    value: 30 mm
+  - label: External width
+    value: 38,3 mm
+  - label: Profile depth
+    value: 36,8 mm
+  - label: Material
+    value: Aluminium
+  - label: Tubeless
+    value: Tubeless ready
+  body: |
+    The E30 Ultra is for riders who descend hard through rocks. Its Hollow Tech profile and width are designed to take hits and protect the tyre.
+
+    Aluminium, tubeless ready, in 27.5" and 29".
+pt:
+  title: Aro E30 Ultra
+  slug: e30-ultra-rim
+  category: rims
+  order: 50
+  featured: false
+  builder: true
+  tagline: Perfil Hollow Tech contra impactos.
+  summary: Aro de 30 mm internos com perfil alto Hollow Tech, pensado para evitar batidas e cortes no pneu.
+  images:
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-2.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-3.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-4.webp
+  colors:
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  specs:
+  - label: Tamanho da roda
+    value: 27,5" / 29"
+  - label: Furos
+    value: 28 / 32
+  - label: Largura interna
+    value: 30 mm
+  - label: Largura externa
+    value: 38,3 mm
+  - label: Altura do perfil
+    value: 36,8 mm
+  - label: Material
+    value: Alumínio
+  - label: Tubeless
+    value: Sim, tubeless ready
+  body: |
+    O E30 Ultra é para quem desce forte em terreno rochoso. O perfil Hollow Tech e a largura foram desenhados para aguentar impactos e proteger o pneu.
+
+    Em alumínio, tubeless ready, em 27,5" e 29".
+de:
+  title: E30 Ultra Felge
+  slug: e30-ultra-rim
+  category: rims
+  order: 50
+  featured: false
+  builder: true
+  tagline: Hollow-Tech-Profil gegen Schläge.
+  summary: Felge mit 30 mm Innenweite und hohem Hollow-Tech-Profil, gegen Durchschläge und Reifenschnitte.
+  images:
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-2.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-3.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-4.webp
+  colors:
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  specs:
+  - label: Laufradgröße
+    value: 27,5" / 29"
+  - label: Speichenlöcher
+    value: 28 / 32
+  - label: Innenweite
+    value: 30 mm
+  - label: Außenbreite
+    value: 38,3 mm
+  - label: Profilhöhe
+    value: 36,8 mm
+  - label: Material
+    value: Aluminium
+  - label: Tubeless
+    value: Tubeless ready
+  body: |
+    Die E30 Ultra ist für alle, die hart durch Steinfelder fahren. Hollow-Tech-Profil und Breite sind darauf ausgelegt, Schläge wegzustecken und den Reifen zu schützen.
+
+    Aluminium, tubeless ready, in 27,5" und 29".
+fr:
+  title: Jante E30 Ultra
+  slug: e30-ultra-rim
+  category: rims
+  order: 50
+  featured: false
+  builder: true
+  tagline: Profil Hollow Tech contre les chocs.
+  summary: Jante de 30 mm intérieurs au profil haut Hollow Tech, conçue contre les pincements et les coupures de pneu.
+  images:
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-2.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-3.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-4.webp
+  colors:
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  specs:
+  - label: Taille de roue
+    value: 27,5" / 29"
+  - label: Trous
+    value: 28 / 32
+  - label: Largeur interne
+    value: 30 mm
+  - label: Largeur externe
+    value: 38,3 mm
+  - label: Hauteur de profil
+    value: 36,8 mm
+  - label: Matériau
+    value: Aluminium
+  - label: Tubeless
+    value: Oui, tubeless ready
+  body: |
+    L'E30 Ultra est faite pour ceux qui descendent fort dans les cailloux. Son profil Hollow Tech et sa largeur sont pensés pour encaisser les chocs et protéger le pneu.
+
+    Aluminium, tubeless ready, en 27,5" et 29".
+it:
+  title: Cerchio E30 Ultra
+  slug: e30-ultra-rim
+  category: rims
+  order: 50
+  featured: false
+  builder: true
+  tagline: Profilo Hollow Tech contro gli urti.
+  summary: Cerchio da 30 mm interni con profilo alto Hollow Tech, studiato contro pizzicature e tagli della gomma.
+  images:
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-2.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-3.webp
+  - /uploads/products/e30-ultra-rim/e30-ultra-29er-4.webp
+  colors:
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/e30-ultra-rim/e30-ultra-29er-1.webp
+  specs:
+  - label: Misura ruota
+    value: 27,5" / 29"
+  - label: Fori
+    value: 28 / 32
+  - label: Larghezza interna
+    value: 30 mm
+  - label: Larghezza esterna
+    value: 38,3 mm
+  - label: Altezza profilo
+    value: 36,8 mm
+  - label: Materiale
+    value: Alluminio
+  - label: Tubeless
+    value: Sì, tubeless ready
+  body: |
+    L'E30 Ultra è per chi scende forte tra le rocce. Il profilo Hollow Tech e la larghezza sono pensati per assorbire gli urti e proteggere la gomma.
+
+    Alluminio, tubeless ready, in 27,5" e 29".

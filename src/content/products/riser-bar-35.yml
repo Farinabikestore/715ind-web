@@ -1,0 +1,276 @@
+es:
+  title: Manillar Riser 35
+  slug: riser-bar-35
+  category: cockpit
+  order: 90
+  featured: false
+  builder: false
+  tagline: Control preciso para enduro y descenso.
+  summary: Manillar de aluminio 6061 con abrazadera de 35 mm, en dos elevaciones y cinco terminaciones.
+  images:
+  - /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-4.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-3.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  colors:
+  - name: Plata
+    hex: '#c6c9c8'
+    image: /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - name: Platino
+    hex: '#b7b2a6'
+    image: /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - name: Negro/blanco
+    hex: '#1d1f1f'
+    image: /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - name: Negro/café
+    hex: '#7a4a2a'
+    image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - name: Negro/gris
+    hex: '#6f7473'
+    image: /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  specs:
+  - label: Material
+    value: Al 6061
+  - label: Abrazadera
+    value: 35 mm
+  - label: Elevación
+    value: 40 / 50 mm
+  body: |
+    El Riser equilibra resistencia, peso y ergonomía para quienes andan rápido en terreno técnico. Está fabricado en aluminio 6061 y viene en dos elevaciones para ajustar tu posición.
+
+    Disponible en plata, platino y en negro con gráfica blanca, café o gris.
+en:
+  title: Riser bar 35
+  slug: riser-bar-35
+  category: cockpit
+  order: 90
+  featured: false
+  builder: false
+  tagline: Precise control for enduro and downhill.
+  summary: 6061 aluminium bar with 35 mm clamp, in two rises and five finishes.
+  images:
+  - /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-4.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-3.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  colors:
+  - name: Silver
+    hex: '#c6c9c8'
+    image: /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - name: Platinum
+    hex: '#b7b2a6'
+    image: /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - name: Black/white
+    hex: '#1d1f1f'
+    image: /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - name: Black/brown
+    hex: '#7a4a2a'
+    image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - name: Black/gray
+    hex: '#6f7473'
+    image: /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  specs:
+  - label: Material
+    value: Al 6061
+  - label: Clamp
+    value: 35 mm
+  - label: Rise
+    value: 40 / 50 mm
+  body: |
+    The Riser balances strength, weight and ergonomics for riders who go fast on technical terrain. It is made from 6061 aluminium and comes in two rises to dial in your position.
+
+    Available in silver, platinum, and black with white, brown or grey graphics.
+pt:
+  title: Guidão Riser 35
+  slug: riser-bar-35
+  category: cockpit
+  order: 90
+  featured: false
+  builder: false
+  tagline: Controle preciso para enduro e downhill.
+  summary: Guidão de alumínio 6061 com abraçadeira de 35 mm, em duas elevações e cinco acabamentos.
+  images:
+  - /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-4.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-3.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  colors:
+  - name: Prata
+    hex: '#c6c9c8'
+    image: /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - name: Platina
+    hex: '#b7b2a6'
+    image: /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - name: Preto/branco
+    hex: '#1d1f1f'
+    image: /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - name: Preto/marrom
+    hex: '#7a4a2a'
+    image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - name: Preto/cinza
+    hex: '#6f7473'
+    image: /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  specs:
+  - label: Material
+    value: Al 6061
+  - label: Abraçadeira
+    value: 35 mm
+  - label: Elevação
+    value: 40 / 50 mm
+  body: |
+    O Riser equilibra resistência, peso e ergonomia para quem anda rápido em terreno técnico. É feito em alumínio 6061 e vem em duas elevações para ajustar a sua posição.
+
+    Disponível em prata, platina e em preto com gráfico branco, marrom ou cinza.
+de:
+  title: Riser Lenker 35
+  slug: riser-bar-35
+  category: cockpit
+  order: 90
+  featured: false
+  builder: false
+  tagline: Präzise Kontrolle für Enduro und Downhill.
+  summary: Lenker aus 6061-Aluminium mit 35-mm-Klemmung, in zwei Rise-Höhen und fünf Farben.
+  images:
+  - /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-4.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-3.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  colors:
+  - name: Silber
+    hex: '#c6c9c8'
+    image: /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - name: Platin
+    hex: '#b7b2a6'
+    image: /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - name: Schwarz/Weiß
+    hex: '#1d1f1f'
+    image: /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - name: Schwarz/Braun
+    hex: '#7a4a2a'
+    image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - name: Schwarz/Grau
+    hex: '#6f7473'
+    image: /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  specs:
+  - label: Material
+    value: Al 6061
+  - label: Klemmung
+    value: 35 mm
+  - label: Rise
+    value: 40 / 50 mm
+  body: |
+    Der Riser verbindet Festigkeit, Gewicht und Ergonomie für alle, die im technischen Gelände schnell unterwegs sind. Gefertigt aus 6061-Aluminium, in zwei Rise-Höhen für deine Position.
+
+    Erhältlich in Silber, Platin sowie Schwarz mit weißer, brauner oder grauer Grafik.
+fr:
+  title: Cintre Riser 35
+  slug: riser-bar-35
+  category: cockpit
+  order: 90
+  featured: false
+  builder: false
+  tagline: Contrôle précis pour enduro et descente.
+  summary: Cintre en aluminium 6061 serrage 35 mm, en deux rises et cinq finitions.
+  images:
+  - /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-4.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-3.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  colors:
+  - name: Argent
+    hex: '#c6c9c8'
+    image: /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - name: Platine
+    hex: '#b7b2a6'
+    image: /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - name: Noir/blanc
+    hex: '#1d1f1f'
+    image: /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - name: Noir/marron
+    hex: '#7a4a2a'
+    image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - name: Noir/gris
+    hex: '#6f7473'
+    image: /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  specs:
+  - label: Matériau
+    value: Al 6061
+  - label: Serrage
+    value: 35 mm
+  - label: Rise
+    value: 40 / 50 mm
+  body: |
+    Le Riser équilibre solidité, poids et ergonomie pour ceux qui roulent vite en terrain technique. Il est fabriqué en aluminium 6061 et existe en deux rises pour ajuster votre position.
+
+    Disponible en argent, platine et en noir avec graphisme blanc, marron ou gris.
+it:
+  title: Manubrio Riser 35
+  slug: riser-bar-35
+  category: cockpit
+  order: 90
+  featured: false
+  builder: false
+  tagline: Controllo preciso per enduro e discesa.
+  summary: Manubrio in alluminio 6061 diametro 35 mm, in due rise e cinque finiture.
+  images:
+  - /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/silver-35-clamp-4.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - /uploads/products/riser-bar-35/manillares-azul-platino-3.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_wht-35-clamp-2.webp
+  - /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  colors:
+  - name: Argento
+    hex: '#c6c9c8'
+    image: /uploads/products/riser-bar-35/silver-35-clamp-1.webp
+  - name: Platino
+    hex: '#b7b2a6'
+    image: /uploads/products/riser-bar-35/manillares-azul-platino-1.webp
+  - name: Nero/bianco
+    hex: '#1d1f1f'
+    image: /uploads/products/riser-bar-35/blk_wht-35-clamp-1.webp
+  - name: Nero/marrone
+    hex: '#7a4a2a'
+    image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+  - name: Nero/grigio
+    hex: '#6f7473'
+    image: /uploads/products/riser-bar-35/blk_gray-35-clamp-1.webp
+  specs:
+  - label: Materiale
+    value: Al 6061
+  - label: Diametro
+    value: 35 mm
+  - label: Rise
+    value: 40 / 50 mm
+  body: |
+    Il Riser bilancia resistenza, peso ed ergonomia per chi va veloce sul tecnico. È realizzato in alluminio 6061 ed è disponibile in due rise per regolare la posizione.
+
+    Disponibile argento, platino e nero con grafica bianca, marrone o grigia.

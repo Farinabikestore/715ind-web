@@ -1,0 +1,45 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import { LOCALES, t } from '../../../i18n/ui.js';
+import { getProducts, CATEGORIES } from '../../../lib/content.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const products = getProducts(lang);
+const groups = CATEGORIES.map((c) => ({ c, items: products.filter((p) => p.category === c) })).filter((g) => g.items.length);
+const other = products.filter((p) => !CATEGORIES.includes(p.category));
+---
+<Base lang={lang} title={t(lang, 'products.title')} description={t(lang, 'products.intro')} path="/products/">
+  <header class="wrap page-head">
+    <h1>{t(lang, 'products.title')}</h1>
+    <p class="lead">{t(lang, 'products.intro')}</p>
+  </header>
+
+  <nav class="cat-nav" aria-label={t(lang, 'products.title')}>
+    <ul class="wrap">
+      {groups.map((g) => <li><a href={`#${g.c}`}>{t(lang, `cat.${g.c}`)}</a></li>)}
+    </ul>
+  </nav>
+
+  <div class="wrap">
+    {groups.map((g, gi) => (
+      <section class="cat-section" id={g.c} aria-labelledby={`h-${g.c}`}>
+        <h2 id={`h-${g.c}`}>{t(lang, `cat.${g.c}`)} <small>{t(lang, 'products.count', { n: g.items.length })}</small></h2>
+        <div class="product-grid">
+          {g.items.map((p, i) => <ProductCard product={p} lang={lang} eager={gi === 0 && i < 2} />)}
+        </div>
+      </section>
+    ))}
+    {other.length > 0 && (
+      <section class="cat-section">
+        <div class="product-grid">
+          {other.map((p) => <ProductCard product={p} lang={lang} />)}
+        </div>
+      </section>
+    )}
+  </div>
+</Base>

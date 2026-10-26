@@ -1,0 +1,143 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Img from '../../../components/Img.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import { LOCALES, t } from '../../../i18n/ui.js';
+import { getProducts, getSettings, md } from '../../../lib/content.js';
+
+export function getStaticPaths() {
+  const paths = [];
+  for (const lang of LOCALES) {
+    for (const p of getProducts(lang)) paths.push({ params: { lang, slug: p.slug }, props: { product: p } });
+  }
+  return paths;
+}
+
+const { lang } = Astro.params;
+const { product: p } = Astro.props;
+const settings = getSettings(lang);
+const slides = [...new Set([...p.images, ...p.colors.map((c) => c.image).filter(Boolean)])];
+const related = getProducts(lang).filter((x) => x.category === p.category && x.slug !== p.slug).slice(0, 4);
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: p.title,
+  description: p.summary || p.tagline,
+  image: slides.slice(0, 4).map((s) => new URL(s, Astro.site).href),
+  brand: { '@type': 'Brand', name: settings.brand_name },
+  category: t(lang, `cat.${p.category}`),
+};
+---
+<Base lang={lang} title={p.title} description={p.summary || p.tagline} path={`/products/${p.slug}/`} image={slides[0]} jsonld={jsonld}>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href={`/${lang}/products/`}>{t(lang, 'products.title')}</a> / <a href={`/${lang}/products/#${p.category}`}>{t(lang, `cat.${p.category}`)}</a>
+    </nav>
+
+    <article class="pdp">
+      <div class="gallery" data-gallery>
+        <div class="gallery__track" tabindex="0" aria-label={p.title} data-track>
+          {slides.map((src, i) => (
+            <figure class="gallery__slide" data-src={src}>
+              <Img src={src} alt={i === 0 ? p.title : t(lang, 'product.photo', { n: i + 1, total: slides.length })} sizes="(max-width: 900px) 100vw, 56vw" eager={i === 0} />
+            </figure>
+          ))}
+        </div>
+        {slides.length > 1 && (
+          <ul class="gallery__thumbs">
+            {slides.map((src, i) => (
+              <li>
+                <button type="button" data-thumb={i} aria-current={i === 0 ? 'true' : 'false'} aria-label={t(lang, 'product.photo', { n: i + 1, total: slides.length })}>
+                  <Img src={src} alt="" sizes="80px" />
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      <div class="pdp__info">
+        <a class="card__cat" href={`/${lang}/products/#${p.category}`}>{t(lang, `cat.${p.category}`)}</a>
+        <h1>{p.title}</h1>
+        {p.tagline && <p class="pdp__tagline">{p.tagline}</p>}
+
+        <div class="btn-row">
+          <a class="btn btn--primary" href={`/${lang}/contact/?product=${encodeURIComponent(p.slug)}`}>{t(lang, 'product.quote')}</a>
+          {p.builder && <a class="btn btn--ghost" href={`/${lang}/wheel-builder/`}>{t(lang, 'product.build')}</a>}
+        </div>
+
+        {p.colors.length > 0 && (
+          <section class="pdp__section">
+            <h2>{t(lang, 'product.colors')}</h2>
+            <ul class="color-pick">
+              {p.colors.map((c, i) => (
+                <li>
+                  <button type="button" data-color-img={c.image || ''} aria-pressed={i === 0 ? 'true' : 'false'}>
+                    <i style={`background:${c.hex || '#999'}`}></i>{c.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {p.body && <section class="pdp__section prose" set:html={md(p.body)} />}
+
+        {p.specs.length > 0 && (
+          <section class="pdp__section">
+            <h2>{t(lang, 'product.specs')}</h2>
+            <dl class="specs">
+              {p.specs.map((s) => (<><dt>{s.label}</dt><dd>{s.value}</dd></>))}
+            </dl>
+          </section>
+        )}
+      </div>
+    </article>
+  </div>
+
+  {related.length > 0 && (
+    <section class="block theme-light" style="padding-top:0">
+      <div class="wrap">
+        <div class="block__head"><h2>{t(lang, 'product.related')}</h2></div>
+        <div class="product-grid">
+          {related.map((r) => <ProductCard product={r} lang={lang} />)}
+        </div>
+      </div>
+    </section>
+  )}
+</Base>
+
+<script>
+  // Galería: miniaturas, deslizamiento y botones de color.
+  const root = document.querySelector<HTMLElement>('[data-gallery]');
+  const track = root?.querySelector<HTMLElement>('[data-track]');
+  if (root && track) {
+    const slides = Array.from(track.querySelectorAll<HTMLElement>('.gallery__slide'));
+    const thumbs = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-thumb]'));
+    const go = (i: number) => {
+      const s = slides[i];
+      if (!s) return;
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      track.scrollTo({ left: s.offsetLeft - track.offsetLeft, behavior: reduce ? 'auto' : 'smooth' });
+      mark(i);
+    };
+    const mark = (i: number) => thumbs.forEach((b, k) => b.setAttribute('aria-current', String(k === i)));
+    thumbs.forEach((b) => b.addEventListener('click', () => go(Number(b.dataset.thumb))));
+    let raf = 0;
+    track.addEventListener('scroll', () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => mark(Math.round(track.scrollLeft / track.clientWidth)));
+    }, { passive: true });
+    track.addEventListener('keydown', (e) => {
+      const cur = Math.round(track.scrollLeft / track.clientWidth);
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(Math.min(cur + 1, slides.length - 1)); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(Math.max(cur - 1, 0)); }
+    });
+    const colorBtns = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-color-img]'));
+    colorBtns.forEach((btn) => btn.addEventListener('click', () => {
+      colorBtns.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+      const idx = slides.findIndex((s) => s.dataset.src === btn.dataset.colorImg);
+      if (idx >= 0) go(idx);
+    }));
+  }
+</script>

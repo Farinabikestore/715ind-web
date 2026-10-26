@@ -1,0 +1,156 @@
+es:
+  title: Polera Hub Edition
+  slug: hub-edition-tee
+  category: apparel
+  order: 130
+  featured: false
+  builder: false
+  tagline: El corazón de la rueda, en despiece.
+  summary: Polera de algodón con el despiece técnico de una maza 715.
+  images:
+  - /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-2.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-3.webp
+  colors:
+  - name: Blanco
+    hex: '#f2f2ef'
+    image: /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  specs:
+  - label: Tela
+    value: 100% algodón
+  - label: Estampado
+    value: DTF transpirable
+  body: |
+    Un homenaje a la pieza donde todo gira: la maza. El diseño muestra cada parte de una 715, de los rodamientos a los trinquetes.
+
+    100% algodón con estampado DTF transpirable.
+en:
+  title: Hub Edition tee
+  slug: hub-edition-tee
+  category: apparel
+  order: 130
+  featured: false
+  builder: false
+  tagline: The heart of the wheel, exploded.
+  summary: Cotton tee with the technical exploded view of a 715 hub.
+  images:
+  - /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-2.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-3.webp
+  colors:
+  - name: White
+    hex: '#f2f2ef'
+    image: /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  specs:
+  - label: Fabric
+    value: 100% cotton
+  - label: Print
+    value: Breathable DTF
+  body: |
+    A tribute to the part where everything turns: the hub. The graphic shows every piece of a 715, from bearings to pawls.
+
+    100% cotton with breathable DTF print.
+pt:
+  title: Camiseta Hub Edition
+  slug: hub-edition-tee
+  category: apparel
+  order: 130
+  featured: false
+  builder: false
+  tagline: O coração da roda, em vista explodida.
+  summary: Camiseta de algodão com a vista explodida de um cubo 715.
+  images:
+  - /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-2.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-3.webp
+  colors:
+  - name: Branco
+    hex: '#f2f2ef'
+    image: /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  specs:
+  - label: Tecido
+    value: 100% algodão
+  - label: Estampa
+    value: DTF respirável
+  body: |
+    Uma homenagem à peça onde tudo gira: o cubo. O desenho mostra cada parte de um 715, dos rolamentos às linguetas.
+
+    100% algodão com estampa DTF respirável.
+de:
+  title: Hub Edition T-Shirt
+  slug: hub-edition-tee
+  category: apparel
+  order: 130
+  featured: false
+  builder: false
+  tagline: Das Herz des Laufrads, in Explosionsansicht.
+  summary: Baumwoll-T-Shirt mit der technischen Explosionsansicht einer 715-Nabe.
+  images:
+  - /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-2.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-3.webp
+  colors:
+  - name: Weiß
+    hex: '#f2f2ef'
+    image: /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  specs:
+  - label: Stoff
+    value: 100 % Baumwolle
+  - label: Druck
+    value: Atmungsaktiver DTF-Druck
+  body: |
+    Eine Hommage an das Teil, um das sich alles dreht: die Nabe. Die Grafik zeigt jedes Teil einer 715, von den Lagern bis zu den Sperrklinken.
+
+    100 % Baumwolle mit atmungsaktivem DTF-Druck.
+fr:
+  title: T-shirt Hub Edition
+  slug: hub-edition-tee
+  category: apparel
+  order: 130
+  featured: false
+  builder: false
+  tagline: Le cœur de la roue, en vue éclatée.
+  summary: T-shirt en coton avec la vue éclatée technique d'un moyeu 715.
+  images:
+  - /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-2.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-3.webp
+  colors:
+  - name: Blanc
+    hex: '#f2f2ef'
+    image: /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  specs:
+  - label: Tissu
+    value: 100 % coton
+  - label: Impression
+    value: DTF respirant
+  body: |
+    Un hommage à la pièce autour de laquelle tout tourne : le moyeu. Le graphisme montre chaque pièce d'un 715, des roulements aux cliquets.
+
+    100 % coton avec impression DTF respirante.
+it:
+  title: T-shirt Hub Edition
+  slug: hub-edition-tee
+  category: apparel
+  order: 130
+  featured: false
+  builder: false
+  tagline: Il cuore della ruota, in esploso.
+  summary: T-shirt in cotone con l'esploso tecnico di un mozzo 715.
+  images:
+  - /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-2.webp
+  - /uploads/products/hub-edition-tee/white-hub-edition-3.webp
+  colors:
+  - name: Bianco
+    hex: '#f2f2ef'
+    image: /uploads/products/hub-edition-tee/white-hub-edition-1.webp
+  specs:
+  - label: Tessuto
+    value: 100% cotone
+  - label: Stampa
+    value: DTF traspirante
+  body: |
+    Un omaggio al pezzo attorno a cui gira tutto: il mozzo. La grafica mostra ogni parte di un 715, dai cuscinetti ai cricchetti.
+
+    100% cotone con stampa DTF traspirante.

@@ -1,0 +1,216 @@
+es:
+  title: Ruedas 715 a medida
+  slug: custom-wheels
+  category: wheels
+  order: 60
+  featured: true
+  builder: true
+  tagline: Elige cada pieza. Nosotros las armamos a mano.
+  summary: Ruedas delanteras, traseras o par, armadas a mano con llantas, mazas y rayos 715.
+  images:
+  - /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  - /uploads/products/ultra-wheelset/rueda-delantera-715-1.webp
+  - /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+  colors:
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  specs:
+  - label: Llantas
+    value: Enduro H30, E30 Ultra
+  - label: Mazas
+    value: Ultra, Trail, Front 15x110
+  - label: Rayos
+    value: Richman SR14 J-bend
+  - label: Niples
+    value: Pillar de bronce 14G
+  - label: Tamaño de rueda
+    value: 27,5" / 29"
+  - label: Hoyos
+    value: 28 / 32
+  - label: Armado
+    value: A mano en nuestro taller de Santiago, Chile
+  body: |
+    Combina la llanta Enduro H30 o la E30 Ultra con las mazas Ultra, Trail o la delantera 15x110, elige colores y núcleo, y nosotros la armamos y tensamos a mano en nuestro taller.
+
+    Usa el armador de ruedas para configurar la tuya y envíanos la solicitud.
+en:
+  title: Custom 715 wheels
+  slug: custom-wheels
+  category: wheels
+  order: 60
+  featured: true
+  builder: true
+  tagline: Pick every part. We build them by hand.
+  summary: Front, rear or pairs, hand built with 715 rims, hubs and spokes.
+  images:
+  - /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  - /uploads/products/ultra-wheelset/rueda-delantera-715-1.webp
+  - /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+  colors:
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  specs:
+  - label: Rims
+    value: Enduro H30, E30 Ultra
+  - label: Hubs
+    value: Ultra, Trail, Front 15x110
+  - label: Spokes
+    value: Richman SR14 J-bend
+  - label: Nipples
+    value: Pillar brass 14G
+  - label: Wheel size
+    value: 27,5" / 29"
+  - label: Spoke holes
+    value: 28 / 32
+  - label: Build
+    value: Hand built in our Santiago, Chile workshop
+  body: |
+    Pair the Enduro H30 or E30 Ultra rim with Ultra, Trail or 15x110 front hubs, choose colours and freehub, and we lace and tension it by hand in our workshop.
+
+    Use the wheel builder to configure yours and send us the request.
+pt:
+  title: Rodas 715 sob medida
+  slug: custom-wheels
+  category: wheels
+  order: 60
+  featured: true
+  builder: true
+  tagline: Escolha cada peça. Nós montamos à mão.
+  summary: Rodas dianteiras, traseiras ou par, montadas à mão com aros, cubos e raios 715.
+  images:
+  - /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  - /uploads/products/ultra-wheelset/rueda-delantera-715-1.webp
+  - /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+  colors:
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  specs:
+  - label: Aros
+    value: Enduro H30, E30 Ultra
+  - label: Cubos
+    value: Ultra, Trail, Front 15x110
+  - label: Raios
+    value: Richman SR14 J-bend
+  - label: Niples
+    value: Pillar de latão 14G
+  - label: Tamanho da roda
+    value: 27,5" / 29"
+  - label: Furos
+    value: 28 / 32
+  - label: Montagem
+    value: À mão na nossa oficina em Santiago, Chile
+  body: |
+    Combine o aro Enduro H30 ou o E30 Ultra com os cubos Ultra, Trail ou o dianteiro 15x110, escolha cores e cubo livre, e nós montamos e tensionamos à mão na nossa oficina.
+
+    Use o configurador de rodas para montar a sua e envie o pedido.
+de:
+  title: 715 Laufräder nach Maß
+  slug: custom-wheels
+  category: wheels
+  order: 60
+  featured: true
+  builder: true
+  tagline: Wähle jedes Teil. Wir bauen sie von Hand.
+  summary: Vorder-, Hinterrad oder Satz, von Hand gebaut mit 715 Felgen, Naben und Speichen.
+  images:
+  - /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  - /uploads/products/ultra-wheelset/rueda-delantera-715-1.webp
+  - /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+  colors:
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  specs:
+  - label: Felgen
+    value: Enduro H30, E30 Ultra
+  - label: Naben
+    value: Ultra, Trail, Front 15x110
+  - label: Speichen
+    value: Richman SR14 J-bend
+  - label: Nippel
+    value: Pillar Messing 14G
+  - label: Laufradgröße
+    value: 27,5" / 29"
+  - label: Speichenlöcher
+    value: 28 / 32
+  - label: Aufbau
+    value: Handgefertigt in unserer Werkstatt in Santiago de Chile
+  body: |
+    Kombiniere die Enduro H30 oder E30 Ultra Felge mit Ultra-, Trail- oder 15x110-Vorderradnabe, wähle Farben und Freilauf, und wir speichen und zentrieren von Hand in unserer Werkstatt.
+
+    Nutze den Laufrad-Konfigurator und schick uns deine Anfrage.
+fr:
+  title: Roues 715 sur mesure
+  slug: custom-wheels
+  category: wheels
+  order: 60
+  featured: true
+  builder: true
+  tagline: Choisissez chaque pièce. Nous les montons à la main.
+  summary: Roue avant, arrière ou paire, montées à la main avec jantes, moyeux et rayons 715.
+  images:
+  - /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  - /uploads/products/ultra-wheelset/rueda-delantera-715-1.webp
+  - /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+  colors:
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  specs:
+  - label: Jantes
+    value: Enduro H30, E30 Ultra
+  - label: Moyeux
+    value: Ultra, Trail, Front 15x110
+  - label: Rayons
+    value: Richman SR14 J-bend
+  - label: Écrous
+    value: Pillar laiton 14G
+  - label: Taille de roue
+    value: 27,5" / 29"
+  - label: Trous
+    value: 28 / 32
+  - label: Montage
+    value: À la main dans notre atelier de Santiago du Chili
+  body: |
+    Associez la jante Enduro H30 ou E30 Ultra aux moyeux Ultra, Trail ou avant 15x110, choisissez couleurs et corps de roue libre, et nous rayonnons et tendons la roue à la main dans notre atelier.
+
+    Utilisez le configurateur de roues et envoyez-nous votre demande.
+it:
+  title: Ruote 715 su misura
+  slug: custom-wheels
+  category: wheels
+  order: 60
+  featured: true
+  builder: true
+  tagline: Scegli ogni pezzo. Le montiamo a mano.
+  summary: Ruota anteriore, posteriore o coppia, montate a mano con cerchi, mozzi e raggi 715.
+  images:
+  - /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  - /uploads/products/ultra-wheelset/rueda-delantera-715-1.webp
+  - /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+  colors:
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  specs:
+  - label: Cerchi
+    value: Enduro H30, E30 Ultra
+  - label: Mozzi
+    value: Ultra, Trail, Front 15x110
+  - label: Raggi
+    value: Richman SR14 J-bend
+  - label: Nipples
+    value: Pillar ottone 14G
+  - label: Misura ruota
+    value: 27,5" / 29"
+  - label: Fori
+    value: 28 / 32
+  - label: Assemblaggio
+    value: A mano nella nostra officina di Santiago del Cile
+  body: |
+    Abbina il cerchio Enduro H30 o E30 Ultra ai mozzi Ultra, Trail o anteriore 15x110, scegli colori e corpetto, e noi la raggiamo e tensioniamo a mano nella nostra officina.
+
+    Usa il configuratore di ruote e inviaci la richiesta.
