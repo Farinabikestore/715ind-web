@@ -1,9 +1,12 @@
 ---
-// Armador de ruedas en modo catálogo: no muestra precios ni carro.
-// Al final guarda la configuración y abre el formulario de contacto con ella adjunta.
-import Img from './Img.astro';
+// Armador de ruedas 715IND (mismo armador de farinabikestore.com/arma-tu-rueda, en modo catálogo).
+// - Muestra todos los productos, sin precios ni stock.
+// - Visor 3D: copia local de github.com/Farinabikestore/715-3d (carpeta public/3d).
+// - "Comprar" lleva al armador de Fariña Bike Store; "Solicitar cotización" abre el formulario con la configuración.
+// Los datos (llantas, mazas, núcleos, largos de rayo) se editan en el panel: Armador de ruedas.
 import { t, clientStrings } from '../i18n/ui.js';
 import { getBuilder } from '../lib/content.js';
+import { variant } from '../lib/img.js';
 
 const { lang } = Astro.props;
 const data = getBuilder();
@@ -12,376 +15,395 @@ const colorName = (c) => {
   const v = t(lang, k);
   return v === k ? c.name : v;
 };
-const strings = clientStrings(lang, ['builder.', 'color.']);
-const types = ['pair', 'rear', 'front'];
+const mapColors = (list = []) => list.map((c) => ({ id: c.id, name: colorName(c), img: c.image ? variant(c.image, 480) : '' }));
+const payload = {
+  sizes: (data.sizes || []).map(String),
+  rims: (data.rims || []).map((r) => ({ id: r.id, name: r.name, note: r.note || '', sizes: (r.sizes || data.sizes || []).map(String), holes: r.holes || [], colors: mapColors(r.colors) })),
+  front: (data.front_hubs || []).map((h) => ({ id: h.id, name: h.name, note: h.note || '', holes: h.holes || [], colors: mapColors(h.colors) })),
+  rear: (data.rear_hubs || []).map((h) => ({ id: h.id, name: h.name, note: h.note || '', holes: h.holes || [], freehubs: h.freehubs || [], colors: mapColors(h.colors) })),
+  freehubs: (data.freehubs || []).map((f) => ({ id: f.id, name: f.name })),
+  spoke: data.spoke || '',
+  nipple: data.nipple || '',
+  lengths: (data.spoke_lengths || []).map((l) => ({ rim: l.rim, size: String(l.size), hub: l.hub, holes: Number(l.holes), left: Number(l.left), right: Number(l.right) })),
+  strings: clientStrings(lang, ['builder.']),
+  shop: 'https://www.farinabikestore.com/arma-tu-rueda',
+  contact: `/${lang}/contact/?from=builder`,
+};
 ---
-<div class="builder" data-builder data-lang={lang}>
-  <form class="builder__steps" data-form novalidate>
-    <section class="step" data-step="type">
-      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.type')}</h2>
-      <fieldset class="choices">
-        <legend class="visually-hidden">{t(lang, 'builder.type')}</legend>
-        {types.map((v, i) => (
-          <label class="choice"><input type="radio" name="type" value={v} checked={i === 0} /><span>{t(lang, `builder.type.${v}`)}</span></label>
-        ))}
-      </fieldset>
-    </section>
-
-    <section class="step" data-step="size">
-      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.size')}</h2>
-      <fieldset class="choices">
-        <legend class="visually-hidden">{t(lang, 'builder.size')}</legend>
-        {(data.sizes || []).map((s, i) => (
-          <label class="choice"><input type="radio" name="size" value={s} checked={i === 0} /><span>{s}"</span></label>
-        ))}
-      </fieldset>
-    </section>
-
-    <section class="step" data-step="rim">
-      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.rim')}</h2>
-      <fieldset class="part-cards">
-        <legend class="visually-hidden">{t(lang, 'builder.rim')}</legend>
-        {(data.rims || []).map((r, i) => (
-          <label class="part" data-rim={r.id}>
-            <input type="radio" name="rim" value={r.id} checked={i === 0} />
-            <span class="part__box">
-              <Img src={r.colors?.[0]?.image} alt="" sizes="220px" />
-              <span class="part__body"><span class="part__name">{r.name}</span><br /><span class="part__note">{r.note}</span></span>
-            </span>
-          </label>
-        ))}
-      </fieldset>
-      <h3 class="step__sub">{t(lang, 'builder.rimColor')}</h3>
-      <fieldset class="choices" data-colors="rimColor"><legend class="visually-hidden">{t(lang, 'builder.rimColor')}</legend></fieldset>
-      <h3 class="step__sub">{t(lang, 'builder.holes')}</h3>
-      <fieldset class="choices" data-holes><legend class="visually-hidden">{t(lang, 'builder.holes')}</legend></fieldset>
-    </section>
-
-    <section class="step" data-step="frontHub">
-      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.frontHub')}</h2>
-      <fieldset class="part-cards">
-        <legend class="visually-hidden">{t(lang, 'builder.frontHub')}</legend>
-        {(data.front_hubs || []).map((h, i) => (
-          <label class="part" data-hub={h.id}>
-            <input type="radio" name="frontHub" value={h.id} checked={i === 0} />
-            <span class="part__box">
-              <Img src={h.colors?.[0]?.image} alt="" sizes="220px" />
-              <span class="part__body"><span class="part__name">{h.name}</span><br /><span class="part__note">{h.note}</span><br /><span class="part__note" data-na hidden>{t(lang, 'builder.unavailable')}</span></span>
-            </span>
-          </label>
-        ))}
-      </fieldset>
-      <h3 class="step__sub">{t(lang, 'builder.hubColor')}</h3>
-      <fieldset class="choices" data-colors="frontHubColor"><legend class="visually-hidden">{t(lang, 'builder.hubColor')}</legend></fieldset>
-    </section>
-
-    <section class="step" data-step="rearHub">
-      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.rearHub')}</h2>
-      <fieldset class="part-cards">
-        <legend class="visually-hidden">{t(lang, 'builder.rearHub')}</legend>
-        {(data.rear_hubs || []).map((h, i) => (
-          <label class="part" data-hub={h.id}>
-            <input type="radio" name="rearHub" value={h.id} checked={i === 0} />
-            <span class="part__box">
-              <Img src={h.colors?.[0]?.image} alt="" sizes="220px" />
-              <span class="part__body"><span class="part__name">{h.name}</span><br /><span class="part__note">{h.note}</span><br /><span class="part__note" data-na hidden>{t(lang, 'builder.unavailable')}</span></span>
-            </span>
-          </label>
-        ))}
-      </fieldset>
-      <h3 class="step__sub">{t(lang, 'builder.hubColor')}</h3>
-      <fieldset class="choices" data-colors="rearHubColor"><legend class="visually-hidden">{t(lang, 'builder.hubColor')}</legend></fieldset>
-      <h3 class="step__sub">{t(lang, 'builder.freehub')}</h3>
-      <fieldset class="choices" data-freehubs><legend class="visually-hidden">{t(lang, 'builder.freehub')}</legend></fieldset>
-    </section>
-
-    <section class="step" data-step="spokes">
-      <h2 class="step__title"><span class="step__num" data-num></span>{t(lang, 'builder.spokes')}</h2>
-      <p class="part__note">{data.spoke}, {data.nipple}</p>
-      <h3 class="step__sub">{t(lang, 'builder.spokeColor')}</h3>
-      <fieldset class="choices" data-colors="spokeColor"><legend class="visually-hidden">{t(lang, 'builder.spokeColor')}</legend></fieldset>
-      <h3 class="step__sub">{t(lang, 'builder.nippleColor')}</h3>
-      <fieldset class="choices" data-colors="nippleColor"><legend class="visually-hidden">{t(lang, 'builder.nippleColor')}</legend></fieldset>
-    </section>
-  </form>
-
-  <a class="btn btn--dark builder__jump" href="#builder-summary">{t(lang, 'builder.summary')}</a>
-
-  <aside class="summary" id="builder-summary" aria-live="polite">
-    <h2>{t(lang, 'builder.summary')}</h2>
-    <div class="wheel-svg" data-wheel role="img" aria-label={t(lang, 'builder.preview')}></div>
-    <div data-summary></div>
-    <button class="btn btn--primary" type="button" data-request>{t(lang, 'builder.request')}</button>
-    <p class="summary__note" data-msg role="status"></p>
-    <p class="summary__note">{t(lang, 'builder.note')}</p>
-    <button class="link-reset" type="button" data-reset>{t(lang, 'builder.reset')}</button>
-  </aside>
+<div id="arm-app" data-armador>
+  <div id="arm-loading" class="arm-loading">{t(lang, 'builder.loading')}</div>
+  <div id="arm-grid" class="arm-grid" hidden>
+    <div class="arm-vis">
+      <div class="arm-wt" id="arm-wt">
+        <button type="button" data-w="d">{t(lang, 'builder.type.front')}</button><button type="button" data-w="t" class="sel">{t(lang, 'builder.type.rear')}</button>
+      </div>
+      <div id="arm-3d" role="img" aria-label={t(lang, 'builder.preview')}></div>
+    </div>
+    <div class="arm-panel">
+      <h1 class="arm-title">{t(lang, 'builder.title')}</h1>
+      <p class="arm-sub">{t(lang, 'builder.intro')}</p>
+      <div id="arm-steps"></div>
+      <div class="arm-side" id="builder-summary">
+        <h2>{t(lang, 'builder.summary')}</h2>
+        <div id="arm-summary" aria-live="polite"></div>
+        <a id="arm-buy" class="arm-btn" href={payload.shop} target="_blank" rel="noopener">{t(lang, 'builder.buy')} ↗</a>
+        <p class="arm-note">{t(lang, 'builder.buyNote')}</p>
+        <button type="button" id="arm-quote" class="arm-btn arm-btn--ghost">{t(lang, 'builder.request')}</button>
+        <div id="arm-msg" class="arm-msg" role="status"></div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<script type="application/json" id="builder-data" set:html={JSON.stringify({ data, strings, contact: `/${lang}/contact/?from=builder` }).replace(/</g, '\\u003c')} />
+<script type="application/json" id="arm-data" set:html={JSON.stringify(payload).replace(/</g, '\\u003c')} />
 
 <script>
-  type Color = { id: string; name: string; hex?: string; image?: string };
-  type Part = { id: string; name: string; note?: string; product?: string; holes?: number[]; sizes?: string[]; freehubs?: string[]; colors?: Color[] };
+  type Color = { id: string; name: string; img: string };
+  type Part = { id: string; name: string; note: string; holes: number[]; sizes?: string[]; freehubs?: string[]; colors: Color[] };
+  type Wheel = { size: string | null; rim: string | null; holes: number | null; hub: string | null; fh: string | null };
 
-  const el = document.querySelector<HTMLElement>('[data-builder]');
-  const raw = document.getElementById('builder-data');
-  if (el && raw) {
-    const { data, strings, contact } = JSON.parse(raw.textContent || '{}');
-    const S = (k: string) => strings[k] ?? k;
-    const cname = (c?: Color) => (c ? strings[`color.${c.id}`] ?? c.name : '');
-    const form = el.querySelector<HTMLFormElement>('[data-form]')!;
-    const KEY = '715-builder-state';
-    const rims: Part[] = data.rims || [];
-    const fronts: Part[] = data.front_hubs || [];
-    const rears: Part[] = data.rear_hubs || [];
-    const freehubs: { id: string; name: string }[] = data.freehubs || [];
+  const root = document.querySelector<HTMLElement>('[data-armador]');
+  const raw = document.getElementById('arm-data');
+  if (root && raw) {
+    const D = JSON.parse(raw.textContent || '{}');
+    const S = (k: string) => D.strings[k] || k;
+    const esc = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] as string);
+    const rims: Part[] = D.rims, front: Part[] = D.front, rear: Part[] = D.rear;
+    const fhName = (id: string) => (D.freehubs.find((f: { id: string }) => f.id === id) || { name: id }).name;
 
-    const val = (name: string) => (form.querySelector<HTMLInputElement>(`input[name="${name}"]:checked`)?.value) || '';
-    const find = (list: Part[], id: string) => list.find((x) => x.id === id);
-    const inter = (...lists: (number[] | undefined)[]) => {
-      const valid = lists.filter((l): l is number[] => Array.isArray(l) && l.length > 0);
-      if (!valid.length) return [];
-      return valid.reduce((a, b) => a.filter((x) => b.includes(x)));
-    };
+    // ---- Estado: una rueda (delantera o trasera) o un juego (par) ----
+    const blank = (): Wheel => ({ size: null, rim: null, holes: null, hub: null, fh: null });
+    const sel = { tipo: 'tra' as 'del' | 'tra' | 'par', one: blank(), par: { d: blank(), t: blank() } };
+    const q = new URLSearchParams(location.search).get('tipo') || '';
+    if (/^del|^front/i.test(q)) sel.tipo = 'del';
+    else if (/^(par|jue|set|pair)/i.test(q)) sel.tipo = 'par';
+    if (D.sizes.length === 1) { sel.one.size = D.sizes[0]; sel.par.d.size = D.sizes[0]; sel.par.t.size = D.sizes[0]; }
 
-    // Dibuja botones de opción (colores, hoyos, núcleos) dentro de un fieldset.
-    function renderChoices(box: HTMLElement, name: string, items: { value: string; label: string; hex?: string }[], keep: string) {
-      const legend = box.querySelector('legend');
-      box.innerHTML = '';
-      if (legend) box.appendChild(legend);
-      const chosen = items.some((i) => i.value === keep) ? keep : items[0]?.value;
-      for (const it of items) {
-        const label = document.createElement('label');
-        label.className = 'choice';
-        const input = document.createElement('input');
-        input.type = 'radio';
-        input.name = name;
-        input.value = it.value;
-        input.checked = it.value === chosen;
-        const span = document.createElement('span');
-        if (it.hex) {
-          const dot = document.createElement('i');
-          if (/^#[0-9a-f]{3,8}$/i.test(it.hex)) dot.style.background = it.hex;
-          span.appendChild(dot);
+    // Claves "pieza|color"
+    const split = (k: string | null) => (k ? k.split('|') : [null, null]) as [string | null, string | null];
+    const findPart = (list: Part[], k: string | null) => { const [id, c] = split(k); const p = list.find((x) => x.id === id); return p ? { p, c: p.colors.find((x) => x.id === c) || p.colors[0] } : null; };
+    const hubsFor = (pos: 'd' | 't') => (pos === 'd' ? front : rear);
+    const frontHoles = () => [...new Set(front.flatMap((h) => h.holes))];
+    const posOf = (w: 'one' | 'd' | 't'): 'd' | 't' => (w === 'one' ? (sel.tipo === 'del' ? 'd' : 't') : w);
+    const W = (w: 'one' | 'd' | 't'): Wheel => (w === 'one' ? sel.one : sel.par[w]);
+    const allowedHoles = (rim: Part, pos: 'd' | 't') => { const hub = new Set(hubsFor(pos).flatMap((h) => h.holes)); return rim.holes.filter((h) => hub.has(h)); };
+
+    function lengthFor(st: Wheel, pos: 'd' | 't') {
+      const r = findPart(rims, st.rim), h = findPart(hubsFor(pos), st.hub);
+      if (!r || !h || !st.holes || !st.size) return null;
+      return D.lengths.find((l: { rim: string; size: string; hub: string; holes: number }) => l.rim === r.p.id && l.size === st.size && l.hub === h.p.id && l.holes === st.holes) || null;
+    }
+    const lenText = (l: { left: number; right: number }) => (l.left === l.right ? `${l.left} mm` : `${l.left} / ${l.right} mm`);
+    const sizeLabel = (s: string) => `${s}"`;
+
+    // ---- Tarjetas ----
+    function card(attrs: string, selected: boolean, img: string, name: string, note: string) {
+      return `<button type="button" class="arm-card${selected ? ' sel' : ''}" ${attrs} aria-pressed="${selected}">`
+        + (img ? `<span class="im"><img loading="lazy" src="${esc(img)}" alt=""></span>` : '')
+        + `<span class="bd"><span class="nm">${esc(name)}</span>${note ? `<small>${esc(note)}</small>` : ''}</span></button>`;
+    }
+    function chips(attrs: string, items: { v: string | number; label: string; out?: boolean }[], current: unknown) {
+      return '<div class="arm-vals">' + items.map((i) => {
+        const on = String(current) === String(i.v);
+        return `<button type="button" class="arm-val${on ? ' sel' : ''}${i.out ? ' out' : ''}" ${attrs} data-val="${esc(i.v)}"${i.out ? ' disabled' : ''} aria-pressed="${on}">${esc(i.label)}${i.out ? ` (${esc(S('builder.notCompatible'))})` : ''}</button>`;
+      }).join('') + '</div>';
+    }
+    const empty = (txt: string) => `<div class="arm-empty">${esc(txt)}</div>`;
+
+    // ---- Pasos de una rueda ----
+    function wheelSteps(w: 'one' | 'd' | 't', head: (t: string, z?: string, zw?: string) => string) {
+      const st = W(w), pos = posOf(w), zw = w === 'one' ? '' : w;
+      const par = w !== 'one';
+      let h = '';
+      h += head(esc(par ? S(pos === 'd' ? 'builder.frontSize' : 'builder.rearSize') : S('builder.size')), 'full', zw)
+        + '<div class="arm-sizes">' + D.sizes.map((s: string) => `<button type="button" class="arm-size${st.size === s ? ' sel' : ''}" data-w="${w}" data-size="${esc(s)}" aria-pressed="${st.size === s}">${esc(sizeLabel(s))}</button>`).join('') + '</div></div>';
+
+      const rimTitle = esc(par ? S(pos === 'd' ? 'builder.frontRim' : 'builder.rearRim') : S('builder.rim'));
+      if (!st.size) h += head(rimTitle, 'full', zw) + empty(S('builder.pickSizeFirst')) + '</div>';
+      else {
+        const list = rims.filter((r) => (r.sizes || []).includes(st.size as string));
+        let body = list.length ? '<div class="arm-cards">' + list.flatMap((r) => r.colors.map((c) => card(`data-w="${w}" data-rim="${esc(r.id + '|' + c.id)}"`, st.rim === r.id + '|' + c.id, c.img, `${r.name} ${sizeLabel(st.size as string)} ${c.name}`, r.note))).join('') + '</div>' : empty(S('builder.empty'));
+        const r = findPart(rims, st.rim);
+        if (r) {
+          const ok = allowedHoles(r.p, pos);
+          body += chips(`data-w="${w}" data-holes`, r.p.holes.map((x) => ({ v: x, label: `${x}H`, out: !ok.includes(x) })), st.holes);
         }
-        span.appendChild(document.createTextNode(it.label));
-        label.append(input, span);
-        box.appendChild(label);
+        h += head(rimTitle + (par && pos === 't' ? ` <span class="hint">${esc(S('builder.pickHoles'))}</span>` : ''), 'full', zw) + body + '</div>';
       }
+
+      const hubTitle = esc(S(pos === 'd' ? 'builder.frontHub' : 'builder.rearHub'));
+      const hubs = hubsFor(pos).filter((x) => !st.holes || x.holes.includes(st.holes));
+      h += head(hubTitle, 'maza', zw) + (hubs.length ? '<div class="arm-cards">' + hubs.flatMap((x) => x.colors.map((c) => card(`data-w="${w}" data-hub="${esc(x.id + '|' + c.id)}"`, st.hub === x.id + '|' + c.id, c.img, `${x.name} ${c.name}`, x.note))).join('') + '</div>' : empty(S('builder.empty'))) + '</div>';
+
+      if (pos === 't') {
+        const hb = findPart(rear, st.hub);
+        h += head(esc(S('builder.freehub')), 'maza', zw) + (hb ? chips(`data-w="${w}" data-fh`, (hb.p.freehubs || []).map((f) => ({ v: f, label: fhName(f) })), st.fh) : empty(S('builder.pickRearHubFirst'))) + '</div>';
+      }
+      return h;
     }
-    const colorItems = (cols?: Color[]) => (cols || []).map((c) => ({ value: c.id, label: cname(c), hex: c.hex }));
 
-    function lengths(rim: string, size: string, hub: string, holes: number) {
-      const r = (data.spoke_lengths || []).find((x: any) => x.rim === rim && String(x.size) === String(size) && x.hub === hub && Number(x.holes) === Number(holes));
-      return r ? `${r.left} / ${r.right} mm` : S('builder.lengthsNA');
+    function spokesStep(head: (t: string) => string) {
+      const parts = `${D.spoke}${D.nipple ? ' + ' + D.nipple : ''}`;
+      if (sel.tipo === 'par') {
+        const d = lengthFor(sel.par.d, 'd'), t = lengthFor(sel.par.t, 't');
+        const ready = sel.par.d.hub && sel.par.t.hub;
+        return head(S('builder.spokes')) + (ready ? `<div class="arm-info"><b>${esc(parts)}</b><small>${esc(S('builder.length'))} · ${esc(S('builder.type.front'))}: ${esc(d ? lenText(d) : S('builder.lengthsNA'))} · ${esc(S('builder.type.rear'))}: ${esc(t ? lenText(t) : S('builder.lengthsNA'))}</small></div>` : empty(S('builder.pickBothForSpokes'))) + '</div>';
+      }
+      const pos = posOf('one'), l = lengthFor(sel.one, pos);
+      return head(S('builder.spokes')) + (sel.one.hub && sel.one.holes ? `<div class="arm-info"><b>${esc(parts)}</b><small>${esc(S('builder.length'))}: ${esc(l ? lenText(l) : S('builder.lengthsNA'))} · ${sel.one.holes} u.</small></div>` : empty(S('builder.pickForSpokes'))) + '</div>';
     }
 
-    function update(changed?: string) {
-      const type = val('type');
-      const showFront = type !== 'rear';
-      const showRear = type !== 'front';
-      el!.querySelector<HTMLElement>('[data-step="frontHub"]')!.hidden = !showFront;
-      el!.querySelector<HTMLElement>('[data-step="rearHub"]')!.hidden = !showRear;
-
-      // Numeración de pasos visibles
+    function render() {
       let n = 0;
-      el!.querySelectorAll<HTMLElement>('.step').forEach((s) => {
-        const num = s.querySelector('[data-num]');
-        if (!s.hidden && num) num.textContent = String(++n);
+      const head = (txt: string, z?: string, zw?: string) => { n++; return `<div class="arm-step" data-zk="s${n}"${z ? ` data-zone="${z}"` : ''}${zw ? ` data-zw="${zw}"` : ''}><h3><span class="n">${n}</span>${txt}</h3>`; };
+      let h = head(esc(S('builder.type')), 'full') + '<div class="arm-toggle">'
+        + (['del', 'tra', 'par'] as const).map((k) => `<button type="button" data-tipo="${k}" class="${sel.tipo === k ? 'sel' : ''}" aria-pressed="${sel.tipo === k}">${esc(S(k === 'del' ? 'builder.type.front' : k === 'tra' ? 'builder.type.rear' : 'builder.type.pair'))}</button>`).join('') + '</div></div>';
+      if (sel.tipo === 'par') {
+        h += `<div class="arm-wheel">${esc(S('builder.frontWheel'))}</div>` + wheelSteps('d', head);
+        h += `<div class="arm-wheel">${esc(S('builder.rearWheel'))}</div>` + wheelSteps('t', head);
+      } else {
+        h += wheelSteps('one', head);
+      }
+      h += spokesStep((t) => head(esc(t)));
+      document.getElementById('arm-steps')!.innerHTML = h;
+      renderSummary();
+      update3D();
+    }
+
+    // ---- Resumen ----
+    function wheelLines(st: Wheel, pos: 'd' | 't') {
+      const out: [string, string][] = [];
+      if (st.size) out.push([S('builder.size'), sizeLabel(st.size)]);
+      const r = findPart(rims, st.rim);
+      if (r) out.push([S('builder.rim'), `${r.p.name} ${r.c ? r.c.name : ''}${st.holes ? ' · ' + st.holes + 'H' : ''}`]);
+      const hb = findPart(hubsFor(pos), st.hub);
+      if (hb) out.push([S(pos === 'd' ? 'builder.frontHub' : 'builder.rearHub'), `${hb.p.name} ${hb.c ? hb.c.name : ''}`]);
+      if (pos === 't' && st.fh) out.push([S('builder.freehub'), fhName(st.fh)]);
+      const l = lengthFor(st, pos);
+      if (hb && st.holes) out.push([S('builder.spokes'), `${D.spoke}${l ? ' · ' + lenText(l) : ''}`]);
+      return out;
+    }
+    const done = (st: Wheel, pos: 'd' | 't') => !!(st.size && st.rim && st.holes && st.hub && (pos === 'd' || st.fh));
+    let configText = '';
+    function renderSummary() {
+      let html = '', lines: string[] = [], ok = false;
+      const row = ([k, v]: [string, string]) => `<div class="arm-line"><span class="l">${esc(k)}</span><span class="v">${esc(v)}</span></div>`;
+      if (sel.tipo === 'par') {
+        const a = wheelLines(sel.par.d, 'd'), b = wheelLines(sel.par.t, 't');
+        if (a.length) html += `<div class="arm-line sub"><span class="l">${esc(S('builder.type.front'))}</span></div>` + a.map(row).join('');
+        if (b.length) html += `<div class="arm-line sub"><span class="l">${esc(S('builder.type.rear'))}</span></div>` + b.map(row).join('');
+        lines = [`${S('builder.type')}: ${S('builder.type.pair')}`, `— ${S('builder.type.front')}`, ...a.map(([k, v]) => `${k}: ${v}`), `— ${S('builder.type.rear')}`, ...b.map(([k, v]) => `${k}: ${v}`)];
+        ok = done(sel.par.d, 'd') && done(sel.par.t, 't');
+      } else {
+        const pos = posOf('one'), a = wheelLines(sel.one, pos);
+        html += a.map(row).join('');
+        lines = [`${S('builder.type')}: ${S(pos === 'd' ? 'builder.type.front' : 'builder.type.rear')}`, ...a.map(([k, v]) => `${k}: ${v}`)];
+        ok = done(sel.one, pos);
+      }
+      document.getElementById('arm-summary')!.innerHTML = html || `<div class="arm-empty">${esc(S('builder.nothing'))}</div>`;
+      configText = ok ? lines.join('\n') : '';
+      const tipo = sel.tipo === 'del' ? 'delantera' : sel.tipo === 'tra' ? 'trasera' : 'par';
+      (document.getElementById('arm-buy') as HTMLAnchorElement).href = `${D.shop}?tipo=${tipo}`;
+      const qb = document.getElementById('arm-quote')!;
+      qb.setAttribute('aria-disabled', String(!ok));
+      if (ok) msg('');
+    }
+    function msg(txt: string) { const m = document.getElementById('arm-msg')!; m.textContent = txt; m.className = 'arm-msg' + (txt ? ' err' : ''); }
+
+    // ---- Clics ----
+    const resetBelow = (st: Wheel, from: 'size' | 'rim' | 'holes' | 'hub') => {
+      if (from === 'size') { st.rim = null; st.holes = null; st.hub = null; st.fh = null; }
+      if (from === 'rim') { st.holes = null; }
+      if (from === 'rim' || from === 'holes') { const h = findPart(hubsFor('t'), st.hub) || findPart(hubsFor('d'), st.hub); if (h && st.holes && !h.p.holes.includes(st.holes)) { st.hub = null; st.fh = null; } }
+      if (from === 'hub') { st.fh = null; }
+    };
+    root.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLElement>('button');
+      if (!b || !root.contains(b)) return;
+      if (b.id === 'arm-quote') return quote();
+      if (b.dataset.tipo) {
+        const t = b.dataset.tipo as typeof sel.tipo;
+        if (t !== sel.tipo) { if (sel.tipo !== 'par' && t !== 'par') { sel.one.hub = null; sel.one.fh = null; if (sel.one.rim) { const r = findPart(rims, sel.one.rim); if (r && sel.one.holes && !allowedHoles(r.p, t === 'del' ? 'd' : 't').includes(sel.one.holes)) sel.one.holes = null; } } sel.tipo = t; rueda3D = 't'; }
+        zoom3D('full'); return render();
+      }
+      const w = b.dataset.w as 'one' | 'd' | 't' | undefined;
+      if (!w || (w !== 'one' && w !== 'd' && w !== 't')) return;
+      const st = W(w), pos = posOf(w);
+      if (w !== 'one') rueda3D = w;
+      if (b.dataset.size) { st.size = b.dataset.size; resetBelow(st, 'size'); zoom3D('full'); }
+      else if (b.dataset.rim) {
+        st.rim = b.dataset.rim; resetBelow(st, 'rim');
+        const r = findPart(rims, st.rim); const ok = r ? allowedHoles(r.p, pos) : [];
+        if (ok.length === 1 || (pos === 'd' && ok.includes(32))) st.holes = pos === 'd' && ok.includes(32) ? 32 : ok[0];
+        resetBelow(st, 'holes'); zoom3D('full');
+      } else if ('holes' in b.dataset) { st.holes = Number(b.dataset.val); resetBelow(st, 'holes'); }
+      else if (b.dataset.hub) {
+        st.hub = b.dataset.hub; resetBelow(st, 'hub');
+        const hb = findPart(rear, st.hub);
+        if (pos === 't' && hb && (hb.p.freehubs || []).length === 1) st.fh = (hb.p.freehubs as string[])[0];
+        zoom3D('maza', b, pos === 't');
+      } else if ('fh' in b.dataset) { st.fh = b.dataset.val || null; zoom3D('nucleo', b, true); }
+      render();
+    });
+
+    function quote() {
+      if (!configText) { msg(S('builder.incomplete')); return; }
+      try { sessionStorage.setItem('715-config', configText); location.href = D.contact; }
+      catch { location.href = `${D.contact}&cfg=${encodeURIComponent(configText)}`; }
+    }
+
+    // ---- Visor 3D (github.com/Farinabikestore/715-3d) ----
+    const A3 = () => (window as any).ARM3D;
+    const c3 = (c: string | null) => (c === 'silver' ? 'silver' : 'negro');
+    const aro3D = (k: string | null) => { const [id, c] = split(k); if (id === 'e30-ultra') return 'ultra'; if (id === 'enduro-h30') return 'h30-' + c3(c); return null; };
+    const mazaT3D = (k: string | null) => { const [id, c] = split(k); return id === 'ultra' || id === 'trail' ? `${id}-${c3(c)}` : null; };
+    const mazaD3D = (k: string | null) => 'del-' + c3(split(k)[1]);
+    const fh3D = (f: string | null) => (f === 'MS' ? 'ms' : f === 'XD' ? 'xd' : f === 'HG' ? 'hg' : null);
+    let rueda3D: 'd' | 't' = 't';
+    function update3D() {
+      const wt = document.getElementById('arm-wt');
+      if (wt) {
+        wt.classList.toggle('on', sel.tipo === 'par');
+        wt.querySelectorAll<HTMLButtonElement>('button').forEach((b) => b.classList.toggle('sel', b.dataset.w === rueda3D));
+      }
+      if (!A3()) return;
+      const front3 = (st: Wheel) => A3().set({ aro: aro3D(st.rim) || 'h30-negro', maza: mazaD3D(st.hub) });
+      const rear3 = (st: Wheel) => A3().set({ aro: aro3D(st.rim) || 'h30-negro', maza: mazaT3D(st.hub) || 'ultra-negro', nucleo: fh3D(st.fh) || 'hg' });
+      if (sel.tipo === 'del') front3(sel.one);
+      else if (sel.tipo === 'tra') rear3(sel.one);
+      else if (rueda3D === 'd') front3(sel.par.d);
+      else rear3(sel.par.t);
+    }
+    document.getElementById('arm-wt')?.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLButtonElement>('button[data-w]');
+      if (!b) return;
+      rueda3D = b.dataset.w as 'd' | 't';
+      update3D();
+    });
+
+    // Zoom automático: al llegar a la maza o al núcleo la cámara se acerca; al elegir, se aleja sola.
+    let zonaKey: string | null = null, zonaLock: string | null = null, zoomOutT: ReturnType<typeof setTimeout> | undefined;
+    function zoom3D(step: string, srcEl?: HTMLElement, tieneNucleo?: boolean) {
+      if (!A3() || !A3().vista) return;
+      clearTimeout(zoomOutT);
+      if (step === 'maza' || step === 'nucleo') {
+        A3().vista('maza');
+        const s = srcEl ? srcEl.closest('.arm-step[data-zone]') : null;
+        zonaLock = s ? s.getAttribute('data-zk') : null;
+        if (step === 'nucleo' || (step === 'maza' && !tieneNucleo)) zoomOutT = setTimeout(() => A3().vista('full'), 4000);
+      } else { A3().vista('full'); zonaLock = null; }
+    }
+    function zonaScan() {
+      if (!A3() || !A3().vista) return;
+      const vh = window.innerHeight, mid = vh * 0.55;
+      let best: Element | null = null, bestD = 1e9;
+      document.querySelectorAll('#arm-steps .arm-step[data-zone]').forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.height < 10 || r.bottom < 90 || r.top > vh - 70) return;
+        const d = Math.abs((Math.max(r.top, 0) + Math.min(r.bottom, vh)) / 2 - mid);
+        if (d < bestD) { bestD = d; best = el; }
       });
+      if (!best) return;
+      const el = best as Element, k = el.getAttribute('data-zk');
+      if (k === zonaKey) return;
+      zonaKey = k;
+      if (k === zonaLock) return;
+      zonaLock = null; clearTimeout(zoomOutT);
+      const w = el.getAttribute('data-zw');
+      if (w && sel.tipo === 'par' && w !== rueda3D) { rueda3D = w as 'd' | 't'; update3D(); }
+      A3().vista(el.getAttribute('data-zone') === 'maza' ? 'maza' : 'full');
+    }
+    let zonaT: ReturnType<typeof setTimeout> | null = null;
+    window.addEventListener('scroll', () => { if (zonaT) return; zonaT = setTimeout(() => { zonaT = null; zonaScan(); }, 130); }, { passive: true });
 
-      const size = val('size');
-      // Llantas disponibles en el tamaño elegido
-      el!.querySelectorAll<HTMLElement>('[data-rim]').forEach((lab) => {
-        const r = find(rims, lab.dataset.rim!);
-        const input = lab.querySelector('input')!;
-        input.disabled = !!(r?.sizes?.length && !r.sizes.includes(size));
-      });
-      let rimId = val('rim');
-      if (!rimId || form.querySelector<HTMLInputElement>(`input[name="rim"][value="${rimId}"]`)?.disabled) {
-        const firstOk = form.querySelector<HTMLInputElement>('input[name="rim"]:not(:disabled)');
-        if (firstOk) { firstOk.checked = true; rimId = firstOk.value; }
-      }
-      const rim = find(rims, rimId);
-
-      // Mazas: se marcan como no disponibles si no comparten hoyos con la llanta
-      const markHubs = (list: Part[], name: string) => {
-        el!.querySelectorAll<HTMLElement>(`[data-step="${name}"] [data-hub]`).forEach((lab) => {
-          const h = find(list, lab.dataset.hub!);
-          const ok = inter(rim?.holes, h?.holes).length > 0;
-          lab.querySelector('input')!.disabled = !ok;
-          lab.querySelector<HTMLElement>('[data-na]')!.hidden = ok;
-        });
-        let id = val(name);
-        if (!id || form.querySelector<HTMLInputElement>(`input[name="${name}"][value="${id}"]`)?.disabled) {
-          const f = form.querySelector<HTMLInputElement>(`input[name="${name}"]:not(:disabled)`);
-          if (f) { f.checked = true; id = f.value; }
-        }
-        return find(list, id);
+    function boot3D() {
+      (window as any).ARM3D_T = {
+        full: S('builder.3d.full'), hub: S('builder.3d.hub'), helpFreehub: S('builder.3d.helpFreehub'), helpSpin: S('builder.3d.helpSpin'),
+        engaged: S('builder.3d.engaged'), free: S('builder.3d.free'), pick: S('builder.3d.pick'), error: S('builder.3d.error'),
       };
-      const front = showFront ? markHubs(fronts, 'frontHub') : undefined;
-      const rear = showRear ? markHubs(rears, 'rearHub') : undefined;
-
-      // Hoyos posibles para la combinación
-      const holes = inter(rim?.holes, front?.holes, rear?.holes);
-      if (changed !== 'holes') renderChoices(el!.querySelector('[data-holes]')!, 'holes', holes.map((h) => ({ value: String(h), label: `${h}H` })), val('holes'));
-      if (changed !== 'rimColor') renderChoices(el!.querySelector('[data-colors="rimColor"]')!, 'rimColor', colorItems(rim?.colors), val('rimColor'));
-      if (front && changed !== 'frontHubColor') renderChoices(el!.querySelector('[data-colors="frontHubColor"]')!, 'frontHubColor', colorItems(front.colors), val('frontHubColor'));
-      if (rear && changed !== 'rearHubColor') renderChoices(el!.querySelector('[data-colors="rearHubColor"]')!, 'rearHubColor', colorItems(rear.colors), val('rearHubColor'));
-      if (rear && changed !== 'freehub') renderChoices(el!.querySelector('[data-freehubs]')!, 'freehub', freehubs.filter((f) => !rear.freehubs || rear.freehubs.includes(f.id)).map((f) => ({ value: f.id, label: f.name })), val('freehub'));
-      if (changed !== 'spokeColor') renderChoices(el!.querySelector('[data-colors="spokeColor"]')!, 'spokeColor', colorItems(data.spoke_colors), val('spokeColor'));
-      if (changed !== 'nippleColor') renderChoices(el!.querySelector('[data-colors="nippleColor"]')!, 'nippleColor', colorItems(data.nipple_colors), val('nippleColor'));
-
-      const ho = Number(val('holes'));
-      const rc = rim?.colors?.find((c) => c.id === val('rimColor'));
-      const fc = front?.colors?.find((c) => c.id === val('frontHubColor'));
-      const bc = rear?.colors?.find((c) => c.id === val('rearHubColor'));
-      const sc = (data.spoke_colors || []).find((c: Color) => c.id === val('spokeColor'));
-      const nc = (data.nipple_colors || []).find((c: Color) => c.id === val('nippleColor'));
-      const fh = freehubs.find((f) => f.id === val('freehub'));
-
-      // Resumen
-      const rows: [string, string][] = [
-        [S('builder.type'), S(`builder.type.${type}`)],
-        [S('builder.size'), `${size}"`],
-        [S('builder.rim'), [rim?.name, cname(rc)].filter(Boolean).join(', ')],
-        [S('builder.holes'), ho ? `${ho}H` : '—'],
-      ];
-      if (front) rows.push([S('builder.frontHub'), [front.name, cname(fc)].filter(Boolean).join(', ')]);
-      if (rear) rows.push([S('builder.rearHub'), [rear.name, cname(bc)].filter(Boolean).join(', ')], [S('builder.freehub'), fh?.name || '—']);
-      rows.push([S('builder.spokes'), [cname(sc), cname(nc)].filter(Boolean).join(' / ')]);
-      const lens: [string, string][] = [];
-      if (rim && ho && front) lens.push([S('builder.type.front'), lengths(rim.id, size, front.id, ho)]);
-      if (rim && ho && rear) lens.push([S('builder.type.rear'), lengths(rim.id, size, rear.id, ho)]);
-
-      const box = el!.querySelector<HTMLElement>('[data-summary]')!;
-      box.innerHTML = '';
-      const dl = document.createElement('dl');
-      const add = (target: HTMLElement, k: string, v: string) => {
-        const dt = document.createElement('dt'); dt.textContent = k;
-        const dd = document.createElement('dd'); dd.textContent = v;
-        target.append(dt, dd);
+      const s = document.createElement('script');
+      s.src = '/3d/visor715.js';
+      s.onload = () => {
+        const box = document.getElementById('arm-3d');
+        if (box && A3()) { A3().init(box, '/3d/', { zoom: 0.95, fov: 14, animMs: 1600, maza: { az: -65, el: -44 } }); update3D(); }
       };
-      rows.forEach(([k, v]) => add(dl, k, v));
-      box.appendChild(dl);
-      if (lens.length) {
-        const g = document.createElement('p'); g.className = 'summary__group'; g.textContent = `${S('builder.lengths')} (${S('builder.left')} / ${S('builder.right')})`;
-        const dl2 = document.createElement('dl');
-        lens.forEach(([k, v]) => add(dl2, k, v));
-        box.append(g, dl2);
-      }
-
-      const complete = !!(rim && ho && rc && (!showFront || front) && (!showRear || (rear && fh)));
-      const req = el!.querySelector<HTMLButtonElement>('[data-request]')!;
-      req.setAttribute('aria-disabled', String(!complete));
-      req.title = complete ? '' : S('builder.incomplete');
-
-      // Texto que viaja al formulario de contacto
-      const text = [...rows, ...lens.map(([k, v]) => [`${S('builder.lengths')} ${k.toLowerCase()}`, v])].map(([k, v]) => `${k}: ${v}`).join('\n');
-      el!.dataset.config = complete ? text : '';
-      if (complete) el!.querySelector<HTMLElement>('[data-msg]')!.textContent = '';
-
-      drawWheel({
-        rim: rc?.hex || '#1d1f1f',
-        hub: (showRear ? bc?.hex : fc?.hex) || '#1d1f1f',
-        spoke: sc?.hex || '#1d1f1f',
-        nipple: nc?.hex || '#1d1f1f',
-        holes: ho || 32,
-        rear: showRear,
-      }, changed !== undefined && changed !== 'init');
-      save();
+      s.onerror = () => console.warn('[armador] no se pudo cargar el visor 3D');
+      document.head.appendChild(s);
     }
 
-    // Vista previa de la rueda en SVG (colores y número de rayos reales)
-    function drawWheel(o: { rim: string; hub: string; spoke: string; nipple: string; holes: number; rear: boolean }, animate: boolean) {
-      const hex = (v: string) => (/^#[0-9a-f]{3,8}$/i.test(v) ? v : '#1d1f1f');
-      o = { ...o, rim: hex(o.rim), hub: hex(o.hub), spoke: hex(o.spoke), nipple: hex(o.nipple), holes: Math.max(8, Math.min(48, Math.round(o.holes) || 32)) };
-      const box = el!.querySelector<HTMLElement>('[data-wheel]')!;
-      const c = 200, Rr = 158, hubR = o.rear ? 30 : 24, flR = o.rear ? 44 : 38;
-      const n = o.holes;
-      let spokes = '', nipples = '';
-      for (let i = 0; i < n; i++) {
-        const a = (i / n) * Math.PI * 2;
-        const side = i % 2 === 0 ? 1 : -1;
-        const hubA = a + side * ((Math.PI * 2) / n) * 3; // patrón cruzado
-        const x1 = c + Math.cos(hubA) * flR, y1 = c + Math.sin(hubA) * flR;
-        const x2 = c + Math.cos(a) * (Rr - 6), y2 = c + Math.sin(a) * (Rr - 6);
-        spokes += `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${o.spoke}" stroke-width="1.6" stroke-linecap="round" opacity="${side > 0 ? 1 : 0.7}"/>`;
-        nipples += `<circle cx="${(c + Math.cos(a) * (Rr - 5)).toFixed(1)}" cy="${(c + Math.sin(a) * (Rr - 5)).toFixed(1)}" r="2.6" fill="${o.nipple}"/>`;
-      }
-      const rimStroke = o.rim;
-      box.innerHTML = `<svg viewBox="0 0 400 400" aria-hidden="true">
-        <circle cx="200" cy="200" r="184" fill="none" stroke="#2b2f2d" stroke-width="22"/>
-        <circle cx="200" cy="200" r="194" fill="none" stroke="#1f2221" stroke-width="3" stroke-dasharray="4 6"/>
-        <g class="spin">
-          <circle cx="200" cy="200" r="${Rr + 6}" fill="none" stroke="${rimStroke}" stroke-width="14"/>
-          ${spokes}${nipples}
-          <circle cx="200" cy="200" r="${flR + 4}" fill="none" stroke="${o.hub}" stroke-width="6"/>
-          <circle cx="200" cy="200" r="${hubR}" fill="${o.hub}"/>
-          <circle cx="200" cy="200" r="${hubR * 0.45}" fill="#161817" opacity=".55"/>
-          ${o.rear ? `<g fill="${o.hub}" opacity=".9">${Array.from({ length: 6 }, (_, k) => { const a = (k / 6) * Math.PI * 2; return `<circle cx="${(200 + Math.cos(a) * (flR - 8)).toFixed(1)}" cy="${(200 + Math.sin(a) * (flR - 8)).toFixed(1)}" r="3"/>`; }).join('')}</g>` : ''}
-        </g>
-      </svg>`;
-      if (animate) {
-        box.classList.remove('is-changed');
-        void box.offsetWidth;
-        box.classList.add('is-changed');
-      }
-    }
-
-    function save() {
-      try {
-        const st: Record<string, string> = {};
-        new FormData(form).forEach((v, k) => (st[k] = String(v)));
-        sessionStorage.setItem(KEY, JSON.stringify(st));
-      } catch {}
-    }
-    function restore() {
-      try {
-        const st = JSON.parse(sessionStorage.getItem(KEY) || '{}');
-        for (const k of ['type', 'size', 'rim', 'frontHub', 'rearHub']) {
-          const i = form.querySelector<HTMLInputElement>(`input[name="${k}"][value="${CSS.escape(st[k] || '')}"]`);
-          if (i) i.checked = true;
-        }
-        return st;
-      } catch { return {}; }
-    }
-
-    const st = restore();
-    update('init');
-    // Restaura también las opciones dinámicas (colores, hoyos, núcleo)
-    for (const k of ['holes', 'rimColor', 'frontHubColor', 'rearHubColor', 'freehub', 'spokeColor', 'nippleColor']) {
-      const i = st[k] && form.querySelector<HTMLInputElement>(`input[name="${k}"][value="${CSS.escape(st[k])}"]`);
-      if (i) i.checked = true;
-    }
-    update('init');
-
-    form.addEventListener('change', (e) => {
-      const name = (e.target as HTMLInputElement).name;
-      update(name);
-    });
-
-    el.querySelector('[data-reset]')!.addEventListener('click', () => {
-      try { sessionStorage.removeItem(KEY); } catch {}
-      form.reset();
-      update('reset');
-    });
-
-    el.querySelector('[data-request]')!.addEventListener('click', () => {
-      const cfg = el.dataset.config;
-      const msg = el.querySelector<HTMLElement>('[data-msg]')!;
-      if (!cfg) {
-        msg.textContent = S('builder.incomplete');
-        return;
-      }
-      msg.textContent = '';
-      try {
-        sessionStorage.setItem('715-config', cfg);
-        location.href = contact;
-      } catch {
-        location.href = `${contact}&cfg=${encodeURIComponent(cfg)}`;
-      }
-    });
+    document.getElementById('arm-loading')!.hidden = true;
+    document.getElementById('arm-grid')!.hidden = false;
+    render();
+    boot3D();
   }
 </script>
+
+<style is:global>
+  #arm-app { --arm-ink: var(--ink, #161817); --arm-line: #e3e3df; color: var(--arm-ink); padding-block: 12px 48px; }
+  #arm-app * { box-sizing: border-box; }
+  #arm-app button { font-family: inherit; line-height: 1.2; }
+  #arm-app [hidden] { display: none !important; }
+  .arm-title { font-family: var(--font-display); text-transform: var(--d-case); font-weight: var(--d-heavy); font-stretch: var(--d-stretch); font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: .95; margin: 0 0 6px; }
+  .arm-sub { color: #6b6f6d; margin: 0 0 22px; font-size: .95rem; line-height: 1.5; max-width: 46ch; }
+  /* Una sola barra de scroll: el visor queda pegado y las opciones pasan por el lado. */
+  .arm-grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 28px; align-items: start; }
+  .arm-vis { position: sticky; top: calc(var(--header-h) + 12px); z-index: 3; }
+  #arm-3d { --a3-alto: clamp(440px, calc(100vh - var(--header-h) - 24px), 1100px); border-radius: 16px; overflow: hidden; }
+  #arm-3d .a3-tag { left: auto; right: 18px; }
+  .arm-panel { min-width: 0; }
+  .arm-wt { position: absolute; left: 50%; top: 18px; transform: translateX(-50%); z-index: 4; display: none; gap: 3px; background: #fffffff2; padding: 4px; border-radius: 99px; box-shadow: 0 2px 10px #0000001a; }
+  .arm-wt.on { display: flex; }
+  .arm-wt button { border: 0; background: transparent; cursor: pointer; border-radius: 99px; padding: 8px 16px; font-weight: 700; font-size: 12px; line-height: 1; color: #777; }
+  .arm-wt button:hover { color: var(--arm-ink); }
+  .arm-wt button.sel { background: var(--arm-ink); color: #fff; }
+  .arm-step { margin-bottom: 26px; }
+  .arm-step h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #8a8d8b; margin: 0 0 12px; font-weight: 700; }
+  .arm-step h3 .n { display: inline-flex; width: 22px; height: 22px; border-radius: 50%; background: var(--arm-ink); color: #fff; align-items: center; justify-content: center; font-size: 12px; margin-right: 8px; }
+  .arm-step h3 .hint { text-transform: none; color: #aaa; font-weight: 400; }
+  .arm-wheel { margin: 6px 0 14px; font-size: 15px; font-weight: 800; padding-top: 14px; border-top: 2px solid var(--arm-ink); }
+  .arm-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 9px; }
+  .arm-card { display: block; width: 100%; padding: 0; text-align: left; color: inherit; border: 2px solid var(--arm-line); border-radius: 12px; cursor: pointer; transition: .15s; background: #fff; position: relative; overflow: hidden; }
+  .arm-card:hover { border-color: #b9bbb9; transform: translateY(-1px); }
+  .arm-card.sel { border-color: var(--arm-ink); box-shadow: 0 2px 0 var(--arm-ink); }
+  .arm-card.sel::after { content: '✓'; position: absolute; top: 8px; right: 8px; width: 21px; height: 21px; border-radius: 50%; background: var(--arm-ink); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; }
+  .arm-card .im { aspect-ratio: 1; background: #fff; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #f0f0ee; }
+  .arm-card .im img { max-width: 84%; max-height: 84%; object-fit: contain; }
+  .arm-card .bd { display: block; padding: 10px 11px; }
+  .arm-card .nm { display: block; font-weight: 600; font-size: 12.5px; line-height: 1.3; margin-bottom: 3px; }
+  .arm-card small { display: block; font-size: 11px; line-height: 1.35; color: #8a8d8b; }
+  .arm-vals { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .arm-val { border: 2px solid var(--arm-line); border-radius: 9px; padding: 8px 14px; cursor: pointer; font-size: 13px; font-weight: 600; transition: .15s; background: #fff; color: inherit; }
+  .arm-val:hover { border-color: #b9bbb9; }
+  .arm-val.sel { border-color: var(--arm-ink); background: var(--arm-ink); color: #fff; }
+  .arm-val.out { opacity: .4; cursor: not-allowed; text-decoration: line-through; }
+  .arm-sizes { display: flex; flex-wrap: wrap; gap: 10px; }
+  .arm-size { border: 2px solid var(--arm-line); border-radius: 12px; padding: 14px 22px; cursor: pointer; font-size: 16px; font-weight: 800; transition: .15s; background: #fff; color: inherit; }
+  .arm-size:hover { border-color: #b9bbb9; }
+  .arm-size.sel { border-color: var(--arm-ink); background: var(--arm-ink); color: #fff; }
+  .arm-toggle { display: inline-flex; border: 2px solid var(--arm-line); border-radius: 10px; overflow: hidden; flex-wrap: wrap; }
+  .arm-toggle button { border: 0; background: #fff; padding: 10px 20px; font-size: 14px; font-weight: 700; cursor: pointer; color: #666; }
+  .arm-toggle button.sel { background: var(--arm-ink); color: #fff; }
+  .arm-info { border: 2px solid var(--arm-line); border-radius: 12px; padding: 12px 14px; background: #fff; font-size: 13px; }
+  .arm-info b { display: block; margin-bottom: 4px; }
+  .arm-info small { color: #6b6f6d; font-size: 12px; }
+  .arm-empty { color: #8a8d8b; font-size: 13px; font-style: italic; padding: 10px 0; }
+  .arm-side { background: #ecece8; border-radius: 16px; padding: 22px; margin-top: 6px; }
+  .arm-side h2 { margin: 0 0 14px; font-size: 16px; font-weight: 800; font-family: inherit; text-transform: none; letter-spacing: 0; }
+  .arm-line { display: flex; justify-content: space-between; font-size: 13px; padding: 7px 0; border-bottom: 1px solid #dcdcd7; gap: 10px; }
+  .arm-line.sub { font-weight: 800; border-bottom: 0; padding-bottom: 0; padding-top: 10px; }
+  .arm-line .l { color: #555; }
+  .arm-line .v { font-weight: 600; text-align: right; }
+  .arm-btn { display: block; width: 100%; margin-top: 18px; border: 0; background: var(--ember); color: var(--on-ember, #161817); padding: 15px; border-radius: 12px; font-size: 15px; font-weight: 800; text-align: center; text-decoration: none; cursor: pointer; transition: .15s; }
+  .arm-btn:hover { filter: brightness(1.06); }
+  .arm-btn--ghost { margin-top: 10px; background: transparent; color: var(--arm-ink); border: 2px solid var(--arm-ink); padding: 13px; }
+  .arm-btn--ghost[aria-disabled='true'] { opacity: .45; }
+  .arm-note { margin: 8px 2px 0; font-size: 12px; line-height: 1.45; color: #6b6f6d; }
+  .arm-msg { margin-top: 12px; font-size: 13px; padding: 10px; border-radius: 8px; display: none; }
+  .arm-msg.err { background: #fde8e8; color: #9b1c1c; display: block; }
+  .arm-loading { padding: 40px; text-align: center; color: #8a8d8b; }
+  @media (max-width: 980px) {
+    /* Celular: el visor va arriba, de ancho completo, y se queda pegado bajo el menú. */
+    .arm-grid { display: block; }
+    .arm-vis { top: var(--header-h); margin: 0 calc(var(--gutter, 16px) * -1) 16px; }
+    #arm-3d { --a3-alto: min(94vw, 46vh, 420px); border-radius: 0 0 16px 16px; }
+  }
+</style>
