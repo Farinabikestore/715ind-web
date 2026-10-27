@@ -136,10 +136,13 @@ collections:
                   - { label: Video (MP4, sin sonido, máx. 20 MB), name: video, widget: file, required: false, i18n: duplicate, hint: 'Se reproduce solo, en silencio y en bucle. Ideal 1920 px de ancho y menos de 10 MB. Si está vacío, el bloque no se muestra.' }
                   - { label: Video para celular (opcional), name: video_mobile, widget: file, required: false, i18n: duplicate, hint: 'Versión más liviana (1280 px de ancho) para celulares.' }
                   - { label: Imagen mientras carga (opcional), name: poster, widget: image, required: false, i18n: duplicate }
+                  - { label: Texto pequeño sobre el título (opcional), name: eyebrow, widget: string, required: false, i18n: true, hint: 'Ej: NUEVO' }
+                  - { label: Título (opcional), name: heading, widget: string, required: false, i18n: true, hint: 'Si tiene título, el texto aparece animado y el botón es naranja.' }
                   - { label: Botón (texto), name: cta_label, widget: string, required: false, i18n: true }
                   - { label: Botón (enlace), name: cta_link, widget: string, required: false, i18n: duplicate, hint: 'Ej: /products/#rims' }
-                  - { label: Alto, name: size, widget: select, required: false, i18n: duplicate, default: normal, options: [{ label: Bajo (360 px), value: short }, { label: Normal (520 px), value: normal }, { label: Alto (700 px), value: tall }] }
-                  - { label: Oscurecer video, name: shade, widget: select, required: false, i18n: duplicate, default: medium, options: [{ label: Poco, value: light }, { label: Medio, value: medium }, { label: Mucho, value: strong }] }
+                  - { label: Color del texto, name: text_color, widget: select, required: false, i18n: duplicate, default: light, options: [{ label: Blanco (para videos oscuros), value: light }, { label: Negro (para videos claros), value: dark }] }
+                  - { label: Alto, name: size, widget: select, required: false, i18n: duplicate, default: normal, options: [{ label: Bajo (360 px), value: short }, { label: Normal (520 px), value: normal }, { label: Portada (650 px), value: hero }, { label: Alto (700 px), value: tall }] }
+                  - { label: Oscurecer video, name: shade, widget: select, required: false, i18n: duplicate, default: medium, options: [{ label: Nada, value: none }, { label: Poco, value: light }, { label: Medio, value: medium }, { label: Mucho, value: strong }] }
               - label: Portada (foto grande)
                 name: hero
                 widget: object

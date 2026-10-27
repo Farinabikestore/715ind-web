@@ -252,7 +252,23 @@ html.header-hidden .site-header { transform: translateY(-100%); }
 .vbanner__shade { position: absolute; inset: 0; background: rgba(0, 0, 0, var(--vb-shade, .45)); }
 .vbanner__btn { position: relative; z-index: 1; display: inline-block; padding: 15px 42px; border: 1px solid rgba(255, 255, 255, .85); color: #fff; text-decoration: none; font-family: var(--font-body); font-size: 13px; font-weight: 500; letter-spacing: .32em; text-transform: uppercase; transition: background .25s ease; }
 .vbanner__btn:hover { background: rgba(255, 255, 255, .15); }
-@media (max-width: 760px) { .vbanner { height: min(var(--vb-h, 520px), 320px); } .vbanner { place-items: end center; padding-bottom: 26px; } .vbanner__btn { padding: 13px 28px; font-size: 12px; } }
+.vbanner__text { position: relative; z-index: 1; text-align: center; padding-inline: var(--gutter); }
+/* Con título: en computador el texto va a la izquierda (la rueda del video queda a la derecha) */
+.vbanner--titled { place-items: center stretch; }
+.vbanner--titled .vbanner__text { width: 100%; max-width: var(--max); margin-inline: auto; text-align: left; }
+.vbanner--titled .vbanner__title { max-width: 11ch; }
+.vbanner--ink { color: var(--ink); }
+.vbanner__eyebrow, .vbanner__title, .vbanner__cta { margin: 0; overflow: hidden; }
+.vbanner__eyebrow > span, .vbanner__title > span, .vbanner__cta > span { display: block; transform: translateY(110%); }
+.vbanner__text.is-in .vbanner__eyebrow > span, .vbanner__text.is-in .vbanner__title > span, .vbanner__text.is-in .vbanner__cta > span { animation: vb-up .9s cubic-bezier(.2, .8, .2, 1) forwards; }
+.vbanner__text.is-in .vbanner__title > span { animation-delay: .12s; }
+.vbanner__text.is-in .vbanner__cta > span { animation-delay: .26s; padding: 6px 0 8px; }
+@keyframes vb-up { to { transform: none; } }
+.vbanner__eyebrow { font-family: var(--ui-font); text-transform: uppercase; letter-spacing: .18em; font-size: 15px; }
+.vbanner__title { font-family: var(--font-display); text-transform: var(--d-case); font-weight: var(--d-heavy); font-size: clamp(2.4rem, 5.6vw, 5rem); line-height: 1.05; margin-block: 6px 18px; }
+.vbanner:not(.vbanner--ink) .vbanner__title { text-shadow: 0 2px 24px rgba(0, 0, 0, .35); }
+@media (prefers-reduced-motion: reduce) { .vbanner__eyebrow > span, .vbanner__title > span, .vbanner__cta > span { transform: none; animation: none !important; } }
+@media (max-width: 760px) { .vbanner { height: min(var(--vb-h, 520px), 320px); } .vbanner { place-items: end center; padding-bottom: 26px; } .vbanner--titled { height: min(100vw, 460px); place-items: start center; padding: 26px 0 0; } .vbanner--titled .vbanner__text { text-align: center; } .vbanner--titled .vbanner__title { max-width: none; } .vbanner__title { margin-block: 4px 12px; } .vbanner__btn { padding: 13px 28px; font-size: 12px; } }
 
 /* Hero */
 .hero { position: relative; min-height: min(88vh, 860px); display: grid; align-items: end; color: var(--bone); background: var(--graphite); overflow: hidden; }

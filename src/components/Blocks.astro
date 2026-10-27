@@ -18,8 +18,8 @@ const catImage = (c) => {
   return p ? p.images[0] : '';
 };
 const catCount = (c) => products.filter((x) => x.category === c).length;
-const vbHeights = { short: 360, normal: 520, tall: 700 };
-const vbShades = { light: 0.25, medium: 0.45, strong: 0.6 };
+const vbHeights = { short: 360, normal: 520, hero: 650, tall: 700 };
+const vbShades = { none: 0, light: 0.25, medium: 0.45, strong: 0.6 };
 const videoUrl = (v) => { const u = safeUrl(v); return /\.(mp4|webm)(\?.*)?$/i.test(u) && (u.startsWith('/uploads/') || u.startsWith('https://')) ? u : ''; };
 const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>';
 ---
@@ -150,13 +150,21 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
       const h = vbHeights[b.size] || vbHeights.normal;
       const shade = vbShades[b.shade] ?? vbShades.medium;
       return (
-        <section class="vbanner" style={`--vb-h:${h}px;--vb-shade:${shade}`} aria-label={b.cta_label || undefined}>
+        <section class:list={['vbanner', { 'vbanner--titled': b.heading, 'vbanner--ink': b.text_color === 'dark' }]} style={`--vb-h:${h}px;--vb-shade:${shade}`} aria-label={b.heading || b.cta_label || undefined}>
           <video class="vbanner__video" autoplay muted loop playsinline preload="metadata" poster={b.poster || undefined} aria-hidden="true" data-vbanner>
             {mobile && <source src={mobile} type="video/mp4" media="(max-width: 760px)" />}
             <source src={src} type={src.endsWith('.webm') ? 'video/webm' : 'video/mp4'} />
           </video>
-          <div class="vbanner__shade"></div>
-          {b.cta_label && <a class="vbanner__btn" href={link(b.cta_link || '/products/', lang)}>{b.cta_label}</a>}
+          {shade > 0 && <div class="vbanner__shade"></div>}
+          {b.heading ? (
+            <div class="vbanner__text" data-reveal>
+              {b.eyebrow && <p class="vbanner__eyebrow"><span>{b.eyebrow}</span></p>}
+              <h2 class="vbanner__title"><span>{b.heading}</span></h2>
+              {b.cta_label && <p class="vbanner__cta"><span><a class="btn btn--primary" href={link(b.cta_link || '/products/', lang)}>{b.cta_label}</a></span></p>}
+            </div>
+          ) : (
+            b.cta_label && <a class="vbanner__btn" href={link(b.cta_link || '/products/', lang)}>{b.cta_label}</a>
+          )}
         </section>
       );
     }
@@ -209,6 +217,12 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
 
 <script>
   // Videos de fondo: se pausan fuera de pantalla y no se mueven si el visitante pidió reducir el movimiento.
+  // Títulos que aparecen subiendo desde una línea (como en el banner de Spank)
+  const reveals = document.querySelectorAll<HTMLElement>('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    const ro = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); ro.unobserve(e.target); } }), { threshold: 0.3 });
+    reveals.forEach((r) => ro.observe(r));
+  } else reveals.forEach((r) => r.classList.add('is-in'));
   const vids = document.querySelectorAll<HTMLVideoElement>('video[data-vbanner]');
   const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
   vids.forEach((v) => {
