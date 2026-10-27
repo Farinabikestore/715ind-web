@@ -25,8 +25,8 @@ es:
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
     poster: /uploads/videos/715-jordi.webp
-    cta_label: Mazas 715
-    cta_link: /products/#hubs
+    cta_label: Enduro HT V3
+    cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
   - type: slides
@@ -116,8 +116,8 @@ en:
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
     poster: /uploads/videos/715-jordi.webp
-    cta_label: 715 Hubs
-    cta_link: /products/#hubs
+    cta_label: Enduro HT V3
+    cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
   - type: slides
@@ -207,8 +207,8 @@ pt:
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
     poster: /uploads/videos/715-jordi.webp
-    cta_label: Cubos 715
-    cta_link: /products/#hubs
+    cta_label: Enduro HT V3
+    cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
   - type: slides
@@ -298,8 +298,8 @@ de:
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
     poster: /uploads/videos/715-jordi.webp
-    cta_label: 715 Naben
-    cta_link: /products/#hubs
+    cta_label: Enduro HT V3
+    cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
   - type: slides
@@ -389,8 +389,8 @@ fr:
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
     poster: /uploads/videos/715-jordi.webp
-    cta_label: Moyeux 715
-    cta_link: /products/#hubs
+    cta_label: Enduro HT V3
+    cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
   - type: slides
@@ -480,8 +480,8 @@ it:
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
     poster: /uploads/videos/715-jordi.webp
-    cta_label: Mozzi 715
-    cta_link: /products/#hubs
+    cta_label: Enduro HT V3
+    cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
   - type: slides
