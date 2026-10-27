@@ -4,12 +4,14 @@
 // - Visor 3D: copia local de github.com/Farinabikestore/715-3d (carpeta public/3d).
 // - "Comprar" lleva al armador de Fariña Bike Store; "Solicitar cotización" abre el formulario con la configuración.
 // Los datos (llantas, mazas, núcleos, largos de rayo) se editan en el panel: Armador de ruedas.
-import { t, clientStrings } from '../i18n/ui.js';
-import { getBuilder } from '../lib/content.js';
+import { t, clientStrings, LOCALES, LANG_NAMES } from '../i18n/ui.js';
+import { getBuilder, getSettings } from '../lib/content.js';
 import { variant } from '../lib/img.js';
 
 const { lang } = Astro.props;
 const data = getBuilder();
+const settings = getSettings(lang);
+const nav = [['/products/', 'nav.products'], ['/about/', 'nav.about'], ['/contact/', 'nav.contact']];
 const colorName = (c) => {
   const k = `color.${c.id}`;
   const v = t(lang, k);
@@ -30,29 +32,46 @@ const payload = {
   contact: `/${lang}/contact/?from=builder`,
 };
 ---
-<div id="arm-app" data-armador>
-  <div id="arm-loading" class="arm-loading">{t(lang, 'builder.loading')}</div>
-  <div id="arm-grid" class="arm-grid" hidden>
-    <div class="arm-vis">
-      <div class="arm-wt" id="arm-wt">
-        <button type="button" data-w="d">{t(lang, 'builder.type.front')}</button><button type="button" data-w="t" class="sel">{t(lang, 'builder.type.rear')}</button>
-      </div>
-      <div id="arm-3d" role="img" aria-label={t(lang, 'builder.preview')}></div>
+<div id="arm-app" class="arm-app" data-armador>
+  <div class="arm-vis">
+    <a class="arm-mark" href={`/${lang}/`} aria-label={settings.brand_name}>
+      {settings.logo ? <img src={settings.logo} alt="" /> : settings.brand_name}
+    </a>
+    <div class="arm-wt" id="arm-wt">
+      <button type="button" data-w="d">{t(lang, 'builder.type.front')}</button><button type="button" data-w="t" class="sel">{t(lang, 'builder.type.rear')}</button>
     </div>
-    <div class="arm-panel">
-      <h1 class="arm-title">{t(lang, 'builder.title')}</h1>
-      <p class="arm-sub">{t(lang, 'builder.intro')}</p>
-      <div id="arm-steps"></div>
-      <div class="arm-side" id="builder-summary">
-        <h2>{t(lang, 'builder.summary')}</h2>
-        <div id="arm-summary" aria-live="polite"></div>
-        <a id="arm-buy" class="arm-btn" href={payload.shop} target="_blank" rel="noopener">{t(lang, 'builder.buy')} ↗</a>
-        <p class="arm-note">{t(lang, 'builder.buyNote')}</p>
-        <button type="button" id="arm-quote" class="arm-btn arm-btn--ghost">{t(lang, 'builder.request')}</button>
-        <div id="arm-msg" class="arm-msg" role="status"></div>
-      </div>
-    </div>
+    <div id="arm-3d" role="img" aria-label={t(lang, 'builder.preview')}></div>
   </div>
+  <aside class="arm-panel">
+    <div class="arm-head">
+      <h1 class="arm-title">{t(lang, 'builder.title')}</h1>
+      <details class="arm-menu">
+        <summary>{t(lang, 'nav.menu')}</summary>
+        <nav>
+          <a href={`/${lang}/`}>{settings.brand_name}</a>
+          {nav.map(([href, key]) => <a href={`/${lang}${href}`}>{t(lang, key)}</a>)}
+          <span class="arm-langs">{LOCALES.map((l) => <a href={`/${l}/wheel-builder/`} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined}>{l.toUpperCase()}</a>)}</span>
+        </nav>
+      </details>
+    </div>
+    <div class="arm-scroll" id="arm-scroll">
+      <p class="arm-sub">{t(lang, 'builder.intro')}</p>
+      <div id="arm-loading" class="arm-loading">{t(lang, 'builder.loading')}</div>
+      <div id="arm-grid" hidden>
+        <div id="arm-steps"></div>
+        <div class="arm-side" id="builder-summary">
+          <h2>{t(lang, 'builder.summary')}</h2>
+          <div id="arm-summary" aria-live="polite"></div>
+          <p class="arm-note">{t(lang, 'builder.buyNote')}</p>
+        </div>
+      </div>
+    </div>
+    <div class="arm-bar">
+      <a id="arm-buy" class="arm-btn" href={payload.shop} target="_blank" rel="noopener">{t(lang, 'builder.buy')} ↗</a>
+      <button type="button" id="arm-quote" class="arm-link">{t(lang, 'builder.request')}</button>
+      <div id="arm-msg" class="arm-msg" role="status"></div>
+    </div>
+  </aside>
 </div>
 <script type="application/json" id="arm-data" set:html={JSON.stringify(payload).replace(/</g, '\\u003c')} />
 
@@ -292,14 +311,15 @@ const payload = {
         if (step === 'nucleo' || (step === 'maza' && !tieneNucleo)) zoomOutT = setTimeout(() => A3().vista('full'), 4000);
       } else { A3().vista('full'); zonaLock = null; }
     }
+    const scroller = document.getElementById('arm-scroll')!;
     function zonaScan() {
       if (!A3() || !A3().vista) return;
-      const vh = window.innerHeight, mid = vh * 0.55;
+      const box = scroller.getBoundingClientRect(), mid = box.top + box.height * 0.45;
       let best: Element | null = null, bestD = 1e9;
       document.querySelectorAll('#arm-steps .arm-step[data-zone]').forEach((el) => {
         const r = el.getBoundingClientRect();
-        if (r.height < 10 || r.bottom < 90 || r.top > vh - 70) return;
-        const d = Math.abs((Math.max(r.top, 0) + Math.min(r.bottom, vh)) / 2 - mid);
+        if (r.height < 10 || r.bottom < box.top + 40 || r.top > box.bottom - 40) return;
+        const d = Math.abs((Math.max(r.top, box.top) + Math.min(r.bottom, box.bottom)) / 2 - mid);
         if (d < bestD) { bestD = d; best = el; }
       });
       if (!best) return;
@@ -313,7 +333,7 @@ const payload = {
       A3().vista(el.getAttribute('data-zone') === 'maza' ? 'maza' : 'full');
     }
     let zonaT: ReturnType<typeof setTimeout> | null = null;
-    window.addEventListener('scroll', () => { if (zonaT) return; zonaT = setTimeout(() => { zonaT = null; zonaScan(); }, 130); }, { passive: true });
+    scroller.addEventListener('scroll', () => { if (zonaT) return; zonaT = setTimeout(() => { zonaT = null; zonaScan(); }, 130); }, { passive: true });
 
     function boot3D() {
       (window as any).ARM3D_T = {
@@ -324,7 +344,7 @@ const payload = {
       s.src = '/3d/visor715.js';
       s.onload = () => {
         const box = document.getElementById('arm-3d');
-        if (box && A3()) { A3().init(box, '/3d/', { zoom: 0.95, fov: 14, animMs: 1600, maza: { az: -65, el: -44 } }); update3D(); }
+        if (box && A3()) { A3().init(box, '/3d/', { zoom: matchMedia('(max-width: 860px)').matches ? 1.12 : 0.95, fov: 14, animMs: 1600, maza: { az: -65, el: -44 } }); update3D(); }
       };
       s.onerror = () => console.warn('[armador] no se pudo cargar el visor 3D');
       document.head.appendChild(s);
@@ -338,29 +358,50 @@ const payload = {
 </script>
 
 <style is:global>
-  #arm-app { --arm-ink: var(--ink, #161817); --arm-line: #e3e3df; color: var(--arm-ink); padding-block: 12px 48px; }
-  #arm-app * { box-sizing: border-box; }
-  #arm-app button { font-family: inherit; line-height: 1.2; }
-  #arm-app [hidden] { display: none !important; }
-  .arm-title { font-family: var(--font-display); text-transform: var(--d-case); font-weight: var(--d-heavy); font-stretch: var(--d-stretch); font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: .95; margin: 0 0 6px; }
-  .arm-sub { color: #6b6f6d; margin: 0 0 22px; font-size: .95rem; line-height: 1.5; max-width: 46ch; }
-  /* Una sola barra de scroll: el visor queda pegado y las opciones pasan por el lado. */
-  .arm-grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 28px; align-items: start; }
-  .arm-vis { position: sticky; top: calc(var(--header-h) + 12px); z-index: 3; }
-  #arm-3d { --a3-alto: clamp(440px, calc(100vh - var(--header-h) - 24px), 1100px); border-radius: 16px; overflow: hidden; }
-  #arm-3d .a3-tag { left: auto; right: 18px; }
-  .arm-panel { min-width: 0; }
-  .arm-wt { position: absolute; left: 50%; top: 18px; transform: translateX(-50%); z-index: 4; display: none; gap: 3px; background: #fffffff2; padding: 4px; border-radius: 99px; box-shadow: 0 2px 10px #0000001a; }
+  /* Modo app (como el armador de la tienda y Gravity Cartel): la rueda usa toda la pantalla
+     y las opciones van en un panel a la derecha con su propio scroll. */
+  body.is-app { overflow: hidden; }
+  .arm-app { --arm-ink: var(--ink, #161817); --arm-line: #e3e3df; --arm-panel: 440px; color: var(--arm-ink);
+    display: grid; grid-template-columns: minmax(0, 1fr) var(--arm-panel); height: 100vh; height: 100dvh; background: #dcdcda; }
+  .arm-app * { box-sizing: border-box; }
+  .arm-app button { font-family: inherit; line-height: 1.2; }
+  .arm-app [hidden] { display: none !important; }
+  .arm-vis { position: relative; min-width: 0; height: 100%; }
+  .arm-app #arm-3d { --a3-alto: 100dvh; border-radius: 0; height: 100%; }
+  .arm-app #arm-3d .a3-tag { left: auto; right: 18px; }
+  .arm-app #arm-3d .a3-help { display: block; }
+  .arm-mark { position: absolute; left: 28px; top: 24px; z-index: 4; line-height: 1; text-decoration: none; color: #161817;
+    font-family: var(--font-display); font-weight: var(--d-heavy); font-stretch: var(--d-stretch); font-size: 30px; letter-spacing: -0.02em; opacity: .28; transition: opacity .2s; }
+  .arm-mark:hover { opacity: .6; }
+  .arm-mark img { height: 32px; display: block; filter: brightness(0); }
+  .arm-wt { position: absolute; left: 50%; top: 20px; transform: translateX(-50%); z-index: 4; display: none; gap: 3px; background: #fffffff2; padding: 4px; border-radius: 99px; box-shadow: 0 2px 10px #0000001a; }
   .arm-wt.on { display: flex; }
   .arm-wt button { border: 0; background: transparent; cursor: pointer; border-radius: 99px; padding: 8px 16px; font-weight: 700; font-size: 12px; line-height: 1; color: #777; }
   .arm-wt button:hover { color: var(--arm-ink); }
   .arm-wt button.sel { background: var(--arm-ink); color: #fff; }
+
+  .arm-panel { display: flex; flex-direction: column; min-height: 0; background: #fff; margin: 14px 14px 14px 0; border-radius: 16px; box-shadow: 0 6px 30px #0000001f; overflow: hidden; }
+  .arm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 20px 16px 24px; border-bottom: 1px solid var(--arm-line); }
+  .arm-title { font-family: var(--font-display); text-transform: var(--d-case); font-weight: var(--d-heavy); font-stretch: var(--d-stretch); font-size: clamp(1.7rem, 2.4vw, 2.2rem); line-height: .95; margin: 0; }
+  .arm-menu { position: relative; flex: none; }
+  .arm-menu summary { list-style: none; cursor: pointer; border: 1px solid var(--arm-line); border-radius: 8px; padding: 11px 16px; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; }
+  .arm-menu summary::-webkit-details-marker { display: none; }
+  .arm-menu nav { position: absolute; right: 0; top: calc(100% + 6px); z-index: 10; min-width: 220px; background: #fff; border: 1px solid var(--arm-line); border-radius: 12px; box-shadow: 0 10px 30px #00000024; padding: 8px; display: flex; flex-direction: column; }
+  .arm-menu nav > a { padding: 10px 12px; border-radius: 8px; text-decoration: none; color: inherit; font-weight: 600; }
+  .arm-menu nav > a:hover { background: #f2f2ef; }
+  .arm-langs { display: flex; flex-wrap: wrap; gap: 4px; padding: 8px 6px 4px; border-top: 1px solid var(--arm-line); margin-top: 6px; }
+  .arm-langs a { padding: 6px 8px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; color: #777; }
+  .arm-langs a[aria-current] { background: var(--arm-ink); color: #fff; }
+  .arm-scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 18px 24px 24px; }
+  .arm-sub { color: #6b6f6d; margin: 0 0 22px; font-size: .92rem; line-height: 1.5; }
+  .arm-bar { border-top: 1px solid var(--arm-line); padding: 14px 20px 16px; background: #fff; }
+
   .arm-step { margin-bottom: 26px; }
   .arm-step h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #8a8d8b; margin: 0 0 12px; font-weight: 700; }
   .arm-step h3 .n { display: inline-flex; width: 22px; height: 22px; border-radius: 50%; background: var(--arm-ink); color: #fff; align-items: center; justify-content: center; font-size: 12px; margin-right: 8px; }
   .arm-step h3 .hint { text-transform: none; color: #aaa; font-weight: 400; }
   .arm-wheel { margin: 6px 0 14px; font-size: 15px; font-weight: 800; padding-top: 14px; border-top: 2px solid var(--arm-ink); }
-  .arm-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 9px; }
+  .arm-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 9px; }
   .arm-card { display: block; width: 100%; padding: 0; text-align: left; color: inherit; border: 2px solid var(--arm-line); border-radius: 12px; cursor: pointer; transition: .15s; background: #fff; position: relative; overflow: hidden; }
   .arm-card:hover { border-color: #b9bbb9; transform: translateY(-1px); }
   .arm-card.sel { border-color: var(--arm-ink); box-shadow: 0 2px 0 var(--arm-ink); }
@@ -386,24 +427,37 @@ const payload = {
   .arm-info b { display: block; margin-bottom: 4px; }
   .arm-info small { color: #6b6f6d; font-size: 12px; }
   .arm-empty { color: #8a8d8b; font-size: 13px; font-style: italic; padding: 10px 0; }
-  .arm-side { background: #ecece8; border-radius: 16px; padding: 22px; margin-top: 6px; }
-  .arm-side h2 { margin: 0 0 14px; font-size: 16px; font-weight: 800; font-family: inherit; text-transform: none; letter-spacing: 0; }
-  .arm-line { display: flex; justify-content: space-between; font-size: 13px; padding: 7px 0; border-bottom: 1px solid #dcdcd7; gap: 10px; }
+  .arm-side { background: #f4f4f1; border-radius: 14px; padding: 20px; }
+  .arm-side h2 { margin: 0 0 12px; font-size: 16px; font-weight: 800; font-family: inherit; text-transform: none; letter-spacing: 0; }
+  .arm-line { display: flex; justify-content: space-between; font-size: 13px; padding: 7px 0; border-bottom: 1px solid #e2e2dd; gap: 10px; }
   .arm-line.sub { font-weight: 800; border-bottom: 0; padding-bottom: 0; padding-top: 10px; }
   .arm-line .l { color: #555; }
   .arm-line .v { font-weight: 600; text-align: right; }
-  .arm-btn { display: block; width: 100%; margin-top: 18px; border: 0; background: var(--ember); color: var(--on-ember, #161817); padding: 15px; border-radius: 12px; font-size: 15px; font-weight: 800; text-align: center; text-decoration: none; cursor: pointer; transition: .15s; }
-  .arm-btn:hover { filter: brightness(1.06); }
-  .arm-btn--ghost { margin-top: 10px; background: transparent; color: var(--arm-ink); border: 2px solid var(--arm-ink); padding: 13px; }
-  .arm-btn--ghost[aria-disabled='true'] { opacity: .45; }
-  .arm-note { margin: 8px 2px 0; font-size: 12px; line-height: 1.45; color: #6b6f6d; }
-  .arm-msg { margin-top: 12px; font-size: 13px; padding: 10px; border-radius: 8px; display: none; }
+  .arm-note { margin: 12px 0 0; font-size: 12px; line-height: 1.45; color: #6b6f6d; }
+  .arm-btn { display: block; width: 100%; border: 0; background: var(--arm-ink); color: #fff; padding: 16px; border-radius: 10px; font-family: var(--font-display); text-transform: uppercase; font-weight: 700; font-size: 17px; letter-spacing: .03em; text-align: center; text-decoration: none; cursor: pointer; transition: .15s; }
+  .arm-btn:hover { background: #2c302e; }
+  .arm-link { display: block; margin: 10px auto 0; border: 0; background: none; padding: 4px; color: var(--arm-ink); font-size: 13px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .arm-link[aria-disabled='true'] { opacity: .5; }
+  .arm-msg { margin-top: 10px; font-size: 13px; padding: 10px; border-radius: 8px; display: none; }
   .arm-msg.err { background: #fde8e8; color: #9b1c1c; display: block; }
   .arm-loading { padding: 40px; text-align: center; color: #8a8d8b; }
-  @media (max-width: 980px) {
-    /* Celular: el visor va arriba, de ancho completo, y se queda pegado bajo el menú. */
-    .arm-grid { display: block; }
-    .arm-vis { top: var(--header-h); margin: 0 calc(var(--gutter, 16px) * -1) 16px; }
-    #arm-3d { --a3-alto: min(94vw, 46vh, 420px); border-radius: 0 0 16px 16px; }
+  @media (max-width: 1100px) { .arm-app { --arm-panel: 380px; } }
+  @media (max-width: 860px) {
+    /* Celular: la rueda arriba, las opciones abajo con su propio scroll y el botón siempre visible. */
+    .arm-app { grid-template-columns: 1fr; grid-template-rows: 44dvh minmax(0, 1fr); }
+    .arm-app #arm-3d { --a3-alto: 44dvh; }
+    .arm-app #arm-3d .a3-help { display: none; }
+    .arm-app #arm-3d .a3-vistas, .arm-app #arm-3d .a3-zoom { bottom: 12px; }
+    .arm-mark { left: 16px; top: 14px; font-size: 22px; }
+    .arm-mark img { height: 22px; }
+    .arm-wt { top: 12px; }
+    .arm-panel { margin: 0; border-radius: 16px 16px 0 0; position: relative; z-index: 5; box-shadow: 0 -6px 24px #0000001a; }
+    .arm-head { padding: 14px 16px 12px 18px; }
+    .arm-title { font-size: 1.6rem; }
+    .arm-menu summary { padding: 9px 12px; font-size: 13px; }
+    .arm-scroll { padding: 16px 18px 20px; }
+    .arm-bar { padding: 10px 16px calc(12px + env(safe-area-inset-bottom)); }
+    .arm-btn { padding: 14px; font-size: 16px; }
+    .arm-link { margin-top: 6px; }
   }
 </style>

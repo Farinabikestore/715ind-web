@@ -8,8 +8,6 @@ export function getStaticPaths() {
 }
 const { lang } = Astro.params;
 ---
-<Base lang={lang} title={t(lang, 'builder.title')} description={t(lang, 'builder.intro')} path="/wheel-builder/" image="/uploads/products/ultra-wheelset/wheelset-715-ind-1.webp">
-  <div class="wrap">
-    <WheelBuilder lang={lang} />
-  </div>
+<Base lang={lang} title={t(lang, 'builder.title')} description={t(lang, 'builder.intro')} path="/wheel-builder/" app image="/uploads/products/ultra-wheelset/wheelset-715-ind-1.webp">
+  <WheelBuilder lang={lang} />
 </Base>

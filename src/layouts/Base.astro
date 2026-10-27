@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { LOCALES, DEFAULT_LOCALE, HTML_LANG, OG_LOCALE, t } from '../i18n/ui.js';
 import { getSettings, link, typeAttrs } from '../lib/content.js';
 
-const { lang, title, description, path = '/', image, noindex = false, jsonld } = Astro.props;
+const { lang, title, description, path = '/', image, noindex = false, jsonld, app = false } = Astro.props;
 const settings = getSettings(lang);
 const site = Astro.site;
 const abs = (p) => new URL(p, site).href;
@@ -42,19 +42,25 @@ const { type, kase, style } = typeAttrs(settings);
   {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
   <slot name="head" />
 </head>
-<body>
-  <a class="skip" href="#main">{t(lang, 'skip')}</a>
-  {settings.announcement && (
-    <div class="announce">
-      <div class="wrap">
-        {settings.announcement_link ? <a href={link(settings.announcement_link, lang)}>{settings.announcement}</a> : <p class="announce__text">{settings.announcement}</p>}
-      </div>
-    </div>
+<body class={app ? 'is-app' : undefined}>
+  {app ? (
+    <main id="main"><slot /></main>
+  ) : (
+    <>
+      <a class="skip" href="#main">{t(lang, 'skip')}</a>
+      {settings.announcement && (
+        <div class="announce">
+          <div class="wrap">
+            {settings.announcement_link ? <a href={link(settings.announcement_link, lang)}>{settings.announcement}</a> : <p class="announce__text">{settings.announcement}</p>}
+          </div>
+        </div>
+      )}
+      <Header lang={lang} path={path} settings={settings} />
+      <main id="main">
+        <slot />
+      </main>
+      <Footer lang={lang} path={path} settings={settings} />
+    </>
   )}
-  <Header lang={lang} path={path} settings={settings} />
-  <main id="main">
-    <slot />
-  </main>
-  <Footer lang={lang} path={path} settings={settings} />
 </body>
 </html>
