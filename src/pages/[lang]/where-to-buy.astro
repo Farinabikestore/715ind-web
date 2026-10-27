@@ -1,0 +1,115 @@
+---
+// "Dónde comprar": mapa con los distribuidores oficiales (OpenStreetMap + Leaflet, sin costo ni clave).
+// Los distribuidores se editan en el panel: Distribuidores.
+import Base from '../../layouts/Base.astro';
+import { LOCALES, HTML_LANG, t } from '../../i18n/ui.js';
+import { getDistributors } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const list = getDistributors();
+const names = new Intl.DisplayNames([HTML_LANG[lang] || lang], { type: 'region' });
+const countryName = (c) => { try { return names.of(c) || c; } catch { return c; } };
+const countries = [...new Set(list.map((d) => d.country))].filter(Boolean).map((c) => ({ code: c, name: countryName(c) })).sort((a, b) => a.name.localeCompare(b.name));
+const waLink = (n) => `https://wa.me/${n.replace(/\D/g, '')}`;
+const fmtPhone = (n) => n.replace(/^\+56(9)(\d{4})(\d{4})$/, '+56 $1 $2 $3');
+const directions = (d) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(d.address || `${d.lat},${d.lng}`)}`;
+const strings = {
+  directions: t(lang, 'where.directions'), whatsapp: t(lang, 'where.whatsapp'), email: t(lang, 'where.email'), web: t(lang, 'where.web'),
+  distributor: t(lang, 'where.type.distributor'), representative: t(lang, 'where.type.representative'),
+};
+const points = list.map((d, i) => ({ i, name: d.name, lat: d.lat, lng: d.lng, country: d.country }));
+---
+<Base lang={lang} title={t(lang, 'where.title')} description={t(lang, 'where.intro')} path="/where-to-buy/">
+  <header class="wrap page-head">
+    <h1>{t(lang, 'where.title')}</h1>
+    <p class="lead">{t(lang, 'where.intro')}</p>
+  </header>
+
+  <section class="wrap where" data-where>
+    {countries.length > 1 && (
+      <div class="where__filters" role="group" aria-label={t(lang, 'contact.country')}>
+        <button type="button" class="is-on" data-country="">{t(lang, 'where.all')}</button>
+        {countries.map((c) => <button type="button" data-country={c.code}>{c.name}</button>)}
+      </div>
+    )}
+    <div class="where__grid">
+      <ol class="where__list">
+        {list.map((d, i) => (
+          <li class="where__item" data-i={i} data-country={d.country}>
+            <p class="where__type">{strings[d.type]} · {countryName(d.country)}</p>
+            <h2 class="where__name">{d.name}</h2>
+            {d.address && <p class="where__addr">{d.address}</p>}
+            <ul class="where__links">
+              {d.whatsapp && <li><a href={waLink(d.whatsapp)} target="_blank" rel="noopener">{strings.whatsapp}: {fmtPhone(d.whatsapp)}</a></li>}
+              {d.phone && <li><a href={`tel:${d.phone.replace(/\s/g, '')}`}>{d.phone}</a></li>}
+              {d.email && <li><a href={`mailto:${d.email}`}>{d.email}</a></li>}
+              {d.website && <li><a href={d.website} target="_blank" rel="noopener">{d.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</a></li>}
+            </ul>
+            <div class="where__actions">
+              <a class="btn btn--dark" href={directions(d)} target="_blank" rel="noopener">{strings.directions} ↗</a>
+              <button type="button" class="where__show" data-show={i} aria-label={`${t(lang, 'where.mapLabel')}: ${d.name}`}>◎</button>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <div class="where__map" id="where-map" role="region" aria-label={t(lang, 'where.mapLabel')}></div>
+    </div>
+
+    <aside class="where__none">
+      <div>
+        <h2>{t(lang, 'where.noneTitle')}</h2>
+        <p>{t(lang, 'where.noneText')}</p>
+      </div>
+      <a class="btn btn--primary" href={`/${lang}/contact/`}>{t(lang, 'nav.contact')}</a>
+    </aside>
+  </section>
+  <script type="application/json" id="where-data" set:html={JSON.stringify(points).replace(/</g, '\\u003c')} />
+</Base>
+
+<script>
+  import L from 'leaflet';
+  import 'leaflet/dist/leaflet.css';
+  const box = document.getElementById('where-map');
+  const raw = document.getElementById('where-data');
+  if (box && raw) {
+    const pts: { i: number; name: string; lat: number; lng: number; country: string }[] = JSON.parse(raw.textContent || '[]');
+    const map = L.map(box, { scrollWheelZoom: false, zoomControl: true });
+    map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+    const icon = L.divIcon({ className: 'where-pin', html: '<span></span>', iconSize: [30, 40], iconAnchor: [15, 38] });
+    const markers = pts.map((p) => {
+      const m = L.marker([p.lat, p.lng], { icon, title: p.name, keyboard: true }).addTo(map);
+      m.on('click', () => select(p.i, false));
+      return m;
+    });
+    const items = [...document.querySelectorAll<HTMLElement>('.where__item')];
+    function fit(list: typeof pts) {
+      if (!list.length) return;
+      if (list.length === 1) map.setView([list[0].lat, list[0].lng], 15);
+      else map.fitBounds(L.latLngBounds(list.map((p) => [p.lat, p.lng] as [number, number])), { padding: [40, 40], maxZoom: 14 });
+    }
+    function select(i: number, fly = true) {
+      items.forEach((el) => el.classList.toggle('is-active', el.dataset.i === String(i)));
+      markers.forEach((m, k) => m.getElement()?.classList.toggle('is-active', k === i));
+      const p = pts[i];
+      if (fly && p) map.flyTo([p.lat, p.lng], 16, { duration: 0.6 });
+      if (!fly) items[i]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+    document.querySelectorAll<HTMLButtonElement>('[data-show]').forEach((b) => b.addEventListener('click', () => select(Number(b.dataset.show))));
+    document.querySelectorAll<HTMLButtonElement>('[data-country]').forEach((b) => b.addEventListener('click', () => {
+      const c = b.dataset.country || '';
+      document.querySelectorAll('[data-country]').forEach((x) => x.classList.toggle('is-on', x === b));
+      items.forEach((el) => { el.hidden = !!c && el.dataset.country !== c; });
+      fit(pts.filter((p) => !c || p.country === c));
+    }));
+    fit(pts);
+    // La rueda del mouse no mueve el mapa hasta que el visitante hace clic en él (así no se queda atrapado al bajar la página)
+    box.addEventListener('click', () => map.scrollWheelZoom.enable(), { once: true });
+  }
+</script>

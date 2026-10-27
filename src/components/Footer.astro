@@ -40,6 +40,7 @@ const news = /^https:\/\//.test(settings.newsletter_endpoint || '') ? settings.n
         <ul>
           <li><a href={`/${lang}/about/`}>{t(lang, 'nav.about')}</a></li>
           <li><a href={`/${lang}/wheel-builder/`}>{t(lang, 'nav.builder')}</a></li>
+          <li><a href={`/${lang}/where-to-buy/`}>{t(lang, 'nav.where')}</a></li>
           <li><a href={`/${lang}/contact/`}>{t(lang, 'nav.contact')}</a></li>
           {settings.public_email && <li><a href={`mailto:${settings.public_email}`}>{settings.public_email}</a></li>}
         </ul>

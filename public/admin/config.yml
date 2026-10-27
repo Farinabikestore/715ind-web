@@ -333,6 +333,32 @@ collections:
           - { label: Razón social, name: legal_name, widget: string, required: false, i18n: duplicate }
 
   # -------------------------------------------------------------------------
+  - name: distributors
+    label: Distribuidores (mapa "Dónde comprar")
+    description: Los distribuidores oficiales que aparecen en el mapa. No se traduce.
+    files:
+      - name: distributors
+        label: Lista de distribuidores
+        file: src/content/distributors.yml
+        fields:
+          - label: Distribuidores
+            name: distributors
+            widget: list
+            summary: '{{fields.name}} ({{fields.country}})'
+            fields:
+              - { label: Nombre, name: name, widget: string }
+              - { label: Tipo, name: type, widget: select, default: distributor, options: [{ label: Distribuidor oficial, value: distributor }, { label: Representante, value: representative }] }
+              - { label: País (código de 2 letras), name: country, widget: string, hint: 'CL = Chile, BO = Bolivia, PE = Perú, AR = Argentina, US = Estados Unidos…' }
+              - { label: Ciudad, name: city, widget: string, required: false }
+              - { label: Dirección, name: address, widget: string, required: false }
+              - { label: WhatsApp (con código de país), name: whatsapp, widget: string, required: false, hint: 'Ej: +56979710591' }
+              - { label: Teléfono (opcional), name: phone, widget: string, required: false }
+              - { label: Correo, name: email, widget: string, required: false }
+              - { label: Sitio web, name: website, widget: string, required: false }
+              - { label: Latitud, name: lat, widget: number, value_type: float, hint: 'En Google Maps: clic derecho sobre el local y copia el primer número.' }
+              - { label: Longitud, name: lng, widget: number, value_type: float, hint: 'El segundo número de Google Maps.' }
+              - { label: Ocultar, name: hidden, widget: boolean, required: false, default: false }
+
   - name: builder
     label: Armador de ruedas
     description: Piezas, colores y largos de rayo del armador. No se traduce (los nombres de color se traducen solos).

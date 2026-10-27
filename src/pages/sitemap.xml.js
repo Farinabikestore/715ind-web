@@ -3,7 +3,7 @@ import { LOCALES } from '../i18n/ui.js';
 import { getProducts } from '../lib/content.js';
 
 export function GET({ site }) {
-  const paths = ['/', '/products/', '/wheel-builder/', '/about/', '/contact/', '/privacy/'];
+  const paths = ['/', '/products/', '/wheel-builder/', '/about/', '/contact/', '/where-to-buy/', '/privacy/'];
   for (const p of getProducts('es')) paths.push(`/products/${p.slug}/`);
   const url = (p) => new URL(p, site).href;
   const body = paths

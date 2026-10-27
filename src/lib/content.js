@@ -9,6 +9,7 @@ const productFiles = import.meta.glob('/src/content/products/*.yml', { query: '?
 const pageFiles = import.meta.glob('/src/content/pages/*.yml', { query: '?raw', import: 'default', eager: true });
 const settingsFile = import.meta.glob('/src/content/settings.yml', { query: '?raw', import: 'default', eager: true });
 const builderFile = import.meta.glob('/src/content/builder.yml', { query: '?raw', import: 'default', eager: true });
+const distFile = import.meta.glob('/src/content/distributors.yml', { query: '?raw', import: 'default', eager: true });
 
 export const CATEGORIES = ['hubs', 'rims', 'wheels', 'frames', 'cockpit', 'saddles', 'apparel'];
 
@@ -141,6 +142,24 @@ export function getProduct(slug, lang) {
 export function getBuilder() {
   const raw = Object.values(builderFile)[0] || '';
   return parse(raw, 'builder.yml');
+}
+
+// Distribuidores para el mapa "Dónde comprar". Solo se aceptan coordenadas válidas.
+export function getDistributors() {
+  const raw = Object.values(distFile)[0] || '';
+  const list = (parse(raw, 'distributors.yml').distributors || []).filter((d) => d && d.name && !d.hidden);
+  return list.map((d) => ({
+    name: String(d.name),
+    type: d.type === 'representative' ? 'representative' : 'distributor',
+    country: String(d.country || '').toUpperCase().slice(0, 2),
+    city: d.city || '',
+    address: d.address || '',
+    whatsapp: String(d.whatsapp || '').replace(/[^\d+]/g, ''),
+    phone: String(d.phone || '').replace(/[^\d+ ]/g, ''),
+    email: /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email || '') ? d.email : '',
+    website: /^https?:\/\//.test(safeUrl(d.website)) ? safeUrl(d.website) : '',
+    lat: Number(d.lat), lng: Number(d.lng),
+  })).filter((d) => Number.isFinite(d.lat) && Number.isFinite(d.lng) && Math.abs(d.lat) <= 90 && Math.abs(d.lng) <= 180);
 }
 
 export function slugify(s) {

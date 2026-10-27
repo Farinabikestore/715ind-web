@@ -1,0 +1,13 @@
+# Distribuidores oficiales de 715IND (se editan en el panel: Distribuidores).
+distributors:
+- name: Fariña Bike Store
+  type: distributor
+  country: CL
+  city: Santiago
+  address: Antonia López de Bello 0118, local -1, Providencia, Santiago
+  whatsapp: '+56979710591'
+  email: vascofarina@farinabikestore.com
+  website: https://www.farinabikestore.com
+  lat: -33.4318672
+  lng: -70.634575
+  hidden: false
