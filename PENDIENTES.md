@@ -30,6 +30,10 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - Plazo: registrar dentro de 15 días desde la compra.
   - Regla: sin registro no hay garantía 715IND (la garantía legal de 6 meses en Chile aplica siempre; confirmar texto con abogado).
   - La garantía extendida es un experimento de 1 año para juntar datos y decidir la política definitiva.
+  - Clientes con productos anteriores al registro: pueden registrar su producto y contar su experiencia
+    (problemas, fotos). 715IND evalúa caso a caso un descuento compensatorio (sin promesa automática).
+  - Los cuadros Enduro HT V2 y V3 están descontinuados: deben aparecer en la lista del formulario para quienes ya los tienen.
+    El V3.1 es el modelo nuevo, pensado para reducir esos problemas.
 
 ## Newsletter "715IND News"
 - [ ] Conectar al panel de email marketing (repositorio panel-marketing): aceptar el origen de la web 715IND,
