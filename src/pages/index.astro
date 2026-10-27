@@ -18,7 +18,10 @@ const { type, kase, style } = typeAttrs(settings);
   <link rel="canonical" href={abs(`/${DEFAULT_LOCALE}/`)} />
   {LOCALES.map((l) => <link rel="alternate" hreflang={l} href={abs(`/${l}/`)} />)}
   <link rel="alternate" hreflang="x-default" href={abs('/en/')} />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  {!settings.favicon && <link rel="icon" href="/favicon.svg" type="image/svg+xml" />}
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 </head>
 <body>
   <main class="wrap simple">
