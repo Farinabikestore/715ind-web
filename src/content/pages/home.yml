@@ -4,10 +4,18 @@ es:
   blocks:
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-960.mp4
+    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
     poster: /uploads/videos/715-banner-llantas.webp
     cta_label: Llantas 715
     cta_link: /products/#rims
+    size: normal
+    shade: medium
+  - type: video_banner
+    video: ''
+    video_mobile: ''
+    poster: ''
+    cta_label: ''
+    cta_link: ''
     size: normal
     shade: medium
   - type: hero
@@ -63,10 +71,18 @@ en:
   blocks:
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-960.mp4
+    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
     poster: /uploads/videos/715-banner-llantas.webp
     cta_label: 715 Rims
     cta_link: /products/#rims
+    size: normal
+    shade: medium
+  - type: video_banner
+    video: ''
+    video_mobile: ''
+    poster: ''
+    cta_label: ''
+    cta_link: ''
     size: normal
     shade: medium
   - type: hero
@@ -122,10 +138,18 @@ pt:
   blocks:
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-960.mp4
+    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
     poster: /uploads/videos/715-banner-llantas.webp
     cta_label: Aros 715
     cta_link: /products/#rims
+    size: normal
+    shade: medium
+  - type: video_banner
+    video: ''
+    video_mobile: ''
+    poster: ''
+    cta_label: ''
+    cta_link: ''
     size: normal
     shade: medium
   - type: hero
@@ -181,10 +205,18 @@ de:
   blocks:
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-960.mp4
+    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
     poster: /uploads/videos/715-banner-llantas.webp
     cta_label: 715 Felgen
     cta_link: /products/#rims
+    size: normal
+    shade: medium
+  - type: video_banner
+    video: ''
+    video_mobile: ''
+    poster: ''
+    cta_label: ''
+    cta_link: ''
     size: normal
     shade: medium
   - type: hero
@@ -240,10 +272,18 @@ fr:
   blocks:
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-960.mp4
+    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
     poster: /uploads/videos/715-banner-llantas.webp
     cta_label: Jantes 715
     cta_link: /products/#rims
+    size: normal
+    shade: medium
+  - type: video_banner
+    video: ''
+    video_mobile: ''
+    poster: ''
+    cta_label: ''
+    cta_link: ''
     size: normal
     shade: medium
   - type: hero
@@ -299,10 +339,18 @@ it:
   blocks:
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-960.mp4
+    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
     poster: /uploads/videos/715-banner-llantas.webp
     cta_label: Cerchi 715
     cta_link: /products/#rims
+    size: normal
+    shade: medium
+  - type: video_banner
+    video: ''
+    video_mobile: ''
+    poster: ''
+    cta_label: ''
+    cta_link: ''
     size: normal
     shade: medium
   - type: hero

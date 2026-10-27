@@ -133,8 +133,8 @@ collections:
                 widget: object
                 summary: '{{fields.cta_label}}'
                 fields:
-                  - { label: Video (MP4, sin sonido, máx. 20 MB), name: video, widget: file, i18n: duplicate, hint: 'Se reproduce solo, en silencio y en bucle. Ideal 1920 px de ancho y menos de 5 MB.' }
-                  - { label: Video para celular (opcional), name: video_mobile, widget: file, required: false, i18n: duplicate, hint: 'Versión más liviana (960 px de ancho) para celulares.' }
+                  - { label: Video (MP4, sin sonido, máx. 20 MB), name: video, widget: file, required: false, i18n: duplicate, hint: 'Se reproduce solo, en silencio y en bucle. Ideal 1920 px de ancho y menos de 10 MB. Si está vacío, el bloque no se muestra.' }
+                  - { label: Video para celular (opcional), name: video_mobile, widget: file, required: false, i18n: duplicate, hint: 'Versión más liviana (1280 px de ancho) para celulares.' }
                   - { label: Imagen mientras carga (opcional), name: poster, widget: image, required: false, i18n: duplicate }
                   - { label: Botón (texto), name: cta_label, widget: string, required: false, i18n: true }
                   - { label: Botón (enlace), name: cta_link, widget: string, required: false, i18n: duplicate, hint: 'Ej: /products/#rims' }
