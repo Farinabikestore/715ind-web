@@ -45,12 +45,17 @@ es:
     limit: 8
     heading: Destacados
     text: ''
-  - type: builder_cta
-    heading: Arma tu rueda
-    text: Elige llanta, maza, núcleo y colores. Te enviamos la cotización y la armamos a mano.
-    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-    cta_label: Abrir el armador
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: Nuevo
+    heading: Armador de ruedas
+    cta_label: Arma tu rueda
     cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: feature
     theme: light
     image_side: right
@@ -112,12 +117,17 @@ en:
     limit: 8
     heading: Featured
     text: ''
-  - type: builder_cta
-    heading: Build your wheel
-    text: Choose rim, hub, freehub and colours. We send you a quote and build it by hand.
-    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-    cta_label: Open the wheel builder
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: New
+    heading: Custom wheel builder
+    cta_label: Build yours
     cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: feature
     theme: light
     image_side: right
@@ -179,12 +189,17 @@ pt:
     limit: 8
     heading: Destaques
     text: ''
-  - type: builder_cta
-    heading: Monte a sua roda
-    text: Escolha aro, cubo, cubo livre e cores. Enviamos o orçamento e montamos à mão.
-    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-    cta_label: Abrir o configurador
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: Novo
+    heading: Montador de rodas
+    cta_label: Monte a sua
     cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: feature
     theme: light
     image_side: right
@@ -246,12 +261,17 @@ de:
     limit: 8
     heading: Highlights
     text: ''
-  - type: builder_cta
-    heading: Stell dein Laufrad zusammen
-    text: Wähle Felge, Nabe, Freilauf und Farben. Wir schicken dir ein Angebot und bauen es von Hand.
-    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-    cta_label: Konfigurator öffnen
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: Neu
+    heading: Laufrad-Konfigurator
+    cta_label: Jetzt konfigurieren
     cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: feature
     theme: light
     image_side: right
@@ -313,12 +333,17 @@ fr:
     limit: 8
     heading: À la une
     text: ''
-  - type: builder_cta
-    heading: Configurez votre roue
-    text: Choisissez jante, moyeu, corps de roue libre et couleurs. Nous vous envoyons un devis et la montons à la main.
-    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-    cta_label: Ouvrir le configurateur
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: Nouveau
+    heading: Configurateur de roues
+    cta_label: Configurer
     cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: feature
     theme: light
     image_side: right
@@ -380,12 +405,17 @@ it:
     limit: 8
     heading: In evidenza
     text: ''
-  - type: builder_cta
-    heading: Configura la tua ruota
-    text: Scegli cerchio, mozzo, corpetto e colori. Ti inviamo il preventivo e la montiamo a mano.
-    image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-    cta_label: Apri il configuratore
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: Novità
+    heading: Configuratore ruote
+    cta_label: Configura ora
     cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: feature
     theme: light
     image_side: right
