@@ -258,6 +258,7 @@ collections:
             hint: 'Cambia la letra de todo el sitio. Se ve publicada en 1 a 2 minutos.'
             options:
               - { label: 'Estilo PNW: condensada en mayúsculas (Barlow Condensed + Barlow)', value: pnw }
+              - { label: 'Estilo Gravity Cartel: Fjalla One + Barlow Semi Condensed', value: gravity }
               - { label: 'Expandida gruesa (Archivo)', value: archivo }
               - { label: 'Técnica angosta (Saira)', value: saira }
               - { label: 'Clásica condensada (Oswald + Barlow)', value: oswald }

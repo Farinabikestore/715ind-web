@@ -155,7 +155,7 @@ export function slugify(s) {
 export { LOCALES, DEFAULT_LOCALE };
 
 // Tipografía y color de acento elegidos en el panel (Configuración general).
-const TYPES = ['pnw', 'archivo', 'saira', 'oswald'];
+const TYPES = ['pnw', 'gravity', 'archivo', 'saira', 'oswald'];
 export function typeAttrs(settings = {}) {
   const type = TYPES.includes(settings.font_style) ? settings.font_style : 'pnw';
   const kase = ['upper', 'normal'].includes(settings.titles_case) ? settings.titles_case : undefined;

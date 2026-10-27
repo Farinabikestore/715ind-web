@@ -11,6 +11,11 @@
 @import '@fontsource/barlow-condensed/800.css';
 @import '@fontsource-variable/saira/wdth.css';
 @import '@fontsource-variable/oswald/index.css';
+@import '@fontsource/fjalla-one/400.css';
+@import '@fontsource/barlow-semi-condensed/400.css';
+@import '@fontsource/barlow-semi-condensed/500.css';
+@import '@fontsource/barlow-semi-condensed/600.css';
+@import '@fontsource/barlow-semi-condensed/700.css';
 /* Solo se descargan las fuentes que realmente usa la tipografía elegida en el panel. */
 
 :root {
@@ -67,6 +72,16 @@ html[data-type='pnw'] {
   --d-weight: 700; --d-heavy: 800; --d-stretch: normal; --d-case: uppercase; --d-track: 0.005em; --d-hero-track: 0; --d-lead: .95; --d-hero-lead: .88;
   --ui-font: 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif; --ui-weight: 700; --ui-stretch: normal; --ui-case: uppercase; --ui-track: .07em;
   --radius: 0; --pill: 0; --d-size: 1.2; --ui-size: 1.1;
+}
+/* Estilo Gravity Cartel: títulos Fjalla One (condensada, en mayúsculas) y texto Barlow Semi Condensed,
+   la alternativa libre más parecida a Conduit ITC (la letra de texto de Gravity Cartel, que es de pago). */
+html[data-type='gravity'] {
+  --font-display: 'Fjalla One', 'Arial Narrow', system-ui, sans-serif;
+  --font-body: 'Barlow Semi Condensed', 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --d-weight: 400; --d-heavy: 400; --d-stretch: normal; --d-case: uppercase; --d-track: 0.01em; --d-hero-track: 0; --d-lead: 1.08; --d-hero-lead: 1.04;
+  --ui-font: 'Fjalla One', 'Arial Narrow', system-ui, sans-serif; --ui-weight: 400; --ui-stretch: normal; --ui-case: uppercase; --ui-track: .04em;
+  --radius: 4px; --pill: 4px; --d-size: 1; --ui-size: 1.05;
+  font-synthesis: none;
 }
 html[data-type='saira'] {
   --font-display: 'Saira Variable', system-ui, sans-serif;

@@ -1,6 +1,6 @@
 es:
   brand_name: 715IND
-  font_style: pnw
+  font_style: gravity
   titles_case: auto
   accent_color: '#f26b1d'
   logo: ''
@@ -20,7 +20,7 @@ es:
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
 en:
   brand_name: 715IND
-  font_style: pnw
+  font_style: gravity
   titles_case: auto
   accent_color: '#f26b1d'
   logo: ''
@@ -40,7 +40,7 @@ en:
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
 pt:
   brand_name: 715IND
-  font_style: pnw
+  font_style: gravity
   titles_case: auto
   accent_color: '#f26b1d'
   logo: ''
@@ -60,7 +60,7 @@ pt:
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
 de:
   brand_name: 715IND
-  font_style: pnw
+  font_style: gravity
   titles_case: auto
   accent_color: '#f26b1d'
   logo: ''
@@ -80,7 +80,7 @@ de:
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
 fr:
   brand_name: 715IND
-  font_style: pnw
+  font_style: gravity
   titles_case: auto
   accent_color: '#f26b1d'
   logo: ''
@@ -100,7 +100,7 @@ fr:
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
 it:
   brand_name: 715IND
-  font_style: pnw
+  font_style: gravity
   titles_case: auto
   accent_color: '#f26b1d'
   logo: ''
