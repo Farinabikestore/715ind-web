@@ -143,6 +143,38 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
         </section>
       );
 
+    case 'slides': {
+      const items = (b.items || []).filter((x) => x && x.image && x.title);
+      if (!items.length) return null;
+      return (
+        <section class="block slides" data-slides>
+          <div class="wrap slides__head">
+            {b.heading && <h2>{b.heading}</h2>}
+            <div class="slides__nav">
+              <button type="button" class="slides__arrow" data-prev aria-label={t(lang, 'nav.prev')}><span aria-hidden="true">←</span></button>
+              <button type="button" class="slides__arrow" data-next aria-label={t(lang, 'nav.next')}><span aria-hidden="true">→</span></button>
+            </div>
+          </div>
+          <div class="slides__track" data-track>
+            {items.map((x) => (
+              <article class="slide">
+                <a href={link(x.link || '/products/', lang)}>
+                  <span class="slide__img"><Img src={x.image} alt="" sizes="(max-width: 760px) 86vw, 68vw" /></span>
+                  <span class="slide__body">
+                    <span class="slide__text">
+                      <h3>{x.title}</h3>
+                      {x.text && <p>{x.text}</p>}
+                    </span>
+                    <span class="slide__go" aria-hidden="true">›</span>
+                  </span>
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+      );
+    }
+
     case 'video_banner': {
       const src = videoUrl(b.video);
       if (!src) return null;
@@ -223,6 +255,17 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
     const ro = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); ro.unobserve(e.target); } }), { threshold: 0.3 });
     reveals.forEach((r) => ro.observe(r));
   } else reveals.forEach((r) => r.classList.add('is-in'));
+  // Carrusel de diapositivas: flechas que avanzan de a una diapositiva
+  document.querySelectorAll<HTMLElement>('[data-slides]').forEach((box) => {
+    const track = box.querySelector<HTMLElement>('[data-track]')!;
+    const prev = box.querySelector<HTMLButtonElement>('[data-prev]')!, next = box.querySelector<HTMLButtonElement>('[data-next]')!;
+    const step = () => { const s = track.querySelector<HTMLElement>('.slide'); return s ? s.offsetWidth + parseFloat(getComputedStyle(track).columnGap || '0') : track.clientWidth * 0.8; };
+    const sync = () => { prev.disabled = track.scrollLeft < 8; next.disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 8; };
+    prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', () => requestAnimationFrame(sync), { passive: true });
+    addEventListener('resize', sync); sync();
+  });
   const vids = document.querySelectorAll<HTMLVideoElement>('video[data-vbanner]');
   const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
   vids.forEach((v) => {

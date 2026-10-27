@@ -128,6 +128,23 @@ collections:
             i18n: duplicate
             hint: 'Arrastra los bloques para cambiar el orden. Agrega bloques con el botón +.'
             types: &block_types
+              - label: Diapositivas (carrusel con flechas)
+                name: slides
+                widget: object
+                summary: '{{fields.heading}}'
+                fields:
+                  - { label: Título, name: heading, widget: string, required: false, i18n: true }
+                  - label: Diapositivas
+                    name: items
+                    widget: list
+                    i18n: duplicate
+                    max: 8
+                    summary: '{{fields.title}}'
+                    fields:
+                      - { label: Foto (horizontal), name: image, widget: image, i18n: duplicate }
+                      - { label: Título, name: title, widget: string, i18n: true }
+                      - { label: Texto, name: text, widget: text, required: false, i18n: true }
+                      - { label: Enlace, name: link, widget: string, required: false, i18n: duplicate, hint: 'Ej: /products/ultra-rear-hub/' }
               - label: Video de fondo con botón
                 name: video_banner
                 widget: object

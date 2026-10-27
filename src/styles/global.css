@@ -270,6 +270,27 @@ html.header-hidden .site-header { transform: translateY(-100%); }
 @media (prefers-reduced-motion: reduce) { .vbanner__eyebrow > span, .vbanner__title > span, .vbanner__cta > span { transform: none; animation: none !important; } }
 @media (max-width: 760px) { .vbanner { height: min(var(--vb-h, 520px), 320px); } .vbanner { place-items: end center; padding-bottom: 26px; } .vbanner--titled { height: min(100vw, 460px); place-items: start center; padding: 26px 0 0; } .vbanner--titled .vbanner__text { text-align: center; } .vbanner--titled .vbanner__title { max-width: none; } .vbanner__title { margin-block: 4px 12px; } .vbanner__btn { padding: 13px 28px; font-size: 12px; } }
 
+/* Diapositivas (como "Explore the PNW") */
+.slides__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: clamp(20px, 3vw, 36px); }
+.slides__head h2 { font-size: var(--fs-h2); }
+.slides__nav { display: flex; gap: 8px; margin-left: auto; }
+.slides__arrow { width: 48px; height: 48px; display: grid; place-items: center; border: 0; background: transparent; color: var(--ink); font-size: 26px; cursor: pointer; border-radius: 50%; transition: background .15s ease, opacity .15s ease; }
+.slides__arrow:hover:not(:disabled) { background: #ececea; }
+.slides__arrow:disabled { opacity: .3; cursor: default; }
+.slides__track { --pad: max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter))); display: grid; grid-auto-flow: column; grid-auto-columns: min(68vw, 1240px); column-gap: clamp(20px, 3vw, 48px); overflow-x: auto; scroll-snap-type: x mandatory; padding-inline: var(--pad); scroll-padding-inline: var(--pad); scrollbar-width: none; overscroll-behavior-x: contain; }
+.slides__track::-webkit-scrollbar { display: none; }
+.slide { scroll-snap-align: start; min-width: 0; }
+.slide a { display: block; text-decoration: none; color: var(--ink); }
+.slide__img { display: block; aspect-ratio: 2.2 / 1; overflow: hidden; background: var(--photo, #e9e9e5); }
+.slide__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.slide a:hover .slide__img img { transform: scale(1.03); }
+.slide__body { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-top: 22px; }
+.slide__body h3 { font-size: calc(1.6rem * var(--d-size)); margin-bottom: 8px; }
+.slide__body p { margin: 0; color: var(--muted); max-width: 60ch; line-height: 1.5; }
+.slide__go { font-size: 30px; line-height: 1; padding: 0 6px; transition: transform .2s ease; }
+.slide a:hover .slide__go { transform: translateX(4px); }
+@media (max-width: 760px) { .slides__track { grid-auto-columns: 86vw; } .slide__img { aspect-ratio: 4 / 3; } .slides__arrow { width: 40px; height: 40px; font-size: 22px; } }
+
 /* Hero */
 .hero { position: relative; min-height: min(88vh, 860px); display: grid; align-items: end; color: var(--bone); background: var(--graphite); overflow: hidden; }
 .hero--short { min-height: min(62vh, 620px); }
