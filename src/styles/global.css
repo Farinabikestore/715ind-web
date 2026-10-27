@@ -242,6 +242,14 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .theme-sage .lead { color: var(--graphite); }
 .theme-light { background: var(--paper); }
 
+/* Video de fondo con botón (como los banners de farinabikestore.com) */
+.vbanner { position: relative; height: var(--vb-h, 520px); overflow: hidden; display: grid; place-items: center; background: #080808; color: #fff; }
+.vbanner__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vbanner__shade { position: absolute; inset: 0; background: rgba(0, 0, 0, var(--vb-shade, .45)); }
+.vbanner__btn { position: relative; z-index: 1; display: inline-block; padding: 15px 42px; border: 1px solid rgba(255, 255, 255, .85); color: #fff; text-decoration: none; font-family: var(--font-body); font-size: 13px; font-weight: 500; letter-spacing: .32em; text-transform: uppercase; transition: background .25s ease; }
+.vbanner__btn:hover { background: rgba(255, 255, 255, .15); }
+@media (max-width: 760px) { .vbanner { height: min(var(--vb-h, 520px), 320px); } .vbanner__video { object-position: 8% 50%; } .vbanner__btn { padding: 13px 28px; font-size: 12px; } }
+
 /* Hero */
 .hero { position: relative; min-height: min(88vh, 860px); display: grid; align-items: end; color: var(--bone); background: var(--graphite); overflow: hidden; }
 .hero--short { min-height: min(62vh, 620px); }

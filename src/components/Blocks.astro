@@ -3,7 +3,8 @@
 import Img from './Img.astro';
 import ProductCard from './ProductCard.astro';
 import { t } from '../i18n/ui.js';
-import { getProducts, CATEGORIES, md, link } from '../lib/content.js';
+import { getProducts, CATEGORIES, md, link, safeUrl } from '../lib/content.js';
+import { variant } from '../lib/img.js';
 
 const { blocks = [], lang, short = false } = Astro.props;
 const products = getProducts(lang);
@@ -18,6 +19,9 @@ const catImage = (c) => {
   return p ? p.images[0] : '';
 };
 const catCount = (c) => products.filter((x) => x.category === c).length;
+const vbHeights = { short: 360, normal: 520, tall: 700 };
+const vbShades = { light: 0.25, medium: 0.45, strong: 0.6 };
+const videoUrl = (v) => { const u = safeUrl(v); return /\.(mp4|webm)(\?.*)?$/i.test(u) && (u.startsWith('/uploads/') || u.startsWith('https://')) ? u : ''; };
 const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>';
 ---
 {blocks.filter(Boolean).map((b, i) => {
@@ -140,6 +144,24 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
         </section>
       );
 
+    case 'video_banner': {
+      const src = videoUrl(b.video);
+      if (!src) return null;
+      const mobile = videoUrl(b.video_mobile);
+      const h = vbHeights[b.size] || vbHeights.normal;
+      const shade = vbShades[b.shade] ?? vbShades.medium;
+      return (
+        <section class="vbanner" style={`--vb-h:${h}px;--vb-shade:${shade}`} aria-label={b.cta_label || undefined}>
+          <video class="vbanner__video" autoplay muted loop playsinline preload="metadata" poster={b.poster ? variant(b.poster, 960) : undefined} aria-hidden="true" data-vbanner>
+            {mobile && <source src={mobile} type="video/mp4" media="(max-width: 760px)" />}
+            <source src={src} type={src.endsWith('.webm') ? 'video/webm' : 'video/mp4'} />
+          </video>
+          <div class="vbanner__shade"></div>
+          {b.cta_label && <a class="vbanner__btn" href={link(b.cta_link || '/products/', lang)}>{b.cta_label}</a>}
+        </section>
+      );
+    }
+
     case 'video': {
       const id = ytId(b.youtube);
       if (!id) return null;
@@ -183,5 +205,17 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
       f.setAttribute('allowfullscreen', '');
       btn.replaceWith(f);
     });
+  });
+</script>
+
+<script>
+  // Videos de fondo: se pausan fuera de pantalla y no se mueven si el visitante pidió reducir el movimiento.
+  const vids = document.querySelectorAll<HTMLVideoElement>('video[data-vbanner]');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  vids.forEach((v) => {
+    if (still) { v.removeAttribute('autoplay'); v.pause(); return; }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) v.play().catch(() => {}); else v.pause(); }), { threshold: 0.05 }).observe(v);
+    }
   });
 </script>

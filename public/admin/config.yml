@@ -128,6 +128,18 @@ collections:
             i18n: duplicate
             hint: 'Arrastra los bloques para cambiar el orden. Agrega bloques con el botón +.'
             types: &block_types
+              - label: Video de fondo con botón
+                name: video_banner
+                widget: object
+                summary: '{{fields.cta_label}}'
+                fields:
+                  - { label: Video (MP4, sin sonido, máx. 20 MB), name: video, widget: file, i18n: duplicate, hint: 'Se reproduce solo, en silencio y en bucle. Ideal 1920 px de ancho y menos de 5 MB.' }
+                  - { label: Video para celular (opcional), name: video_mobile, widget: file, required: false, i18n: duplicate, hint: 'Versión más liviana (960 px de ancho) para celulares.' }
+                  - { label: Imagen mientras carga (opcional), name: poster, widget: image, required: false, i18n: duplicate }
+                  - { label: Botón (texto), name: cta_label, widget: string, required: false, i18n: true }
+                  - { label: Botón (enlace), name: cta_link, widget: string, required: false, i18n: duplicate, hint: 'Ej: /products/#rims' }
+                  - { label: Alto, name: size, widget: select, required: false, i18n: duplicate, default: normal, options: [{ label: Bajo (360 px), value: short }, { label: Normal (520 px), value: normal }, { label: Alto (700 px), value: tall }] }
+                  - { label: Oscurecer video, name: shade, widget: select, required: false, i18n: duplicate, default: medium, options: [{ label: Poco, value: light }, { label: Medio, value: medium }, { label: Mucho, value: strong }] }
               - label: Portada (foto grande)
                 name: hero
                 widget: object
