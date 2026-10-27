@@ -11,11 +11,11 @@ es:
     size: normal
     shade: medium
   - type: video_banner
-    video: ''
-    video_mobile: ''
-    poster: ''
-    cta_label: ''
-    cta_link: ''
+    video: /uploads/videos/715-banner-mazas.mp4
+    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
+    poster: /uploads/videos/715-banner-mazas.webp
+    cta_label: Mazas 715
+    cta_link: /products/#hubs
     size: normal
     shade: medium
   - type: hero
@@ -78,11 +78,11 @@ en:
     size: normal
     shade: medium
   - type: video_banner
-    video: ''
-    video_mobile: ''
-    poster: ''
-    cta_label: ''
-    cta_link: ''
+    video: /uploads/videos/715-banner-mazas.mp4
+    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
+    poster: /uploads/videos/715-banner-mazas.webp
+    cta_label: 715 Hubs
+    cta_link: /products/#hubs
     size: normal
     shade: medium
   - type: hero
@@ -145,11 +145,11 @@ pt:
     size: normal
     shade: medium
   - type: video_banner
-    video: ''
-    video_mobile: ''
-    poster: ''
-    cta_label: ''
-    cta_link: ''
+    video: /uploads/videos/715-banner-mazas.mp4
+    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
+    poster: /uploads/videos/715-banner-mazas.webp
+    cta_label: Cubos 715
+    cta_link: /products/#hubs
     size: normal
     shade: medium
   - type: hero
@@ -212,11 +212,11 @@ de:
     size: normal
     shade: medium
   - type: video_banner
-    video: ''
-    video_mobile: ''
-    poster: ''
-    cta_label: ''
-    cta_link: ''
+    video: /uploads/videos/715-banner-mazas.mp4
+    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
+    poster: /uploads/videos/715-banner-mazas.webp
+    cta_label: 715 Naben
+    cta_link: /products/#hubs
     size: normal
     shade: medium
   - type: hero
@@ -279,11 +279,11 @@ fr:
     size: normal
     shade: medium
   - type: video_banner
-    video: ''
-    video_mobile: ''
-    poster: ''
-    cta_label: ''
-    cta_link: ''
+    video: /uploads/videos/715-banner-mazas.mp4
+    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
+    poster: /uploads/videos/715-banner-mazas.webp
+    cta_label: Moyeux 715
+    cta_link: /products/#hubs
     size: normal
     shade: medium
   - type: hero
@@ -346,11 +346,11 @@ it:
     size: normal
     shade: medium
   - type: video_banner
-    video: ''
-    video_mobile: ''
-    poster: ''
-    cta_label: ''
-    cta_link: ''
+    video: /uploads/videos/715-banner-mazas.mp4
+    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
+    poster: /uploads/videos/715-banner-mazas.webp
+    cta_label: Mozzi 715
+    cta_link: /products/#hubs
     size: normal
     shade: medium
   - type: hero
