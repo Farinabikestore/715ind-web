@@ -75,3 +75,24 @@ const globe = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
     </div>
   </div>
 </header>
+
+<script>
+  // Al bajar, el encabezado se esconde; al subir (o cerca del inicio) vuelve a aparecer.
+  const root = document.documentElement;
+  const header = document.querySelector<HTMLElement>('.site-header');
+  if (header) {
+    // Hasta dónde llega el encabezado al cargar (aviso + menú); antes de ese punto nunca se esconde.
+    const limit = header.getBoundingClientRect().bottom + window.scrollY + 40;
+    let last = window.scrollY, ticking = false;
+    const busy = () => header.matches(':hover, :focus-within') || !!header.querySelector('details[open]');
+    const update = () => {
+      ticking = false;
+      const y = window.scrollY, dy = y - last;
+      if (y <= limit || dy < -6) root.classList.remove('header-hidden');
+      else if (dy > 6 && !busy()) root.classList.add('header-hidden');
+      if (Math.abs(dy) > 6 || y <= limit) last = y;
+    };
+    window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    header.addEventListener('focusin', () => root.classList.remove('header-hidden'));
+  }
+</script>

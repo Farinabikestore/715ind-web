@@ -112,7 +112,9 @@ html[data-case='normal'] { --d-case: none; --ui-case: none; --ui-track: 0; }
 .field label small, .field legend small, .cat-tile__label span, .consent, .field .consent { text-transform: none; letter-spacing: 0; font-family: var(--font-body); font-stretch: normal; }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); --header-offset: var(--header-h); }
+/* El encabezado se esconde al bajar y vuelve al subir (Header.astro) */
+html.header-hidden { --header-offset: 0px; }
 body {
   margin: 0;
   background: var(--paper);
@@ -171,7 +173,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .announce a:hover { text-decoration: underline; }
 .announce__text { margin: 0; padding: 8px 0; font-weight: 600; }
 
-.site-header { position: sticky; top: 0; z-index: 50; background: #fff; color: var(--ink); border-bottom: 1px solid #e7e7e3; }
+.site-header { position: sticky; top: 0; z-index: 50; background: #fff; color: var(--ink); border-bottom: 1px solid #e7e7e3; transition: transform .3s ease; }
+html.header-hidden .site-header { transform: translateY(-100%); }
+@media (prefers-reduced-motion: reduce) { .site-header, .cat-nav, .pdp__info, .summary { transition: none; } }
 .site-header__inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; gap: 20px; height: var(--header-h); }
 .wordmark { align-self: center; justify-self: center; font-family: var(--font-display); font-weight: var(--d-heavy); font-stretch: var(--d-stretch); font-size: calc(1.5rem * var(--d-size)); letter-spacing: -0.02em; text-decoration: none; line-height: 1; display: inline-flex; align-items: center; color: var(--ink); }
 /* El logo del panel es claro; en el encabezado blanco se muestra negro. */
@@ -329,7 +333,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 /* ---------- Listado de productos ---------- */
 .page-head { padding-block: clamp(40px, 7vw, 88px) clamp(24px, 4vw, 40px); }
 .page-head h1 { margin-bottom: 14px; }
-.cat-nav { position: sticky; top: var(--header-h); z-index: 20; background: var(--paper); border-bottom: 1px solid var(--line); }
+.cat-nav { position: sticky; top: var(--header-offset); transition: top .3s ease; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--line); }
 .cat-nav ul { display: flex; gap: 6px; margin-block: 0; padding-block: 10px; list-style: none; overflow-x: auto; scrollbar-width: none; }
 .cat-nav a { display: block; white-space: nowrap; padding: 8px 14px; border: 1.5px solid var(--line); border-radius: var(--pill); text-decoration: none; font-weight: 600; font-size: .95rem; }
 .cat-nav a:hover { border-color: var(--ink); }
@@ -343,7 +347,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .crumbs a { text-decoration: none; }
 .crumbs a:hover { text-decoration: underline; }
 .pdp { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 72px); padding-block: 20px var(--block); align-items: start; }
-.pdp__info { position: sticky; top: calc(var(--header-h) + 24px); }
+.pdp__info { position: sticky; top: calc(var(--header-offset) + 24px); transition: top .3s ease; }
 .pdp__info h1 { font-size: var(--fs-h1); margin: 8px 0 12px; }
 .pdp__tagline { font-size: var(--fs-lead); color: var(--muted); margin-bottom: 24px; }
 .pdp__section { border-top: 1px solid var(--line); padding-block: 20px; }
@@ -404,7 +408,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .part input:focus-visible + .part__box { outline: 3px solid var(--ember); outline-offset: 2px; }
 .part__link { position: relative; z-index: 2; font-size: .85rem; color: var(--muted); }
 
-.summary { position: sticky; top: calc(var(--header-h) + 20px); background: var(--graphite); color: var(--bone); padding: clamp(20px, 3vw, 32px); border-radius: var(--radius); }
+.summary { position: sticky; top: calc(var(--header-offset) + 20px); transition: top .3s ease; background: var(--graphite); color: var(--bone); padding: clamp(20px, 3vw, 32px); border-radius: var(--radius); }
 .summary h2 { font-size: 1.3rem; margin-bottom: 16px; }
 .wheel-svg { width: 100%; margin: 0 0 20px; aspect-ratio: 1; background: var(--sage); border-radius: var(--radius); padding: 7%; }
 .wheel-svg svg { max-width: 360px; margin-inline: auto; }
