@@ -3,6 +3,17 @@ es:
   seo_description: ''
   blocks:
   - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: Nuevo
+    heading: Armador de ruedas
+    cta_label: Arma tu rueda
+    cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
+  - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
     video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
     poster: /uploads/videos/715-banner-llantas.webp
@@ -45,17 +56,6 @@ es:
     limit: 8
     heading: Destacados
     text: ''
-  - type: video_banner
-    video: /uploads/videos/armador-715.mp4
-    video_mobile: /uploads/videos/armador-715-movil.mp4
-    poster: /uploads/videos/armador-715.webp
-    eyebrow: Nuevo
-    heading: Armador de ruedas
-    cta_label: Arma tu rueda
-    cta_link: /wheel-builder/
-    size: hero
-    shade: none
-    text_color: dark
   - type: feature
     theme: light
     image_side: right
@@ -74,6 +74,17 @@ en:
   seo_title: 715IND | MTB components designed in Chile
   seo_description: ''
   blocks:
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: New
+    heading: Custom wheel builder
+    cta_label: Build yours
+    cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
     video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
@@ -117,17 +128,6 @@ en:
     limit: 8
     heading: Featured
     text: ''
-  - type: video_banner
-    video: /uploads/videos/armador-715.mp4
-    video_mobile: /uploads/videos/armador-715-movil.mp4
-    poster: /uploads/videos/armador-715.webp
-    eyebrow: New
-    heading: Custom wheel builder
-    cta_label: Build yours
-    cta_link: /wheel-builder/
-    size: hero
-    shade: none
-    text_color: dark
   - type: feature
     theme: light
     image_side: right
@@ -146,6 +146,17 @@ pt:
   seo_title: 715IND | Componentes de MTB projetados no Chile
   seo_description: ''
   blocks:
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: Novo
+    heading: Montador de rodas
+    cta_label: Monte a sua
+    cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
     video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
@@ -189,17 +200,6 @@ pt:
     limit: 8
     heading: Destaques
     text: ''
-  - type: video_banner
-    video: /uploads/videos/armador-715.mp4
-    video_mobile: /uploads/videos/armador-715-movil.mp4
-    poster: /uploads/videos/armador-715.webp
-    eyebrow: Novo
-    heading: Montador de rodas
-    cta_label: Monte a sua
-    cta_link: /wheel-builder/
-    size: hero
-    shade: none
-    text_color: dark
   - type: feature
     theme: light
     image_side: right
@@ -218,6 +218,17 @@ de:
   seo_title: 715IND | MTB-Komponenten aus Chile
   seo_description: ''
   blocks:
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: Neu
+    heading: Laufrad-Konfigurator
+    cta_label: Jetzt konfigurieren
+    cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
     video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
@@ -261,17 +272,6 @@ de:
     limit: 8
     heading: Highlights
     text: ''
-  - type: video_banner
-    video: /uploads/videos/armador-715.mp4
-    video_mobile: /uploads/videos/armador-715-movil.mp4
-    poster: /uploads/videos/armador-715.webp
-    eyebrow: Neu
-    heading: Laufrad-Konfigurator
-    cta_label: Jetzt konfigurieren
-    cta_link: /wheel-builder/
-    size: hero
-    shade: none
-    text_color: dark
   - type: feature
     theme: light
     image_side: right
@@ -290,6 +290,17 @@ fr:
   seo_title: 715IND | Composants VTT conçus au Chili
   seo_description: ''
   blocks:
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: Nouveau
+    heading: Configurateur de roues
+    cta_label: Configurer
+    cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
     video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
@@ -333,17 +344,6 @@ fr:
     limit: 8
     heading: À la une
     text: ''
-  - type: video_banner
-    video: /uploads/videos/armador-715.mp4
-    video_mobile: /uploads/videos/armador-715-movil.mp4
-    poster: /uploads/videos/armador-715.webp
-    eyebrow: Nouveau
-    heading: Configurateur de roues
-    cta_label: Configurer
-    cta_link: /wheel-builder/
-    size: hero
-    shade: none
-    text_color: dark
   - type: feature
     theme: light
     image_side: right
@@ -362,6 +362,17 @@ it:
   seo_title: 715IND | Componenti MTB progettati in Cile
   seo_description: ''
   blocks:
+  - type: video_banner
+    video: /uploads/videos/armador-715.mp4
+    video_mobile: /uploads/videos/armador-715-movil.mp4
+    poster: /uploads/videos/armador-715.webp
+    eyebrow: Novità
+    heading: Configuratore ruote
+    cta_label: Configura ora
+    cta_link: /wheel-builder/
+    size: hero
+    shade: none
+    text_color: dark
   - type: video_banner
     video: /uploads/videos/715-banner-llantas.mp4
     video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
@@ -405,17 +416,6 @@ it:
     limit: 8
     heading: In evidenza
     text: ''
-  - type: video_banner
-    video: /uploads/videos/armador-715.mp4
-    video_mobile: /uploads/videos/armador-715-movil.mp4
-    poster: /uploads/videos/armador-715.webp
-    eyebrow: Novità
-    heading: Configuratore ruote
-    cta_label: Configura ora
-    cta_link: /wheel-builder/
-    size: hero
-    shade: none
-    text_color: dark
   - type: feature
     theme: light
     image_side: right
