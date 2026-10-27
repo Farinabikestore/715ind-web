@@ -14,21 +14,21 @@ es:
     shade: none
     text_color: dark
   - type: video_banner
-    video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
-    poster: /uploads/videos/715-banner-llantas.webp
+    video: /uploads/videos/715-jere.mp4
+    video_mobile: /uploads/videos/715-jere-movil.mp4
+    poster: /uploads/videos/715-jere.webp
     cta_label: Llantas 715
     cta_link: /products/#rims
     size: normal
     shade: medium
   - type: video_banner
-    video: /uploads/videos/715-banner-mazas.mp4
-    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
-    poster: /uploads/videos/715-banner-mazas.webp
+    video: /uploads/videos/715-jordi.mp4
+    video_mobile: /uploads/videos/715-jordi-movil.mp4
+    poster: /uploads/videos/715-jordi.webp
     cta_label: Mazas 715
     cta_link: /products/#hubs
     size: normal
-    shade: medium
+    shade: light
   - type: slides
     heading: "Explora 715IND"
     items:
@@ -105,21 +105,21 @@ en:
     shade: none
     text_color: dark
   - type: video_banner
-    video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
-    poster: /uploads/videos/715-banner-llantas.webp
+    video: /uploads/videos/715-jere.mp4
+    video_mobile: /uploads/videos/715-jere-movil.mp4
+    poster: /uploads/videos/715-jere.webp
     cta_label: 715 Rims
     cta_link: /products/#rims
     size: normal
     shade: medium
   - type: video_banner
-    video: /uploads/videos/715-banner-mazas.mp4
-    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
-    poster: /uploads/videos/715-banner-mazas.webp
+    video: /uploads/videos/715-jordi.mp4
+    video_mobile: /uploads/videos/715-jordi-movil.mp4
+    poster: /uploads/videos/715-jordi.webp
     cta_label: 715 Hubs
     cta_link: /products/#hubs
     size: normal
-    shade: medium
+    shade: light
   - type: slides
     heading: "Explore 715IND"
     items:
@@ -196,21 +196,21 @@ pt:
     shade: none
     text_color: dark
   - type: video_banner
-    video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
-    poster: /uploads/videos/715-banner-llantas.webp
+    video: /uploads/videos/715-jere.mp4
+    video_mobile: /uploads/videos/715-jere-movil.mp4
+    poster: /uploads/videos/715-jere.webp
     cta_label: Aros 715
     cta_link: /products/#rims
     size: normal
     shade: medium
   - type: video_banner
-    video: /uploads/videos/715-banner-mazas.mp4
-    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
-    poster: /uploads/videos/715-banner-mazas.webp
+    video: /uploads/videos/715-jordi.mp4
+    video_mobile: /uploads/videos/715-jordi-movil.mp4
+    poster: /uploads/videos/715-jordi.webp
     cta_label: Cubos 715
     cta_link: /products/#hubs
     size: normal
-    shade: medium
+    shade: light
   - type: slides
     heading: "Explore a 715IND"
     items:
@@ -287,21 +287,21 @@ de:
     shade: none
     text_color: dark
   - type: video_banner
-    video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
-    poster: /uploads/videos/715-banner-llantas.webp
+    video: /uploads/videos/715-jere.mp4
+    video_mobile: /uploads/videos/715-jere-movil.mp4
+    poster: /uploads/videos/715-jere.webp
     cta_label: 715 Felgen
     cta_link: /products/#rims
     size: normal
     shade: medium
   - type: video_banner
-    video: /uploads/videos/715-banner-mazas.mp4
-    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
-    poster: /uploads/videos/715-banner-mazas.webp
+    video: /uploads/videos/715-jordi.mp4
+    video_mobile: /uploads/videos/715-jordi-movil.mp4
+    poster: /uploads/videos/715-jordi.webp
     cta_label: 715 Naben
     cta_link: /products/#hubs
     size: normal
-    shade: medium
+    shade: light
   - type: slides
     heading: "Entdecke 715IND"
     items:
@@ -378,21 +378,21 @@ fr:
     shade: none
     text_color: dark
   - type: video_banner
-    video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
-    poster: /uploads/videos/715-banner-llantas.webp
+    video: /uploads/videos/715-jere.mp4
+    video_mobile: /uploads/videos/715-jere-movil.mp4
+    poster: /uploads/videos/715-jere.webp
     cta_label: Jantes 715
     cta_link: /products/#rims
     size: normal
     shade: medium
   - type: video_banner
-    video: /uploads/videos/715-banner-mazas.mp4
-    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
-    poster: /uploads/videos/715-banner-mazas.webp
+    video: /uploads/videos/715-jordi.mp4
+    video_mobile: /uploads/videos/715-jordi-movil.mp4
+    poster: /uploads/videos/715-jordi.webp
     cta_label: Moyeux 715
     cta_link: /products/#hubs
     size: normal
-    shade: medium
+    shade: light
   - type: slides
     heading: "Découvrez 715IND"
     items:
@@ -469,21 +469,21 @@ it:
     shade: none
     text_color: dark
   - type: video_banner
-    video: /uploads/videos/715-banner-llantas.mp4
-    video_mobile: /uploads/videos/715-banner-llantas-movil.mp4
-    poster: /uploads/videos/715-banner-llantas.webp
+    video: /uploads/videos/715-jere.mp4
+    video_mobile: /uploads/videos/715-jere-movil.mp4
+    poster: /uploads/videos/715-jere.webp
     cta_label: Cerchi 715
     cta_link: /products/#rims
     size: normal
     shade: medium
   - type: video_banner
-    video: /uploads/videos/715-banner-mazas.mp4
-    video_mobile: /uploads/videos/715-banner-mazas-movil.mp4
-    poster: /uploads/videos/715-banner-mazas.webp
+    video: /uploads/videos/715-jordi.mp4
+    video_mobile: /uploads/videos/715-jordi-movil.mp4
+    poster: /uploads/videos/715-jordi.webp
     cta_label: Mozzi 715
     cta_link: /products/#hubs
     size: normal
-    shade: medium
+    shade: light
   - type: slides
     heading: "Scopri 715IND"
     items:

@@ -268,7 +268,7 @@ html.header-hidden .site-header { transform: translateY(-100%); }
 .vbanner__title { font-family: var(--font-display); text-transform: var(--d-case); font-weight: var(--d-heavy); font-size: clamp(2.4rem, 5.6vw, 5rem); line-height: 1.05; margin-block: 6px 18px; }
 .vbanner:not(.vbanner--ink) .vbanner__title { text-shadow: 0 2px 24px rgba(0, 0, 0, .35); }
 @media (prefers-reduced-motion: reduce) { .vbanner__eyebrow > span, .vbanner__title > span, .vbanner__cta > span { transform: none; animation: none !important; } }
-@media (max-width: 760px) { .vbanner { height: min(var(--vb-h, 520px), 320px); } .vbanner { place-items: end center; padding-bottom: 26px; } .vbanner--titled { height: min(100vw, 460px); place-items: start center; padding: 26px 0 0; } .vbanner--titled .vbanner__text { text-align: center; } .vbanner--titled .vbanner__title { max-width: none; } .vbanner__title { margin-block: 4px 12px; } .vbanner__btn { padding: 13px 28px; font-size: 12px; } }
+@media (max-width: 760px) { .vbanner { height: min(100vw, 420px); } .vbanner--titled { height: min(100vw, 460px); place-items: start center; padding: 26px 0 0; } .vbanner--titled .vbanner__text { text-align: center; } .vbanner--titled .vbanner__title { max-width: none; } .vbanner__title { margin-block: 4px 12px; } .vbanner__btn { padding: 13px 28px; font-size: 12px; } }
 
 /* Diapositivas (como "Explore the PNW") */
 .slides__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: clamp(20px, 3vw, 36px); }
