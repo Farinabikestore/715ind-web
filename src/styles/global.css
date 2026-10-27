@@ -174,8 +174,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--graphite); color: var(--bone); }
 .site-header__inner { display: flex; align-items: center; gap: 20px; height: var(--header-h); }
 .wordmark { font-family: var(--font-display); font-weight: var(--d-heavy); font-stretch: var(--d-stretch); font-size: calc(1.5rem * var(--d-size)); letter-spacing: -0.02em; text-decoration: none; line-height: 1; display: inline-flex; align-items: center; }
-.wordmark img { height: 32px; width: auto; max-width: 180px; object-fit: contain; display: block; }
-@media (max-width: 600px) { .wordmark img { height: 26px; max-width: 140px; } }
+.wordmark img { height: 24px; width: auto; max-width: 300px; object-fit: contain; object-position: left center; display: block; }
+@media (max-width: 600px) { .wordmark img { height: 16px; max-width: 190px; } }
 .site-nav { margin-left: auto; display: flex; align-items: center; gap: 4px; }
 .site-nav a { padding: 10px 12px; text-decoration: none; font-weight: 600; font-size: calc(.98rem * var(--ui-size)); border-radius: var(--radius); }
 .site-nav a:hover { background: var(--graphite-2); }
