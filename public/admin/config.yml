@@ -326,6 +326,8 @@ collections:
           - { label: Instagram (enlace), name: instagram, widget: string, required: false, i18n: duplicate }
           - { label: Facebook (enlace), name: facebook, widget: string, required: false, i18n: duplicate }
           - { label: YouTube (enlace), name: youtube, widget: string, required: false, i18n: duplicate }
+          - { label: 'Pie de página: foto de fondo', name: footer_image, widget: image, required: false, i18n: duplicate, hint: 'Foto horizontal de ambiente, mínimo 1920 px de ancho. Se oscurece sola para que se lea el texto.' }
+          - { label: 'Newsletter: dirección de suscripción', name: newsletter_endpoint, widget: string, required: false, i18n: duplicate, hint: 'La deja configurada Claude. Si está vacía, el pie muestra un botón a Distribuidores en vez del formulario.' }
           - { label: Ubicación, name: location, widget: string, required: false, i18n: true }
           - { label: Nota del pie de página, name: footer_note, widget: string, required: false, i18n: true }
           - { label: Razón social, name: legal_name, widget: string, required: false, i18n: duplicate }

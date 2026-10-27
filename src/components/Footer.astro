@@ -1,59 +1,113 @@
 ---
-import { LOCALES, LANG_NAMES, t } from '../i18n/ui.js';
-import { CATEGORIES, safeUrl } from '../lib/content.js';
+// Pie de página estilo PNW: foto de fondo, columnas de enlaces, newsletter, logo + redes, idiomas y línea legal.
+// La foto, las redes y el newsletter se editan en el panel (Configuración general).
+import { LOCALES, t } from '../i18n/ui.js';
+import { CATEGORIES, getProducts, safeUrl } from '../lib/content.js';
+import { variant } from '../lib/img.js';
 const { lang, path, settings } = Astro.props;
 const year = new Date().getFullYear();
+const products = getProducts(lang);
+const cats = CATEGORIES.filter((c) => products.some((p) => p.category === c));
+const icons = {
+  Instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 2.2c-3.1 0-3.5 0-4.7.1-2.3.1-3.4 1.2-3.5 3.5-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 2.3 1.2 3.4 3.5 3.5 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c2.3-.1 3.4-1.2 3.5-3.5.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-2.3-1.2-3.4-3.5-3.5-1.2-.1-1.6-.1-4.7-.1zm0 3.5a4.1 4.1 0 1 1 0 8.2 4.1 4.1 0 0 1 0-8.2zm0 6.8a2.7 2.7 0 1 0 0-5.4 2.7 2.7 0 0 0 0 5.4zm5.3-8a1 1 0 1 1 0 1.9 1 1 0 0 1 0-1.9z"/></svg>',
+  Facebook: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22h3.4z"/></svg>',
+  YouTube: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg>',
+  WhatsApp: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.6-.3z"/></svg>',
+};
 const social = [
   ['Instagram', settings.instagram],
   ['Facebook', settings.facebook],
   ['YouTube', settings.youtube],
   ['WhatsApp', settings.whatsapp ? `https://wa.me/${String(settings.whatsapp).replace(/\D/g, '')}` : ''],
 ].map(([n, url]) => [n, /^https?:/i.test(safeUrl(url)) ? safeUrl(url) : '']).filter(([, url]) => url);
+const bg = settings.footer_image ? variant(settings.footer_image, 960) : '';
+const bgFull = settings.footer_image || '';
+// El newsletter solo se muestra cuando está conectado (dirección del panel de email marketing en Configuración general)
+const news = /^https:\/\//.test(settings.newsletter_endpoint || '') ? settings.newsletter_endpoint : '';
 ---
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <p class="footer-note">{settings.tagline}.</p>
-        {settings.location && <p class="footer-note">{settings.location}</p>}
-        {settings.public_email && <p><a href={`mailto:${settings.public_email}`}>{settings.public_email}</a></p>}
-      </div>
+<footer class="site-footer" style={bgFull ? `--footer-bg:url('${bgFull}');--footer-bg-sm:url('${bg}')` : undefined}>
+  <div class="wrap footer-top">
+    <nav class="footer-cols" aria-label={t(lang, 'nav.menu')}>
       <div>
         <h2>{t(lang, 'nav.products')}</h2>
         <ul>
-          {CATEGORIES.map((c) => <li><a href={`/${lang}/products/#${c}`}>{t(lang, `cat.${c}`)}</a></li>)}
+          {cats.map((c) => <li><a href={`/${lang}/products/#${c}`}>{t(lang, `cat.${c}`)}</a></li>)}
+          <li><a href={`/${lang}/products/`}>{t(lang, 'products.seeAll')}</a></li>
         </ul>
       </div>
       <div>
-        <h2>{t(lang, 'nav.menu')}</h2>
+        <h2>{t(lang, 'footer.connect')}</h2>
         <ul>
-          <li><a href={`/${lang}/wheel-builder/`}>{t(lang, 'nav.builder')}</a></li>
           <li><a href={`/${lang}/about/`}>{t(lang, 'nav.about')}</a></li>
+          <li><a href={`/${lang}/wheel-builder/`}>{t(lang, 'nav.builder')}</a></li>
           <li><a href={`/${lang}/contact/`}>{t(lang, 'nav.contact')}</a></li>
-          <li><a href={`/${lang}/privacy/`}>{t(lang, 'footer.privacy')}</a></li>
-        </ul>
-        {social.length > 0 && (
-          <>
-            <h2 class="footer-follow">{t(lang, 'footer.follow')}</h2>
-            <ul>
-              {social.map(([name, url]) => <li><a href={url} rel="noopener noreferrer" target="_blank">{name}</a></li>)}
-            </ul>
-          </>
-        )}
-      </div>
-      <div>
-        <h2>{t(lang, 'nav.language')}</h2>
-        <ul>
-          {LOCALES.map((l) => <li><a href={`/${l}${path}`} hreflang={l} lang={l}>{LANG_NAMES[l]}</a></li>)}
+          {settings.public_email && <li><a href={`mailto:${settings.public_email}`}>{settings.public_email}</a></li>}
         </ul>
       </div>
-    </div>
+    </nav>
+    {news ? (
+      <div class="footer-news">
+        <h2>{t(lang, 'footer.newsTitle')}</h2>
+        <p>{t(lang, 'footer.newsText')}</p>
+        <form class="footer-news__form" data-news={news} novalidate>
+          <label class="visually-hidden" for="news-email">{t(lang, 'footer.newsPlaceholder')}</label>
+          <input id="news-email" name="email" type="email" required autocomplete="email" placeholder={t(lang, 'footer.newsPlaceholder')} />
+          <input name="apellido" type="text" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true" />
+          <button type="submit">{t(lang, 'footer.newsButton')}</button>
+          <p class="footer-news__msg" role="status" data-ok={t(lang, 'footer.newsOk')} data-err={t(lang, 'footer.newsErr')} data-bad={t(lang, 'contact.err.email')}></p>
+        </form>
+      </div>
+    ) : (
+      <div class="footer-news">
+        <h2>{settings.brand_name}</h2>
+        <p>{settings.tagline}.{settings.location && ` ${settings.location}.`}</p>
+        <a class="footer-news__cta" href={`/${lang}/contact/`}>{t(lang, 'nav.contact')}</a>
+      </div>
+    )}
   </div>
-  <div class="wrap"><p class="footer-mark" aria-hidden="true">{settings.brand_name}</p></div>
-  <div class="footer-legal">
-    <div class="wrap">
-      <span>© {year} {settings.legal_name || settings.brand_name}. {t(lang, 'footer.rights')}</span>
-      <span>{settings.footer_note}</span>
-    </div>
+
+  <div class="wrap footer-brand">
+    <a class="footer-logo" href={`/${lang}/`} aria-label={settings.brand_name}>
+      {settings.logo ? <img src={settings.logo} alt="" /> : settings.brand_name}
+    </a>
+    {social.length > 0 && (
+      <ul class="footer-social">
+        {social.map(([name, url]) => <li><a href={url} rel="noopener noreferrer" target="_blank" aria-label={name} set:html={icons[name]} /></li>)}
+      </ul>
+    )}
+    <ul class="footer-langs" aria-label={t(lang, 'nav.language')}>
+      {LOCALES.map((l) => <li><a href={`/${l}${path}`} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined}>{l.toUpperCase()}</a></li>)}
+    </ul>
+  </div>
+
+  <div class="wrap footer-legal">
+    <span>© {year} {settings.legal_name || settings.brand_name}. {t(lang, 'footer.rights')}</span>
+    <span class="footer-legal__links">
+      {settings.footer_note && <span>{settings.footer_note}</span>}
+      <a href={`/${lang}/privacy/`}>{t(lang, 'footer.privacy')}</a>
+    </span>
   </div>
 </footer>
+
+{news && (
+  <script>
+    // Suscripción al newsletter: envía el correo al panel de email marketing (origen "fans 715").
+    const form = document.querySelector<HTMLFormElement>('[data-news]');
+    if (form) {
+      const msg = form.querySelector<HTMLElement>('.footer-news__msg')!;
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = (form.elements.namedItem('email') as HTMLInputElement).value.trim();
+        if (!/^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(email)) { msg.textContent = msg.dataset.bad || ''; return; }
+        const btn = form.querySelector('button')!; btn.disabled = true;
+        try {
+          const r = await fetch(form.dataset.news!, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, origen: 'fans-715', apellido: (form.elements.namedItem('apellido') as HTMLInputElement).value }) });
+          if (!r.ok) throw new Error(String(r.status));
+          msg.textContent = msg.dataset.ok || ''; form.reset();
+        } catch { msg.textContent = msg.dataset.err || ''; }
+        btn.disabled = false;
+      });
+    }
+  </script>
+)}

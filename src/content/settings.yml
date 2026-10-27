@@ -25,9 +25,11 @@ es:
   announcement_link: /contact/
   public_email: ''
   whatsapp: ''
-  instagram: ''
-  facebook: ''
-  youtube: ''
+  instagram: https://www.instagram.com/715ind/
+  facebook: https://www.facebook.com/profile.php?id=100077041761714
+  youtube: https://www.youtube.com/@FarinaBikeStore
+  footer_image: /uploads/videos/715-jordi.webp
+  newsletter_endpoint: ''
   location: Santiago, Chile
   footer_note: Diseñado en Chile. Fabricado en Taiwán.
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
@@ -58,9 +60,11 @@ en:
   announcement_link: /contact/
   public_email: ''
   whatsapp: ''
-  instagram: ''
-  facebook: ''
-  youtube: ''
+  instagram: https://www.instagram.com/715ind/
+  facebook: https://www.facebook.com/profile.php?id=100077041761714
+  youtube: https://www.youtube.com/@FarinaBikeStore
+  footer_image: /uploads/videos/715-jordi.webp
+  newsletter_endpoint: ''
   location: Santiago, Chile
   footer_note: Designed in Chile. Made in Taiwan.
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
@@ -91,9 +95,11 @@ pt:
   announcement_link: /contact/
   public_email: ''
   whatsapp: ''
-  instagram: ''
-  facebook: ''
-  youtube: ''
+  instagram: https://www.instagram.com/715ind/
+  facebook: https://www.facebook.com/profile.php?id=100077041761714
+  youtube: https://www.youtube.com/@FarinaBikeStore
+  footer_image: /uploads/videos/715-jordi.webp
+  newsletter_endpoint: ''
   location: Santiago, Chile
   footer_note: Projetado no Chile. Fabricado em Taiwan.
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
@@ -124,9 +130,11 @@ de:
   announcement_link: /contact/
   public_email: ''
   whatsapp: ''
-  instagram: ''
-  facebook: ''
-  youtube: ''
+  instagram: https://www.instagram.com/715ind/
+  facebook: https://www.facebook.com/profile.php?id=100077041761714
+  youtube: https://www.youtube.com/@FarinaBikeStore
+  footer_image: /uploads/videos/715-jordi.webp
+  newsletter_endpoint: ''
   location: Santiago de Chile
   footer_note: Entwickelt in Chile. Gefertigt in Taiwan.
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
@@ -157,9 +165,11 @@ fr:
   announcement_link: /contact/
   public_email: ''
   whatsapp: ''
-  instagram: ''
-  facebook: ''
-  youtube: ''
+  instagram: https://www.instagram.com/715ind/
+  facebook: https://www.facebook.com/profile.php?id=100077041761714
+  youtube: https://www.youtube.com/@FarinaBikeStore
+  footer_image: /uploads/videos/715-jordi.webp
+  newsletter_endpoint: ''
   location: Santiago du Chili
   footer_note: Conçu au Chili. Fabriqué à Taïwan.
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
@@ -190,9 +200,11 @@ it:
   announcement_link: /contact/
   public_email: ''
   whatsapp: ''
-  instagram: ''
-  facebook: ''
-  youtube: ''
+  instagram: https://www.instagram.com/715ind/
+  facebook: https://www.facebook.com/profile.php?id=100077041761714
+  youtube: https://www.youtube.com/@FarinaBikeStore
+  footer_image: /uploads/videos/715-jordi.webp
+  newsletter_endpoint: ''
   location: Santiago del Cile
   footer_note: Progettato in Cile. Prodotto a Taiwan.
   legal_name: VASCO FARINA BAHAMONDES Y FARINA SPA
