@@ -20,7 +20,16 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - Eje pasante V3 UDH (M12x1.0, 170,5 mm) · Eje pasante V3 "No UDH" (M12x1.5, 181 mm)
 
 ## Garantía / registro de producto
-- [ ] Definir el registro de producto (investigación: antigüedad del producto, uso) para decidir cuánta garantía dar.
+- [ ] Formulario "Registra tu 715" (definido con Vasco):
+  - Productos: todo menos sillines y ropa (mazas, llantas, ruedas armadas, cuadros, bicicletas, cockpit).
+  - Obligatorios: nombre, correo, país, producto, color, fecha de compra (mes/año), dónde lo compró
+    (Fariña Bike Store / otra tienda / distribuidor), uso principal (XC, trail, enduro, downhill, urbano).
+  - Número de serie: obligatorio solo para cuadros y bicicletas.
+  - Estilo de manejo: No salto / Hago saltos pequeños / Hago saltos grandes.
+  - Opcional: foto de la boleta o factura.
+  - Plazo: registrar dentro de 15 días desde la compra.
+  - Regla: sin registro no hay garantía 715IND (la garantía legal de 6 meses en Chile aplica siempre; confirmar texto con abogado).
+  - La garantía extendida es un experimento de 1 año para juntar datos y decidir la política definitiva.
 
 ## Newsletter "715IND News"
 - [ ] Conectar al panel de email marketing (repositorio panel-marketing): aceptar el origen de la web 715IND,
