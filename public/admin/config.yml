@@ -274,6 +274,16 @@ collections:
           - { label: Color de acento (botones y destacados), name: accent_color, widget: color, i18n: duplicate, default: '#f26b1d', hint: 'Naranja 715 por defecto. El color del texto sobre el botón se ajusta solo.' }
           - { label: 'Logo del menú (opcional, reemplaza el nombre)', name: logo, widget: image, required: false, i18n: duplicate, hint: 'Versión clara (blanca o gris claro) con fondo transparente, porque el menú es gris oscuro. Ideal SVG con el texto convertido a contornos; si es PNG, de 120 px de alto. Se muestra a 24 px de alto.' }
           - { label: 'Ícono de la pestaña (favicon)', name: favicon, widget: image, required: false, i18n: duplicate, hint: 'Cuadrado de 512 × 512 px, PNG con fondo transparente o SVG. Usa solo el símbolo, no el nombre completo: se ve muy pequeño. Vacío = rueda 715 por defecto.' }
+          - label: 'Menú de productos: imágenes destacadas'
+            name: menu_featured
+            widget: list
+            i18n: duplicate
+            max: 4
+            hint: 'Hasta 4 imágenes que aparecen al pasar el mouse sobre "Productos". Fotos verticales o cuadradas.'
+            fields:
+              - { label: Imagen, name: image, widget: image, i18n: duplicate }
+              - { label: Texto, name: label, widget: string, i18n: true }
+              - { label: Enlace, name: link, widget: string, i18n: duplicate, hint: 'Ej: /products/#hubs o /wheel-builder/' }
           - { label: Frase de la marca, name: tagline, widget: string, i18n: true }
           - { label: Descripción para Google, name: seo_description, widget: text, i18n: true }
           - { label: Imagen al compartir en redes, name: og_image, widget: image, required: false, i18n: duplicate }

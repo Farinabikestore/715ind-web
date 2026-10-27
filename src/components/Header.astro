@@ -1,44 +1,77 @@
 ---
+// Encabezado estilo PNW: enlaces a la izquierda, logo al centro, distribuidores e idioma a la derecha.
+// "Productos" abre un menú grande con las categorías y 4 imágenes destacadas
+// (las imágenes se editan en el panel: Configuración general → Menú de productos).
+import Img from './Img.astro';
 import { LOCALES, LANG_NAMES, t } from '../i18n/ui.js';
+import { getProducts, CATEGORIES, link } from '../lib/content.js';
 const { lang, path, settings } = Astro.props;
-const items = [
-  { href: '/products/', key: 'nav.products' },
-  { href: '/wheel-builder/', key: 'nav.builder' },
-  { href: '/about/', key: 'nav.about' },
-];
+const products = getProducts(lang);
+const cats = CATEGORIES.filter((c) => products.some((p) => p.category === c));
+const featured = (settings.menu_featured || []).filter((f) => f && f.image && f.label).slice(0, 4);
 const isCurrent = (href) => path === href || (href !== '/' && path.startsWith(href));
 const globe = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>';
 ---
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a class="wordmark" href={`/${lang}/`}>
-      {settings.logo ? <img src={settings.logo} alt={settings.brand_name} height="32" /> : settings.brand_name}
-    </a>
-
-    <nav class="site-nav" aria-label={t(lang, 'nav.menu')}>
-      {items.map((i) => (
-        <a href={`/${lang}${i.href}`} aria-current={isCurrent(i.href) ? 'page' : undefined}>{t(lang, i.key)}</a>
-      ))}
-      <a class="btn btn--primary" href={`/${lang}/contact/`} aria-current={isCurrent('/contact/') ? 'page' : undefined}>{t(lang, 'nav.contact')}</a>
+    <nav class="hnav hnav--left" aria-label={t(lang, 'nav.menu')}>
+      <div class="mega">
+        <a class="hnav__link mega__trigger" href={`/${lang}/products/`} aria-haspopup="true" aria-current={isCurrent('/products/') ? 'page' : undefined}>{t(lang, 'nav.products')}</a>
+        <div class="mega__panel">
+          <div class="wrap mega__grid">
+            <ul class="mega__cats">
+              {cats.map((c) => <li><a href={`/${lang}/products/#${c}`}>{t(lang, `cat.${c}`)}</a></li>)}
+              <li><a href={`/${lang}/products/`}>{t(lang, 'products.seeAll')}</a></li>
+            </ul>
+            {featured.length > 0 && (
+              <div class="mega__feat">
+                <p class="mega__feat-title">{t(lang, 'nav.featured')}</p>
+                <ul class="mega__tiles">
+                  {featured.map((f) => (
+                    <li>
+                      <a href={link(f.link || '/products/', lang)}>
+                        <span class="mega__img"><Img src={f.image} alt="" sizes="(max-width: 1400px) 20vw, 300px" /></span>
+                        <span class="mega__label">{f.label}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+      <a class="hnav__link" href={`/${lang}/wheel-builder/`} aria-current={isCurrent('/wheel-builder/') ? 'page' : undefined}>{t(lang, 'nav.builder')}</a>
+      <a class="hnav__link" href={`/${lang}/about/`} aria-current={isCurrent('/about/') ? 'page' : undefined}>{t(lang, 'nav.about')}</a>
     </nav>
 
-    <details class="lang">
-      <summary aria-label={t(lang, 'nav.language')}><Fragment set:html={globe} />{lang.toUpperCase()}</summary>
-      <ul>
-        {LOCALES.map((l) => (
-          <li><a href={`/${l}${path}`} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined}>{LANG_NAMES[l]} <span>{l}</span></a></li>
-        ))}
-      </ul>
-    </details>
+    <a class="wordmark" href={`/${lang}/`}>
+      {settings.logo ? <img src={settings.logo} alt={settings.brand_name} height="24" /> : settings.brand_name}
+    </a>
 
-    <details class="menu-toggle">
-      <summary>{t(lang, 'nav.menu')}</summary>
-      <nav aria-label={t(lang, 'nav.menu')}>
-        {items.map((i) => (
-          <a href={`/${lang}${i.href}`} aria-current={isCurrent(i.href) ? 'page' : undefined}>{t(lang, i.key)}</a>
-        ))}
-        <a class="btn btn--primary" href={`/${lang}/contact/`}>{t(lang, 'nav.contact')}</a>
-      </nav>
-    </details>
+    <div class="hnav hnav--right">
+      <a class="btn btn--primary hnav__cta" href={`/${lang}/contact/`} aria-current={isCurrent('/contact/') ? 'page' : undefined}>{t(lang, 'nav.contact')}</a>
+      <details class="lang">
+        <summary aria-label={t(lang, 'nav.language')}><Fragment set:html={globe} />{lang.toUpperCase()}</summary>
+        <ul>
+          {LOCALES.map((l) => (
+            <li><a href={`/${l}${path}`} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined}>{LANG_NAMES[l]} <span>{l}</span></a></li>
+          ))}
+        </ul>
+      </details>
+      <details class="menu-toggle">
+        <summary>{t(lang, 'nav.menu')}</summary>
+        <nav aria-label={t(lang, 'nav.menu')}>
+          <p class="menu-toggle__head">{t(lang, 'nav.products')}</p>
+          <ul class="menu-toggle__cats">
+            {cats.map((c) => <li><a href={`/${lang}/products/#${c}`}>{t(lang, `cat.${c}`)}</a></li>)}
+            <li><a href={`/${lang}/products/`}>{t(lang, 'products.seeAll')}</a></li>
+          </ul>
+          <a href={`/${lang}/wheel-builder/`}>{t(lang, 'nav.builder')}</a>
+          <a href={`/${lang}/about/`}>{t(lang, 'nav.about')}</a>
+          <a class="btn btn--primary" href={`/${lang}/contact/`}>{t(lang, 'nav.contact')}</a>
+        </nav>
+      </details>
+    </div>
   </div>
 </header>

@@ -5,6 +5,19 @@ es:
   accent_color: '#f26b1d'
   logo: /uploads/brand/logo-715-industries.svg
   favicon: /uploads/brand/favicon-715ind-negro.png
+  menu_featured:
+  - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    label: Ver cuadros
+    link: /products/#frames
+  - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    label: Ver mazas
+    link: /products/#hubs
+  - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    label: Arma tu rueda
+    link: /wheel-builder/
+  - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+    label: Ver cockpit
+    link: /products/#cockpit
   tagline: Componentes MTB diseñados en Chile
   seo_description: 715IND diseña mazas, llantas, ruedas, cuadros y cockpit para mountain bike en Chile. Buscamos distribuidores internacionales y dealers en Chile.
   og_image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
@@ -25,6 +38,19 @@ en:
   accent_color: '#f26b1d'
   logo: /uploads/brand/logo-715-industries.svg
   favicon: /uploads/brand/favicon-715ind-negro.png
+  menu_featured:
+  - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    label: See frames
+    link: /products/#frames
+  - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    label: See hubs
+    link: /products/#hubs
+  - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    label: Build your wheel
+    link: /wheel-builder/
+  - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+    label: See cockpit
+    link: /products/#cockpit
   tagline: MTB components designed in Chile
   seo_description: 715IND designs mountain bike hubs, rims, wheels, frames and cockpit parts in Chile. We are looking for international distributors and dealers.
   og_image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
@@ -45,6 +71,19 @@ pt:
   accent_color: '#f26b1d'
   logo: /uploads/brand/logo-715-industries.svg
   favicon: /uploads/brand/favicon-715ind-negro.png
+  menu_featured:
+  - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    label: Ver quadros
+    link: /products/#frames
+  - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    label: Ver cubos
+    link: /products/#hubs
+  - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    label: Monte sua roda
+    link: /wheel-builder/
+  - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+    label: Ver cockpit
+    link: /products/#cockpit
   tagline: Componentes de MTB projetados no Chile
   seo_description: A 715IND projeta cubos, aros, rodas, quadros e cockpit para mountain bike no Chile. Procuramos distribuidores internacionais e lojistas.
   og_image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
@@ -65,6 +104,19 @@ de:
   accent_color: '#f26b1d'
   logo: /uploads/brand/logo-715-industries.svg
   favicon: /uploads/brand/favicon-715ind-negro.png
+  menu_featured:
+  - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    label: Rahmen ansehen
+    link: /products/#frames
+  - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    label: Naben ansehen
+    link: /products/#hubs
+  - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    label: Laufrad konfigurieren
+    link: /wheel-builder/
+  - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+    label: Cockpit ansehen
+    link: /products/#cockpit
   tagline: MTB-Komponenten aus Chile
   seo_description: 715IND entwickelt in Chile Naben, Felgen, Laufräder, Rahmen und Cockpit-Teile für Mountainbikes. Wir suchen internationale Distributoren und Händler.
   og_image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
@@ -85,6 +137,19 @@ fr:
   accent_color: '#f26b1d'
   logo: /uploads/brand/logo-715-industries.svg
   favicon: /uploads/brand/favicon-715ind-negro.png
+  menu_featured:
+  - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    label: Voir les cadres
+    link: /products/#frames
+  - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    label: Voir les moyeux
+    link: /products/#hubs
+  - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    label: Configurez votre roue
+    link: /wheel-builder/
+  - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+    label: Voir le cockpit
+    link: /products/#cockpit
   tagline: Composants VTT conçus au Chili
   seo_description: 715IND conçoit au Chili des moyeux, jantes, roues, cadres et pièces de poste de pilotage pour le VTT. Nous recherchons des distributeurs et revendeurs.
   og_image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
@@ -105,6 +170,19 @@ it:
   accent_color: '#f26b1d'
   logo: /uploads/brand/logo-715-industries.svg
   favicon: /uploads/brand/favicon-715ind-negro.png
+  menu_featured:
+  - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+    label: Vedi telai
+    link: /products/#frames
+  - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    label: Vedi mozzi
+    link: /products/#hubs
+  - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+    label: Configura la tua ruota
+    link: /wheel-builder/
+  - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+    label: Vedi cockpit
+    link: /products/#cockpit
   tagline: Componenti MTB progettati in Cile
   seo_description: 715IND progetta in Cile mozzi, cerchi, ruote, telai e componenti cockpit per mountain bike. Cerchiamo distributori internazionali e rivenditori.
   og_image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
