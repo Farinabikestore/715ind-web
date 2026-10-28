@@ -1,0 +1,36 @@
+---
+// Historias 715 (blog): listado. Las entradas se editan en el panel: Historias.
+import Base from '../../../layouts/Base.astro';
+import Img from '../../../components/Img.astro';
+import { LOCALES, HTML_LANG, t } from '../../../i18n/ui.js';
+import { getPosts } from '../../../lib/content.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const posts = getPosts(lang);
+const fmt = new Intl.DateTimeFormat(HTML_LANG[lang] || lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const day = (d) => (d ? fmt.format(new Date(d + 'T12:00:00Z')) : '');
+---
+<Base lang={lang} title={t(lang, 'stories.title')} description={t(lang, 'stories.intro')} path="/stories/">
+  <header class="wrap page-head">
+    <h1>{t(lang, 'stories.title')}</h1>
+    <p class="lead">{t(lang, 'stories.intro')}</p>
+  </header>
+  <div class="wrap stories">
+    {posts.map((p, i) => (
+      <article class:list={['story-card', { 'story-card--lead': i === 0 }]}>
+        <a href={`/${lang}/stories/${p.slug}/`}>
+          <span class="story-card__img">{p.cover && <Img src={p.cover} alt="" sizes={i === 0 ? '(max-width: 860px) 100vw, 1200px' : '(max-width: 860px) 100vw, 600px'} eager={i === 0} />}</span>
+          <span class="story-card__body">
+            {p.date && <time datetime={p.date}>{day(p.date)}</time>}
+            <h2>{p.title}</h2>
+            {p.excerpt && <p>{p.excerpt}</p>}
+            <span class="story-card__go">{t(lang, 'stories.read')} →</span>
+          </span>
+        </a>
+      </article>
+    ))}
+  </div>
+</Base>

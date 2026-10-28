@@ -94,7 +94,9 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 - [ ] Foto de fondo propia (hoy es provisoria: cuadro del video de Jordi).
 - [ ] Manuales y fichas técnicas (PDFs).
 
-## Dominio
+## Dominio (en pausa: problema con la clave de GoDaddy)
+- [x] 715ind.com agregado a Cloudflare (nameservers harvey / raphaela.ns.cloudflare.com).
+- [ ] En GoDaddy: cambiar los nameservers (hoy apuntan a Amazon awsdns, sin registros).
 - [ ] Recuperar acceso a GoDaddy y conectar el dominio propio (luego actualizar SITE_URL, Turnstile y site_url del panel).
 
 ## Pendientes de la garantía
@@ -103,3 +105,10 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 - [ ] Revisar con abogado el texto de garantía legal.
 - [ ] Cuando esté el dominio propio: agregarlo en ORIGENES_715 (Render) para el newsletter.
 - Correos al cliente solo en español (clientes de Chile y Bolivia).
+
+## Portada e Historias (28-oct)
+- [x] Video Enduro HT V3 bajo "Explora 715IND"; borrados el bloque "Componentes de montaña" y "Destacados".
+- [x] Bloque "Nuestra historia" (texto base con lo que sabemos; enlaza a Nosotros).
+- [ ] Vasco: contar la historia real (año de inicio, por qué "715", hitos) para completar Nosotros y el bloque.
+- [x] Blog "Historias 715" (/stories/) con 4 artículos; las slides de Explora llevan a ellos. Se edita en el panel: Historias.
+- [ ] Diseñador: fotos de las slides (2400 x 1100 px) y del pie de página (2400 x 1200 + 1080 x 1920 para celular).

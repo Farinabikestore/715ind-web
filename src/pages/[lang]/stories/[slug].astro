@@ -1,0 +1,62 @@
+---
+// Historias 715 (blog): una entrada.
+import Base from '../../../layouts/Base.astro';
+import Img from '../../../components/Img.astro';
+import { LOCALES, HTML_LANG, t } from '../../../i18n/ui.js';
+import { getPosts, md, link } from '../../../lib/content.js';
+
+export function getStaticPaths() {
+  return LOCALES.flatMap((lang) => getPosts(lang).map((p) => ({ params: { lang, slug: p.slug } })));
+}
+const { lang, slug } = Astro.params;
+const posts = getPosts(lang);
+const p = posts.find((x) => x.slug === slug);
+const more = posts.filter((x) => x.slug !== slug).slice(0, 3);
+const fmt = new Intl.DateTimeFormat(HTML_LANG[lang] || lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const day = (d) => (d ? fmt.format(new Date(d + 'T12:00:00Z')) : '');
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: p.title,
+  description: p.excerpt || '',
+  datePublished: p.date || undefined,
+  image: p.cover ? new URL(p.cover, Astro.site).href : undefined,
+  inLanguage: HTML_LANG[lang] || lang,
+  publisher: { '@type': 'Organization', name: '715IND' },
+};
+---
+<Base lang={lang} title={p.title} description={p.excerpt} path={`/stories/${p.slug}/`} jsonld={jsonld}>
+  <article class="post">
+    <header class="wrap post__head">
+      <a class="card__cat" href={`/${lang}/stories/`}>← {t(lang, 'stories.all')}</a>
+      <h1>{p.title}</h1>
+      {p.excerpt && <p class="lead">{p.excerpt}</p>}
+      {p.date && <time datetime={p.date}>{day(p.date)}</time>}
+    </header>
+    {p.cover && <div class="post__cover"><Img src={p.cover} alt="" sizes="100vw" eager /></div>}
+    <div class="wrap post__body prose" set:html={md(p.body)} />
+    {p.images.length > 0 && (
+      <div class="wrap post__gallery">
+        {p.images.map((src) => <figure><Img src={src} alt="" sizes="(max-width: 760px) 100vw, 33vw" /></figure>)}
+      </div>
+    )}
+    {p.cta_label && p.cta_link && (
+      <p class="wrap post__cta"><a class="btn btn--primary" href={link(p.cta_link, lang)}>{p.cta_label}</a></p>
+    )}
+  </article>
+  {more.length > 0 && (
+    <section class="wrap post__more">
+      <h2>{t(lang, 'stories.more')}</h2>
+      <div class="stories stories--more">
+        {more.map((m) => (
+          <article class="story-card">
+            <a href={`/${lang}/stories/${m.slug}/`}>
+              <span class="story-card__img">{m.cover && <Img src={m.cover} alt="" sizes="(max-width: 860px) 100vw, 400px" />}</span>
+              <span class="story-card__body"><h3>{m.title}</h3><span class="story-card__go">{t(lang, 'stories.read')} →</span></span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+</Base>

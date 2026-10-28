@@ -10,6 +10,7 @@ const pageFiles = import.meta.glob('/src/content/pages/*.yml', { query: '?raw', 
 const settingsFile = import.meta.glob('/src/content/settings.yml', { query: '?raw', import: 'default', eager: true });
 const builderFile = import.meta.glob('/src/content/builder.yml', { query: '?raw', import: 'default', eager: true });
 const distFile = import.meta.glob('/src/content/distributors.yml', { query: '?raw', import: 'default', eager: true });
+const postFiles = import.meta.glob('/src/content/posts/*.yml', { query: '?raw', import: 'default', eager: true });
 
 export const CATEGORIES = ['hubs', 'rims', 'wheels', 'frames', 'cockpit', 'saddles', 'apparel'];
 
@@ -186,4 +187,30 @@ export function typeAttrs(settings = {}) {
     style = `--ember:${hex};--on-ember:${lum > 0.22 ? '#161817' : '#f5f5f2'}`;
   }
   return { type, kase, style };
+}
+
+// Historias (blog): una entrada por archivo en src/content/posts, con todos los idiomas juntos.
+function isoDate(v) {
+  if (v instanceof Date && !isNaN(v)) return v.toISOString().slice(0, 10);
+  const s = String(v || '').slice(0, 10);
+  return /^\d{4}-\d{2}-\d{2}$/.test(s) ? s : '';
+}
+export function getPosts(lang) {
+  return Object.entries(postFiles)
+    .map(([file, raw]) => {
+      const doc = parse(raw, file);
+      const p = localize(doc, lang);
+      const fallbackSlug = file.split('/').pop().replace(/\.yml$/, '');
+      return {
+        ...p,
+        slug: slugify(p.slug || fallbackSlug),
+        date: isoDate(p.date),
+        images: (p.images || []).filter(Boolean),
+      };
+    })
+    .filter((p) => p.title && !p.hidden)
+    .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+}
+export function getPost(slug, lang) {
+  return getPosts(lang).find((p) => p.slug === slug);
 }

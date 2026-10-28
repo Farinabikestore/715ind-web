@@ -110,6 +110,40 @@ collections:
       - { label: Descripción, name: body, widget: markdown, required: false, i18n: true, buttons: [bold, italic, link, bulleted-list, numbered-list] }
 
   # -------------------------------------------------------------------------
+  - name: posts
+    label: Historias
+    label_singular: Historia
+    description: Entradas del blog "Historias 715". Las slides de la portada pueden llevar a estas páginas.
+    folder: src/content/posts
+    extension: yml
+    format: yaml
+    create: true
+    delete: true
+    i18n: true
+    identifier_field: title
+    slug: '{{slug}}'
+    summary: '{{title}} · {{date}}'
+    sortable_fields: [date, title]
+    media_folder: /public/uploads/posts
+    public_folder: /uploads/posts
+    fields:
+      - { label: Título, name: title, widget: string, i18n: true }
+      - label: Dirección web (URL)
+        name: slug
+        widget: string
+        i18n: duplicate
+        hint: 'Solo minúsculas, números y guiones. Queda en /stories/esta-direccion/. No la cambies después de publicar.'
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Usa solo minúsculas, números y guiones']
+      - { label: Fecha, name: date, widget: datetime, time_format: false, date_format: 'YYYY-MM-DD', format: 'YYYY-MM-DD', i18n: duplicate }
+      - { label: Ocultar del sitio, name: hidden, widget: boolean, default: false, required: false, i18n: duplicate }
+      - { label: Foto principal, name: cover, widget: image, i18n: duplicate, hint: 'Horizontal, ideal 2400 x 1600 px.' }
+      - { label: Bajada (una frase), name: excerpt, widget: string, required: false, i18n: true }
+      - { label: Texto, name: body, widget: markdown, i18n: true, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote] }
+      - { label: Galería, name: images, widget: list, required: false, i18n: duplicate, field: { label: Foto, name: image, widget: image } }
+      - { label: Botón (texto), name: cta_label, widget: string, required: false, i18n: true }
+      - { label: Botón (enlace), name: cta_link, widget: string, required: false, i18n: duplicate, hint: 'Ej: /products/ultra-rear-hub/ o /wheel-builder/' }
+
+  # -------------------------------------------------------------------------
   - name: pages
     label: Páginas
     description: Contenido de la portada y demás páginas. Los bloques se reordenan arrastrando.
@@ -354,7 +388,8 @@ collections:
           - { label: Instagram (enlace), name: instagram, widget: string, required: false, i18n: duplicate }
           - { label: Facebook (enlace), name: facebook, widget: string, required: false, i18n: duplicate }
           - { label: YouTube (enlace), name: youtube, widget: string, required: false, i18n: duplicate }
-          - { label: 'Pie de página: foto de fondo', name: footer_image, widget: image, required: false, i18n: duplicate, hint: 'Foto horizontal de ambiente, mínimo 1920 px de ancho. Se oscurece sola para que se lea el texto.' }
+          - { label: 'Pie de página: foto de fondo', name: footer_image, widget: image, required: false, i18n: duplicate, hint: 'Foto horizontal de ambiente, 2400 x 1200 px. Se oscurece sola para que se lea el texto.' }
+          - { label: 'Pie de página: foto para celular', name: footer_image_mobile, widget: image, required: false, i18n: duplicate, hint: 'Opcional. Foto vertical 1080 x 1920 px. Si no la subes, se recorta la horizontal.' }
           - { label: 'Newsletter: dirección de suscripción', name: newsletter_endpoint, widget: string, required: false, i18n: duplicate, hint: 'La deja configurada Claude. Si está vacía, el pie muestra un botón a Distribuidores en vez del formulario.' }
           - { label: Ubicación, name: location, widget: string, required: false, i18n: true }
           - { label: Nota del pie de página, name: footer_note, widget: string, required: false, i18n: true }

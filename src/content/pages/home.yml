@@ -21,6 +21,25 @@ es:
     cta_link: /products/#rims
     size: normal
     shade: medium
+  - type: slides
+    heading: Explora 715IND
+    items:
+    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+      title: Enduro HT V3.1
+      text: Hardtail de enduro 29" con UDH y ángulo de dirección de 63°. Para bajar fuerte.
+      link: /stories/enduro-ht-v31/
+    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+      title: Maza trasera Ultra
+      text: 612 puntos de enganche y 0,55° de ángulo. Mecanizada en aluminio 7075-T6.
+      link: /stories/ultra-hub-612/
+    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+      title: Ruedas 715 a medida
+      text: Elige llanta, maza y núcleo en el armador. Las armamos a mano.
+      link: /stories/handbuilt-wheels/
+    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+      title: Cockpit 35
+      text: Manillar Riser y tee Ultra de 35 mm, en aluminio 6061.
+      link: /stories/cockpit-35/
   - type: video_banner
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
@@ -29,33 +48,17 @@ es:
     cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
-  - type: slides
-    heading: "Explora 715IND"
-    items:
-    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-      title: "Enduro HT V3.1"
-      text: "Hardtail de enduro 29\" con UDH y ángulo de dirección de 63°. Para bajar fuerte."
-      link: /products/enduro-ht-v31/
-    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
-      title: "Maza trasera Ultra"
-      text: "612 puntos de enganche y 0,55° de ángulo. Mecanizada en aluminio 7075-T6."
-      link: /products/ultra-rear-hub/
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: "Ruedas 715 a medida"
-      text: "Elige llanta, maza y núcleo en el armador. Las armamos a mano."
-      link: /wheel-builder/
-    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
-      title: "Cockpit 35"
-      text: "Manillar Riser y tee Ultra de 35 mm, en aluminio 6061."
-      link: /products/#cockpit
-  - type: hero
-    heading: Componentes de montaña diseñados en Chile.
-    text: Mazas, llantas, ruedas, cuadros y cockpit probados en los cerros de los Andes y fabricados en Taiwán.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-    cta_label: Ver productos
-    cta_link: /products/
-    cta2_label: Quiero distribuir 715IND
-    cta2_link: /contact/
+  - type: feature
+    theme: sage
+    image_side: right
+    heading: Nuestra historia
+    text: |
+      715IND nació en un taller de bicicletas en Santiago. Empezamos diseñando lo que necesitábamos para nuestros propios cerros y hoy hacemos mazas, llantas, ruedas, cuadros y cockpit.
+
+      Cada pieza se define y se prueba en Chile, en terreno de montaña real, y se fabrica en Taiwán con aluminios 6061 y 7075-T6.
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    cta_label: Conoce la marca
+    cta_link: /about/
   - type: categories
     heading: Línea de productos
   - type: feature
@@ -69,12 +72,6 @@ es:
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
     cta_label: Ver la maza Ultra
     cta_link: /products/ultra-rear-hub/
-  - type: products
-    mode: featured
-    category: ''
-    limit: 8
-    heading: Destacados
-    text: ''
   - type: feature
     theme: light
     image_side: right
@@ -112,6 +109,25 @@ en:
     cta_link: /products/#rims
     size: normal
     shade: medium
+  - type: slides
+    heading: Explore 715IND
+    items:
+    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+      title: Enduro HT V3.1
+      text: 29" enduro hardtail with UDH and a 63° head angle. Built to go down hard.
+      link: /stories/enduro-ht-v31/
+    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+      title: Ultra rear hub
+      text: 612 points of engagement and 0.55° of engagement angle. Machined from 7075-T6 aluminium.
+      link: /stories/ultra-hub-612/
+    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+      title: Custom 715 wheels
+      text: Choose rim, hub and freehub in the builder. We build them by hand.
+      link: /stories/handbuilt-wheels/
+    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+      title: Cockpit 35
+      text: Riser bar and Ultra stem with 35 mm clamp, in 6061 aluminium.
+      link: /stories/cockpit-35/
   - type: video_banner
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
@@ -120,33 +136,17 @@ en:
     cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
-  - type: slides
-    heading: "Explore 715IND"
-    items:
-    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-      title: "Enduro HT V3.1"
-      text: "29\" enduro hardtail with UDH and a 63° head angle. Built to go down hard."
-      link: /products/enduro-ht-v31/
-    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
-      title: "Ultra rear hub"
-      text: "612 points of engagement and 0.55° of engagement angle. Machined from 7075-T6 aluminium."
-      link: /products/ultra-rear-hub/
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: "Custom 715 wheels"
-      text: "Choose rim, hub and freehub in the builder. We build them by hand."
-      link: /wheel-builder/
-    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
-      title: "Cockpit 35"
-      text: "Riser bar and Ultra stem with 35 mm clamp, in 6061 aluminium."
-      link: /products/#cockpit
-  - type: hero
-    heading: Mountain bike parts designed in Chile.
-    text: Hubs, rims, wheels, frames and cockpit parts tested on Andean trails and made in Taiwan.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-    cta_label: See products
-    cta_link: /products/
-    cta2_label: Distribute 715IND
-    cta2_link: /contact/
+  - type: feature
+    theme: sage
+    image_side: right
+    heading: Our story
+    text: |
+      715IND was born in a bike workshop in Santiago, Chile. We started by designing what we needed for our own mountains; today we make hubs, rims, wheels, frames and cockpits.
+
+      Every part is defined and tested in Chile on real mountain terrain, and made in Taiwan from 6061 and 7075-T6 aluminium.
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    cta_label: About the brand
+    cta_link: /about/
   - type: categories
     heading: Product line
   - type: feature
@@ -160,12 +160,6 @@ en:
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
     cta_label: See the Ultra hub
     cta_link: /products/ultra-rear-hub/
-  - type: products
-    mode: featured
-    category: ''
-    limit: 8
-    heading: Featured
-    text: ''
   - type: feature
     theme: light
     image_side: right
@@ -203,6 +197,25 @@ pt:
     cta_link: /products/#rims
     size: normal
     shade: medium
+  - type: slides
+    heading: Explore a 715IND
+    items:
+    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+      title: Enduro HT V3.1
+      text: Hardtail de enduro 29" com UDH e ângulo de direção de 63°. Para descer forte.
+      link: /stories/enduro-ht-v31/
+    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+      title: Cubo traseiro Ultra
+      text: 612 pontos de engate e ângulo de 0,55°. Usinado em alumínio 7075-T6.
+      link: /stories/ultra-hub-612/
+    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+      title: Rodas 715 sob medida
+      text: Escolha aro, cubo e cassete no montador. Montamos à mão.
+      link: /stories/handbuilt-wheels/
+    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+      title: Cockpit 35
+      text: Guidão Riser e mesa Ultra de 35 mm, em alumínio 6061.
+      link: /stories/cockpit-35/
   - type: video_banner
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
@@ -211,33 +224,17 @@ pt:
     cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
-  - type: slides
-    heading: "Explore a 715IND"
-    items:
-    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-      title: "Enduro HT V3.1"
-      text: "Hardtail de enduro 29\" com UDH e ângulo de direção de 63°. Para descer forte."
-      link: /products/enduro-ht-v31/
-    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
-      title: "Cubo traseiro Ultra"
-      text: "612 pontos de engate e ângulo de 0,55°. Usinado em alumínio 7075-T6."
-      link: /products/ultra-rear-hub/
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: "Rodas 715 sob medida"
-      text: "Escolha aro, cubo e cassete no montador. Montamos à mão."
-      link: /wheel-builder/
-    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
-      title: "Cockpit 35"
-      text: "Guidão Riser e mesa Ultra de 35 mm, em alumínio 6061."
-      link: /products/#cockpit
-  - type: hero
-    heading: Peças de mountain bike projetadas no Chile.
-    text: Cubos, aros, rodas, quadros e cockpit testados nas trilhas dos Andes e fabricados em Taiwan.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-    cta_label: Ver produtos
-    cta_link: /products/
-    cta2_label: Quero distribuir 715IND
-    cta2_link: /contact/
+  - type: feature
+    theme: sage
+    image_side: right
+    heading: Nossa história
+    text: |
+      A 715IND nasceu em uma oficina de bicicletas em Santiago, no Chile. Começamos desenhando o que precisávamos para as nossas próprias montanhas; hoje fazemos cubos, aros, rodas, quadros e cockpit.
+
+      Cada peça é definida e testada no Chile, em terreno de montanha real, e fabricada em Taiwan com alumínios 6061 e 7075-T6.
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    cta_label: Conheça a marca
+    cta_link: /about/
   - type: categories
     heading: Linha de produtos
   - type: feature
@@ -251,12 +248,6 @@ pt:
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
     cta_label: Ver o cubo Ultra
     cta_link: /products/ultra-rear-hub/
-  - type: products
-    mode: featured
-    category: ''
-    limit: 8
-    heading: Destaques
-    text: ''
   - type: feature
     theme: light
     image_side: right
@@ -294,6 +285,25 @@ de:
     cta_link: /products/#rims
     size: normal
     shade: medium
+  - type: slides
+    heading: Entdecke 715IND
+    items:
+    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+      title: Enduro HT V3.1
+      text: 29"-Enduro-Hardtail mit UDH und 63° Lenkwinkel. Gebaut für harte Abfahrten.
+      link: /stories/enduro-ht-v31/
+    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+      title: Ultra Hinterradnabe
+      text: 612 Eingriffspunkte und 0,55° Eingriffswinkel. Gefräst aus 7075-T6-Aluminium.
+      link: /stories/ultra-hub-612/
+    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+      title: 715 Laufräder nach Maß
+      text: Felge, Nabe und Freilauf im Konfigurator wählen. Wir bauen sie von Hand.
+      link: /stories/handbuilt-wheels/
+    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+      title: Cockpit 35
+      text: Riser-Lenker und Ultra-Vorbau mit 35-mm-Klemmung, aus 6061-Aluminium.
+      link: /stories/cockpit-35/
   - type: video_banner
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
@@ -302,33 +312,17 @@ de:
     cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
-  - type: slides
-    heading: "Entdecke 715IND"
-    items:
-    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-      title: "Enduro HT V3.1"
-      text: "29\"-Enduro-Hardtail mit UDH und 63° Lenkwinkel. Gebaut für harte Abfahrten."
-      link: /products/enduro-ht-v31/
-    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
-      title: "Ultra Hinterradnabe"
-      text: "612 Eingriffspunkte und 0,55° Eingriffswinkel. Gefräst aus 7075-T6-Aluminium."
-      link: /products/ultra-rear-hub/
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: "715 Laufräder nach Maß"
-      text: "Felge, Nabe und Freilauf im Konfigurator wählen. Wir bauen sie von Hand."
-      link: /wheel-builder/
-    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
-      title: "Cockpit 35"
-      text: "Riser-Lenker und Ultra-Vorbau mit 35-mm-Klemmung, aus 6061-Aluminium."
-      link: /products/#cockpit
-  - type: hero
-    heading: Mountainbike-Teile aus Chile.
-    text: Naben, Felgen, Laufräder, Rahmen und Cockpit, getestet auf den Trails der Anden und gefertigt in Taiwan.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-    cta_label: Produkte ansehen
-    cta_link: /products/
-    cta2_label: 715IND vertreiben
-    cta2_link: /contact/
+  - type: feature
+    theme: sage
+    image_side: right
+    heading: Unsere Geschichte
+    text: |
+      715IND entstand in einer Fahrradwerkstatt in Santiago de Chile. Wir haben angefangen, das zu entwickeln, was wir für unsere eigenen Berge brauchten; heute bauen wir Naben, Felgen, Laufräder, Rahmen und Cockpits.
+
+      Jedes Teil wird in Chile auf echten Bergtrails entwickelt und getestet und in Taiwan aus Aluminium 6061 und 7075-T6 gefertigt.
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    cta_label: Über die Marke
+    cta_link: /about/
   - type: categories
     heading: Produktlinie
   - type: feature
@@ -342,12 +336,6 @@ de:
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
     cta_label: Ultra Nabe ansehen
     cta_link: /products/ultra-rear-hub/
-  - type: products
-    mode: featured
-    category: ''
-    limit: 8
-    heading: Highlights
-    text: ''
   - type: feature
     theme: light
     image_side: right
@@ -385,6 +373,25 @@ fr:
     cta_link: /products/#rims
     size: normal
     shade: medium
+  - type: slides
+    heading: Découvrez 715IND
+    items:
+    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+      title: Enduro HT V3.1
+      text: Semi-rigide enduro 29" avec UDH et angle de direction de 63°. Fait pour descendre fort.
+      link: /stories/enduro-ht-v31/
+    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+      title: Moyeu arrière Ultra
+      text: 612 points d’engagement et 0,55° d’angle. Usiné en aluminium 7075-T6.
+      link: /stories/ultra-hub-612/
+    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+      title: Roues 715 sur mesure
+      text: Choisissez jante, moyeu et corps de roue libre dans le configurateur. Nous les montons à la main.
+      link: /stories/handbuilt-wheels/
+    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+      title: Cockpit 35
+      text: Cintre Riser et potence Ultra en 35 mm, en aluminium 6061.
+      link: /stories/cockpit-35/
   - type: video_banner
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
@@ -393,33 +400,17 @@ fr:
     cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
-  - type: slides
-    heading: "Découvrez 715IND"
-    items:
-    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-      title: "Enduro HT V3.1"
-      text: "Semi-rigide enduro 29\" avec UDH et angle de direction de 63°. Fait pour descendre fort."
-      link: /products/enduro-ht-v31/
-    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
-      title: "Moyeu arrière Ultra"
-      text: "612 points d’engagement et 0,55° d’angle. Usiné en aluminium 7075-T6."
-      link: /products/ultra-rear-hub/
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: "Roues 715 sur mesure"
-      text: "Choisissez jante, moyeu et corps de roue libre dans le configurateur. Nous les montons à la main."
-      link: /wheel-builder/
-    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
-      title: "Cockpit 35"
-      text: "Cintre Riser et potence Ultra en 35 mm, en aluminium 6061."
-      link: /products/#cockpit
-  - type: hero
-    heading: Des pièces VTT conçues au Chili.
-    text: Moyeux, jantes, roues, cadres et poste de pilotage testés sur les sentiers des Andes et fabriqués à Taïwan.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-    cta_label: Voir les produits
-    cta_link: /products/
-    cta2_label: Distribuer 715IND
-    cta2_link: /contact/
+  - type: feature
+    theme: sage
+    image_side: right
+    heading: Notre histoire
+    text: |
+      715IND est né dans un atelier vélo à Santiago du Chili. Nous avons commencé par concevoir ce dont nous avions besoin pour nos propres montagnes ; aujourd'hui nous fabriquons moyeux, jantes, roues, cadres et cockpits.
+
+      Chaque pièce est définie et testée au Chili, sur du vrai terrain de montagne, et fabriquée à Taïwan en aluminium 6061 et 7075-T6.
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    cta_label: Découvrir la marque
+    cta_link: /about/
   - type: categories
     heading: Gamme de produits
   - type: feature
@@ -433,12 +424,6 @@ fr:
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
     cta_label: Voir le moyeu Ultra
     cta_link: /products/ultra-rear-hub/
-  - type: products
-    mode: featured
-    category: ''
-    limit: 8
-    heading: À la une
-    text: ''
   - type: feature
     theme: light
     image_side: right
@@ -476,6 +461,25 @@ it:
     cta_link: /products/#rims
     size: normal
     shade: medium
+  - type: slides
+    heading: Scopri 715IND
+    items:
+    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
+      title: Enduro HT V3.1
+      text: Front enduro 29" con UDH e angolo sterzo di 63°. Fatta per scendere forte.
+      link: /stories/enduro-ht-v31/
+    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+      title: Mozzo posteriore Ultra
+      text: 612 punti di ingaggio e angolo di 0,55°. Lavorato dal pieno in alluminio 7075-T6.
+      link: /stories/ultra-hub-612/
+    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+      title: Ruote 715 su misura
+      text: Scegli cerchio, mozzo e corpetto nel configuratore. Le montiamo a mano.
+      link: /stories/handbuilt-wheels/
+    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
+      title: Cockpit 35
+      text: Manubrio Riser e attacco Ultra da 35 mm, in alluminio 6061.
+      link: /stories/cockpit-35/
   - type: video_banner
     video: /uploads/videos/715-jordi.mp4
     video_mobile: /uploads/videos/715-jordi-movil.mp4
@@ -484,33 +488,17 @@ it:
     cta_link: /products/enduro-ht-v31/
     size: normal
     shade: light
-  - type: slides
-    heading: "Scopri 715IND"
-    items:
-    - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-      title: "Enduro HT V3.1"
-      text: "Front enduro 29\" con UDH e angolo sterzo di 63°. Fatta per scendere forte."
-      link: /products/enduro-ht-v31/
-    - image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
-      title: "Mozzo posteriore Ultra"
-      text: "612 punti di ingaggio e angolo di 0,55°. Lavorato dal pieno in alluminio 7075-T6."
-      link: /products/ultra-rear-hub/
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: "Ruote 715 su misura"
-      text: "Scegli cerchio, mozzo e corpetto nel configuratore. Le montiamo a mano."
-      link: /wheel-builder/
-    - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
-      title: "Cockpit 35"
-      text: "Manubrio Riser e attacco Ultra da 35 mm, in alluminio 6061."
-      link: /products/#cockpit
-  - type: hero
-    heading: Componenti MTB progettati in Cile.
-    text: Mozzi, cerchi, ruote, telai e cockpit testati sui sentieri delle Ande e prodotti a Taiwan.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
-    cta_label: Vedi prodotti
-    cta_link: /products/
-    cta2_label: Distribuire 715IND
-    cta2_link: /contact/
+  - type: feature
+    theme: sage
+    image_side: right
+    heading: La nostra storia
+    text: |
+      715IND è nata in un'officina di biciclette a Santiago del Cile. Abbiamo iniziato progettando ciò che ci serviva per le nostre montagne; oggi facciamo mozzi, cerchi, ruote, telai e cockpit.
+
+      Ogni pezzo viene definito e testato in Cile, su vero terreno di montagna, e prodotto a Taiwan in alluminio 6061 e 7075-T6.
+    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    cta_label: Scopri il marchio
+    cta_link: /about/
   - type: categories
     heading: Linea prodotti
   - type: feature
@@ -524,12 +512,6 @@ it:
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
     cta_label: Vedi il mozzo Ultra
     cta_link: /products/ultra-rear-hub/
-  - type: products
-    mode: featured
-    category: ''
-    limit: 8
-    heading: In evidenza
-    text: ''
   - type: feature
     theme: light
     image_side: right

@@ -3,6 +3,7 @@
 // Para agregar un idioma: añádelo a LOCALES, a LANG_NAMES y copia un bloque completo.
 // Los textos de garantía están en warranty.js.
 import { warrantyUi } from './warranty.js';
+import { storiesUi } from './stories.js';
 
 export const LOCALES = ['es', 'en', 'pt', 'de', 'fr', 'it'];
 export const DEFAULT_LOCALE = 'es';
@@ -915,7 +916,7 @@ const ui = {
     'root.choose': 'Scegli la lingua',
   },
 };
-for (const l of Object.keys(warrantyUi)) Object.assign(ui[l], warrantyUi[l]);
+for (const l of Object.keys(warrantyUi)) Object.assign(ui[l], warrantyUi[l], storiesUi[l]);
 
 export function t(lang, key, vars) {
   let s = (ui[lang] && ui[lang][key]) ?? ui.en[key] ?? ui.es[key] ?? key;

@@ -20,7 +20,8 @@ const social = [
   ['YouTube', settings.youtube],
   ['WhatsApp', settings.whatsapp ? `https://wa.me/${String(settings.whatsapp).replace(/\D/g, '')}` : ''],
 ].map(([n, url]) => [n, /^https?:/i.test(safeUrl(url)) ? safeUrl(url) : '']).filter(([, url]) => url);
-const bg = settings.footer_image ? variant(settings.footer_image, 960) : '';
+// En celular se usa la foto vertical si existe; si no, una versión reducida de la horizontal.
+const bg = settings.footer_image_mobile ? variant(settings.footer_image_mobile, 960) : settings.footer_image ? variant(settings.footer_image, 960) : '';
 const bgFull = settings.footer_image || '';
 // El newsletter solo se muestra cuando está conectado (dirección del panel de email marketing en Configuración general)
 const news = /^https:\/\//.test(settings.newsletter_endpoint || '') ? settings.newsletter_endpoint : '';
@@ -41,6 +42,7 @@ const news = /^https:\/\//.test(settings.newsletter_endpoint || '') ? settings.n
           <li><a href={`/${lang}/about/`}>{t(lang, 'nav.about')}</a></li>
           <li><a href={`/${lang}/wheel-builder/`}>{t(lang, 'nav.builder')}</a></li>
           <li><a href={`/${lang}/where-to-buy/`}>{t(lang, 'nav.where')}</a></li>
+          <li><a href={`/${lang}/stories/`}>{t(lang, 'nav.stories')}</a></li>
           <li><a href={`/${lang}/contact/`}>{t(lang, 'nav.contact')}</a></li>
           {settings.public_email && <li><a href={`mailto:${settings.public_email}`}>{settings.public_email}</a></li>}
         </ul>
