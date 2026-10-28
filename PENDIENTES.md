@@ -38,6 +38,8 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - Crash replacement: los clientes registrados (también los de compras anteriores) pueden pedir un reemplazo con
     descuento cuando el daño es por accidente (no cubierto por garantía). 30% de descuento en todos los productos
     registrables (mazas, llantas, ruedas armadas, cuadros, bicicletas, cockpit); el envío no está incluido.
+    Condiciones: producto registrado, lo pide el dueño que lo registró, fotos del daño, una vez por producto, y fotos
+    del producto inutilizado (cortado) en lugar de devolverlo.
   - Por definir: plazos de la garantía extendida (pregunta 13).
 
 ## Newsletter "715IND News"
