@@ -51,14 +51,25 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 
 - Crash replacement: clientes con producto registrado pueden pedir reemplazo con 30% de descuento cuando el daño es
   por accidente. Aplica a todos los productos registrables; el envío no está incluido.
-  Condiciones: producto registrado, lo pide el dueño que lo registró, fotos del daño, una vez por producto, y fotos
-  del producto inutilizado (cortado) en lugar de devolverlo.
+  Condiciones: producto registrado, lo pide el dueño que lo registró, fotos del daño, una vez por producto, y foto
+  del producto inutilizado (cortado) en lugar de devolverlo, que se pide solo después de aprobar.
 
 - [ ] Dos páginas separadas en el sitio:
   - "Registra tu 715": registro del producto.
   - "Solicitar garantía": formulario de reclamo (incluye crash replacement). Cada solicitud llega por correo a
     vascofarina@farinabikestore.com.
 - Quién revisa: cualquiera del equipo puede revisar y cambiar el estado de una solicitud en el panel.
+- Datos del formulario "Solicitar garantía":
+  1. Correo con el que registró el producto (para encontrar su registro).
+  2. Producto y número de serie (serie solo cuadros y bicicletas).
+  3. Tipo: falla de fábrica / crash replacement (accidente).
+  4. Qué pasó (descripción breve).
+  5. Fotos del daño (obligatorias, hasta 5).
+- Flujo crash replacement:
+  1. El cliente envía la solicitud con fotos del producto dañado.
+  2. El equipo revisa y aprueba (o deniega).
+  3. Si se aprueba, se le pide foto del producto cortado (inutilizado).
+  4. Recibida la foto, el equipo contacta al cliente para que pague el 30% off y se le envía el reemplazo (envío a su cargo).
 
 - [ ] Dashboard de garantías (en el panel):
   - Estados: Pendiente, Aprobado, Denegado, Crash replacement.
