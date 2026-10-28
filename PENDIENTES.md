@@ -41,9 +41,7 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   | Kaze | 1 año |
   | Tee Ultra 35 | 5 años |
   | Manillar Riser 35 | De por vida |
-  | Maza Trail | Eje: 1 año. Cuerpo (body): de por vida. Resto: garantía legal (requiere mantención del cliente) |
-  | Maza Ultra | Eje: 1 año. (Confirmar si cuerpo de por vida y resto igual que Trail) |
-  | Maza delantera Front 15x110 | Igual que las mazas: eje 1 año |
+  | Todas las mazas (Trail, Ultra, delantera Front 15x110) | Eje: 1 año. Cuerpo (body): de por vida. Resto: garantía legal (requiere mantención del cliente) |
   | Llanta E30 Ultra (actual) | 2 años ante fallas de fábrica, juntura y hoyos |
   | Llanta Enduro H30 | 1 año ante fallas de fábrica; 1 año ante separación de junturas y hoyos; debe llevar lentejas (golillas de niple) |
   | Ruedas armadas | Cada componente con su propia garantía |
