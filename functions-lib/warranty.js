@@ -96,9 +96,8 @@ export async function handle(context, mode) {
         pais: ['CL', 'BO'].includes(b.pais) ? b.pais : '',
         color: clean(b.color, 60),
         fecha_compra: /^\d{4}-\d{2}-\d{2}$/.test(String(b.fecha_compra || '')) ? b.fecha_compra : '',
-        tienda: ['farina', 'otra', 'distribuidor'].includes(b.tienda) ? b.tienda : '',
-        tienda_nombre: b.tienda === 'farina' ? '' : clean(b.tienda_nombre, 120),
-        uso: ['xc', 'trail', 'enduro', 'downhill', 'urbano'].includes(b.uso) ? b.uso : '',
+        tienda: clean(b.tienda, 120),
+        uso: ['xc', 'trail', 'enduro', 'downhill', 'ebike', 'urbano'].includes(b.uso) ? b.uso : '',
         estilo: ['no_salto', 'saltos_pequenos', 'saltos_grandes'].includes(b.estilo) ? b.estilo : '',
       });
       for (const k of ['nombre', 'pais', 'color', 'fecha_compra', 'tienda', 'uso', 'estilo']) if (!d[k]) bad.push(k);
@@ -108,8 +107,10 @@ export async function handle(context, mode) {
       if (!Number.isFinite(bought)) return json(400, { ok: false, error: 'form', fields: ['fecha_compra'] });
       if (bought > Date.now() + DAY) return json(400, { ok: false, error: 'future', fields: ['fecha_compra'] });
       if (bought < Date.now() - 16 * DAY) return json(400, { ok: false, error: 'late', fields: ['fecha_compra'] });
-      const boleta = b.boleta ? photo(b.boleta) : null;
-      if (b.boleta && !boleta) return json(400, { ok: false, error: 'photo' });
+      // La foto de la boleta o factura es obligatoria
+      if (!b.boleta) return json(400, { ok: false, error: 'receipt', fields: ['fotos'] });
+      const boleta = photo(b.boleta);
+      if (!boleta) return json(400, { ok: false, error: 'photo' });
       payload = {
         ...d, producto_slug: slug, producto: prod.name, categoria: prod.category,
         garantia: prod.term || '', es_maza: !!prod.hub, idioma: lang, sitio: self, boleta,

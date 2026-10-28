@@ -24,10 +24,10 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - Solo productos comprados desde que se lance el registro (NO hay registro retroactivo).
   - Productos: todo menos ropa (mazas, llantas, ruedas armadas, cuadros, bicicletas, cockpit, sillines).
   - Obligatorios: nombre, correo, país, producto, color, fecha de compra, dónde lo compró
-    (Fariña Bike Store / otra tienda / distribuidor), uso principal (XC, trail, enduro, downhill, urbano).
+    (texto libre: nombre de la tienda o distribuidor), uso principal (XC, trail, enduro, downhill, e-bike, urbano).
   - Número de serie: obligatorio solo para cuadros y bicicletas.
   - Estilo de manejo: No salto / Hago saltos pequeños / Hago saltos grandes.
-  - Opcional: foto de la boleta o factura.
+  - Obligatoria: foto de la boleta o factura.
   - Plazo: registrar dentro de 15 días desde la compra.
   - Países con garantía 715IND (por ahora): solo Chile y Bolivia. El campo país del formulario ofrece solo esos dos.
   - Regla: sin registro no hay garantía 715IND (la garantía legal de 6 meses en Chile aplica siempre; confirmar texto con abogado).

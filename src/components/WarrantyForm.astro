@@ -85,24 +85,17 @@ const productData = Object.fromEntries(products.map((p) => [p.slug, {
         <p class="field__error" id="e-fecha_compra"></p>
       </div>
 
-      <fieldset class="field full">
-        <legend>{t(lang, 'w.store')}</legend>
-        <div class="choices">
-          {choices('tienda', ['farina', 'otra', 'distribuidor'], 'w.store').map((c) => (
-            <label class="choice"><input type="radio" name="tienda" value={c.v} required /><span>{c.label}</span></label>
-          ))}
-        </div>
+      <div class="field full">
+        <label for="w-store">{t(lang, 'w.store')}</label>
+        <input id="w-store" name="tienda" required maxlength="120" aria-describedby="h-store e-tienda" />
+        <p class="field__hint" id="h-store">{t(lang, 'w.storeHint')}</p>
         <p class="field__error" id="e-tienda"></p>
-      </fieldset>
-      <div class="field full" data-store-name hidden>
-        <label for="w-store">{t(lang, 'w.storeName')}</label>
-        <input id="w-store" name="tienda_nombre" maxlength="120" />
       </div>
 
       <fieldset class="field full">
         <legend>{t(lang, 'w.use')}</legend>
         <div class="choices">
-          {choices('uso', ['xc', 'trail', 'enduro', 'downhill', 'urbano'], 'w.use').map((c) => (
+          {choices('uso', ['xc', 'trail', 'enduro', 'downhill', 'ebike', 'urbano'], 'w.use').map((c) => (
             <label class="choice"><input type="radio" name="uso" value={c.v} required /><span>{c.label}</span></label>
           ))}
         </div>
@@ -120,8 +113,8 @@ const productData = Object.fromEntries(products.map((p) => [p.slug, {
       </fieldset>
 
       <div class="field full">
-        <label for="w-receipt">{t(lang, 'w.receipt')} <Fragment set:html={opt} /></label>
-        <input id="w-receipt" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/*" data-photos="1" aria-describedby="e-fotos" />
+        <label for="w-receipt">{t(lang, 'w.receipt')}</label>
+        <input id="w-receipt" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/*" data-photos="1" required aria-describedby="e-fotos" />
         <div class="wphotos" data-previews></div>
         <p class="field__error" id="e-fotos"></p>
       </div>
@@ -242,11 +235,6 @@ const productData = Object.fromEntries(products.map((p) => [p.slug, {
       dateIn.min = iso(new Date(today.getTime() - 15 * 86400000));
     }
 
-    // Tienda: pide el nombre si no es Fariña
-    const storeName = $('[data-store-name]');
-    form.querySelectorAll<HTMLInputElement>('[name="tienda"]').forEach((r) => r.addEventListener('change', () => {
-      if (storeName) storeName.hidden = r.value === 'farina' && r.checked;
-    }));
     // Crash: muestra la explicación
     const crashHint = $('[data-crash-hint]');
     form.querySelectorAll<HTMLInputElement>('[name="tipo"]').forEach((r) => r.addEventListener('change', () => {
@@ -329,7 +317,7 @@ const productData = Object.fromEntries(products.map((p) => [p.slug, {
         if (dateIn && d > dateIn.max) bad('fecha_compra', S('w.err.future'));
         else if (dateIn && d < dateIn.min) bad('fecha_compra', S('w.err.late'));
       }
-      if (!isReg) bad('fotos', photos.length ? '' : S('w.err.photos'));
+      bad('fotos', photos.length ? '' : S(isReg ? 'w.err.receipt' : 'w.err.photos'));
       const consent = form!.querySelector<HTMLInputElement>('[name="consent"]')!;
       bad('consent', consent.checked ? '' : S('contact.err.consent'));
       return first as HTMLElement | null;
@@ -350,7 +338,7 @@ const productData = Object.fromEntries(products.map((p) => [p.slug, {
       const body: Record<string, unknown> = { lang: val('lang'), hp_x: val('hp_x'), token, producto: val('producto'), email: val('email'), numero_serie: val('numero_serie') };
       if (isReg) {
         Object.assign(body, { nombre: val('nombre'), pais: val('pais'), color: val('color'), fecha_compra: val('fecha_compra'),
-          tienda: val('tienda'), tienda_nombre: val('tienda') === 'farina' ? '' : val('tienda_nombre'), uso: val('uso'), estilo: val('estilo'),
+          tienda: val('tienda'), uso: val('uso'), estilo: val('estilo'),
           boleta: photos[0] ? { mime: photos[0].mime, base64: photos[0].base64 } : null });
       } else {
         Object.assign(body, { tipo: val('tipo'), descripcion: val('descripcion'), fotos: photos.map((p) => ({ mime: p.mime, base64: p.base64 })) });
@@ -376,7 +364,7 @@ const productData = Object.fromEntries(products.map((p) => [p.slug, {
         }
         const code = json.error || 'generic';
         if (json.fields) for (const f of json.fields) setErr(f, f === 'email' ? S('contact.err.email') : S('contact.err.required'));
-        const msg = { late: 'w.err.late', future: 'w.err.future', photo: 'w.err.photo', photos: 'w.err.photos' }[code as string] || `contact.err.${code}`;
+        const msg = { late: 'w.err.late', future: 'w.err.future', photo: 'w.err.photo', photos: 'w.err.photos', receipt: 'w.err.receipt' }[code as string] || `contact.err.${code}`;
         status.textContent = strings[msg] || S('contact.err.generic');
         status.classList.add('form-status--error');
         (window as any).turnstile?.reset();
