@@ -29,6 +29,7 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - Estilo de manejo: No salto / Hago saltos pequeños / Hago saltos grandes.
   - Opcional: foto de la boleta o factura.
   - Plazo: registrar dentro de 15 días desde la compra.
+  - Países con garantía 715IND (por ahora): solo Chile y Bolivia. El campo país del formulario ofrece solo esos dos.
   - Regla: sin registro no hay garantía 715IND (la garantía legal de 6 meses en Chile aplica siempre; confirmar texto con abogado).
   - La garantía extendida es un experimento de 1 año para juntar datos y decidir la política definitiva.
   - Los registros se guardan en el panel de email marketing (base Neon). Requiere acceso a panel-marketing.
