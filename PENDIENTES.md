@@ -63,6 +63,7 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - "Solicitar garantía": formulario de reclamo (incluye crash replacement). Cada solicitud llega por correo a
     vascofarina@farinabikestore.com.
 - Quién revisa: cualquiera del equipo puede revisar y cambiar el estado de una solicitud en el panel.
+- Bolivia: las solicitudes llegan igual al correo de Vasco y el equipo coordina con el representante (el cambio se hace a través de él).
 - Datos del formulario "Solicitar garantía":
   1. Correo con el que registró el producto (para encontrar su registro).
   2. Producto y número de serie (serie solo cuadros y bicicletas).
