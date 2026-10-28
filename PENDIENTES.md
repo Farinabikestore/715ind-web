@@ -54,6 +54,12 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   Condiciones: producto registrado, lo pide el dueño que lo registró, fotos del daño, una vez por producto, y fotos
   del producto inutilizado (cortado) en lugar de devolverlo.
 
+- [ ] Dos páginas separadas en el sitio:
+  - "Registra tu 715": registro del producto.
+  - "Solicitar garantía": formulario de reclamo (incluye crash replacement). Cada solicitud llega por correo a
+    vascofarina@farinabikestore.com.
+- Quién revisa: cualquiera del equipo puede revisar y cambiar el estado de una solicitud en el panel.
+
 - [ ] Dashboard de garantías (en el panel):
   - Estados: Pendiente, Aprobado, Denegado, Crash replacement.
   - Ver en qué tienda compró cada cliente.
