@@ -20,7 +20,7 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - Eje pasante V3 UDH (M12x1.0, 170,5 mm) · Eje pasante V3 "No UDH" (M12x1.5, 181 mm)
 
 ## Garantía / registro de producto
-- [ ] Formulario "Registra tu 715" (definido con Vasco):
+- [x] Formulario "Registra tu 715" (construido 28-oct; falta GARANTIA_TOKEN en Render y Cloudflare):
   - Solo productos comprados desde que se lance el registro (NO hay registro retroactivo).
   - Productos: todo menos ropa (mazas, llantas, ruedas armadas, cuadros, bicicletas, cockpit, sillines).
   - Obligatorios: nombre, correo, país, producto, color, fecha de compra, dónde lo compró
@@ -58,7 +58,7 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   Condiciones: producto registrado, lo pide el dueño que lo registró, fotos del daño, una vez por producto, y foto
   del producto inutilizado (cortado) en lugar de devolverlo, que se pide solo después de aprobar.
 
-- [ ] Dos páginas separadas en el sitio:
+- [x] Dos páginas separadas en el sitio (+ página de política /warranty/):
   - "Registra tu 715": registro del producto.
   - "Solicitar garantía": formulario de reclamo (incluye crash replacement). Cada solicitud llega por correo a
     vascofarina@farinabikestore.com.
@@ -80,14 +80,14 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   3. Si se aprueba, se le pide foto del producto cortado (inutilizado).
   4. Recibida la foto, el equipo contacta al cliente para que pague el 30% off y se le envía el reemplazo (envío a su cargo).
 
-- [ ] Dashboard de garantías (en el panel):
+- [x] Dashboard de garantías (en el panel, /garantias):
   - Estados: Pendiente (recién llegó) · Aprobado (falla de fábrica aceptada) · Denegado ·
     Esperando foto cortado (crash replacement aprobado) · Esperando pago · Enviado / cerrado.
   - Ver en qué tienda compró cada cliente.
   - Vista por cliente: historial de registros y reclamos, para detectar clientes que rompen productos seguido.
 
 ## Newsletter "715IND News"
-- [ ] Conectar al panel de email marketing (repositorio panel-marketing): aceptar el origen de la web 715IND,
+- [x] Conectar al panel de email marketing (repositorio panel-marketing): aceptar el origen de la web 715IND,
       marcar los contactos como "fans 715" y no enviarles el cupón de Fariña. Requiere que Vasco apruebe el acceso al repositorio.
 
 ## Pie de página
@@ -96,3 +96,10 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 
 ## Dominio
 - [ ] Recuperar acceso a GoDaddy y conectar el dominio propio (luego actualizar SITE_URL, Turnstile y site_url del panel).
+
+## Pendientes de la garantía
+- [ ] Vasco: poner GARANTIA_TOKEN en Render (panel-marketing) y en Cloudflare Pages (secreta) y volver a desplegar el sitio.
+- [ ] Probar un registro y una solicitud reales.
+- [ ] Revisar con abogado el texto de garantía legal.
+- [ ] Cuando esté el dominio propio: agregarlo en ORIGENES_715 (Render) para el newsletter.
+- Correos al cliente solo en español (clientes de Chile y Bolivia).
