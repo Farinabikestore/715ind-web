@@ -217,6 +217,16 @@ html.header-hidden .site-header { transform: translateY(-100%); }
 
 .menu-toggle { display: none; }
 
+/* Encabezado transparente sobre el primer video de la página (estilo Race Face).
+   Toma fondo blanco al bajar, al pasar el mouse o al abrir un menú. Si el video es oscuro, el texto va en blanco. */
+#main > .vbanner:first-child { margin-top: calc(-1 * var(--header-h)); }
+body:has(#main > .vbanner:first-child) .site-header { transition: transform .3s ease, background-color .3s ease, border-color .3s ease, color .3s ease; }
+html:not(.header-solid) body:has(#main > .vbanner:first-child) .site-header:not(:hover, :focus-within, :has(details[open])) { background: transparent; border-bottom-color: transparent; }
+html:not(.header-solid) body:has(#main > .vbanner:not(.vbanner--ink):first-child) .site-header:not(:hover, :focus-within, :has(details[open])) :is(.hnav__link, .wordmark, .lang summary, .menu-toggle summary) { color: #fff; }
+html:not(.header-solid) body:has(#main > .vbanner:not(.vbanner--ink):first-child) .site-header:not(:hover, :focus-within, :has(details[open])) .wordmark img { filter: brightness(0) invert(1); }
+html:not(.header-solid) body:has(#main > .vbanner:not(.vbanner--ink):first-child) .site-header:not(:hover, :focus-within, :has(details[open])) .menu-toggle summary { border-color: rgba(255, 255, 255, .7); }
+@media (max-width: 760px) { #main > .vbanner--titled:first-child { padding-top: calc(var(--header-h) + 26px); } }
+
 @media (max-width: 1100px) { .hnav__link { padding: 0 9px; font-size: 1rem; } .mega__tiles { gap: 18px; } }
 @media (max-width: 940px) {
   .site-header__inner { grid-template-columns: auto 1fr; }

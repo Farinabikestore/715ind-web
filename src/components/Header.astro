@@ -90,11 +90,14 @@ const globe = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
     const update = () => {
       ticking = false;
       const y = window.scrollY, dy = y - last;
+      // Sobre el primer video el encabezado es transparente; al bajar toma fondo.
+      root.classList.toggle('header-solid', y > 30);
       if (y <= limit || dy < -6) root.classList.remove('header-hidden');
       else if (dy > 6 && !busy()) root.classList.add('header-hidden');
       if (Math.abs(dy) > 6 || y <= limit) last = y;
     };
     window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
     header.addEventListener('focusin', () => root.classList.remove('header-hidden'));
+    update();
   }
 </script>
