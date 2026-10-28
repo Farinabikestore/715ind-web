@@ -32,6 +32,9 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - Regla: sin registro no hay garantía 715IND (la garantía legal de 6 meses en Chile aplica siempre; confirmar texto con abogado).
   - La garantía extendida es un experimento de 1 año para juntar datos y decidir la política definitiva.
   - Los registros se guardan en el panel de email marketing (base Neon). Requiere acceso a panel-marketing.
+  - Al registrar, el cliente recibe un correo de confirmación con: sus datos registrados, la garantía que corresponde
+    a su producto (según la tabla) y el enlace a "Solicitar garantía".
+  - Solo mazas: recordatorio por correo cada 4 meses para la limpieza (queda constancia de que se le avisó).
 
 - Plazos de garantía 715IND (definidos por Vasco el 28-oct). Ninguna garantía cubre gastos de envío.
   | Producto | Garantía |
