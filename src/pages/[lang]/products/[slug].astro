@@ -81,6 +81,10 @@ const jsonld = {
           </section>
         )}
 
+        {p.category !== 'apparel' && (
+          <p class="pdp__warranty">{t(lang, 'w.productNotice')} <a href={`/${lang}/warranty/register/?product=${encodeURIComponent(p.slug)}`}>{t(lang, 'w.registerLink')} →</a></p>
+        )}
+
         {p.body && <section class="pdp__section prose" set:html={md(p.body)} />}
 
         {p.specs.length > 0 && (

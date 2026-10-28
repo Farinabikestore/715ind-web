@@ -263,6 +263,34 @@ collections:
           - { label: Título tiendas en Chile, name: dealer_heading, widget: string, i18n: true }
           - { label: Beneficios tiendas, name: dealer_points, widget: list, i18n: true, field: { label: Punto, name: point, widget: string } }
           - { label: Nota de plazo de respuesta, name: response_note, widget: string, required: false, i18n: true }
+      - name: warranty
+        label: Garantía
+        file: src/content/pages/warranty.yml
+        i18n: true
+        fields:
+          - { label: Título, name: title, widget: string, i18n: true }
+          - { label: Introducción, name: intro, widget: text, i18n: true }
+          - { label: Encabezado columna producto, name: table_product, widget: string, i18n: true }
+          - { label: Encabezado columna garantía, name: table_term, widget: string, i18n: true }
+          - label: Plazos por producto
+            name: items
+            widget: list
+            i18n: true
+            hint: 'El producto se indica con su dirección (slug), por ejemplo trail-rear-hub. El texto en español es el que llega en el correo de registro.'
+            summary: '{{fields.product}}'
+            fields:
+              - { label: Producto (slug), name: product, widget: string, i18n: duplicate }
+              - { label: Garantía, name: term, widget: string, i18n: true }
+          - { label: Título condiciones, name: conditions_heading, widget: string, i18n: true }
+          - { label: Condiciones, name: conditions, widget: list, i18n: true, field: { label: Condición, name: item, widget: string } }
+          - { label: Título crash replacement, name: crash_heading, widget: string, i18n: true }
+          - { label: Texto crash replacement, name: crash_text, widget: text, i18n: true }
+          - { label: Título mantención, name: maintenance_heading, widget: string, i18n: true }
+          - { label: Texto mantención, name: maintenance_text, widget: text, i18n: true }
+          - { label: Título página de registro, name: register_title, widget: string, i18n: true }
+          - { label: Introducción página de registro, name: register_intro, widget: text, i18n: true }
+          - { label: Título página de solicitud, name: claim_title, widget: string, i18n: true }
+          - { label: Introducción página de solicitud, name: claim_intro, widget: text, i18n: true }
       - name: privacy
         label: Privacidad
         file: src/content/pages/privacy.yml

@@ -1,0 +1,53 @@
+---
+// Política de garantía 715IND: tabla de plazos, condiciones, crash replacement y mantención.
+// Se edita en el panel: Páginas → Garantía.
+import Base from '../../../layouts/Base.astro';
+import { LOCALES, t } from '../../../i18n/ui.js';
+import { getPage, getProducts } from '../../../lib/content.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const page = getPage('warranty', lang);
+const bySlug = Object.fromEntries(getProducts(lang).map((p) => [p.slug, p]));
+const rows = (page.items || []).filter((i) => i && i.product && bySlug[i.product]).map((i) => ({ p: bySlug[i.product], term: i.term }));
+---
+<Base lang={lang} title={page.title} description={page.intro} path="/warranty/">
+  <header class="wrap page-head">
+    <h1>{page.title}</h1>
+    <p class="lead">{page.intro}</p>
+    <p class="wactions">
+      <a class="btn btn--primary" href={`/${lang}/warranty/register/`}>{t(lang, 'w.register')}</a>
+      <a class="btn btn--dark" href={`/${lang}/warranty/claim/`}>{t(lang, 'w.claim')}</a>
+    </p>
+  </header>
+
+  <div class="wrap wpolicy">
+    <div class="wtable-wrap">
+      <table class="wtable">
+        <thead><tr><th scope="col">{page.table_product}</th><th scope="col">{page.table_term}</th></tr></thead>
+        <tbody>
+          {rows.map(({ p, term }) => (
+            <tr><th scope="row"><a href={`/${lang}/products/${p.slug}/`}>{p.title}</a></th><td>{term}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="wnotes">
+      <section>
+        <h2>{page.conditions_heading}</h2>
+        <ul>{(page.conditions || []).map((c) => <li>{c}</li>)}</ul>
+      </section>
+      <section>
+        <h2>{page.crash_heading}</h2>
+        <p>{page.crash_text}</p>
+      </section>
+      <section>
+        <h2>{page.maintenance_heading}</h2>
+        <p>{page.maintenance_text}</p>
+      </section>
+    </div>
+  </div>
+</Base>

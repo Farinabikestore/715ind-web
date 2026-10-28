@@ -1,6 +1,8 @@
 // Textos fijos de la interfaz en los 6 idiomas.
 // Para cambiar un texto, edita la línea del idioma correspondiente.
 // Para agregar un idioma: añádelo a LOCALES, a LANG_NAMES y copia un bloque completo.
+// Los textos de garantía están en warranty.js.
+import { warrantyUi } from './warranty.js';
 
 export const LOCALES = ['es', 'en', 'pt', 'de', 'fr', 'it'];
 export const DEFAULT_LOCALE = 'es';
@@ -913,6 +915,7 @@ const ui = {
     'root.choose': 'Scegli la lingua',
   },
 };
+for (const l of Object.keys(warrantyUi)) Object.assign(ui[l], warrantyUi[l]);
 
 export function t(lang, key, vars) {
   let s = (ui[lang] && ui[lang][key]) ?? ui.en[key] ?? ui.es[key] ?? key;

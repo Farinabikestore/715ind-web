@@ -1,0 +1,31 @@
+---
+import Base from '../../../layouts/Base.astro';
+import WarrantyForm from '../../../components/WarrantyForm.astro';
+import { LOCALES, t } from '../../../i18n/ui.js';
+import { getPage } from '../../../lib/content.js';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const page = getPage('warranty', lang);
+---
+<Base lang={lang} title={page.register_title} description={page.register_intro} path="/warranty/register/">
+  <script slot="head" src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <header class="wrap page-head">
+    <h1>{page.register_title}</h1>
+    <p class="lead">{page.register_intro}</p>
+  </header>
+  <div class="wrap contact">
+    <aside class="contact__aside waside">
+      <div class="wterm" data-term hidden>
+        <h2>{t(lang, 'w.warrantyFor')}</h2>
+        <p data-term-text></p>
+      </div>
+      <h2>{page.conditions_heading}</h2>
+      <ul>{(page.conditions || []).map((c) => <li>{c}</li>)}</ul>
+      <p><a href={`/${lang}/warranty/`}>{t(lang, 'w.policy')} →</a></p>
+    </aside>
+    <div><WarrantyForm lang={lang} mode="register" /></div>
+  </div>
+</Base>

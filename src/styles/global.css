@@ -542,8 +542,9 @@ fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
 /* ---------- Pie ---------- */
 .site-footer { position: relative; color: #f3f3f0; background: #141615; background-image: linear-gradient(180deg, rgba(14, 16, 15, .55) 0%, rgba(14, 16, 15, .7) 55%, rgba(14, 16, 15, .92) 100%), var(--footer-bg, none); background-size: cover; background-position: center; padding-top: clamp(56px, 9vw, 150px); }
 @media (max-width: 760px) { .site-footer { background-image: linear-gradient(180deg, rgba(14, 16, 15, .6), rgba(14, 16, 15, .92)), var(--footer-bg-sm, var(--footer-bg, none)); } }
-.footer-top { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px; padding-bottom: clamp(40px, 6vw, 80px); }
-.footer-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.footer-top { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 40px; padding-bottom: clamp(40px, 6vw, 80px); }
+.footer-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+@media (max-width: 560px) { .footer-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .site-footer h2 { font-family: var(--font-display); text-transform: var(--d-case); font-size: 1.25rem; font-weight: var(--d-weight); margin: 0 0 16px; color: #fff; letter-spacing: .01em; }
 .site-footer ul { margin: 0; padding: 0; list-style: none; }
 .footer-cols li a { display: inline-block; padding: 7px 0; text-decoration: none; font-size: 1.05rem; color: #f3f3f0; }
@@ -582,3 +583,39 @@ fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
 
 .block-title { margin-bottom: 24px; }
 .root-mark { font-size: 2.4rem; margin-bottom: 24px; }
+
+/* ---------- Garantía 715IND ---------- */
+.wactions { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 0; }
+.wpolicy { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); padding-bottom: var(--block); align-items: start; }
+.wtable-wrap { overflow-x: auto; }
+.wtable { width: 100%; border-collapse: collapse; }
+.wtable th, .wtable td { text-align: left; vertical-align: top; padding: 14px 14px 14px 0; border-bottom: 1px solid var(--line); }
+.wtable thead th { font-family: var(--ui-font); text-transform: uppercase; letter-spacing: .08em; font-size: var(--fs-small); color: var(--muted); font-weight: 600; }
+.wtable tbody th { font-weight: var(--ui-weight); width: 38%; }
+.wtable tbody th a { text-decoration: none; }
+.wtable tbody th a:hover { text-decoration: underline; }
+.wnotes section + section { margin-top: 30px; }
+.wnotes h2, .waside h2 { font-size: 1.2rem; margin: 0 0 10px; font-weight: var(--ui-weight); }
+.waside h2 { margin-top: 28px; }
+.wnotes ul { margin: 0; padding: 0; list-style: none; }
+.wnotes li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--line); position: relative; }
+.wnotes li::before { content: ''; position: absolute; left: 0; top: 18px; width: 10px; height: 2px; background: var(--ember); }
+.wnotes p, .waside p { margin: 0 0 10px; }
+.waside h2:first-child, .waside .wterm + h2 { margin-top: 0; }
+.wterm { background: var(--graphite); color: var(--bone); padding: 18px 20px; border-radius: var(--radius); margin-bottom: 28px; }
+.wterm h2 { color: var(--bone); margin: 0 0 6px; }
+.wterm p { margin: 0; }
+.wphotos { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.wphotos:empty { display: none; }
+.wphotos figure { margin: 0; width: 112px; }
+.wphotos img { width: 112px; height: 112px; object-fit: cover; border-radius: var(--radius); display: block; background: var(--bone); }
+.wphotos button { margin-top: 4px; border: 0; background: none; padding: 2px 0; color: var(--danger); font-weight: 600; cursor: pointer; text-decoration: underline; }
+.wform input[type='file'] { padding: 10px; background: var(--paper); }
+.wform select:disabled { opacity: .6; }
+.wdone { background: var(--graphite); color: var(--bone); padding: clamp(24px, 4vw, 40px); border-radius: var(--radius); }
+.wdone h2 { color: var(--bone); margin: 0 0 10px; }
+.wdone p { margin: 0 0 20px; font-size: 1.1rem; }
+.wdone .btn--dark { background: var(--bone); color: var(--ink); }
+.pdp__warranty { margin: 18px 0 0; padding: 14px 16px; border: 1.5px solid var(--line); border-radius: var(--radius); font-size: .98rem; }
+.pdp__warranty a { font-weight: 700; }
+@media (max-width: 860px) { .wpolicy { grid-template-columns: 1fr; } .waside { order: 2; } }

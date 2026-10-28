@@ -45,6 +45,14 @@ const news = /^https:\/\//.test(settings.newsletter_endpoint || '') ? settings.n
           {settings.public_email && <li><a href={`mailto:${settings.public_email}`}>{settings.public_email}</a></li>}
         </ul>
       </div>
+      <div>
+        <h2>{t(lang, 'w.support')}</h2>
+        <ul>
+          <li><a href={`/${lang}/warranty/register/`}>{t(lang, 'w.register')}</a></li>
+          <li><a href={`/${lang}/warranty/claim/`}>{t(lang, 'w.claim')}</a></li>
+          <li><a href={`/${lang}/warranty/`}>{t(lang, 'w.policy')}</a></li>
+        </ul>
+      </div>
     </nav>
     {news ? (
       <div class="footer-news">

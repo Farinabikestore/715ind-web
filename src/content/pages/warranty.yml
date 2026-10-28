@@ -1,0 +1,282 @@
+es:
+  title: Garantía 715IND
+  intro: Registra tu producto dentro de 15 días desde la compra para activar la garantía 715IND.
+  table_product: Producto
+  table_term: Garantía
+  items:
+  - product: ranger
+    term: 2 años (bicicleta o cuadro).
+  - product: enduro-ht-v31
+    term: 2 años.
+  - product: kaze-xc
+    term: 1 año.
+  - product: ultra-35-stem
+    term: 5 años.
+  - product: riser-bar-35
+    term: De por vida.
+  - product: trail-rear-hub
+    term: 'Eje: 1 año. Cuerpo (body): de por vida. Resto de la maza: garantía legal, con mantención a cargo del cliente.'
+  - product: ultra-rear-hub
+    term: 'Eje: 1 año. Cuerpo (body): de por vida. Resto de la maza: garantía legal, con mantención a cargo del cliente.'
+  - product: front-hub-15x110
+    term: 'Eje: 1 año. Cuerpo (body): de por vida. Resto de la maza: garantía legal, con mantención a cargo del cliente.'
+  - product: e30-ultra-rim
+    term: 2 años ante fallas de fábrica, separación de junturas y hoyos.
+  - product: enduro-h30-rim
+    term: 1 año ante fallas de fábrica, separación de junturas y hoyos. Debe armarse con golillas de niple (lentejas).
+  - product: custom-wheels
+    term: Cada componente con su propia garantía (llantas y mazas).
+  - product: goat-saddle
+    term: 1 año.
+  - product: racing-line-saddle
+    term: 1 año.
+  conditions_heading: Condiciones
+  conditions:
+  - Registra tu producto dentro de 15 días desde la compra. Sin registro no hay garantía 715IND.
+  - La garantía la pide la persona que registró el producto, con fotos del daño.
+  - Aplica a productos comprados en Chile y Bolivia.
+  - Ninguna garantía cubre gastos de envío.
+  - La garantía legal vigente en tu país se aplica siempre.
+  crash_heading: Crash replacement
+  crash_text: Si tu producto registrado se daña en un accidente, pide un crash replacement con 30% de descuento en un producto nuevo. Aplica una vez por producto y solo lo pide quien lo registró, con fotos del daño. Si lo aprobamos, te pediremos una foto del producto cortado (inutilizado). El envío no está incluido.
+  maintenance_heading: Mantención de mazas
+  maintenance_text: Recomendamos limpiar las mazas cada 4 meses. La mantención es responsabilidad del cliente; te enviaremos un recordatorio por correo.
+  register_title: Registra tu 715
+  register_intro: Registra tu producto dentro de 15 días desde la compra para activar la garantía 715IND.
+  claim_title: Solicitar garantía
+  claim_intro: Cuéntanos qué pasó y sube fotos del daño. Te responderemos por correo.
+en:
+  title: 715IND warranty
+  intro: Register your product within 15 days of purchase to activate the 715IND warranty.
+  table_product: Product
+  table_term: Warranty
+  items:
+  - product: ranger
+    term: 2 years (bike or frame).
+  - product: enduro-ht-v31
+    term: 2 years.
+  - product: kaze-xc
+    term: 1 year.
+  - product: ultra-35-stem
+    term: 5 years.
+  - product: riser-bar-35
+    term: Lifetime.
+  - product: trail-rear-hub
+    term: 'Axle: 1 year. Hub body: lifetime. Rest of the hub: legal warranty, with maintenance by the owner.'
+  - product: ultra-rear-hub
+    term: 'Axle: 1 year. Hub body: lifetime. Rest of the hub: legal warranty, with maintenance by the owner.'
+  - product: front-hub-15x110
+    term: 'Axle: 1 year. Hub body: lifetime. Rest of the hub: legal warranty, with maintenance by the owner.'
+  - product: e30-ultra-rim
+    term: 2 years against manufacturing defects, seam separation and cracked spoke holes.
+  - product: enduro-h30-rim
+    term: 1 year against manufacturing defects, seam separation and cracked spoke holes. Must be built with nipple washers.
+  - product: custom-wheels
+    term: Each component carries its own warranty (rims and hubs).
+  - product: goat-saddle
+    term: 1 year.
+  - product: racing-line-saddle
+    term: 1 year.
+  conditions_heading: Conditions
+  conditions:
+  - Register your product within 15 days of purchase. No registration, no 715IND warranty.
+  - Claims are made by the person who registered the product, with photos of the damage.
+  - Applies to products bought in Chile and Bolivia.
+  - No warranty covers shipping costs.
+  - The legal warranty in your country always applies.
+  crash_heading: Crash replacement
+  crash_text: If your registered product is damaged in a crash, request a crash replacement with 30% off a new product. It applies once per product and only the person who registered it can request it, with photos of the damage. If approved, we will ask for a photo of the product cut (made unusable). Shipping is not included.
+  maintenance_heading: Hub maintenance
+  maintenance_text: We recommend cleaning your hubs every 4 months. Maintenance is the owner's responsibility; we will send you an email reminder.
+  register_title: Register your 715
+  register_intro: Register your product within 15 days of purchase to activate the 715IND warranty.
+  claim_title: Warranty claim
+  claim_intro: Tell us what happened and upload photos of the damage. We will reply by email.
+pt:
+  title: Garantia 715IND
+  intro: Registre seu produto em até 15 dias após a compra para ativar a garantia 715IND.
+  table_product: Produto
+  table_term: Garantia
+  items:
+  - product: ranger
+    term: 2 anos (bicicleta ou quadro).
+  - product: enduro-ht-v31
+    term: 2 anos.
+  - product: kaze-xc
+    term: 1 ano.
+  - product: ultra-35-stem
+    term: 5 anos.
+  - product: riser-bar-35
+    term: Vitalícia.
+  - product: trail-rear-hub
+    term: 'Eixo: 1 ano. Corpo (body): vitalícia. Resto do cubo: garantia legal, com manutenção por conta do cliente.'
+  - product: ultra-rear-hub
+    term: 'Eixo: 1 ano. Corpo (body): vitalícia. Resto do cubo: garantia legal, com manutenção por conta do cliente.'
+  - product: front-hub-15x110
+    term: 'Eixo: 1 ano. Corpo (body): vitalícia. Resto do cubo: garantia legal, com manutenção por conta do cliente.'
+  - product: e30-ultra-rim
+    term: 2 anos contra defeitos de fabricação, separação da junta e furos trincados.
+  - product: enduro-h30-rim
+    term: 1 ano contra defeitos de fabricação, separação da junta e furos trincados. Deve ser montado com arruelas de niple.
+  - product: custom-wheels
+    term: Cada componente com sua própria garantia (aros e cubos).
+  - product: goat-saddle
+    term: 1 ano.
+  - product: racing-line-saddle
+    term: 1 ano.
+  conditions_heading: Condições
+  conditions:
+  - Registre seu produto em até 15 dias após a compra. Sem registro, não há garantia 715IND.
+  - A garantia é solicitada por quem registrou o produto, com fotos do dano.
+  - Válida para produtos comprados no Chile e na Bolívia.
+  - Nenhuma garantia cobre custos de envio.
+  - A garantia legal do seu país sempre se aplica.
+  crash_heading: Crash replacement
+  crash_text: Se o seu produto registrado for danificado em um acidente, solicite um crash replacement com 30% de desconto em um produto novo. Vale uma vez por produto e só quem o registrou pode solicitar, com fotos do dano. Se aprovado, pediremos uma foto do produto cortado (inutilizado). O envio não está incluído.
+  maintenance_heading: Manutenção dos cubos
+  maintenance_text: Recomendamos limpar os cubos a cada 4 meses. A manutenção é responsabilidade do cliente; enviaremos um lembrete por e-mail.
+  register_title: Registre seu 715
+  register_intro: Registre seu produto em até 15 dias após a compra para ativar a garantia 715IND.
+  claim_title: Solicitar garantia
+  claim_intro: Conte o que aconteceu e envie fotos do dano. Responderemos por e-mail.
+de:
+  title: 715IND Garantie
+  intro: Registriere dein Produkt innerhalb von 15 Tagen nach dem Kauf, um die 715IND Garantie zu aktivieren.
+  table_product: Produkt
+  table_term: Garantie
+  items:
+  - product: ranger
+    term: 2 Jahre (Bike oder Rahmen).
+  - product: enduro-ht-v31
+    term: 2 Jahre.
+  - product: kaze-xc
+    term: 1 Jahr.
+  - product: ultra-35-stem
+    term: 5 Jahre.
+  - product: riser-bar-35
+    term: Lebenslang.
+  - product: trail-rear-hub
+    term: 'Achse: 1 Jahr. Nabenkörper: lebenslang. Rest der Nabe: gesetzliche Gewährleistung, Wartung durch den Besitzer.'
+  - product: ultra-rear-hub
+    term: 'Achse: 1 Jahr. Nabenkörper: lebenslang. Rest der Nabe: gesetzliche Gewährleistung, Wartung durch den Besitzer.'
+  - product: front-hub-15x110
+    term: 'Achse: 1 Jahr. Nabenkörper: lebenslang. Rest der Nabe: gesetzliche Gewährleistung, Wartung durch den Besitzer.'
+  - product: e30-ultra-rim
+    term: 2 Jahre bei Herstellungsfehlern, gelöster Felgennaht und gerissenen Speichenlöchern.
+  - product: enduro-h30-rim
+    term: 1 Jahr bei Herstellungsfehlern, gelöster Felgennaht und gerissenen Speichenlöchern. Muss mit Nippelscheiben aufgebaut werden.
+  - product: custom-wheels
+    term: Jede Komponente hat ihre eigene Garantie (Felgen und Naben).
+  - product: goat-saddle
+    term: 1 Jahr.
+  - product: racing-line-saddle
+    term: 1 Jahr.
+  conditions_heading: Bedingungen
+  conditions:
+  - Registriere dein Produkt innerhalb von 15 Tagen nach dem Kauf. Ohne Registrierung keine 715IND Garantie.
+  - Die Garantie beantragt die Person, die das Produkt registriert hat, mit Fotos des Schadens.
+  - Gilt für Produkte, die in Chile und Bolivien gekauft wurden.
+  - Keine Garantie deckt Versandkosten.
+  - Die gesetzliche Gewährleistung deines Landes gilt immer.
+  crash_heading: Crash Replacement
+  crash_text: Wird dein registriertes Produkt bei einem Unfall beschädigt, beantrage ein Crash Replacement mit 30 % Rabatt auf ein neues Produkt. Gilt einmal pro Produkt und nur für die Person, die es registriert hat, mit Fotos des Schadens. Nach der Freigabe bitten wir um ein Foto des zerschnittenen (unbrauchbar gemachten) Produkts. Versand nicht inbegriffen.
+  maintenance_heading: Wartung der Naben
+  maintenance_text: Wir empfehlen, die Naben alle 4 Monate zu reinigen. Die Wartung liegt beim Besitzer; wir schicken dir eine Erinnerung per E-Mail.
+  register_title: Registriere deine 715
+  register_intro: Registriere dein Produkt innerhalb von 15 Tagen nach dem Kauf, um die 715IND Garantie zu aktivieren.
+  claim_title: Garantie beantragen
+  claim_intro: Erzähl uns, was passiert ist, und lade Fotos des Schadens hoch. Wir antworten per E-Mail.
+fr:
+  title: Garantie 715IND
+  intro: Enregistre ton produit dans les 15 jours suivant l'achat pour activer la garantie 715IND.
+  table_product: Produit
+  table_term: Garantie
+  items:
+  - product: ranger
+    term: 2 ans (vélo ou cadre).
+  - product: enduro-ht-v31
+    term: 2 ans.
+  - product: kaze-xc
+    term: 1 an.
+  - product: ultra-35-stem
+    term: 5 ans.
+  - product: riser-bar-35
+    term: À vie.
+  - product: trail-rear-hub
+    term: 'Axe : 1 an. Corps de moyeu : à vie. Reste du moyeu : garantie légale, entretien à la charge du propriétaire.'
+  - product: ultra-rear-hub
+    term: 'Axe : 1 an. Corps de moyeu : à vie. Reste du moyeu : garantie légale, entretien à la charge du propriétaire.'
+  - product: front-hub-15x110
+    term: 'Axe : 1 an. Corps de moyeu : à vie. Reste du moyeu : garantie légale, entretien à la charge du propriétaire.'
+  - product: e30-ultra-rim
+    term: 2 ans contre les défauts de fabrication, la séparation de la jonction et les trous fissurés.
+  - product: enduro-h30-rim
+    term: 1 an contre les défauts de fabrication, la séparation de la jonction et les trous fissurés. Doit être monté avec des rondelles d'écrou.
+  - product: custom-wheels
+    term: Chaque composant a sa propre garantie (jantes et moyeux).
+  - product: goat-saddle
+    term: 1 an.
+  - product: racing-line-saddle
+    term: 1 an.
+  conditions_heading: Conditions
+  conditions:
+  - Enregistre ton produit dans les 15 jours suivant l'achat. Sans enregistrement, pas de garantie 715IND.
+  - La garantie est demandée par la personne qui a enregistré le produit, avec des photos des dégâts.
+  - Valable pour les produits achetés au Chili et en Bolivie.
+  - Aucune garantie ne couvre les frais d'envoi.
+  - La garantie légale de ton pays s'applique toujours.
+  crash_heading: Crash replacement
+  crash_text: Si ton produit enregistré est endommagé lors d'une chute, demande un crash replacement avec 30 % de remise sur un produit neuf. Une fois par produit, uniquement par la personne qui l'a enregistré, avec des photos des dégâts. Si c'est accepté, nous te demanderons une photo du produit coupé (rendu inutilisable). Envoi non inclus.
+  maintenance_heading: Entretien des moyeux
+  maintenance_text: Nous recommandons de nettoyer les moyeux tous les 4 mois. L'entretien est à la charge du propriétaire ; nous t'enverrons un rappel par e-mail.
+  register_title: Enregistre ta 715
+  register_intro: Enregistre ton produit dans les 15 jours suivant l'achat pour activer la garantie 715IND.
+  claim_title: Demande de garantie
+  claim_intro: Raconte-nous ce qui s'est passé et envoie des photos des dégâts. Nous répondrons par e-mail.
+it:
+  title: Garanzia 715IND
+  intro: Registra il tuo prodotto entro 15 giorni dall'acquisto per attivare la garanzia 715IND.
+  table_product: Prodotto
+  table_term: Garanzia
+  items:
+  - product: ranger
+    term: 2 anni (bici o telaio).
+  - product: enduro-ht-v31
+    term: 2 anni.
+  - product: kaze-xc
+    term: 1 anno.
+  - product: ultra-35-stem
+    term: 5 anni.
+  - product: riser-bar-35
+    term: A vita.
+  - product: trail-rear-hub
+    term: 'Asse: 1 anno. Corpo mozzo: a vita. Resto del mozzo: garanzia legale, con manutenzione a carico del proprietario.'
+  - product: ultra-rear-hub
+    term: 'Asse: 1 anno. Corpo mozzo: a vita. Resto del mozzo: garanzia legale, con manutenzione a carico del proprietario.'
+  - product: front-hub-15x110
+    term: 'Asse: 1 anno. Corpo mozzo: a vita. Resto del mozzo: garanzia legale, con manutenzione a carico del proprietario.'
+  - product: e30-ultra-rim
+    term: 2 anni contro difetti di fabbricazione, separazione della giunzione e fori crepati.
+  - product: enduro-h30-rim
+    term: 1 anno contro difetti di fabbricazione, separazione della giunzione e fori crepati. Va montato con rondelle per nipples.
+  - product: custom-wheels
+    term: Ogni componente ha la propria garanzia (cerchi e mozzi).
+  - product: goat-saddle
+    term: 1 anno.
+  - product: racing-line-saddle
+    term: 1 anno.
+  conditions_heading: Condizioni
+  conditions:
+  - Registra il tuo prodotto entro 15 giorni dall'acquisto. Senza registrazione non c'è garanzia 715IND.
+  - La garanzia la richiede chi ha registrato il prodotto, con foto del danno.
+  - Valida per prodotti acquistati in Cile e Bolivia.
+  - Nessuna garanzia copre le spese di spedizione.
+  - La garanzia legale del tuo paese si applica sempre.
+  crash_heading: Crash replacement
+  crash_text: Se il tuo prodotto registrato si danneggia in una caduta, richiedi un crash replacement con il 30% di sconto su un prodotto nuovo. Vale una volta per prodotto e solo per chi lo ha registrato, con foto del danno. Se approvato, ti chiederemo una foto del prodotto tagliato (reso inutilizzabile). Spedizione non inclusa.
+  maintenance_heading: Manutenzione dei mozzi
+  maintenance_text: Consigliamo di pulire i mozzi ogni 4 mesi. La manutenzione è a carico del proprietario; ti invieremo un promemoria via e-mail.
+  register_title: Registra la tua 715
+  register_intro: Registra il tuo prodotto entro 15 giorni dall'acquisto per attivare la garanzia 715IND.
+  claim_title: Richiedi la garanzia
+  claim_intro: Raccontaci cosa è successo e carica le foto del danno. Ti risponderemo via e-mail.

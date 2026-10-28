@@ -1,0 +1,392 @@
+---
+// Formulario de garantía 715IND: "register" (Registra tu 715) o "claim" (Solicitar garantía).
+// Envía a /api/warranty/register o /api/warranty/claim (Cloudflare Pages Function → panel de garantías).
+import { t, clientStrings, HTML_LANG } from '../i18n/ui.js';
+import { getProducts, getPage } from '../lib/content.js';
+const { lang, mode } = Astro.props;
+const isReg = mode === 'register';
+const page = getPage('warranty', lang);
+const terms = Object.fromEntries((page.items || []).filter((i) => i && i.product).map((i) => [i.product, i.term]));
+const products = getProducts(lang)
+  .filter((p) => p.category !== 'apparel')
+  .sort((a, b) => a.title.localeCompare(b.title, HTML_LANG[lang] || lang));
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x00000000000000000000AA';
+const region = new Intl.DisplayNames([HTML_LANG[lang] || lang], { type: 'region' });
+const countries = ['CL', 'BO'].map((c) => ({ code: c, name: region.of(c) }));
+const strings = clientStrings(lang, ['w.', 'contact.err.']);
+const privacyLink = `<a href="/${lang}/privacy/">${t(lang, 'contact.privacy')}</a>`;
+const opt = `<small>(${t(lang, 'contact.optional')})</small>`;
+const choices = (name, values, prefix) => values.map((v) => ({ v, label: t(lang, `${prefix}.${v}`) }));
+const productData = Object.fromEntries(products.map((p) => [p.slug, {
+  frame: p.category === 'frames',
+  colors: (p.colors || []).map((c) => c && c.name).filter(Boolean),
+  term: terms[p.slug] || '',
+}]));
+---
+<form class="form wform" data-wform={mode} novalidate>
+  <input type="hidden" name="lang" value={lang} />
+
+  {isReg && (
+    <div class="field">
+      <label for="w-name">{t(lang, 'w.name')}</label>
+      <input id="w-name" name="nombre" autocomplete="name" required maxlength="120" aria-describedby="e-nombre" />
+      <p class="field__error" id="e-nombre"></p>
+    </div>
+  )}
+  <div class:list={['field', { full: !isReg }]}>
+    <label for="w-email">{t(lang, isReg ? 'w.email' : 'w.claimEmail')}</label>
+    <input id="w-email" name="email" type="email" autocomplete="email" required maxlength="160" aria-describedby="e-email" />
+    <p class="field__error" id="e-email"></p>
+  </div>
+
+  {isReg && (
+    <div class="field">
+      <label for="w-country">{t(lang, 'w.country')}</label>
+      <select id="w-country" name="pais" required aria-describedby="e-pais">
+        <option value="">{t(lang, 'w.choose')}</option>
+        {countries.map((c) => <option value={c.code}>{c.name}</option>)}
+      </select>
+      <p class="field__error" id="e-pais"></p>
+    </div>
+  )}
+
+  <div class:list={['field', { full: !isReg }]}>
+    <label for="w-product">{t(lang, 'w.product')}</label>
+    <select id="w-product" name="producto" required aria-describedby="e-producto" data-product>
+      <option value="">{t(lang, 'w.choose')}</option>
+      {products.map((p) => <option value={p.slug}>{p.title}</option>)}
+    </select>
+    <p class="field__error" id="e-producto"></p>
+  </div>
+
+  {isReg && (
+    <div class="field">
+      <label for="w-color">{t(lang, 'w.color')}</label>
+      <select id="w-color" name="color" required aria-describedby="e-color" data-color disabled>
+        <option value="">{t(lang, 'w.choose')}</option>
+      </select>
+      <p class="field__error" id="e-color"></p>
+    </div>
+  )}
+
+  <div class:list={['field', { full: !isReg }]} data-serial-wrap hidden>
+    <label for="w-serial">{t(lang, 'w.serial')}</label>
+    <input id="w-serial" name="numero_serie" maxlength="60" autocomplete="off" aria-describedby="h-serial e-numero_serie" />
+    <p class="field__hint" id="h-serial">{t(lang, 'w.serialHint')}</p>
+    <p class="field__error" id="e-numero_serie"></p>
+  </div>
+
+  {isReg && (
+    <>
+      <div class="field">
+        <label for="w-date">{t(lang, 'w.date')}</label>
+        <input id="w-date" name="fecha_compra" type="date" required aria-describedby="h-date e-fecha_compra" data-date />
+        <p class="field__hint" id="h-date">{t(lang, 'w.dateHint')}</p>
+        <p class="field__error" id="e-fecha_compra"></p>
+      </div>
+
+      <fieldset class="field full">
+        <legend>{t(lang, 'w.store')}</legend>
+        <div class="choices">
+          {choices('tienda', ['farina', 'otra', 'distribuidor'], 'w.store').map((c) => (
+            <label class="choice"><input type="radio" name="tienda" value={c.v} required /><span>{c.label}</span></label>
+          ))}
+        </div>
+        <p class="field__error" id="e-tienda"></p>
+      </fieldset>
+      <div class="field full" data-store-name hidden>
+        <label for="w-store">{t(lang, 'w.storeName')}</label>
+        <input id="w-store" name="tienda_nombre" maxlength="120" />
+      </div>
+
+      <fieldset class="field full">
+        <legend>{t(lang, 'w.use')}</legend>
+        <div class="choices">
+          {choices('uso', ['xc', 'trail', 'enduro', 'downhill', 'urbano'], 'w.use').map((c) => (
+            <label class="choice"><input type="radio" name="uso" value={c.v} required /><span>{c.label}</span></label>
+          ))}
+        </div>
+        <p class="field__error" id="e-uso"></p>
+      </fieldset>
+
+      <fieldset class="field full">
+        <legend>{t(lang, 'w.style')}</legend>
+        <div class="choices">
+          {choices('estilo', ['no_salto', 'saltos_pequenos', 'saltos_grandes'], 'w.style').map((c) => (
+            <label class="choice"><input type="radio" name="estilo" value={c.v} required /><span>{c.label}</span></label>
+          ))}
+        </div>
+        <p class="field__error" id="e-estilo"></p>
+      </fieldset>
+
+      <div class="field full">
+        <label for="w-receipt">{t(lang, 'w.receipt')} <Fragment set:html={opt} /></label>
+        <input id="w-receipt" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/*" data-photos="1" aria-describedby="e-fotos" />
+        <div class="wphotos" data-previews></div>
+        <p class="field__error" id="e-fotos"></p>
+      </div>
+    </>
+  )}
+
+  {!isReg && (
+    <>
+      <fieldset class="field full">
+        <legend>{t(lang, 'w.type')}</legend>
+        <div class="choices">
+          {choices('tipo', ['falla', 'crash'], 'w.type').map((c) => (
+            <label class="choice"><input type="radio" name="tipo" value={c.v} required /><span>{c.label}</span></label>
+          ))}
+        </div>
+        <p class="field__hint" data-crash-hint hidden>{t(lang, 'w.crashHint')}</p>
+        <p class="field__error" id="e-tipo"></p>
+      </fieldset>
+
+      <div class="field full">
+        <label for="w-desc">{t(lang, 'w.desc')}</label>
+        <textarea id="w-desc" name="descripcion" required maxlength="3000" aria-describedby="h-desc e-descripcion"></textarea>
+        <p class="field__hint" id="h-desc">{t(lang, 'w.descHint')}</p>
+        <p class="field__error" id="e-descripcion"></p>
+      </div>
+
+      <div class="field full">
+        <label for="w-photos">{t(lang, 'w.photos')}</label>
+        <input id="w-photos" type="file" multiple accept="image/jpeg,image/png,image/webp,image/heic,image/*" data-photos="5" aria-describedby="h-photos e-fotos" />
+        <p class="field__hint" id="h-photos">{t(lang, 'w.photosHint')}</p>
+        <div class="wphotos" data-previews></div>
+        <p class="field__error" id="e-fotos"></p>
+      </div>
+    </>
+  )}
+
+  <div class="hp" aria-hidden="true">
+    <label for="w-hp">No completar</label>
+    <input id="w-hp" name="hp_x" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div class="field full">
+    <label class="consent">
+      <input type="checkbox" name="consent" value="yes" required aria-describedby="e-consent" />
+      <span set:html={t(lang, 'contact.consent', { link: privacyLink })} />
+    </label>
+    <p class="field__error" id="e-consent"></p>
+  </div>
+
+  <div class="field full">
+    <div class="cf-turnstile" data-sitekey={siteKey} data-language={lang} data-theme="light" data-action={isReg ? 'warranty-register' : 'warranty-claim'}></div>
+  </div>
+
+  <div class="full">
+    <p class="form-status" data-status role="alert"></p>
+    <button class="btn btn--primary" type="submit" data-submit>{t(lang, isReg ? 'w.submitRegister' : 'w.submitClaim')}</button>
+  </div>
+</form>
+
+<div class="wdone" data-done hidden tabindex="-1">
+  <h2 data-done-title></h2>
+  <p data-done-text></p>
+  {isReg ? <a class="btn btn--dark" href={`/${lang}/warranty/register/`}>{t(lang, 'w.another')}</a> : <a class="btn btn--dark" href={`/${lang}/warranty/`}>{t(lang, 'w.policy')}</a>}
+</div>
+
+<script type="application/json" id="wform-data" set:html={JSON.stringify({ mode, strings, products: productData }).replace(/</g, '\\u003c')} />
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-wform]');
+  const raw = document.getElementById('wform-data');
+  if (form && raw) {
+    const { mode, strings, products } = JSON.parse(raw.textContent || '{}');
+    const isReg = mode === 'register';
+    const S = (k: string, v?: Record<string, string>) => {
+      let s = strings[k] ?? k;
+      if (v) for (const x of Object.keys(v)) s = s.replaceAll(`{${x}}`, v[x]);
+      return s;
+    };
+    const $ = <T extends Element = HTMLElement>(sel: string) => form.querySelector<T>(sel);
+    const status = $('[data-status]')!;
+    const submit = $<HTMLButtonElement>('[data-submit]')!;
+
+    // Despierta el servidor de garantías mientras la persona llena el formulario
+    fetch('/api/warranty/wake', { method: 'POST' }).catch(() => {});
+
+    // Producto → colores, número de serie y garantía
+    const productSel = $<HTMLSelectElement>('[data-product]')!;
+    const colorSel = $<HTMLSelectElement>('[data-color]');
+    const serialWrap = $('[data-serial-wrap]')!;
+    const termBox = document.querySelector<HTMLElement>('[data-term]');
+    const termText = document.querySelector<HTMLElement>('[data-term-text]');
+    const onProduct = () => {
+      const p = products[productSel.value];
+      serialWrap.hidden = !(p && p.frame);
+      if (colorSel) {
+        const first = colorSel.options[0];
+        colorSel.replaceChildren(first);
+        for (const c of (p && p.colors) || []) colorSel.add(new Option(c, c));
+        colorSel.disabled = !p;
+        if (p && p.colors.length === 1) colorSel.value = p.colors[0];
+      }
+      if (termBox && termText) {
+        termBox.hidden = !(p && p.term);
+        termText.textContent = (p && p.term) || '';
+      }
+    };
+    productSel.addEventListener('change', onProduct);
+    const pre = new URLSearchParams(location.search).get('product');
+    if (pre && products[pre]) { productSel.value = pre; }
+    onProduct();
+
+    // Fecha: no futura y dentro de 15 días
+    const dateIn = $<HTMLInputElement>('[data-date]');
+    const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    if (dateIn) {
+      const today = new Date();
+      dateIn.max = iso(today);
+      dateIn.min = iso(new Date(today.getTime() - 15 * 86400000));
+    }
+
+    // Tienda: pide el nombre si no es Fariña
+    const storeName = $('[data-store-name]');
+    form.querySelectorAll<HTMLInputElement>('[name="tienda"]').forEach((r) => r.addEventListener('change', () => {
+      if (storeName) storeName.hidden = r.value === 'farina' && r.checked;
+    }));
+    // Crash: muestra la explicación
+    const crashHint = $('[data-crash-hint]');
+    form.querySelectorAll<HTMLInputElement>('[name="tipo"]').forEach((r) => r.addEventListener('change', () => {
+      if (crashHint) crashHint.hidden = !(r.value === 'crash' && r.checked);
+    }));
+
+    // Fotos: se achican en el navegador (máx. 1600 px, JPG) antes de enviarlas
+    const photoIn = $<HTMLInputElement>('[data-photos]')!;
+    const maxPhotos = Number(photoIn.dataset.photos || 1);
+    const previews = $('[data-previews]')!;
+    let photos: { mime: string; base64: string; url: string }[] = [];
+    async function shrink(file: File) {
+      const bmp = await createImageBitmap(file, { imageOrientation: 'from-image' } as any);
+      const scale = Math.min(1, 1600 / Math.max(bmp.width, bmp.height));
+      const c = document.createElement('canvas');
+      c.width = Math.round(bmp.width * scale); c.height = Math.round(bmp.height * scale);
+      c.getContext('2d')!.drawImage(bmp, 0, 0, c.width, c.height);
+      bmp.close?.();
+      const blob: Blob = await new Promise((ok, bad) => c.toBlob((b) => (b ? ok(b) : bad(new Error('blob'))), 'image/jpeg', 0.82));
+      const buf = new Uint8Array(await blob.arrayBuffer());
+      let bin = '';
+      for (let i = 0; i < buf.length; i += 0x8000) bin += String.fromCharCode(...buf.subarray(i, i + 0x8000));
+      const base64 = btoa(bin);
+      return { mime: 'image/jpeg', base64, url: `data:image/jpeg;base64,${base64}` };
+    }
+    const drawPreviews = () => {
+      previews.replaceChildren(...photos.map((p, i) => {
+        const fig = document.createElement('figure');
+        const img = document.createElement('img'); img.src = p.url; img.alt = '';
+        const b = document.createElement('button'); b.type = 'button'; b.textContent = S('w.remove');
+        b.addEventListener('click', () => { photos.splice(i, 1); drawPreviews(); });
+        fig.append(img, b);
+        return fig;
+      }));
+    };
+    photoIn.addEventListener('change', async () => {
+      setErr('fotos', '');
+      const files = [...(photoIn.files || [])];
+      photoIn.value = '';
+      if (maxPhotos === 1) photos = [];
+      for (const f of files) {
+        if (photos.length >= maxPhotos) { setErr('fotos', S('w.err.max')); break; }
+        try { photos.push(await shrink(f)); } catch { setErr('fotos', S('w.err.photo')); }
+      }
+      drawPreviews();
+    });
+
+    // Al corregir un campo se borra su error
+    const clearErr = (e: Event) => { const n = (e.target as HTMLInputElement).name; if (n) setErr(n, ''); };
+    form.addEventListener('input', clearErr);
+    form.addEventListener('change', clearErr);
+
+    function setErr(name: string, msg: string) {
+      const input = form!.querySelector<HTMLInputElement>(`[name="${name}"]`);
+      const err = document.getElementById(`e-${name}`);
+      if (input && input.type !== 'radio') input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+      if (err) err.textContent = msg;
+    }
+    const val = (n: string) => {
+      const els = form.querySelectorAll<HTMLInputElement>(`[name="${n}"]`);
+      if (!els.length) return '';
+      if (els[0].type === 'radio') return [...els].find((e) => e.checked)?.value || '';
+      return els[0].value.trim();
+    };
+
+    function validate() {
+      let first: HTMLElement | null = null;
+      const bad = (n: string, msg: string) => {
+        setErr(n, msg);
+        if (msg && !first) first = form!.querySelector<HTMLElement>(`[name="${n}"]`) || photoIn;
+      };
+      const req = isReg ? ['nombre', 'email', 'pais', 'producto', 'color', 'fecha_compra', 'tienda', 'uso', 'estilo'] : ['email', 'producto', 'tipo', 'descripcion'];
+      for (const n of req) bad(n, val(n) ? '' : S('contact.err.required'));
+      const email = val('email');
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) bad('email', S('contact.err.email'));
+      const p = products[val('producto')];
+      bad('numero_serie', p && p.frame && !val('numero_serie') ? S('contact.err.required') : '');
+      if (isReg && val('fecha_compra')) {
+        const d = val('fecha_compra');
+        if (dateIn && d > dateIn.max) bad('fecha_compra', S('w.err.future'));
+        else if (dateIn && d < dateIn.min) bad('fecha_compra', S('w.err.late'));
+      }
+      if (!isReg) bad('fotos', photos.length ? '' : S('w.err.photos'));
+      const consent = form!.querySelector<HTMLInputElement>('[name="consent"]')!;
+      bad('consent', consent.checked ? '' : S('contact.err.consent'));
+      return first as HTMLElement | null;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = ''; status.className = 'form-status';
+      const first = validate();
+      if (first) {
+        status.textContent = S('contact.err.form'); status.classList.add('form-status--error');
+        first.focus();
+        return;
+      }
+      const token = form.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]')?.value || '';
+      if (!token) { status.textContent = S('contact.err.captcha'); status.classList.add('form-status--error'); return; }
+
+      const body: Record<string, unknown> = { lang: val('lang'), hp_x: val('hp_x'), token, producto: val('producto'), email: val('email'), numero_serie: val('numero_serie') };
+      if (isReg) {
+        Object.assign(body, { nombre: val('nombre'), pais: val('pais'), color: val('color'), fecha_compra: val('fecha_compra'),
+          tienda: val('tienda'), tienda_nombre: val('tienda') === 'farina' ? '' : val('tienda_nombre'), uso: val('uso'), estilo: val('estilo'),
+          boleta: photos[0] ? { mime: photos[0].mime, base64: photos[0].base64 } : null });
+      } else {
+        Object.assign(body, { tipo: val('tipo'), descripcion: val('descripcion'), fotos: photos.map((p) => ({ mime: p.mime, base64: p.base64 })) });
+      }
+
+      submit.disabled = true;
+      const label = submit.textContent;
+      submit.textContent = S('w.sending');
+      const slow = setTimeout(() => { status.textContent = S('w.slow'); }, 6000);
+      try {
+        const res = await fetch(`/api/warranty/${isReg ? 'register' : 'claim'}`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body),
+        });
+        const json = await res.json().catch(() => ({}));
+        clearTimeout(slow);
+        if (res.ok && json.ok) {
+          const done = document.querySelector<HTMLElement>('[data-done]')!;
+          done.querySelector('[data-done-title]')!.textContent = S(isReg ? 'w.okRegister' : 'w.okClaim');
+          done.querySelector('[data-done-text]')!.textContent = S(isReg ? 'w.okRegisterText' : 'w.okClaimText', { code: json.code || '' });
+          form.hidden = true; done.hidden = false; done.focus();
+          done.scrollIntoView({ block: 'center', behavior: 'smooth' });
+          return;
+        }
+        const code = json.error || 'generic';
+        if (json.fields) for (const f of json.fields) setErr(f, f === 'email' ? S('contact.err.email') : S('contact.err.required'));
+        const msg = { late: 'w.err.late', future: 'w.err.future', photo: 'w.err.photo', photos: 'w.err.photos' }[code as string] || `contact.err.${code}`;
+        status.textContent = strings[msg] || S('contact.err.generic');
+        status.classList.add('form-status--error');
+        (window as any).turnstile?.reset();
+      } catch {
+        clearTimeout(slow);
+        status.textContent = S('contact.err.generic'); status.classList.add('form-status--error');
+        (window as any).turnstile?.reset();
+      } finally {
+        submit.disabled = false; submit.textContent = label;
+      }
+    });
+  }
+</script>
