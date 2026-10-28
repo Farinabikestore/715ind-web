@@ -22,7 +22,7 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 ## Garantía / registro de producto
 - [ ] Formulario "Registra tu 715" (definido con Vasco):
   - Solo productos comprados desde que se lance el registro (NO hay registro retroactivo).
-  - Productos: todo menos sillines y ropa (mazas, llantas, ruedas armadas, cuadros, bicicletas, cockpit).
+  - Productos: todo menos ropa (mazas, llantas, ruedas armadas, cuadros, bicicletas, cockpit, sillines).
   - Obligatorios: nombre, correo, país, producto, color, fecha de compra, dónde lo compró
     (Fariña Bike Store / otra tienda / distribuidor), uso principal (XC, trail, enduro, downhill, urbano).
   - Número de serie: obligatorio solo para cuadros y bicicletas.
@@ -33,18 +33,23 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - La garantía extendida es un experimento de 1 año para juntar datos y decidir la política definitiva.
   - Los registros se guardan en el panel de email marketing (base Neon). Requiere acceso a panel-marketing.
 
-- Plazos de garantía 715IND (definidos por Vasco el 28-oct):
+- Plazos de garantía 715IND (definidos por Vasco el 28-oct). Ninguna garantía cubre gastos de envío.
   | Producto | Garantía |
   |---|---|
   | Ranger (bicicleta / cuadro) | 2 años |
   | Enduro HT V3.1 | 2 años |
   | Kaze | 1 año |
   | Tee Ultra 35 | 5 años |
-  | Maza Trail | 1 año en ejes |
-  | Maza Ultra | 1 año en eje |
+  | Manillar Riser 35 | De por vida |
+  | Maza Trail | Eje: 1 año. Cuerpo (body): de por vida. Resto: garantía legal (requiere mantención del cliente) |
+  | Maza Ultra | Eje: 1 año. (Confirmar si cuerpo de por vida y resto igual que Trail) |
+  | Maza delantera Front 15x110 | Igual que las mazas: eje 1 año |
   | Llanta E30 Ultra (actual) | 2 años ante fallas de fábrica, juntura y hoyos |
   | Llanta Enduro H30 | 1 año ante fallas de fábrica; 1 año ante separación de junturas y hoyos; debe llevar lentejas (golillas de niple) |
-  | Sillín | 1 año |
+  | Ruedas armadas | Cada componente con su propia garantía |
+  | Sillín | 1 año (se registra) |
+  - Mantención de mazas: limpieza recomendada cada 4 meses (el cliente debe hacer servicio).
+  - El Enduro HT V3 (no V3.1) queda fuera.
 
 - Crash replacement: clientes con producto registrado pueden pedir reemplazo con 30% de descuento cuando el daño es
   por accidente. Aplica a todos los productos registrables; el envío no está incluido.
