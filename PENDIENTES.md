@@ -72,7 +72,8 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   4. Recibida la foto, el equipo contacta al cliente para que pague el 30% off y se le envía el reemplazo (envío a su cargo).
 
 - [ ] Dashboard de garantías (en el panel):
-  - Estados: Pendiente, Aprobado, Denegado, Crash replacement.
+  - Estados: Pendiente (recién llegó) · Aprobado (falla de fábrica aceptada) · Denegado ·
+    Esperando foto cortado (crash replacement aprobado) · Esperando pago · Enviado / cerrado.
   - Ver en qué tienda compró cada cliente.
   - Vista por cliente: historial de registros y reclamos, para detectar clientes que rompen productos seguido.
 
