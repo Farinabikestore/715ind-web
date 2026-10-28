@@ -36,7 +36,8 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
     El V3.1 es el modelo nuevo, pensado para reducir esos problemas.
   - Los registros se guardan en el panel de email marketing (base Neon), junto a los contactos. Requiere acceso a panel-marketing.
   - Crash replacement: los clientes registrados (también los de compras anteriores) pueden pedir un reemplazo con
-    descuento cuando el daño es por accidente (no cubierto por garantía). Condiciones por definir.
+    descuento cuando el daño es por accidente (no cubierto por garantía). 30% de descuento en todos los productos
+    registrables (mazas, llantas, ruedas armadas, cuadros, bicicletas, cockpit); el envío no está incluido.
   - Por definir: plazos de la garantía extendida (pregunta 13).
 
 ## Newsletter "715IND News"
