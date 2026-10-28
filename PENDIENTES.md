@@ -34,6 +34,7 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
     (problemas, fotos). 715IND evalúa caso a caso un descuento compensatorio (sin promesa automática).
   - Los cuadros Enduro HT V2 y V3 están descontinuados: deben aparecer en la lista del formulario para quienes ya los tienen.
     El V3.1 es el modelo nuevo, pensado para reducir esos problemas.
+  - Los registros se guardan en el panel de email marketing (base Neon), junto a los contactos. Requiere acceso a panel-marketing.
 
 ## Newsletter "715IND News"
 - [ ] Conectar al panel de email marketing (repositorio panel-marketing): aceptar el origen de la web 715IND,
