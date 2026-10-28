@@ -21,8 +21,9 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 
 ## Garantía / registro de producto
 - [ ] Formulario "Registra tu 715" (definido con Vasco):
+  - Solo productos comprados desde que se lance el registro (NO hay registro retroactivo).
   - Productos: todo menos sillines y ropa (mazas, llantas, ruedas armadas, cuadros, bicicletas, cockpit).
-  - Obligatorios: nombre, correo, país, producto, color, fecha de compra (mes/año), dónde lo compró
+  - Obligatorios: nombre, correo, país, producto, color, fecha de compra, dónde lo compró
     (Fariña Bike Store / otra tienda / distribuidor), uso principal (XC, trail, enduro, downhill, urbano).
   - Número de serie: obligatorio solo para cuadros y bicicletas.
   - Estilo de manejo: No salto / Hago saltos pequeños / Hago saltos grandes.
@@ -30,17 +31,30 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - Plazo: registrar dentro de 15 días desde la compra.
   - Regla: sin registro no hay garantía 715IND (la garantía legal de 6 meses en Chile aplica siempre; confirmar texto con abogado).
   - La garantía extendida es un experimento de 1 año para juntar datos y decidir la política definitiva.
-  - Clientes con productos anteriores al registro: pueden registrar su producto y contar su experiencia
-    (problemas, fotos). 715IND evalúa caso a caso un descuento compensatorio (sin promesa automática).
-  - Los cuadros Enduro HT V2 y V3 están descontinuados: deben aparecer en la lista del formulario para quienes ya los tienen.
-    El V3.1 es el modelo nuevo, pensado para reducir esos problemas.
-  - Los registros se guardan en el panel de email marketing (base Neon), junto a los contactos. Requiere acceso a panel-marketing.
-  - Crash replacement: los clientes registrados (también los de compras anteriores) pueden pedir un reemplazo con
-    descuento cuando el daño es por accidente (no cubierto por garantía). 30% de descuento en todos los productos
-    registrables (mazas, llantas, ruedas armadas, cuadros, bicicletas, cockpit); el envío no está incluido.
-    Condiciones: producto registrado, lo pide el dueño que lo registró, fotos del daño, una vez por producto, y fotos
-    del producto inutilizado (cortado) en lugar de devolverlo.
-  - Por definir: plazos de la garantía extendida (pregunta 13).
+  - Los registros se guardan en el panel de email marketing (base Neon). Requiere acceso a panel-marketing.
+
+- Plazos de garantía 715IND (definidos por Vasco el 28-oct):
+  | Producto | Garantía |
+  |---|---|
+  | Ranger (bicicleta / cuadro) | 2 años |
+  | Enduro HT V3.1 | 2 años |
+  | Kaze | 1 año |
+  | Tee Ultra 35 | 5 años |
+  | Maza Trail | 1 año en ejes |
+  | Maza Ultra | 1 año en eje |
+  | Llanta E30 Ultra (actual) | 2 años ante fallas de fábrica, juntura y hoyos |
+  | Llanta Enduro H30 | 1 año ante fallas de fábrica; 1 año ante separación de junturas y hoyos; debe llevar lentejas (golillas de niple) |
+  | Sillín | 1 año |
+
+- Crash replacement: clientes con producto registrado pueden pedir reemplazo con 30% de descuento cuando el daño es
+  por accidente. Aplica a todos los productos registrables; el envío no está incluido.
+  Condiciones: producto registrado, lo pide el dueño que lo registró, fotos del daño, una vez por producto, y fotos
+  del producto inutilizado (cortado) en lugar de devolverlo.
+
+- [ ] Dashboard de garantías (en el panel):
+  - Estados: Pendiente, Aprobado, Denegado, Crash replacement.
+  - Ver en qué tienda compró cada cliente.
+  - Vista por cliente: historial de registros y reclamos, para detectar clientes que rompen productos seguido.
 
 ## Newsletter "715IND News"
 - [ ] Conectar al panel de email marketing (repositorio panel-marketing): aceptar el origen de la web 715IND,
