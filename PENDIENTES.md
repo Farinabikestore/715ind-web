@@ -62,6 +62,7 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - "Registra tu 715": registro del producto.
   - "Solicitar garantía": formulario de reclamo (incluye crash replacement). Cada solicitud llega por correo a
     vascofarina@farinabikestore.com.
+- Idiomas: ambas páginas en los 6 idiomas del sitio.
 - Quién revisa: cualquiera del equipo puede revisar y cambiar el estado de una solicitud en el panel.
 - Bolivia: las solicitudes llegan igual al correo de Vasco y el equipo coordina con el representante (el cambio se hace a través de él).
 - Datos del formulario "Solicitar garantía":
