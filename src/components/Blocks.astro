@@ -1,6 +1,7 @@
 ---
 // Dibuja la lista de bloques que se arma (y reordena arrastrando) en el panel.
 import Img from './Img.astro';
+import { srcset } from '../lib/img.js';
 import ProductCard from './ProductCard.astro';
 import { t } from '../i18n/ui.js';
 import { getProducts, CATEGORIES, md, link, safeUrl } from '../lib/content.js';
@@ -159,7 +160,14 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
             {items.map((x) => (
               <article class="slide">
                 <a href={link(x.link || '/products/', lang)}>
-                  <span class="slide__img"><Img src={x.image} alt="" sizes="(max-width: 760px) 86vw, 68vw" /></span>
+                  <span class="slide__img">
+                    {x.image_mobile ? (
+                      <picture>
+                        <source media="(max-width: 760px)" srcset={srcset(x.image_mobile) || x.image_mobile} sizes="86vw" />
+                        <Img src={x.image} alt="" sizes="68vw" />
+                      </picture>
+                    ) : <Img src={x.image} alt="" sizes="(max-width: 760px) 86vw, 68vw" />}
+                  </span>
                   <span class="slide__body">
                     <span class="slide__text">
                       <h3>{x.title}</h3>

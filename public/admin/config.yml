@@ -175,7 +175,8 @@ collections:
                     max: 8
                     summary: '{{fields.title}}'
                     fields:
-                      - { label: Foto (horizontal), name: image, widget: image, i18n: duplicate }
+                      - { label: Foto (horizontal), name: image, widget: image, i18n: duplicate, hint: '2400 x 1100 px.' }
+                      - { label: Foto para celular, name: image_mobile, widget: image, required: false, i18n: duplicate, hint: 'Opcional. 1460 x 1100 px. Si no la subes, se recorta la horizontal.' }
                       - { label: Título, name: title, widget: string, i18n: true }
                       - { label: Texto, name: text, widget: text, required: false, i18n: true }
                       - { label: Enlace, name: link, widget: string, required: false, i18n: duplicate, hint: 'Ej: /products/ultra-rear-hub/' }

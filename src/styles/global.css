@@ -293,6 +293,7 @@ html:not(.header-solid) body:has(#main > .vbanner:not(.vbanner--ink):first-child
 .slide a { display: block; text-decoration: none; color: var(--ink); }
 .slide__img { display: block; aspect-ratio: 2.2 / 1; overflow: hidden; background: var(--photo, #e9e9e5); }
 .slide__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.slide__img picture { display: block; width: 100%; height: 100%; }
 .slide a:hover .slide__img img { transform: scale(1.03); }
 .slide__body { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-top: 22px; }
 .slide__body h3 { font-size: calc(1.6rem * var(--d-size)); margin-bottom: 8px; }

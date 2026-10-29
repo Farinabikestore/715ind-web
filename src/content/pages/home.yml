@@ -24,6 +24,11 @@ es:
   - type: slides
     heading: Explora 715IND
     items:
+    - image: /uploads/home/explora-ranger.webp
+      image_mobile: /uploads/home/explora-ranger-movil.webp
+      title: Ranger
+      text: La primera doble suspensión de 715IND. Enduro y all mountain.
+      link: /products/ranger/
     - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
       title: Enduro HT V3.1
       text: Hardtail de enduro 29" con UDH y ángulo de dirección de 63°. Para bajar fuerte.
@@ -56,7 +61,7 @@ es:
       715IND nació en un taller de bicicletas en Santiago. Empezamos diseñando lo que necesitábamos para nuestros propios cerros y hoy hacemos mazas, llantas, ruedas, cuadros y cockpit.
 
       Cada pieza se define y se prueba en Chile, en terreno de montaña real, y se fabrica en Taiwán con aluminios 6061 y 7075-T6.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/home/taller-herramientas.webp
     cta_label: Conoce la marca
     cta_link: /about/
   - type: categories
@@ -69,7 +74,7 @@ es:
       Seis trinquetes y un ángulo de enganche de 0,55°. La potencia llega a la rueda apenas tocas el pedal.
 
       Cuerpo de aluminio 7075-T6, eje Boost 12x148 y núcleos HG, Micro Spline y XD.
-    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    image: /uploads/home/maza-naranja.webp
     cta_label: Ver la maza Ultra
     cta_link: /products/ultra-rear-hub/
   - type: feature
@@ -78,7 +83,7 @@ es:
     heading: Enduro HT V3.1
     text: |
       Rígida de enduro con 63° de dirección, tubos delanteros 2 mm más gruesos y doble soldadura en la pipa. Compatible con UDH y SRAM Transmission.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    image: /uploads/home/ht-v31-azul.webp
     cta_label: Ver el cuadro
     cta_link: /products/enduro-ht-v31/
   - type: dealer_cta
@@ -112,6 +117,11 @@ en:
   - type: slides
     heading: Explore 715IND
     items:
+    - image: /uploads/home/explora-ranger.webp
+      image_mobile: /uploads/home/explora-ranger-movil.webp
+      title: Ranger
+      text: The first 715IND full suspension. Enduro and all mountain.
+      link: /products/ranger/
     - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
       title: Enduro HT V3.1
       text: 29" enduro hardtail with UDH and a 63° head angle. Built to go down hard.
@@ -144,7 +154,7 @@ en:
       715IND was born in a bike workshop in Santiago, Chile. We started by designing what we needed for our own mountains; today we make hubs, rims, wheels, frames and cockpits.
 
       Every part is defined and tested in Chile on real mountain terrain, and made in Taiwan from 6061 and 7075-T6 aluminium.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/home/taller-herramientas.webp
     cta_label: About the brand
     cta_link: /about/
   - type: categories
@@ -157,7 +167,7 @@ en:
       Six pawls and a 0.55° engagement angle. Power reaches the wheel the moment you touch the pedal.
 
       7075-T6 aluminium shell, 12x148 Boost axle and HG, Micro Spline and XD freehubs.
-    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    image: /uploads/home/maza-naranja.webp
     cta_label: See the Ultra hub
     cta_link: /products/ultra-rear-hub/
   - type: feature
@@ -166,7 +176,7 @@ en:
     heading: Enduro HT V3.1
     text: |
       Enduro hardtail with a 63° head angle, 2 mm thicker front tubes and a double weld at the head tube. UDH and SRAM Transmission ready.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    image: /uploads/home/ht-v31-azul.webp
     cta_label: See the frame
     cta_link: /products/enduro-ht-v31/
   - type: dealer_cta
@@ -200,6 +210,11 @@ pt:
   - type: slides
     heading: Explore a 715IND
     items:
+    - image: /uploads/home/explora-ranger.webp
+      image_mobile: /uploads/home/explora-ranger-movil.webp
+      title: Ranger
+      text: A primeira full suspension da 715IND. Enduro e all mountain.
+      link: /products/ranger/
     - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
       title: Enduro HT V3.1
       text: Hardtail de enduro 29" com UDH e ângulo de direção de 63°. Para descer forte.
@@ -232,7 +247,7 @@ pt:
       A 715IND nasceu em uma oficina de bicicletas em Santiago, no Chile. Começamos desenhando o que precisávamos para as nossas próprias montanhas; hoje fazemos cubos, aros, rodas, quadros e cockpit.
 
       Cada peça é definida e testada no Chile, em terreno de montanha real, e fabricada em Taiwan com alumínios 6061 e 7075-T6.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/home/taller-herramientas.webp
     cta_label: Conheça a marca
     cta_link: /about/
   - type: categories
@@ -245,7 +260,7 @@ pt:
       Seis linguetas e ângulo de engate de 0,55°. A força chega à roda assim que você toca o pedal.
 
       Corpo de alumínio 7075-T6, eixo Boost 12x148 e cubos livres HG, Micro Spline e XD.
-    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    image: /uploads/home/maza-naranja.webp
     cta_label: Ver o cubo Ultra
     cta_link: /products/ultra-rear-hub/
   - type: feature
@@ -254,7 +269,7 @@ pt:
     heading: Enduro HT V3.1
     text: |
       Hardtail de enduro com 63° de direção, tubos dianteiros 2 mm mais grossos e solda dupla na caixa de direção. Compatível com UDH e SRAM Transmission.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    image: /uploads/home/ht-v31-azul.webp
     cta_label: Ver o quadro
     cta_link: /products/enduro-ht-v31/
   - type: dealer_cta
@@ -288,6 +303,11 @@ de:
   - type: slides
     heading: Entdecke 715IND
     items:
+    - image: /uploads/home/explora-ranger.webp
+      image_mobile: /uploads/home/explora-ranger-movil.webp
+      title: Ranger
+      text: Das erste Fully von 715IND. Enduro und All Mountain.
+      link: /products/ranger/
     - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
       title: Enduro HT V3.1
       text: 29"-Enduro-Hardtail mit UDH und 63° Lenkwinkel. Gebaut für harte Abfahrten.
@@ -320,7 +340,7 @@ de:
       715IND entstand in einer Fahrradwerkstatt in Santiago de Chile. Wir haben angefangen, das zu entwickeln, was wir für unsere eigenen Berge brauchten; heute bauen wir Naben, Felgen, Laufräder, Rahmen und Cockpits.
 
       Jedes Teil wird in Chile auf echten Bergtrails entwickelt und getestet und in Taiwan aus Aluminium 6061 und 7075-T6 gefertigt.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/home/taller-herramientas.webp
     cta_label: Über die Marke
     cta_link: /about/
   - type: categories
@@ -333,7 +353,7 @@ de:
       Sechs Sperrklinken und 0,55° Eingriffswinkel. Die Kraft ist sofort am Laufrad, sobald du das Pedal berührst.
 
       Gehäuse aus 7075-T6-Aluminium, 12x148 Boost und Freiläufe HG, Micro Spline und XD.
-    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    image: /uploads/home/maza-naranja.webp
     cta_label: Ultra Nabe ansehen
     cta_link: /products/ultra-rear-hub/
   - type: feature
@@ -342,7 +362,7 @@ de:
     heading: Enduro HT V3.1
     text: |
       Enduro-Hardtail mit 63° Lenkwinkel, 2 mm stärkeren Frontrohren und doppelter Schweißnaht am Steuerrohr. UDH- und SRAM-Transmission-kompatibel.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    image: /uploads/home/ht-v31-azul.webp
     cta_label: Rahmen ansehen
     cta_link: /products/enduro-ht-v31/
   - type: dealer_cta
@@ -376,6 +396,11 @@ fr:
   - type: slides
     heading: Découvrez 715IND
     items:
+    - image: /uploads/home/explora-ranger.webp
+      image_mobile: /uploads/home/explora-ranger-movil.webp
+      title: Ranger
+      text: Le premier tout-suspendu 715IND. Enduro et all mountain.
+      link: /products/ranger/
     - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
       title: Enduro HT V3.1
       text: Semi-rigide enduro 29" avec UDH et angle de direction de 63°. Fait pour descendre fort.
@@ -408,7 +433,7 @@ fr:
       715IND est né dans un atelier vélo à Santiago du Chili. Nous avons commencé par concevoir ce dont nous avions besoin pour nos propres montagnes ; aujourd'hui nous fabriquons moyeux, jantes, roues, cadres et cockpits.
 
       Chaque pièce est définie et testée au Chili, sur du vrai terrain de montagne, et fabriquée à Taïwan en aluminium 6061 et 7075-T6.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/home/taller-herramientas.webp
     cta_label: Découvrir la marque
     cta_link: /about/
   - type: categories
@@ -421,7 +446,7 @@ fr:
       Six cliquets et un angle d'engagement de 0,55°. La puissance arrive à la roue dès que vous touchez la pédale.
 
       Corps en aluminium 7075-T6, axe Boost 12x148 et corps HG, Micro Spline et XD.
-    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    image: /uploads/home/maza-naranja.webp
     cta_label: Voir le moyeu Ultra
     cta_link: /products/ultra-rear-hub/
   - type: feature
@@ -430,7 +455,7 @@ fr:
     heading: Enduro HT V3.1
     text: |
       Semi-rigide enduro à 63° de direction, tubes avant 2 mm plus épais et double soudure à la douille. Compatible UDH et SRAM Transmission.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    image: /uploads/home/ht-v31-azul.webp
     cta_label: Voir le cadre
     cta_link: /products/enduro-ht-v31/
   - type: dealer_cta
@@ -464,6 +489,11 @@ it:
   - type: slides
     heading: Scopri 715IND
     items:
+    - image: /uploads/home/explora-ranger.webp
+      image_mobile: /uploads/home/explora-ranger-movil.webp
+      title: Ranger
+      text: La prima biammortizzata 715IND. Enduro e all mountain.
+      link: /products/ranger/
     - image: /uploads/products/enduro-ht-v31/enduro-ht-v3-black-8.webp
       title: Enduro HT V3.1
       text: Front enduro 29" con UDH e angolo sterzo di 63°. Fatta per scendere forte.
@@ -496,7 +526,7 @@ it:
       715IND è nata in un'officina di biciclette a Santiago del Cile. Abbiamo iniziato progettando ciò che ci serviva per le nostre montagne; oggi facciamo mozzi, cerchi, ruote, telai e cockpit.
 
       Ogni pezzo viene definito e testato in Cile, su vero terreno di montagna, e prodotto a Taiwan in alluminio 6061 e 7075-T6.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/home/taller-herramientas.webp
     cta_label: Scopri il marchio
     cta_link: /about/
   - type: categories
@@ -509,7 +539,7 @@ it:
       Sei cricchetti e un angolo di innesto di 0,55°. La potenza arriva alla ruota appena tocchi il pedale.
 
       Corpo in alluminio 7075-T6, asse Boost 12x148 e corpetti HG, Micro Spline e XD.
-    image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
+    image: /uploads/home/maza-naranja.webp
     cta_label: Vedi il mozzo Ultra
     cta_link: /products/ultra-rear-hub/
   - type: feature
@@ -518,7 +548,7 @@ it:
     heading: Enduro HT V3.1
     text: |
       Front enduro con 63° di sterzo, tubi anteriori più spessi di 2 mm e doppia saldatura al tubo sterzo. Compatibile UDH e SRAM Transmission.
-    image: /uploads/products/enduro-ht-v31/enduro-ht-29er-v3-white-udh-6.webp
+    image: /uploads/home/ht-v31-azul.webp
     cta_label: Vedi il telaio
     cta_link: /products/enduro-ht-v31/
   - type: dealer_cta
