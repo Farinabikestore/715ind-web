@@ -5,18 +5,26 @@ es:
   - type: hero
     heading: Hecho por riders en Santiago de Chile.
     text: 715IND nace en un taller de bicicletas. Diseñamos lo que necesitábamos para nuestros propios cerros.
-    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+    image: /uploads/about/portada-bosque.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
+    layout: stacked
+  - type: gallery
+    heading: El equipo y el taller
+    images:
+    - /uploads/about/equipo-1.webp
+    - /uploads/about/equipo-2.webp
+    - /uploads/about/equipo-3.webp
+    - /uploads/about/taller-maza.webp
   - type: feature
     theme: light
     image_side: right
     heading: Diseño en Chile, fabricación en Taiwán
     text: |
       Cada pieza se define y se prueba en Chile, en terreno de montaña real. La fabricación la hacen fábricas de Taiwán especializadas en componentes de bicicleta, con aluminios 6061 y 7075-T6.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/about/diseno-planos.webp
     cta_label: ''
     cta_link: ''
   - type: feature
@@ -25,7 +33,7 @@ es:
     heading: Ruedas armadas a mano
     text: |
       Las ruedas 715 se arman y tensan a mano en nuestro taller de Santiago. Conocemos cada combinación de llanta, maza y largo de rayo.
-    image: /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+    image: /uploads/about/ruedas-a-mano.webp
     cta_label: Abrir el armador
     cta_link: /wheel-builder/
   - type: dealer_cta
@@ -40,18 +48,26 @@ en:
   - type: hero
     heading: Made by riders in Santiago, Chile.
     text: 715IND was born in a bike workshop. We design what we needed for our own trails.
-    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+    image: /uploads/about/portada-bosque.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
+    layout: stacked
+  - type: gallery
+    heading: The team and the workshop
+    images:
+    - /uploads/about/equipo-1.webp
+    - /uploads/about/equipo-2.webp
+    - /uploads/about/equipo-3.webp
+    - /uploads/about/taller-maza.webp
   - type: feature
     theme: light
     image_side: right
     heading: Designed in Chile, made in Taiwan
     text: |
       Every part is specified and tested in Chile, on real mountain terrain. Production is done by Taiwanese factories that specialise in bicycle components, using 6061 and 7075-T6 aluminium.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/about/diseno-planos.webp
     cta_label: ''
     cta_link: ''
   - type: feature
@@ -60,7 +76,7 @@ en:
     heading: Hand-built wheels
     text: |
       715 wheels are laced and tensioned by hand in our Santiago workshop. We know every combination of rim, hub and spoke length.
-    image: /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+    image: /uploads/about/ruedas-a-mano.webp
     cta_label: Open the wheel builder
     cta_link: /wheel-builder/
   - type: dealer_cta
@@ -75,18 +91,26 @@ pt:
   - type: hero
     heading: Feito por riders em Santiago do Chile.
     text: A 715IND nasceu numa oficina de bicicletas. Projetamos o que precisávamos para as nossas trilhas.
-    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+    image: /uploads/about/portada-bosque.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
+    layout: stacked
+  - type: gallery
+    heading: A equipe e a oficina
+    images:
+    - /uploads/about/equipo-1.webp
+    - /uploads/about/equipo-2.webp
+    - /uploads/about/equipo-3.webp
+    - /uploads/about/taller-maza.webp
   - type: feature
     theme: light
     image_side: right
     heading: Projeto no Chile, fabricação em Taiwan
     text: |
       Cada peça é definida e testada no Chile, em terreno de montanha real. A fabricação é feita por fábricas de Taiwan especializadas em componentes de bicicleta, com alumínios 6061 e 7075-T6.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/about/diseno-planos.webp
     cta_label: ''
     cta_link: ''
   - type: feature
@@ -95,7 +119,7 @@ pt:
     heading: Rodas montadas à mão
     text: |
       As rodas 715 são montadas e tensionadas à mão na nossa oficina em Santiago. Conhecemos cada combinação de aro, cubo e comprimento de raio.
-    image: /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+    image: /uploads/about/ruedas-a-mano.webp
     cta_label: Abrir o configurador
     cta_link: /wheel-builder/
   - type: dealer_cta
@@ -110,18 +134,26 @@ de:
   - type: hero
     heading: Von Ridern in Santiago de Chile gemacht.
     text: 715IND entstand in einer Fahrradwerkstatt. Wir entwickeln, was wir für unsere eigenen Trails brauchten.
-    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+    image: /uploads/about/portada-bosque.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
+    layout: stacked
+  - type: gallery
+    heading: Team und Werkstatt
+    images:
+    - /uploads/about/equipo-1.webp
+    - /uploads/about/equipo-2.webp
+    - /uploads/about/equipo-3.webp
+    - /uploads/about/taller-maza.webp
   - type: feature
     theme: light
     image_side: right
     heading: Entwickelt in Chile, gefertigt in Taiwan
     text: |
       Jedes Teil wird in Chile definiert und auf echtem Bergterrain getestet. Gefertigt wird in taiwanischen Werken, die auf Fahrradkomponenten spezialisiert sind, aus 6061- und 7075-T6-Aluminium.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/about/diseno-planos.webp
     cta_label: ''
     cta_link: ''
   - type: feature
@@ -130,7 +162,7 @@ de:
     heading: Handgebaute Laufräder
     text: |
       715 Laufräder werden in unserer Werkstatt in Santiago von Hand eingespeicht und gespannt. Wir kennen jede Kombination aus Felge, Nabe und Speichenlänge.
-    image: /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+    image: /uploads/about/ruedas-a-mano.webp
     cta_label: Konfigurator öffnen
     cta_link: /wheel-builder/
   - type: dealer_cta
@@ -145,18 +177,26 @@ fr:
   - type: hero
     heading: Fait par des riders à Santiago du Chili.
     text: 715IND est né dans un atelier vélo. Nous concevons ce dont nous avions besoin pour nos propres sentiers.
-    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+    image: /uploads/about/portada-bosque.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
+    layout: stacked
+  - type: gallery
+    heading: L'équipe et l'atelier
+    images:
+    - /uploads/about/equipo-1.webp
+    - /uploads/about/equipo-2.webp
+    - /uploads/about/equipo-3.webp
+    - /uploads/about/taller-maza.webp
   - type: feature
     theme: light
     image_side: right
     heading: Conçu au Chili, fabriqué à Taïwan
     text: |
       Chaque pièce est définie et testée au Chili, sur de vrais terrains de montagne. La fabrication est confiée à des usines taïwanaises spécialisées dans les composants de vélo, en aluminium 6061 et 7075-T6.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/about/diseno-planos.webp
     cta_label: ''
     cta_link: ''
   - type: feature
@@ -165,7 +205,7 @@ fr:
     heading: Roues montées à la main
     text: |
       Les roues 715 sont rayonnées et tendues à la main dans notre atelier de Santiago. Nous connaissons chaque combinaison de jante, moyeu et longueur de rayon.
-    image: /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+    image: /uploads/about/ruedas-a-mano.webp
     cta_label: Ouvrir le configurateur
     cta_link: /wheel-builder/
   - type: dealer_cta
@@ -180,18 +220,26 @@ it:
   - type: hero
     heading: Fatto da rider a Santiago del Cile.
     text: 715IND nasce in un'officina di bici. Progettiamo ciò che ci serviva per i nostri sentieri.
-    image: /uploads/products/enduro-h30-rim/enduro-h30-29er-32h-black-4.webp
+    image: /uploads/about/portada-bosque.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
+    layout: stacked
+  - type: gallery
+    heading: Il team e l'officina
+    images:
+    - /uploads/about/equipo-1.webp
+    - /uploads/about/equipo-2.webp
+    - /uploads/about/equipo-3.webp
+    - /uploads/about/taller-maza.webp
   - type: feature
     theme: light
     image_side: right
     heading: Progettato in Cile, prodotto a Taiwan
     text: |
       Ogni pezzo viene definito e testato in Cile, su vero terreno di montagna. La produzione è affidata a fabbriche di Taiwan specializzate in componenti per bici, con alluminio 6061 e 7075-T6.
-    image: /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+    image: /uploads/about/diseno-planos.webp
     cta_label: ''
     cta_link: ''
   - type: feature
@@ -200,7 +248,7 @@ it:
     heading: Ruote montate a mano
     text: |
       Le ruote 715 vengono raggiate e tensionate a mano nella nostra officina di Santiago. Conosciamo ogni combinazione di cerchio, mozzo e lunghezza dei raggi.
-    image: /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp
+    image: /uploads/about/ruedas-a-mano.webp
     cta_label: Apri il configuratore
     cta_link: /wheel-builder/
   - type: dealer_cta

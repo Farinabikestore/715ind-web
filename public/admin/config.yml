@@ -204,6 +204,7 @@ collections:
                   - { label: Texto, name: text, widget: text, required: false, i18n: true }
                   - { label: Foto de fondo, name: image, widget: image, required: false, i18n: duplicate }
                   - { label: Alto, name: size, widget: select, required: false, i18n: duplicate, default: normal, options: [{ label: Pantalla completa, value: normal }, { label: Más bajo, value: short }] }
+                  - { label: Diseño, name: layout, widget: select, required: false, i18n: duplicate, default: overlay, options: [{ label: Texto sobre la foto, value: overlay }, { label: Foto completa y texto debajo, value: stacked }], hint: 'Usa "texto debajo" si la foto ya trae logo o texto.' }
                   - { label: Botón principal (texto), name: cta_label, widget: string, required: false, i18n: true }
                   - { label: Botón principal (enlace), name: cta_link, widget: string, required: false, i18n: duplicate, hint: &link_hint 'Enlace interno sin idioma, ej: /products/  /wheel-builder/  /contact/  /products/ultra-rear-hub/ o una dirección completa https://...' }
                   - { label: Botón secundario (texto), name: cta2_label, widget: string, required: false, i18n: true }

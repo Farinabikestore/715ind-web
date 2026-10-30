@@ -29,7 +29,7 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
   switch (b.type) {
     case 'hero':
       return (
-        <section class:list={['hero', { 'hero--short': short || b.size === 'short' }]}>
+        <section class:list={['hero', { 'hero--short': short || b.size === 'short', 'hero--stacked': b.layout === 'stacked' }]}>
           {b.image && (
             <div class="hero__media">
               <Img src={b.image} alt="" sizes="100vw" eager={first} />

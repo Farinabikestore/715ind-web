@@ -339,6 +339,15 @@ html:not(.header-solid) body:has(#main > .vbanner:not(.vbanner--ink):first-child
 .hero--short h1, .hero--short .h1 { font-size: var(--fs-h1); max-width: 18ch; }
 .hero p { font-size: var(--fs-lead); max-width: 46ch; margin: 20px 0 28px; color: #f1f0ea; }
 .hero .btn--ghost { color: var(--bone); }
+/* Portada con la foto completa arriba y el texto debajo (para fotos que ya traen logo o texto) */
+.hero--stacked { min-height: 0; display: block; background: var(--paper); color: var(--ink); }
+.hero--stacked .hero__media { position: relative; inset: auto; aspect-ratio: 3 / 2; max-height: 82vh; width: 100%; }
+.hero--stacked .hero__media::after { display: none; }
+.hero--stacked .hero__media img { object-position: center; }
+.hero--stacked p { color: var(--muted); }
+.hero--stacked .hero__body { padding-block: clamp(36px, 5vw, 64px) 0; }
+.hero--stacked .btn--ghost { color: var(--ink); }
+@media (max-width: 760px) { .hero--stacked .hero__media { aspect-ratio: 4 / 3; } }
 
 /* Categorías */
 .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }

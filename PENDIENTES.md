@@ -114,3 +114,8 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 - [ ] Vasco: contar la historia real (año de inicio, por qué "715", hitos) para completar Nosotros y el bloque.
 - [x] Blog "Historias 715" (/stories/) con 4 artículos; las slides de Explora llevan a ellos. Se edita en el panel: Historias.
 - [ ] Diseñador: fotos de las slides (2400 x 1100 px) y del pie de página (2400 x 1200 + 1080 x 1920 para celular).
+
+## Material del diseñador (Drive 715IND-sitio)
+- [x] 1-portada: P4-1 (slide Ranger + celular), P6, P7, P8 cargadas (29-oct).
+- [x] 2-nosotros: N1 portada, N2 fotos del equipo y taller, N4 planos, N5 ruedas (30-oct).
+- [ ] Faltan los textos (textos.docx): historia N2/N3 y el resto del pedido. Carpeta 3-historias vacía.
