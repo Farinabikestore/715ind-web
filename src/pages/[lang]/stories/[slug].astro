@@ -33,11 +33,11 @@ const jsonld = {
       {p.excerpt && <p class="lead">{p.excerpt}</p>}
       {p.date && <time datetime={p.date}>{day(p.date)}</time>}
     </header>
-    {p.cover && <div class="post__cover"><Img src={p.cover} alt="" sizes="100vw" eager /></div>}
+    {p.cover && <div class="post__cover"><Img src={p.cover} alt={p.title} sizes="100vw" eager /></div>}
     <div class="wrap post__body prose" set:html={md(p.body)} />
     {p.images.length > 0 && (
       <div class="wrap post__gallery">
-        {p.images.map((src) => <figure><Img src={src} alt="" sizes="(max-width: 760px) 100vw, 33vw" /></figure>)}
+        {p.images.map((src) => <figure><Img src={src} alt={p.title} sizes="(max-width: 760px) 100vw, 33vw" /></figure>)}
       </div>
     )}
     {p.cta_label && p.cta_link && (
@@ -51,7 +51,7 @@ const jsonld = {
         {more.map((m) => (
           <article class="story-card">
             <a href={`/${lang}/stories/${m.slug}/`}>
-              <span class="story-card__img">{m.cover && <Img src={m.cover} alt="" sizes="(max-width: 860px) 100vw, 400px" />}</span>
+              <span class="story-card__img">{m.cover && <Img src={m.cover} alt={m.title} sizes="(max-width: 860px) 100vw, 400px" />}</span>
               <span class="story-card__body"><h3>{m.title}</h3><span class="story-card__go">{t(lang, 'stories.read')} →</span></span>
             </a>
           </article>

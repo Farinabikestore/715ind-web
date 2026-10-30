@@ -1,10 +1,11 @@
 // Mapa del sitio para Google, con todas las páginas en los 6 idiomas.
 import { LOCALES } from '../i18n/ui.js';
-import { getProducts } from '../lib/content.js';
+import { getProducts, getPosts } from '../lib/content.js';
 
 export function GET({ site }) {
-  const paths = ['/', '/products/', '/wheel-builder/', '/about/', '/contact/', '/where-to-buy/', '/privacy/'];
+  const paths = ['/', '/products/', '/wheel-builder/', '/about/', '/contact/', '/where-to-buy/', '/privacy/', '/stories/', '/warranty/', '/warranty/register/', '/warranty/claim/'];
   for (const p of getProducts('es')) paths.push(`/products/${p.slug}/`);
+  for (const p of getPosts('es')) paths.push(`/stories/${p.slug}/`);
   const url = (p) => new URL(p, site).href;
   const body = paths
     .flatMap((p) =>

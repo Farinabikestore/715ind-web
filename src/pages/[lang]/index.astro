@@ -22,5 +22,6 @@ const jsonld = {
 };
 ---
 <Base lang={lang} title={page.seo_title} description={page.seo_description} path="/" jsonld={jsonld}>
+  <h1 class="visually-hidden">{page.seo_title}</h1>
   <Blocks blocks={page.blocks} lang={lang} />
 </Base>

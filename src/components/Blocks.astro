@@ -164,9 +164,9 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
                     {x.image_mobile ? (
                       <picture>
                         <source media="(max-width: 760px)" srcset={srcset(x.image_mobile) || x.image_mobile} sizes="86vw" />
-                        <Img src={x.image} alt="" sizes="68vw" />
+                        <Img src={x.image} alt={x.title} sizes="68vw" />
                       </picture>
-                    ) : <Img src={x.image} alt="" sizes="(max-width: 760px) 86vw, 68vw" />}
+                    ) : <Img src={x.image} alt={x.title} sizes="(max-width: 760px) 86vw, 68vw" />}
                   </span>
                   <span class="slide__body">
                     <span class="slide__text">
