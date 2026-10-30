@@ -1,11 +1,8 @@
 // Configuración de Astro (generador del sitio estático).
-// SITE_URL se define en Cloudflare Pages > Settings > Variables (ej: https://www.715ind.com)
+// Dirección oficial del sitio (enlaces canónicos, sitemap y redes sociales).
 import { defineConfig } from 'astro/config';
 
-const site = process.env.SITE_URL || 'https://www.example.com';
-if (!process.env.SITE_URL) {
-  console.warn('\n[715IND] Falta la variable SITE_URL. Se usa https://www.example.com en enlaces canónicos y sitemap.\n');
-}
+const site = 'https://715ind.com';
 
 export default defineConfig({
   site,

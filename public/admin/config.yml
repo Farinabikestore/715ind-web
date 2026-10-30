@@ -15,7 +15,7 @@ backend:
   # Opcional: botón "Ingresar con GitHub" sin token (ver guía, sección "Ingreso con botón").
   # base_url: https://sveltia-cms-auth.TU_SUBDOMINIO.workers.dev
 
-site_url: https://715ind.pages.dev
+site_url: https://715ind.com
 logo:
   src: /favicon.svg
 

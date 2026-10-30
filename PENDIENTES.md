@@ -94,16 +94,18 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 - [ ] Foto de fondo propia (hoy es provisoria: cuadro del video de Jordi).
 - [ ] Manuales y fichas técnicas (PDFs).
 
-## Dominio (en pausa: problema con la clave de GoDaddy)
+## Dominio
 - [x] 715ind.com agregado a Cloudflare (nameservers harvey / raphaela.ns.cloudflare.com).
-- [ ] En GoDaddy: cambiar los nameservers (hoy apuntan a Amazon awsdns, sin registros).
-- [ ] Recuperar acceso a GoDaddy y conectar el dominio propio (luego actualizar SITE_URL, Turnstile y site_url del panel).
+- [x] En GoDaddy: nameservers cambiados a Cloudflare (30-oct); zona activa.
+- [x] Dominio conectado al sitio (715ind.com y www); dirección oficial y panel actualizados a https://715ind.com.
+- [ ] Vasco: agregar 715ind.com y www.715ind.com en Turnstile (Hostname Management).
+- [ ] Vasco: regla de redirección www → 715ind.com en Cloudflare.
 
 ## Pendientes de la garantía
 - [x] GARANTIA_TOKEN puesto en Render y Cloudflare (29-oct).
 - [x] Registro y solicitud probados en vivo por Vasco (29-oct): todo funcionando.
 - [ ] Revisar con abogado el texto de garantía legal.
-- [ ] Cuando esté el dominio propio: agregarlo en ORIGENES_715 (Render) para el newsletter.
+- [x] Newsletter acepta 715ind.com y www (en el código del panel).
 - Correos al cliente solo en español (clientes de Chile y Bolivia).
 
 ## Portada e Historias (28-oct)
