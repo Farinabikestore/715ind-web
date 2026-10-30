@@ -98,8 +98,9 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 - [x] 715ind.com agregado a Cloudflare (nameservers harvey / raphaela.ns.cloudflare.com).
 - [x] En GoDaddy: nameservers cambiados a Cloudflare (30-oct); zona activa.
 - [x] Dominio conectado al sitio (715ind.com y www); dirección oficial y panel actualizados a https://715ind.com.
-- [ ] Vasco: agregar 715ind.com y www.715ind.com en Turnstile (Hostname Management).
-- [ ] Vasco: regla de redirección www → 715ind.com en Cloudflare.
+- [x] Turnstile con 715ind.com y www.715ind.com (30-oct). Registro DNS @ → 715ind.pages.dev creado; ambos dominios activos.
+- [ ] Opcional: regla de redirección www → 715ind.com en Cloudflare (hoy ambos funcionan; el canónico es 715ind.com).
+- [ ] Google Search Console: verificar 715ind.com y enviar sitemap.xml.
 
 ## Pendientes de la garantía
 - [x] GARANTIA_TOKEN puesto en Render y Cloudflare (29-oct).
