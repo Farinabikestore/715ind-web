@@ -118,4 +118,5 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 ## Material del diseñador (Drive 715IND-sitio)
 - [x] 1-portada: P4-1 (slide Ranger + celular), P6, P7, P8 cargadas (29-oct).
 - [x] 2-nosotros: N1 portada, N2 fotos del equipo y taller, N4 planos, N5 ruedas (30-oct).
-- [ ] Faltan los textos (textos.docx): historia N2/N3 y el resto del pedido. Carpeta 3-historias vacía.
+- [x] 3-historias: textos H1 (Enduro HT V3.1) y H2 (Maza Ultra) cargados y traducidos (30-oct).
+- [ ] Faltan: textos de Nosotros (historia N2, hitos N3), H3 y H4, y el resto del pedido.

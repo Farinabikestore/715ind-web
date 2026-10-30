@@ -15,6 +15,7 @@ es:
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
   - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  - /uploads/home/maza-naranja.webp
   colors:
   - name: Negro
     hex: '#1d1f1f'
@@ -22,6 +23,9 @@ es:
   - name: Plata
     hex: '#c6c9c8'
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - name: Naranja
+    hex: '#e8601c'
+    image: /uploads/home/maza-naranja.webp
   specs:
   - label: Trinquetes
     value: '6'
@@ -39,6 +43,8 @@ es:
     value: Shimano HG, Shimano Micro Spline, SRAM XD
   - label: Anclaje de disco
     value: 6 pernos
+  - label: Peso
+    value: 350 g
   body: |
     La Ultra es la maza que usamos en nuestras propias ruedas. Su mecanismo de 6 trinquetes engancha cada 0,55°, así la potencia llega a la rueda apenas empiezas a pedalear, incluso en subidas técnicas.
 
@@ -60,6 +66,7 @@ en:
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
   - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  - /uploads/home/maza-naranja.webp
   colors:
   - name: Black
     hex: '#1d1f1f'
@@ -67,6 +74,7 @@ en:
   - name: Silver
     hex: '#c6c9c8'
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - name: Orange
   specs:
   - label: Pawls
     value: '6'
@@ -84,6 +92,8 @@ en:
     value: Shimano HG, Shimano Micro Spline, SRAM XD
   - label: Rotor mount
     value: 6-bolt
+  - label: Weight
+    value: 350 g
   body: |
     The Ultra is the hub we lace into our own wheels. Its 6-pawl mechanism engages every 0.55°, so power reaches the wheel the moment you start pedalling, even on technical climbs.
 
@@ -105,6 +115,7 @@ pt:
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
   - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  - /uploads/home/maza-naranja.webp
   colors:
   - name: Preto
     hex: '#1d1f1f'
@@ -112,6 +123,7 @@ pt:
   - name: Prata
     hex: '#c6c9c8'
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - name: Laranja
   specs:
   - label: Linguetas
     value: '6'
@@ -129,6 +141,8 @@ pt:
     value: Shimano HG, Shimano Micro Spline, SRAM XD
   - label: Fixação do disco
     value: 6 parafusos
+  - label: Peso
+    value: 350 g
   body: |
     O Ultra é o cubo que usamos nas nossas próprias rodas. O mecanismo de 6 linguetas engata a cada 0,55°, e a força chega à roda assim que você começa a pedalar, mesmo em subidas técnicas.
 
@@ -150,6 +164,7 @@ de:
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
   - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  - /uploads/home/maza-naranja.webp
   colors:
   - name: Schwarz
     hex: '#1d1f1f'
@@ -157,6 +172,7 @@ de:
   - name: Silber
     hex: '#c6c9c8'
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - name: Orange
   specs:
   - label: Sperrklinken
     value: '6'
@@ -174,6 +190,8 @@ de:
     value: Shimano HG, Shimano Micro Spline, SRAM XD
   - label: Bremsscheibenaufnahme
     value: 6-Loch
+  - label: Gewicht
+    value: 350 g
   body: |
     Die Ultra ist die Nabe, die wir in unsere eigenen Laufräder einspeichen. Der Mechanismus mit 6 Sperrklinken greift alle 0,55°, so kommt die Kraft sofort am Laufrad an, auch in technischen Anstiegen.
 
@@ -195,6 +213,7 @@ fr:
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
   - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  - /uploads/home/maza-naranja.webp
   colors:
   - name: Noir
     hex: '#1d1f1f'
@@ -202,6 +221,7 @@ fr:
   - name: Argent
     hex: '#c6c9c8'
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - name: Orange
   specs:
   - label: Cliquets
     value: '6'
@@ -219,6 +239,8 @@ fr:
     value: Shimano HG, Shimano Micro Spline, SRAM XD
   - label: Fixation du disque
     value: 6 trous
+  - label: Poids
+    value: 350 g
   body: |
     L'Ultra est le moyeu que nous montons sur nos propres roues. Son mécanisme à 6 cliquets s'engage tous les 0,55° : la puissance arrive à la roue dès le premier coup de pédale, même dans les montées techniques.
 
@@ -240,6 +262,7 @@ it:
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-2.webp
   - /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-4.webp
   - /uploads/products/ultra-rear-hub/ultra-blk-12x148-4.webp
+  - /uploads/home/maza-naranja.webp
   colors:
   - name: Nero
     hex: '#1d1f1f'
@@ -247,6 +270,7 @@ it:
   - name: Argento
     hex: '#c6c9c8'
     image: /uploads/products/ultra-rear-hub/ultra-silver-12x148-32h-612-1.webp
+  - name: Arancione
   specs:
   - label: Cricchetti
     value: '6'
@@ -264,6 +288,8 @@ it:
     value: Shimano HG, Shimano Micro Spline, SRAM XD
   - label: Attacco disco
     value: 6 fori
+  - label: Peso
+    value: 350 g
   body: |
     L'Ultra è il mozzo che montiamo sulle nostre ruote. Il meccanismo a 6 cricchetti innesta ogni 0,55°, così la potenza arriva alla ruota appena inizi a pedalare, anche nelle salite tecniche.
 
