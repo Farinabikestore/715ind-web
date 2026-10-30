@@ -276,10 +276,30 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
   });
   const vids = document.querySelectorAll<HTMLVideoElement>('video[data-vbanner]');
   const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Algunos navegadores (Brave, modo ahorro de batería en iPhone) bloquean la reproducción automática.
+  // Si se bloquea, los videos parten con el primer toque, clic o tecla del visitante.
+  const visible = new Set<HTMLVideoElement>();
+  let waiting = false;
+  const tryPlay = (v: HTMLVideoElement) => {
+    v.muted = true;
+    v.play().catch(() => {
+      if (waiting) return;
+      waiting = true;
+      const go = () => {
+        waiting = false;
+        ['pointerdown', 'touchstart', 'keydown'].forEach((t) => removeEventListener(t, go));
+        visible.forEach((x) => { x.muted = true; x.play().catch(() => {}); });
+      };
+      ['pointerdown', 'touchstart', 'keydown'].forEach((t) => addEventListener(t, go, { passive: true }));
+    });
+  };
   vids.forEach((v) => {
     if (still) { v.removeAttribute('autoplay'); v.pause(); return; }
+    v.muted = true;
     if ('IntersectionObserver' in window) {
-      new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) v.play().catch(() => {}); else v.pause(); }), { threshold: 0.05 }).observe(v);
-    }
+      new IntersectionObserver((es) => es.forEach((e) => {
+        if (e.isIntersecting) { visible.add(v); tryPlay(v); } else { visible.delete(v); v.pause(); }
+      }), { threshold: 0.05 }).observe(v);
+    } else tryPlay(v);
   });
 </script>
