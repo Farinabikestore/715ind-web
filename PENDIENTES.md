@@ -20,7 +20,7 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
   - Eje pasante V3 UDH (M12x1.0, 170,5 mm) · Eje pasante V3 "No UDH" (M12x1.5, 181 mm)
 
 ## Garantía / registro de producto
-- [x] Formulario "Registra tu 715" (construido 28-oct; falta GARANTIA_TOKEN en Render y Cloudflare):
+- [x] Formulario "Registra tu 715" (en vivo desde el 29-oct):
   - Solo productos comprados desde que se lance el registro (NO hay registro retroactivo).
   - Productos: todo menos ropa (mazas, llantas, ruedas armadas, cuadros, bicicletas, cockpit, sillines).
   - Obligatorios: nombre, correo, país, producto, color, fecha de compra, dónde lo compró
@@ -100,8 +100,8 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 - [ ] Recuperar acceso a GoDaddy y conectar el dominio propio (luego actualizar SITE_URL, Turnstile y site_url del panel).
 
 ## Pendientes de la garantía
-- [ ] Vasco: poner GARANTIA_TOKEN en Render (panel-marketing) y en Cloudflare Pages (secreta) y volver a desplegar el sitio.
-- [ ] Probar un registro y una solicitud reales.
+- [x] GARANTIA_TOKEN puesto en Render y Cloudflare (29-oct).
+- [x] Registro y solicitud probados en vivo por Vasco (29-oct): todo funcionando.
 - [ ] Revisar con abogado el texto de garantía legal.
 - [ ] Cuando esté el dominio propio: agregarlo en ORIGENES_715 (Render) para el newsletter.
 - Correos al cliente solo en español (clientes de Chile y Bolivia).
