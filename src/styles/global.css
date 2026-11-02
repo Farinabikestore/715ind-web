@@ -289,7 +289,9 @@ html:not(.header-solid) body:has(#main > .vbanner:not(.vbanner--ink):first-child
 .slides__arrow:disabled { opacity: .3; cursor: default; }
 .slides__track { --pad: max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter))); display: grid; grid-auto-flow: column; grid-auto-columns: min(68vw, 1240px); column-gap: clamp(20px, 3vw, 48px); overflow-x: auto; scroll-snap-type: x mandatory; padding-inline: var(--pad); scroll-padding-inline: var(--pad); scrollbar-width: none; overscroll-behavior-x: contain; }
 .slides__track::-webkit-scrollbar { display: none; }
-.slide { scroll-snap-align: start; min-width: 0; }
+.slide { scroll-snap-align: start; min-width: 0; transition: opacity .35s ease; }
+.slide.is-peek { opacity: .55; }
+.slide.is-peek:hover { opacity: .8; }
 .slide a { display: block; text-decoration: none; color: var(--ink); }
 .slide__img { display: block; aspect-ratio: 2.2 / 1; overflow: hidden; background: var(--photo, #e9e9e5); }
 .slide__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }

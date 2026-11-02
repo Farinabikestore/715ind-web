@@ -271,8 +271,41 @@ const playIcon = '<svg viewBox="0 0 24 24" fill="#161817" aria-hidden="true"><pa
     const sync = () => { prev.disabled = track.scrollLeft < 8; next.disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 8; };
     prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
     next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
-    track.addEventListener('scroll', () => requestAnimationFrame(sync), { passive: true });
-    addEventListener('resize', sync); sync();
+    // Fichas que se ven a medias (siguiente o anterior): quedan atenuadas
+    const slides = [...track.querySelectorAll<HTMLElement>('.slide')];
+    const peek = () => {
+      const r = track.getBoundingClientRect();
+      slides.forEach((s) => { const b = s.getBoundingClientRect(); s.classList.toggle('is-peek', b.left < r.left - 1 || b.right > r.right + 1); });
+    };
+    // Con mouse: al dejar el cursor sobre la ficha siguiente (o en el borde izquierdo), el carrusel se desliza
+    if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      let timer = 0, zone = '', armed = true, busy = false, end = 0;
+      track.addEventListener('scroll', () => { clearTimeout(end); end = window.setTimeout(() => { busy = false; }, 150); }, { passive: true });
+      const zoneAt = (x: number) => {
+        const r = track.getBoundingClientRect(), pad = parseFloat(getComputedStyle(track).paddingLeft) || 0;
+        const cur = slides.find((s) => !s.classList.contains('is-peek'));
+        if (cur && x > cur.getBoundingClientRect().right && !next.disabled) return 'next';
+        if (x < r.left + pad && !prev.disabled) return 'prev';
+        return '';
+      };
+      const go = () => {
+        if (!armed || busy || !zone) return;
+        armed = false; busy = true;
+        window.setTimeout(() => { busy = false; }, 1000);
+        track.scrollBy({ left: zone === 'next' ? step() : -step(), behavior: 'smooth' });
+      };
+      track.addEventListener('mousemove', (e) => {
+        // Después de deslizar, espera a que el cursor se mueva de nuevo (evita que avance solo sin parar)
+        if (!armed && !busy && (e.movementX || e.movementY)) armed = true;
+        const z = zoneAt(e.clientX);
+        if (z !== zone) { zone = z; clearTimeout(timer); if (z) timer = window.setTimeout(go, 180); }
+        else if (z && armed && !busy) { clearTimeout(timer); timer = window.setTimeout(go, 180); }
+        track.style.cursor = z ? (z === 'next' ? 'e-resize' : 'w-resize') : '';
+      });
+      track.addEventListener('mouseleave', () => { zone = ''; clearTimeout(timer); track.style.cursor = ''; });
+    }
+    track.addEventListener('scroll', () => requestAnimationFrame(() => { sync(); peek(); }), { passive: true });
+    addEventListener('resize', () => { sync(); peek(); }); sync(); peek();
   });
   const vids = document.querySelectorAll<HTMLVideoElement>('video[data-vbanner]');
   const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
