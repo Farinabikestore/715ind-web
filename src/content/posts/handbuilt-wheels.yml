@@ -2,7 +2,8 @@ es:
   title: Nuevo armador de ruedas 715
   slug: handbuilt-wheels
   date: '2026-11-02'
-  cover: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
+  cover: /uploads/home/explora-armador.webp
+  cover_mobile: /uploads/home/explora-armador-movil.webp
   excerpt: Diseña tus ruedas en 3D, pieza por pieza, y nosotros las armamos a mano en Chile.
   images:
   - /uploads/products/ultra-wheelset/rueda-trasera-715-1.webp

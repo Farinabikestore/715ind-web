@@ -1,4 +1,5 @@
 ---
+import { srcset } from '../../../lib/img.js';
 // Historias 715 (blog): listado. Las entradas se editan en el panel: Historias.
 import Base from '../../../layouts/Base.astro';
 import Img from '../../../components/Img.astro';
@@ -22,7 +23,14 @@ const day = (d) => (d ? fmt.format(new Date(d + 'T12:00:00Z')) : '');
     {posts.map((p, i) => (
       <article class:list={['story-card', { 'story-card--lead': i === 0 }]}>
         <a href={`/${lang}/stories/${p.slug}/`}>
-          <span class="story-card__img">{p.cover && <Img src={p.cover} alt={p.title} sizes={i === 0 ? '(max-width: 860px) 100vw, 1200px' : '(max-width: 860px) 100vw, 600px'} eager={i === 0} />}</span>
+          <span class:list={['story-card__img', { 'story-card__img--full': i === 0 && p.cover_mobile }]}>{p.cover && (i === 0 ? (
+            p.cover_mobile ? (
+              <picture>
+                <source media="(max-width: 860px)" srcset={srcset(p.cover_mobile) || p.cover_mobile} sizes="100vw" />
+                <Img src={p.cover} alt={p.title} sizes="1200px" eager />
+              </picture>
+            ) : <Img src={p.cover} alt={p.title} sizes="(max-width: 860px) 100vw, 1200px" eager />
+          ) : <Img src={p.cover_mobile || p.cover} alt={p.title} sizes="(max-width: 860px) 100vw, 600px" />)}</span>
           <span class="story-card__body">
             {p.date && <time datetime={p.date}>{day(p.date)}</time>}
             <h2>{p.title}</h2>

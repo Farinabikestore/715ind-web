@@ -136,7 +136,8 @@ collections:
         pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Usa solo minúsculas, números y guiones']
       - { label: Fecha, name: date, widget: datetime, time_format: false, date_format: 'YYYY-MM-DD', format: 'YYYY-MM-DD', i18n: duplicate }
       - { label: Ocultar del sitio, name: hidden, widget: boolean, default: false, required: false, i18n: duplicate }
-      - { label: Foto principal, name: cover, widget: image, i18n: duplicate, hint: 'Horizontal, ideal 2400 x 1600 px.' }
+      - { label: Foto principal, name: cover, widget: image, i18n: duplicate, hint: 'Horizontal, ideal 2400 x 1100 px (la misma del slide de Explora).' }
+      - { label: Foto principal en celular, name: cover_mobile, widget: image, required: false, i18n: duplicate, hint: 'Opcional. 1460 x 1100 px. Si existe, la foto principal se muestra completa, sin recortes.' }
       - { label: Bajada (una frase), name: excerpt, widget: string, required: false, i18n: true }
       - { label: Texto, name: body, widget: markdown, i18n: true, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote] }
       - { label: Galería, name: images, widget: list, required: false, i18n: duplicate, field: { label: Foto, name: image, widget: image } }
