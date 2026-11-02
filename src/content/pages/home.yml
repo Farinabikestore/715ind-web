@@ -68,8 +68,6 @@ es:
     image: /uploads/home/taller-herramientas.webp
     cta_label: Conoce la marca
     cta_link: /about/
-  - type: categories
-    heading: Línea de productos
   - type: feature
     theme: dark
     image_side: left
@@ -165,8 +163,6 @@ en:
     image: /uploads/home/taller-herramientas.webp
     cta_label: About the brand
     cta_link: /about/
-  - type: categories
-    heading: Product line
   - type: feature
     theme: dark
     image_side: left
@@ -262,8 +258,6 @@ pt:
     image: /uploads/home/taller-herramientas.webp
     cta_label: Conheça a marca
     cta_link: /about/
-  - type: categories
-    heading: Linha de produtos
   - type: feature
     theme: dark
     image_side: left
@@ -359,8 +353,6 @@ de:
     image: /uploads/home/taller-herramientas.webp
     cta_label: Über die Marke
     cta_link: /about/
-  - type: categories
-    heading: Produktlinie
   - type: feature
     theme: dark
     image_side: left
@@ -456,8 +448,6 @@ fr:
     image: /uploads/home/taller-herramientas.webp
     cta_label: Découvrir la marque
     cta_link: /about/
-  - type: categories
-    heading: Gamme de produits
   - type: feature
     theme: dark
     image_side: left
@@ -553,8 +543,6 @@ it:
     image: /uploads/home/taller-herramientas.webp
     cta_label: Scopri il marchio
     cta_link: /about/
-  - type: categories
-    heading: Linea prodotti
   - type: feature
     theme: dark
     image_side: left
