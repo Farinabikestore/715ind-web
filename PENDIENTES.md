@@ -123,3 +123,9 @@ Lista de trabajo acordada con Vasco. Se actualiza a medida que se avanza.
 - [x] 2-nosotros: N1 portada, N2 fotos del equipo y taller, N4 planos, N5 ruedas (30-oct).
 - [x] 3-historias: textos H1 (Enduro HT V3.1) y H2 (Maza Ultra) cargados y traducidos (30-oct).
 - [ ] Faltan: textos de Nosotros (historia N2, hitos N3), H3 y H4, y el resto del pedido.
+
+## Material diseñador (2 nov)
+- [x] Slides en orden: Ranger, Ultra, HT V3.1, Armador, Llanta E30 Ultra, Cockpit (falta slide de diseñador para Cockpit)
+- [x] Historias H3 (Ranger) y H4 (Armador) en 6 idiomas
+- [x] Pie de página madera, portada Nosotros N1 nueva, specs Ranger
+- [ ] Confirmar con Vasco: claims H4 ("primer configurador 3D en Chile", comparación con Industry Nine/NOBL/Spank)

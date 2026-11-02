@@ -26,6 +26,20 @@ es:
     value: Doble suspensión
   - label: Versiones
     value: Cuadro, kit de cuadro o bicicleta completa
+  - label: Recorrido
+    value: 170 mm adelante / 160 mm atrás
+  - label: Ángulo de dirección
+    value: 63°
+  - label: Vainas
+    value: 435 mm
+  - label: Caja pedalera
+    value: BSA roscada 68/73 mm
+  - label: Patilla de cambio
+    value: UDH
+  - label: Tija
+    value: 31,6 mm, abrazadera 34,9 mm (telescópica hasta 150 mm en talla S)
+  - label: Pivotes
+    value: Rodamientos sellados con pernos de aluminio
   body: |
     La Ranger nace para dominar los descensos técnicos sin perder eficiencia cuando el sendero sube. Su geometría moderna busca estabilidad y control en el terreno más exigente.
 
@@ -58,6 +72,20 @@ en:
     value: Full suspension
   - label: Versions
     value: Frame only, frame kit or complete bike
+  - label: Travel
+    value: 170 mm front / 160 mm rear
+  - label: Head angle
+    value: 63°
+  - label: Chainstays
+    value: 435 mm
+  - label: Bottom bracket
+    value: Threaded BSA 68/73 mm
+  - label: Derailleur hanger
+    value: UDH
+  - label: Seatpost
+    value: 31.6 mm, 34.9 mm clamp (dropper up to 150 mm on size S)
+  - label: Pivots
+    value: Sealed bearings with aluminium bolts
   body: |
     The Ranger is built to dominate technical descents without losing efficiency when the trail points up. Its modern geometry is tuned for stability and control on demanding terrain.
 
@@ -90,6 +118,20 @@ pt:
     value: Full suspension
   - label: Versões
     value: Quadro, kit de quadro ou bicicleta completa
+  - label: Curso
+    value: 170 mm na frente / 160 mm atrás
+  - label: Ângulo de direção
+    value: 63°
+  - label: Chainstays
+    value: 435 mm
+  - label: Movimento central
+    value: BSA rosqueado 68/73 mm
+  - label: Gancheira
+    value: UDH
+  - label: Canote
+    value: 31,6 mm, abraçadeira 34,9 mm (retrátil até 150 mm no tamanho S)
+  - label: Pivôs
+    value: Rolamentos selados com parafusos de alumínio
   body: |
     A Ranger nasce para dominar descidas técnicas sem perder eficiência quando a trilha sobe. A geometria moderna busca estabilidade e controle no terreno mais exigente.
 
@@ -122,6 +164,20 @@ de:
     value: Vollgefedert
   - label: Versionen
     value: Rahmen, Rahmenkit oder Komplettrad
+  - label: Federweg
+    value: 170 mm vorne / 160 mm hinten
+  - label: Lenkwinkel
+    value: 63°
+  - label: Kettenstreben
+    value: 435 mm
+  - label: Tretlager
+    value: BSA-Gewinde 68/73 mm
+  - label: Schaltauge
+    value: UDH
+  - label: Sattelstütze
+    value: 31,6 mm, Klemme 34,9 mm (Vario bis 150 mm in Größe S)
+  - label: Lager
+    value: Gedichtete Kugellager mit Aluminiumschrauben
   body: |
     Die Ranger ist gebaut, um technische Abfahrten zu beherrschen, ohne bergauf an Effizienz zu verlieren. Die moderne Geometrie setzt auf Stabilität und Kontrolle im anspruchsvollsten Gelände.
 
@@ -154,6 +210,20 @@ fr:
     value: Tout-suspendu
   - label: Versions
     value: Cadre seul, kit cadre ou vélo complet
+  - label: Débattement
+    value: 170 mm avant / 160 mm arrière
+  - label: Angle de direction
+    value: 63°
+  - label: Bases
+    value: 435 mm
+  - label: Boîtier de pédalier
+    value: BSA fileté 68/73 mm
+  - label: Patte de dérailleur
+    value: UDH
+  - label: Tige de selle
+    value: 31,6 mm, collier 34,9 mm (télescopique jusqu'à 150 mm en taille S)
+  - label: Pivots
+    value: Roulements étanches avec vis en aluminium
   body: |
     Le Ranger est conçu pour dominer les descentes techniques sans perdre en efficacité quand le sentier remonte. Sa géométrie moderne vise stabilité et contrôle sur les terrains les plus exigeants.
 
@@ -186,6 +256,20 @@ it:
     value: Biammortizzata
   - label: Versioni
     value: Telaio, kit telaio o bici completa
+  - label: Escursione
+    value: 170 mm davanti / 160 mm dietro
+  - label: Angolo sterzo
+    value: 63°
+  - label: Foderi
+    value: 435 mm
+  - label: Movimento centrale
+    value: BSA filettato 68/73 mm
+  - label: Forcellino
+    value: UDH
+  - label: Reggisella
+    value: 31,6 mm, collarino 34,9 mm (telescopico fino a 150 mm in taglia S)
+  - label: Perni
+    value: Cuscinetti sigillati con viti in alluminio
   body: |
     La Ranger nasce per dominare le discese tecniche senza perdere efficienza quando il sentiero sale. La geometria moderna punta su stabilità e controllo nei terreni più impegnativi.
 

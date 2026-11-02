@@ -28,21 +28,27 @@ es:
       image_mobile: /uploads/home/explora-ranger-movil.webp
       title: Ranger
       text: La primera doble suspensión de 715IND. Enduro y all mountain.
-      link: /products/ranger/
-    - image: /uploads/home/explora-ht-v31.webp
-      title: Enduro HT V3.1
-      text: Hardtail de enduro 29" con UDH y ángulo de dirección de 63°. Para bajar fuerte.
-      link: /stories/enduro-ht-v31/
-      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+      link: /stories/ranger/
     - image: /uploads/home/explora-ultra.webp
       title: Maza trasera Ultra
       text: 612 puntos de enganche y 0,55° de ángulo. Mecanizada en aluminio 7075-T6.
       link: /stories/ultra-hub-612/
       image_mobile: /uploads/home/explora-ultra-movil.webp
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: Ruedas 715 a medida
-      text: Elige llanta, maza y núcleo en el armador. Las armamos a mano.
+    - image: /uploads/home/explora-ht-v31.webp
+      title: Enduro HT V3.1
+      text: Hardtail de enduro 29" con UDH y ángulo de dirección de 63°. Para bajar fuerte.
+      link: /stories/enduro-ht-v31/
+      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+    - image: /uploads/home/explora-armador.webp
+      title: Armador de ruedas a medida
+      text: Diseña tus ruedas en 3D, pieza por pieza. Las armamos a mano.
       link: /stories/handbuilt-wheels/
+      image_mobile: /uploads/home/explora-armador-movil.webp
+    - image: /uploads/home/explora-llanta-ultra.webp
+      image_mobile: /uploads/home/explora-llanta-ultra-movil.webp
+      title: Llanta E30 Ultra
+      text: Perfil Hollow Tech contra impactos. 30 mm de ancho interno, tubeless ready.
+      link: /products/e30-ultra-rim/
     - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
       title: Cockpit 35
       text: Manillar Riser y tee Ultra de 35 mm, en aluminio 6061.
@@ -123,21 +129,27 @@ en:
       image_mobile: /uploads/home/explora-ranger-movil.webp
       title: Ranger
       text: The first 715IND full suspension. Enduro and all mountain.
-      link: /products/ranger/
-    - image: /uploads/home/explora-ht-v31.webp
-      title: Enduro HT V3.1
-      text: 29" enduro hardtail with UDH and a 63° head angle. Built to go down hard.
-      link: /stories/enduro-ht-v31/
-      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+      link: /stories/ranger/
     - image: /uploads/home/explora-ultra.webp
       title: Ultra rear hub
       text: 612 points of engagement and 0.55° of engagement angle. Machined from 7075-T6 aluminium.
       link: /stories/ultra-hub-612/
       image_mobile: /uploads/home/explora-ultra-movil.webp
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: Custom 715 wheels
-      text: Choose rim, hub and freehub in the builder. We build them by hand.
+    - image: /uploads/home/explora-ht-v31.webp
+      title: Enduro HT V3.1
+      text: 29" enduro hardtail with UDH and a 63° head angle. Built to go down hard.
+      link: /stories/enduro-ht-v31/
+      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+    - image: /uploads/home/explora-armador.webp
+      title: Custom wheel builder
+      text: Design your wheels in 3D, part by part. We build them by hand.
       link: /stories/handbuilt-wheels/
+      image_mobile: /uploads/home/explora-armador-movil.webp
+    - image: /uploads/home/explora-llanta-ultra.webp
+      image_mobile: /uploads/home/explora-llanta-ultra-movil.webp
+      title: E30 Ultra rim
+      text: Hollow Tech profile, built for impacts. 30 mm internal width, tubeless ready.
+      link: /products/e30-ultra-rim/
     - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
       title: Cockpit 35
       text: Riser bar and Ultra stem with 35 mm clamp, in 6061 aluminium.
@@ -218,21 +230,27 @@ pt:
       image_mobile: /uploads/home/explora-ranger-movil.webp
       title: Ranger
       text: A primeira full suspension da 715IND. Enduro e all mountain.
-      link: /products/ranger/
-    - image: /uploads/home/explora-ht-v31.webp
-      title: Enduro HT V3.1
-      text: Hardtail de enduro 29" com UDH e ângulo de direção de 63°. Para descer forte.
-      link: /stories/enduro-ht-v31/
-      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+      link: /stories/ranger/
     - image: /uploads/home/explora-ultra.webp
       title: Cubo traseiro Ultra
       text: 612 pontos de engate e ângulo de 0,55°. Usinado em alumínio 7075-T6.
       link: /stories/ultra-hub-612/
       image_mobile: /uploads/home/explora-ultra-movil.webp
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: Rodas 715 sob medida
-      text: Escolha aro, cubo e cassete no montador. Montamos à mão.
+    - image: /uploads/home/explora-ht-v31.webp
+      title: Enduro HT V3.1
+      text: Hardtail de enduro 29" com UDH e ângulo de direção de 63°. Para descer forte.
+      link: /stories/enduro-ht-v31/
+      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+    - image: /uploads/home/explora-armador.webp
+      title: Montador de rodas sob medida
+      text: Crie suas rodas em 3D, peça por peça. Nós as montamos à mão.
       link: /stories/handbuilt-wheels/
+      image_mobile: /uploads/home/explora-armador-movil.webp
+    - image: /uploads/home/explora-llanta-ultra.webp
+      image_mobile: /uploads/home/explora-llanta-ultra-movil.webp
+      title: Aro E30 Ultra
+      text: Perfil Hollow Tech contra impactos. 30 mm de largura interna, tubeless ready.
+      link: /products/e30-ultra-rim/
     - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
       title: Cockpit 35
       text: Guidão Riser e mesa Ultra de 35 mm, em alumínio 6061.
@@ -313,21 +331,27 @@ de:
       image_mobile: /uploads/home/explora-ranger-movil.webp
       title: Ranger
       text: Das erste Fully von 715IND. Enduro und All Mountain.
-      link: /products/ranger/
-    - image: /uploads/home/explora-ht-v31.webp
-      title: Enduro HT V3.1
-      text: 29"-Enduro-Hardtail mit UDH und 63° Lenkwinkel. Gebaut für harte Abfahrten.
-      link: /stories/enduro-ht-v31/
-      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+      link: /stories/ranger/
     - image: /uploads/home/explora-ultra.webp
       title: Ultra Hinterradnabe
       text: 612 Eingriffspunkte und 0,55° Eingriffswinkel. Gefräst aus 7075-T6-Aluminium.
       link: /stories/ultra-hub-612/
       image_mobile: /uploads/home/explora-ultra-movil.webp
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: 715 Laufräder nach Maß
-      text: Felge, Nabe und Freilauf im Konfigurator wählen. Wir bauen sie von Hand.
+    - image: /uploads/home/explora-ht-v31.webp
+      title: Enduro HT V3.1
+      text: 29"-Enduro-Hardtail mit UDH und 63° Lenkwinkel. Gebaut für harte Abfahrten.
+      link: /stories/enduro-ht-v31/
+      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+    - image: /uploads/home/explora-armador.webp
+      title: Laufrad-Konfigurator
+      text: Gestalte deine Laufräder in 3D, Teil für Teil. Wir bauen sie von Hand.
       link: /stories/handbuilt-wheels/
+      image_mobile: /uploads/home/explora-armador-movil.webp
+    - image: /uploads/home/explora-llanta-ultra.webp
+      image_mobile: /uploads/home/explora-llanta-ultra-movil.webp
+      title: E30 Ultra Felge
+      text: Hollow-Tech-Profil gegen Schläge. 30 mm Innenweite, tubeless ready.
+      link: /products/e30-ultra-rim/
     - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
       title: Cockpit 35
       text: Riser-Lenker und Ultra-Vorbau mit 35-mm-Klemmung, aus 6061-Aluminium.
@@ -408,21 +432,27 @@ fr:
       image_mobile: /uploads/home/explora-ranger-movil.webp
       title: Ranger
       text: Le premier tout-suspendu 715IND. Enduro et all mountain.
-      link: /products/ranger/
-    - image: /uploads/home/explora-ht-v31.webp
-      title: Enduro HT V3.1
-      text: Semi-rigide enduro 29" avec UDH et angle de direction de 63°. Fait pour descendre fort.
-      link: /stories/enduro-ht-v31/
-      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+      link: /stories/ranger/
     - image: /uploads/home/explora-ultra.webp
       title: Moyeu arrière Ultra
       text: 612 points d’engagement et 0,55° d’angle. Usiné en aluminium 7075-T6.
       link: /stories/ultra-hub-612/
       image_mobile: /uploads/home/explora-ultra-movil.webp
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: Roues 715 sur mesure
-      text: Choisissez jante, moyeu et corps de roue libre dans le configurateur. Nous les montons à la main.
+    - image: /uploads/home/explora-ht-v31.webp
+      title: Enduro HT V3.1
+      text: Semi-rigide enduro 29" avec UDH et angle de direction de 63°. Fait pour descendre fort.
+      link: /stories/enduro-ht-v31/
+      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+    - image: /uploads/home/explora-armador.webp
+      title: Configurateur de roues sur mesure
+      text: Créez vos roues en 3D, pièce par pièce. Nous les montons à la main.
       link: /stories/handbuilt-wheels/
+      image_mobile: /uploads/home/explora-armador-movil.webp
+    - image: /uploads/home/explora-llanta-ultra.webp
+      image_mobile: /uploads/home/explora-llanta-ultra-movil.webp
+      title: Jante E30 Ultra
+      text: Profil Hollow Tech contre les chocs. 30 mm de largeur interne, tubeless ready.
+      link: /products/e30-ultra-rim/
     - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
       title: Cockpit 35
       text: Cintre Riser et potence Ultra en 35 mm, en aluminium 6061.
@@ -503,21 +533,27 @@ it:
       image_mobile: /uploads/home/explora-ranger-movil.webp
       title: Ranger
       text: La prima biammortizzata 715IND. Enduro e all mountain.
-      link: /products/ranger/
-    - image: /uploads/home/explora-ht-v31.webp
-      title: Enduro HT V3.1
-      text: Front enduro 29" con UDH e angolo sterzo di 63°. Fatta per scendere forte.
-      link: /stories/enduro-ht-v31/
-      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+      link: /stories/ranger/
     - image: /uploads/home/explora-ultra.webp
       title: Mozzo posteriore Ultra
       text: 612 punti di ingaggio e angolo di 0,55°. Lavorato dal pieno in alluminio 7075-T6.
       link: /stories/ultra-hub-612/
       image_mobile: /uploads/home/explora-ultra-movil.webp
-    - image: /uploads/products/ultra-wheelset/wheelset-715-ind-1.webp
-      title: Ruote 715 su misura
-      text: Scegli cerchio, mozzo e corpetto nel configuratore. Le montiamo a mano.
+    - image: /uploads/home/explora-ht-v31.webp
+      title: Enduro HT V3.1
+      text: Front enduro 29" con UDH e angolo sterzo di 63°. Fatta per scendere forte.
+      link: /stories/enduro-ht-v31/
+      image_mobile: /uploads/home/explora-ht-v31-movil.webp
+    - image: /uploads/home/explora-armador.webp
+      title: Configuratore di ruote su misura
+      text: Progetta le tue ruote in 3D, pezzo per pezzo. Le montiamo a mano.
       link: /stories/handbuilt-wheels/
+      image_mobile: /uploads/home/explora-armador-movil.webp
+    - image: /uploads/home/explora-llanta-ultra.webp
+      image_mobile: /uploads/home/explora-llanta-ultra-movil.webp
+      title: Cerchio E30 Ultra
+      text: Profilo Hollow Tech contro gli urti. 30 mm di larghezza interna, tubeless ready.
+      link: /products/e30-ultra-rim/
     - image: /uploads/products/riser-bar-35/blk_brown-35-clamp-1.webp
       title: Cockpit 35
       text: Manubrio Riser e attacco Ultra da 35 mm, in alluminio 6061.

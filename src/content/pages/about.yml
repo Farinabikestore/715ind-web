@@ -5,7 +5,7 @@ es:
   - type: hero
     heading: Hecho por riders en Santiago de Chile.
     text: 715IND nace en un taller de bicicletas. Diseñamos lo que necesitábamos para nuestros propios cerros.
-    image: /uploads/about/portada-bosque.webp
+    image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
@@ -48,7 +48,7 @@ en:
   - type: hero
     heading: Made by riders in Santiago, Chile.
     text: 715IND was born in a bike workshop. We design what we needed for our own trails.
-    image: /uploads/about/portada-bosque.webp
+    image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
@@ -91,7 +91,7 @@ pt:
   - type: hero
     heading: Feito por riders em Santiago do Chile.
     text: A 715IND nasceu numa oficina de bicicletas. Projetamos o que precisávamos para as nossas trilhas.
-    image: /uploads/about/portada-bosque.webp
+    image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
@@ -134,7 +134,7 @@ de:
   - type: hero
     heading: Von Ridern in Santiago de Chile gemacht.
     text: 715IND entstand in einer Fahrradwerkstatt. Wir entwickeln, was wir für unsere eigenen Trails brauchten.
-    image: /uploads/about/portada-bosque.webp
+    image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
@@ -177,7 +177,7 @@ fr:
   - type: hero
     heading: Fait par des riders à Santiago du Chili.
     text: 715IND est né dans un atelier vélo. Nous concevons ce dont nous avions besoin pour nos propres sentiers.
-    image: /uploads/about/portada-bosque.webp
+    image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
@@ -220,7 +220,7 @@ it:
   - type: hero
     heading: Fatto da rider a Santiago del Cile.
     text: 715IND nasce in un'officina di bici. Progettiamo ciò che ci serviva per i nostri sentieri.
-    image: /uploads/about/portada-bosque.webp
+    image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
