@@ -1,0 +1,6 @@
+# Si encuentras un problema de seguridad en 715ind.com, escríbenos.
+# If you find a security issue on 715ind.com, please contact us.
+Contact: mailto:vascofarina@farinabikestore.com
+Expires: 2027-11-01T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://715ind.com/.well-known/security.txt
