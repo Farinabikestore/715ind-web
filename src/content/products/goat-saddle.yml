@@ -8,20 +8,20 @@ es:
   tagline: Edición Evil, base mate.
   summary: El mismo perfil 2026 con base mate, rieles de acero y gráfica Evil, en negro o cuero.
   images:
-  - /uploads/products/goat-saddle/goat-evil-black-1.webp
-  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-black-1.webp
+  - /uploads/products/goat-saddle/goat-black-2.webp
   - /uploads/products/goat-saddle/goat-evil-black-4.webp
   - /uploads/products/goat-saddle/goat-evil-black-5.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-leather-1.webp
+  - /uploads/products/goat-saddle/goat-leather-2.webp
   - /uploads/products/goat-saddle/goat-evil-leather-4.webp
   colors:
   - name: Evil negro
     hex: '#1d1f1f'
-    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+    image: /uploads/products/goat-saddle/goat-black-1.webp
   - name: Evil cuero
     hex: '#a0532d'
-    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+    image: /uploads/products/goat-saddle/goat-leather-1.webp
   specs:
   - label: Rieles
     value: Acero
@@ -43,20 +43,20 @@ en:
   tagline: Evil edition, matte base.
   summary: The same 2026 profile with a matte base, steel rails and Evil graphics, in black or leather.
   images:
-  - /uploads/products/goat-saddle/goat-evil-black-1.webp
-  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-black-1.webp
+  - /uploads/products/goat-saddle/goat-black-2.webp
   - /uploads/products/goat-saddle/goat-evil-black-4.webp
   - /uploads/products/goat-saddle/goat-evil-black-5.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-leather-1.webp
+  - /uploads/products/goat-saddle/goat-leather-2.webp
   - /uploads/products/goat-saddle/goat-evil-leather-4.webp
   colors:
   - name: Evil black
     hex: '#1d1f1f'
-    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+    image: /uploads/products/goat-saddle/goat-black-1.webp
   - name: Evil leather
     hex: '#a0532d'
-    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+    image: /uploads/products/goat-saddle/goat-leather-1.webp
   specs:
   - label: Rails
     value: Steel
@@ -78,20 +78,20 @@ pt:
   tagline: Edição Evil, base fosca.
   summary: O mesmo perfil 2026 com base fosca, trilhos de aço e grafismo Evil, em preto ou couro.
   images:
-  - /uploads/products/goat-saddle/goat-evil-black-1.webp
-  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-black-1.webp
+  - /uploads/products/goat-saddle/goat-black-2.webp
   - /uploads/products/goat-saddle/goat-evil-black-4.webp
   - /uploads/products/goat-saddle/goat-evil-black-5.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-leather-1.webp
+  - /uploads/products/goat-saddle/goat-leather-2.webp
   - /uploads/products/goat-saddle/goat-evil-leather-4.webp
   colors:
   - name: Evil preto
     hex: '#1d1f1f'
-    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+    image: /uploads/products/goat-saddle/goat-black-1.webp
   - name: Evil couro
     hex: '#a0532d'
-    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+    image: /uploads/products/goat-saddle/goat-leather-1.webp
   specs:
   - label: Trilhos
     value: Aço
@@ -113,20 +113,20 @@ de:
   tagline: Evil Edition, matte Schale.
   summary: Dasselbe Profil 2026 mit matter Schale, Stahlstreben und Evil-Grafik, in Schwarz oder Leder.
   images:
-  - /uploads/products/goat-saddle/goat-evil-black-1.webp
-  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-black-1.webp
+  - /uploads/products/goat-saddle/goat-black-2.webp
   - /uploads/products/goat-saddle/goat-evil-black-4.webp
   - /uploads/products/goat-saddle/goat-evil-black-5.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-leather-1.webp
+  - /uploads/products/goat-saddle/goat-leather-2.webp
   - /uploads/products/goat-saddle/goat-evil-leather-4.webp
   colors:
   - name: Evil Schwarz
     hex: '#1d1f1f'
-    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+    image: /uploads/products/goat-saddle/goat-black-1.webp
   - name: Evil Leder
     hex: '#a0532d'
-    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+    image: /uploads/products/goat-saddle/goat-leather-1.webp
   specs:
   - label: Streben
     value: Stahl
@@ -148,20 +148,20 @@ fr:
   tagline: Édition Evil, coque mate.
   summary: Le même profil 2026 avec coque mate, rails acier et graphisme Evil, en noir ou cuir.
   images:
-  - /uploads/products/goat-saddle/goat-evil-black-1.webp
-  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-black-1.webp
+  - /uploads/products/goat-saddle/goat-black-2.webp
   - /uploads/products/goat-saddle/goat-evil-black-4.webp
   - /uploads/products/goat-saddle/goat-evil-black-5.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-leather-1.webp
+  - /uploads/products/goat-saddle/goat-leather-2.webp
   - /uploads/products/goat-saddle/goat-evil-leather-4.webp
   colors:
   - name: Evil noir
     hex: '#1d1f1f'
-    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+    image: /uploads/products/goat-saddle/goat-black-1.webp
   - name: Evil cuir
     hex: '#a0532d'
-    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+    image: /uploads/products/goat-saddle/goat-leather-1.webp
   specs:
   - label: Rails
     value: Acier
@@ -183,20 +183,20 @@ it:
   tagline: Edizione Evil, scocca opaca.
   summary: Lo stesso profilo 2026 con scocca opaca, telaio in acciaio e grafica Evil, nero o pelle.
   images:
-  - /uploads/products/goat-saddle/goat-evil-black-1.webp
-  - /uploads/products/goat-saddle/goat-evil-black-2.webp
+  - /uploads/products/goat-saddle/goat-black-1.webp
+  - /uploads/products/goat-saddle/goat-black-2.webp
   - /uploads/products/goat-saddle/goat-evil-black-4.webp
   - /uploads/products/goat-saddle/goat-evil-black-5.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-1.webp
-  - /uploads/products/goat-saddle/goat-evil-leather-3.webp
+  - /uploads/products/goat-saddle/goat-leather-1.webp
+  - /uploads/products/goat-saddle/goat-leather-2.webp
   - /uploads/products/goat-saddle/goat-evil-leather-4.webp
   colors:
   - name: Evil nero
     hex: '#1d1f1f'
-    image: /uploads/products/goat-saddle/goat-evil-black-1.webp
+    image: /uploads/products/goat-saddle/goat-black-1.webp
   - name: Evil pelle
     hex: '#a0532d'
-    image: /uploads/products/goat-saddle/goat-evil-leather-1.webp
+    image: /uploads/products/goat-saddle/goat-leather-1.webp
   specs:
   - label: Telaio
     value: Acciaio

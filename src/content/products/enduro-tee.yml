@@ -1,0 +1,132 @@
+es:
+  title: Polera Enduro HT
+  slug: enduro-tee
+  category: apparel
+  order: 131
+  featured: false
+  builder: false
+  tagline: La Enduro HT, en la espalda.
+  summary: Polera blanca con ilustración de la Enduro HT en la espalda.
+  images:
+  - /uploads/products/enduro-tee/enduro-tee-1.webp
+  - /uploads/products/enduro-tee/enduro-tee-2.webp
+  - /uploads/products/enduro-tee/enduro-tee-3.webp
+  colors:
+  - name: Blanco
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-tee/enduro-tee-1.webp
+  specs:
+  - label: Corte
+    value: Manga corta
+  body: |
+    Logo 715IND al frente y la ilustración de la Enduro HT en la espalda.
+en:
+  title: Enduro HT tee
+  slug: enduro-tee
+  category: apparel
+  order: 131
+  featured: false
+  builder: false
+  tagline: The Enduro HT, on your back.
+  summary: White tee with an Enduro HT illustration on the back.
+  images:
+  - /uploads/products/enduro-tee/enduro-tee-1.webp
+  - /uploads/products/enduro-tee/enduro-tee-2.webp
+  - /uploads/products/enduro-tee/enduro-tee-3.webp
+  colors:
+  - name: White
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-tee/enduro-tee-1.webp
+  specs:
+  - label: Fit
+    value: Short sleeve
+  body: |
+    715IND logo on the front and an illustration of the Enduro HT on the back.
+pt:
+  title: Camiseta Enduro HT
+  slug: enduro-tee
+  category: apparel
+  order: 131
+  featured: false
+  builder: false
+  tagline: A Enduro HT, nas costas.
+  summary: Camiseta branca com ilustração da Enduro HT nas costas.
+  images:
+  - /uploads/products/enduro-tee/enduro-tee-1.webp
+  - /uploads/products/enduro-tee/enduro-tee-2.webp
+  - /uploads/products/enduro-tee/enduro-tee-3.webp
+  colors:
+  - name: Branco
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-tee/enduro-tee-1.webp
+  specs:
+  - label: Corte
+    value: Manga curta
+  body: |
+    Logo 715IND na frente e a ilustração da Enduro HT nas costas.
+de:
+  title: Enduro HT T-Shirt
+  slug: enduro-tee
+  category: apparel
+  order: 131
+  featured: false
+  builder: false
+  tagline: Das Enduro HT, auf dem Rücken.
+  summary: Weißes T-Shirt mit Enduro-HT-Illustration auf dem Rücken.
+  images:
+  - /uploads/products/enduro-tee/enduro-tee-1.webp
+  - /uploads/products/enduro-tee/enduro-tee-2.webp
+  - /uploads/products/enduro-tee/enduro-tee-3.webp
+  colors:
+  - name: Weiß
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-tee/enduro-tee-1.webp
+  specs:
+  - label: Schnitt
+    value: Kurzarm
+  body: |
+    715IND-Logo vorne und eine Illustration des Enduro HT auf dem Rücken.
+fr:
+  title: T-shirt Enduro HT
+  slug: enduro-tee
+  category: apparel
+  order: 131
+  featured: false
+  builder: false
+  tagline: L'Enduro HT, dans le dos.
+  summary: T-shirt blanc avec une illustration de l'Enduro HT dans le dos.
+  images:
+  - /uploads/products/enduro-tee/enduro-tee-1.webp
+  - /uploads/products/enduro-tee/enduro-tee-2.webp
+  - /uploads/products/enduro-tee/enduro-tee-3.webp
+  colors:
+  - name: Blanc
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-tee/enduro-tee-1.webp
+  specs:
+  - label: Coupe
+    value: Manches courtes
+  body: |
+    Logo 715IND devant et une illustration de l'Enduro HT dans le dos.
+it:
+  title: T-shirt Enduro HT
+  slug: enduro-tee
+  category: apparel
+  order: 131
+  featured: false
+  builder: false
+  tagline: La Enduro HT, sulla schiena.
+  summary: T-shirt bianca con illustrazione della Enduro HT sulla schiena.
+  images:
+  - /uploads/products/enduro-tee/enduro-tee-1.webp
+  - /uploads/products/enduro-tee/enduro-tee-2.webp
+  - /uploads/products/enduro-tee/enduro-tee-3.webp
+  colors:
+  - name: Bianco
+    hex: '#f2f2ef'
+    image: /uploads/products/enduro-tee/enduro-tee-1.webp
+  specs:
+  - label: Vestibilità
+    value: Manica corta
+  body: |
+    Logo 715IND davanti e un'illustrazione della Enduro HT sulla schiena.

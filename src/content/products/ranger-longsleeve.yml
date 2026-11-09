@@ -1,0 +1,132 @@
+es:
+  title: Polera manga larga Ranger
+  slug: ranger-longsleeve
+  category: apparel
+  order: 132
+  featured: false
+  builder: false
+  tagline: Feeling good, sobre la Ranger.
+  summary: Polera negra manga larga con la ilustración de la 715 Ranger.
+  images:
+  - /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-2.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-3.webp
+  colors:
+  - name: Negro
+    hex: '#1d1f1f'
+    image: /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  specs:
+  - label: Corte
+    value: Manga larga
+  body: |
+    Polera negra de manga larga con la ilustración de nuestra doble suspensión Ranger al frente.
+en:
+  title: Ranger long sleeve
+  slug: ranger-longsleeve
+  category: apparel
+  order: 132
+  featured: false
+  builder: false
+  tagline: Feeling good, on the Ranger.
+  summary: Black long sleeve with an illustration of the 715 Ranger.
+  images:
+  - /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-2.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-3.webp
+  colors:
+  - name: Black
+    hex: '#1d1f1f'
+    image: /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  specs:
+  - label: Fit
+    value: Long sleeve
+  body: |
+    Black long sleeve with an illustration of our Ranger full suspension on the front.
+pt:
+  title: Camiseta manga longa Ranger
+  slug: ranger-longsleeve
+  category: apparel
+  order: 132
+  featured: false
+  builder: false
+  tagline: Feeling good, na Ranger.
+  summary: Camiseta preta de manga longa com ilustração da 715 Ranger.
+  images:
+  - /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-2.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-3.webp
+  colors:
+  - name: Preto
+    hex: '#1d1f1f'
+    image: /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  specs:
+  - label: Corte
+    value: Manga longa
+  body: |
+    Camiseta preta de manga longa com a ilustração da nossa full suspension Ranger na frente.
+de:
+  title: Ranger Longsleeve
+  slug: ranger-longsleeve
+  category: apparel
+  order: 132
+  featured: false
+  builder: false
+  tagline: Feeling good, auf dem Ranger.
+  summary: Schwarzes Longsleeve mit Illustration des 715 Ranger.
+  images:
+  - /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-2.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-3.webp
+  colors:
+  - name: Schwarz
+    hex: '#1d1f1f'
+    image: /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  specs:
+  - label: Schnitt
+    value: Langarm
+  body: |
+    Schwarzes Longsleeve mit einer Illustration unseres Fullys Ranger auf der Vorderseite.
+fr:
+  title: T-shirt manches longues Ranger
+  slug: ranger-longsleeve
+  category: apparel
+  order: 132
+  featured: false
+  builder: false
+  tagline: Feeling good, sur le Ranger.
+  summary: T-shirt noir à manches longues avec une illustration du 715 Ranger.
+  images:
+  - /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-2.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-3.webp
+  colors:
+  - name: Noir
+    hex: '#1d1f1f'
+    image: /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  specs:
+  - label: Coupe
+    value: Manches longues
+  body: |
+    T-shirt noir à manches longues avec une illustration de notre tout-suspendu Ranger sur le devant.
+it:
+  title: Maglia manica lunga Ranger
+  slug: ranger-longsleeve
+  category: apparel
+  order: 132
+  featured: false
+  builder: false
+  tagline: Feeling good, sulla Ranger.
+  summary: Maglia nera a manica lunga con illustrazione della 715 Ranger.
+  images:
+  - /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-2.webp
+  - /uploads/products/ranger-longsleeve/ranger-ls-3.webp
+  colors:
+  - name: Nero
+    hex: '#1d1f1f'
+    image: /uploads/products/ranger-longsleeve/ranger-ls-1.webp
+  specs:
+  - label: Vestibilità
+    value: Manica lunga
+  body: |
+    Maglia nera a manica lunga con l'illustrazione della nostra biammortizzata Ranger sul davanti.

@@ -8,25 +8,25 @@ es:
   tagline: Nacida para el XC.
   summary: Cuadro XC 29" en aluminio 6061 con geometría actualizada y UDH, también como bicicleta completa.
   images:
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-black-1.webp
+  - /uploads/products/kaze-xc/kaze-black-2.webp
+  - /uploads/products/kaze-xc/kaze-white-1.webp
+  - /uploads/products/kaze-xc/kaze-white-2.webp
   - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
   colors:
   - name: Azul
     hex: '#1f5fc4'
-    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-blue-1.webp
   - name: Negro
     hex: '#1d1f1f'
-    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-black-1.webp
   - name: Blanco
     hex: '#f2f2ef'
-    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-white-1.webp
   specs:
   - label: Uso
     value: XC
@@ -60,25 +60,25 @@ en:
   tagline: Born for cross-country.
   summary: 29" XC frame in 6061 aluminium with updated geometry and UDH, also available as a complete bike.
   images:
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-black-1.webp
+  - /uploads/products/kaze-xc/kaze-black-2.webp
+  - /uploads/products/kaze-xc/kaze-white-1.webp
+  - /uploads/products/kaze-xc/kaze-white-2.webp
   - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
   colors:
   - name: Blue
     hex: '#1f5fc4'
-    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-blue-1.webp
   - name: Black
     hex: '#1d1f1f'
-    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-black-1.webp
   - name: White
     hex: '#f2f2ef'
-    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-white-1.webp
   specs:
   - label: Riding style
     value: XC
@@ -112,25 +112,25 @@ pt:
   tagline: Nascida para o XC.
   summary: Quadro XC 29" em alumínio 6061 com geometria atualizada e UDH, também como bicicleta completa.
   images:
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-black-1.webp
+  - /uploads/products/kaze-xc/kaze-black-2.webp
+  - /uploads/products/kaze-xc/kaze-white-1.webp
+  - /uploads/products/kaze-xc/kaze-white-2.webp
   - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
   colors:
   - name: Azul
     hex: '#1f5fc4'
-    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-blue-1.webp
   - name: Preto
     hex: '#1d1f1f'
-    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-black-1.webp
   - name: Branco
     hex: '#f2f2ef'
-    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-white-1.webp
   specs:
   - label: Uso
     value: XC
@@ -164,25 +164,25 @@ de:
   tagline: Gebaut für Cross-Country.
   summary: 29"-XC-Rahmen aus 6061-Aluminium mit moderner Geometrie und UDH, auch als Komplettrad.
   images:
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-black-1.webp
+  - /uploads/products/kaze-xc/kaze-black-2.webp
+  - /uploads/products/kaze-xc/kaze-white-1.webp
+  - /uploads/products/kaze-xc/kaze-white-2.webp
   - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
   colors:
   - name: Blau
     hex: '#1f5fc4'
-    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-blue-1.webp
   - name: Schwarz
     hex: '#1d1f1f'
-    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-black-1.webp
   - name: Weiß
     hex: '#f2f2ef'
-    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-white-1.webp
   specs:
   - label: Einsatzbereich
     value: XC
@@ -216,25 +216,25 @@ fr:
   tagline: Née pour le cross-country.
   summary: Cadre XC 29" en aluminium 6061 à géométrie actualisée et UDH, aussi en vélo complet.
   images:
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-black-1.webp
+  - /uploads/products/kaze-xc/kaze-black-2.webp
+  - /uploads/products/kaze-xc/kaze-white-1.webp
+  - /uploads/products/kaze-xc/kaze-white-2.webp
   - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
   colors:
   - name: Bleu
     hex: '#1f5fc4'
-    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-blue-1.webp
   - name: Noir
     hex: '#1d1f1f'
-    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-black-1.webp
   - name: Blanc
     hex: '#f2f2ef'
-    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-white-1.webp
   specs:
   - label: Pratique
     value: XC
@@ -268,25 +268,25 @@ it:
   tagline: Nata per il cross country.
   summary: Telaio XC 29" in alluminio 6061 con geometria aggiornata e UDH, anche come bici completa.
   images:
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-1.webp
+  - /uploads/products/kaze-xc/kaze-blue-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-2.webp
   - /uploads/products/kaze-xc/kaze-xc-blue-udh-3.webp
-  - /uploads/products/kaze-xc/kaze-xc-blue-udh-5.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-black-udh-2.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
-  - /uploads/products/kaze-xc/kaze-xc-white-udh-2.webp
+  - /uploads/products/kaze-xc/kaze-black-1.webp
+  - /uploads/products/kaze-xc/kaze-black-2.webp
+  - /uploads/products/kaze-xc/kaze-white-1.webp
+  - /uploads/products/kaze-xc/kaze-white-2.webp
   - /uploads/products/kaze-xc/bike-kaze-udh-preventa-1.webp
   colors:
   - name: Blu
     hex: '#1f5fc4'
-    image: /uploads/products/kaze-xc/kaze-xc-blue-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-blue-1.webp
   - name: Nero
     hex: '#1d1f1f'
-    image: /uploads/products/kaze-xc/kaze-xc-black-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-black-1.webp
   - name: Bianco
     hex: '#f2f2ef'
-    image: /uploads/products/kaze-xc/kaze-xc-white-udh-1.webp
+    image: /uploads/products/kaze-xc/kaze-white-1.webp
   specs:
   - label: Utilizzo
     value: XC

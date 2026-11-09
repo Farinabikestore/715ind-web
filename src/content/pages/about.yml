@@ -3,14 +3,27 @@ es:
   seo_description: 'Quiénes somos: una marca chilena de componentes MTB diseñados en Santiago y fabricados en Taiwán.'
   blocks:
   - type: hero
-    heading: Hecho por riders en Santiago de Chile.
-    text: 715IND nace en un taller de bicicletas. Diseñamos lo que necesitábamos para nuestros propios cerros.
+    heading: Nosotros
+    text: Nacimos en Chile para acercar componentes MTB confiables, buen servicio y calidad que se nota en cada salida.
     image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
     layout: stacked
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Nuestra historia
+    text: |
+      715IND nace de una idea sencilla: disfrutar el mountain bike no debería significar pagar de más por componentes en los que puedas confiar. Somos una marca chilena creada por y para quienes viven el cerro y conocen las exigencias de cada sendero.
+
+      Un hito importante llegó en 2021 con el lanzamiento de nuestro cuadro **Enduro HT**, diseñado y probado en Chile. Ese proyecto marcó nuestra forma de trabajar: escuchar a los riders, buscar soluciones funcionales y hacer productos pensados para el uso real, no solo para destacar en una ficha técnica.
+
+      Hoy seguimos esa idea con componentes para trail, enduro y descenso. Somos una marca nacida en Chile, con fabricación en Taiwán, que combina conocimiento del terreno, buenas especificaciones y una búsqueda constante de calidad.
+    image: /uploads/about/historia-7.webp
+    cta_label: ''
+    cta_link: ''
   - type: gallery
     heading: El equipo y el taller
     images:
@@ -18,21 +31,29 @@ es:
     - /uploads/about/equipo-2.webp
     - /uploads/about/equipo-3.webp
     - /uploads/about/taller-maza.webp
-  - type: feature
-    theme: light
-    image_side: right
-    heading: Diseño en Chile, fabricación en Taiwán
-    text: |
-      Cada pieza se define y se prueba en Chile, en terreno de montaña real. La fabricación la hacen fábricas de Taiwán especializadas en componentes de bicicleta, con aluminios 6061 y 7075-T6.
-    image: /uploads/about/diseno-planos.webp
-    cta_label: ''
-    cta_link: ''
+    - /uploads/about/taller-tension.webp
+    - /uploads/about/historia-6.webp
   - type: feature
     theme: sage
     image_side: left
-    heading: Ruedas armadas a mano
+    heading: 'Calidad y precio: una combinación que importa'
     text: |
-      Las ruedas 715 se arman y tensan a mano en nuestro taller de Santiago. Conocemos cada combinación de llanta, maza y largo de rayo.
+      Creemos que una buena experiencia sobre la bicicleta debe estar al alcance de más personas. Por eso trabajamos con una relación precio/calidad honesta: componentes confiables, bien resueltos y listos para tus rutas, sin que el precio sea una barrera innecesaria.
+
+      No se trata solo de precio. Se trata de cuidar lo importante: materiales, funcionamiento, compatibilidad y durabilidad. Queremos que quien elige 715IND sienta que tomó una buena decisión.
+    image: /uploads/about/historia-8.webp
+    cta_label: ''
+    cta_link: ''
+  - type: feature
+    theme: light
+    image_side: right
+    heading: 'Mucho más que componentes: personas y servicio'
+    text: |
+      Para nosotros, el vínculo con el cliente no termina cuando entregamos un producto. Queremos que cada rider se sienta bien asesorado y seguro con lo que instala en su bicicleta.
+
+      Esa misma idea está en nuestro servicio de taller, sobre todo en el armado de ruedas. Una rueda bien armada exige atención al detalle: compatibilidad entre componentes, centrado preciso y tensión correcta de los rayos.
+
+      **715IND: componentes en los que puedes confiar, servicio cercano y pasión por el MTB.**
     image: /uploads/about/ruedas-a-mano.webp
     cta_label: Abrir el armador
     cta_link: /wheel-builder/
@@ -46,14 +67,27 @@ en:
   seo_description: 'Who we are: a Chilean MTB component brand designed in Santiago and made in Taiwan.'
   blocks:
   - type: hero
-    heading: Made by riders in Santiago, Chile.
-    text: 715IND was born in a bike workshop. We design what we needed for our own trails.
+    heading: About us
+    text: Born in Chile to bring reliable MTB components, good service and quality you feel on every ride.
     image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
     layout: stacked
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Our story
+    text: |
+      715IND comes from a simple idea: enjoying mountain biking shouldn't mean overpaying for components you can trust. We are a Chilean brand made by and for people who live on the mountain and know what every trail demands.
+
+      A key milestone came in 2021 with the launch of our **Enduro HT** frame, designed and tested in Chile. That project shaped the way we work: listen to riders, look for practical solutions and build products made for real use, not just to look good on a spec sheet.
+
+      Today we keep that idea going with components for trail, enduro and downhill. We are a brand born in Chile and made in Taiwan, combining knowledge of the terrain, sound specs and a constant drive for quality.
+    image: /uploads/about/historia-7.webp
+    cta_label: ''
+    cta_link: ''
   - type: gallery
     heading: The team and the workshop
     images:
@@ -61,21 +95,29 @@ en:
     - /uploads/about/equipo-2.webp
     - /uploads/about/equipo-3.webp
     - /uploads/about/taller-maza.webp
-  - type: feature
-    theme: light
-    image_side: right
-    heading: Designed in Chile, made in Taiwan
-    text: |
-      Every part is specified and tested in Chile, on real mountain terrain. Production is done by Taiwanese factories that specialise in bicycle components, using 6061 and 7075-T6 aluminium.
-    image: /uploads/about/diseno-planos.webp
-    cta_label: ''
-    cta_link: ''
+    - /uploads/about/taller-tension.webp
+    - /uploads/about/historia-6.webp
   - type: feature
     theme: sage
     image_side: left
-    heading: Hand-built wheels
+    heading: 'Quality and price: a combination that matters'
     text: |
-      715 wheels are laced and tensioned by hand in our Santiago workshop. We know every combination of rim, hub and spoke length.
+      We believe a good experience on the bike should be within reach of more people. That's why we work with an honest price/quality ratio: reliable, well-designed components ready for your rides, without price being an unnecessary barrier.
+
+      It's not only about price. It's about getting the important things right: materials, function, compatibility and durability. We want everyone who picks 715IND to feel they made a good choice.
+    image: /uploads/about/historia-8.webp
+    cta_label: ''
+    cta_link: ''
+  - type: feature
+    theme: light
+    image_side: right
+    heading: 'More than components: people and service'
+    text: |
+      For us, the relationship with a customer doesn't end when we deliver a product. We want every rider to feel well advised and confident in what they put on their bike.
+
+      The same idea drives our workshop service, especially wheel building. A well-built wheel takes attention to detail: compatible parts, precise truing and correct spoke tension.
+
+      **715IND: components you can trust, close service and a passion for MTB.**
     image: /uploads/about/ruedas-a-mano.webp
     cta_label: Open the wheel builder
     cta_link: /wheel-builder/
@@ -89,14 +131,27 @@ pt:
   seo_description: 'Quem somos: uma marca chilena de componentes de MTB projetados em Santiago e fabricados em Taiwan.'
   blocks:
   - type: hero
-    heading: Feito por riders em Santiago do Chile.
-    text: A 715IND nasceu numa oficina de bicicletas. Projetamos o que precisávamos para as nossas trilhas.
+    heading: Sobre nós
+    text: Nascemos no Chile para oferecer componentes MTB confiáveis, bom atendimento e qualidade que se sente em cada pedal.
     image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
     layout: stacked
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Nossa história
+    text: |
+      A 715IND nasce de uma ideia simples: curtir o mountain bike não deveria significar pagar mais por componentes em que você possa confiar. Somos uma marca chilena criada por e para quem vive a montanha e conhece as exigências de cada trilha.
+
+      Um marco importante veio em 2021 com o lançamento do nosso quadro **Enduro HT**, projetado e testado no Chile. Esse projeto definiu nossa forma de trabalhar: ouvir os riders, buscar soluções funcionais e criar produtos pensados para o uso real, não só para se destacar numa ficha técnica.
+
+      Hoje seguimos essa ideia com componentes para trail, enduro e downhill. Somos uma marca nascida no Chile, com fabricação em Taiwan, que une conhecimento do terreno, boas especificações e uma busca constante por qualidade.
+    image: /uploads/about/historia-7.webp
+    cta_label: ''
+    cta_link: ''
   - type: gallery
     heading: A equipe e a oficina
     images:
@@ -104,23 +159,31 @@ pt:
     - /uploads/about/equipo-2.webp
     - /uploads/about/equipo-3.webp
     - /uploads/about/taller-maza.webp
-  - type: feature
-    theme: light
-    image_side: right
-    heading: Projeto no Chile, fabricação em Taiwan
-    text: |
-      Cada peça é definida e testada no Chile, em terreno de montanha real. A fabricação é feita por fábricas de Taiwan especializadas em componentes de bicicleta, com alumínios 6061 e 7075-T6.
-    image: /uploads/about/diseno-planos.webp
-    cta_label: ''
-    cta_link: ''
+    - /uploads/about/taller-tension.webp
+    - /uploads/about/historia-6.webp
   - type: feature
     theme: sage
     image_side: left
-    heading: Rodas montadas à mão
+    heading: 'Qualidade e preço: uma combinação que importa'
     text: |
-      As rodas 715 são montadas e tensionadas à mão na nossa oficina em Santiago. Conhecemos cada combinação de aro, cubo e comprimento de raio.
+      Acreditamos que uma boa experiência na bike deve estar ao alcance de mais pessoas. Por isso trabalhamos com uma relação preço/qualidade honesta: componentes confiáveis, bem resolvidos e prontos para suas trilhas, sem que o preço seja uma barreira desnecessária.
+
+      Não se trata só de preço. Trata-se de cuidar do que importa: materiais, funcionamento, compatibilidade e durabilidade. Queremos que quem escolhe a 715IND sinta que fez uma boa escolha.
+    image: /uploads/about/historia-8.webp
+    cta_label: ''
+    cta_link: ''
+  - type: feature
+    theme: light
+    image_side: right
+    heading: 'Muito mais que componentes: pessoas e atendimento'
+    text: |
+      Para nós, a relação com o cliente não termina quando entregamos um produto. Queremos que cada rider se sinta bem orientado e seguro com o que instala na bike.
+
+      A mesma ideia está no nosso serviço de oficina, principalmente na montagem de rodas. Uma roda bem montada exige atenção aos detalhes: compatibilidade entre componentes, centragem precisa e tensão correta dos raios.
+
+      **715IND: componentes em que você pode confiar, atendimento próximo e paixão pelo MTB.**
     image: /uploads/about/ruedas-a-mano.webp
-    cta_label: Abrir o configurador
+    cta_label: Abrir o montador
     cta_link: /wheel-builder/
   - type: dealer_cta
     heading: Vamos trabalhar juntos
@@ -132,38 +195,59 @@ de:
   seo_description: 'Wer wir sind: eine chilenische MTB-Komponentenmarke, entwickelt in Santiago, gefertigt in Taiwan.'
   blocks:
   - type: hero
-    heading: Von Ridern in Santiago de Chile gemacht.
-    text: 715IND entstand in einer Fahrradwerkstatt. Wir entwickeln, was wir für unsere eigenen Trails brauchten.
+    heading: Über uns
+    text: Gegründet in Chile, um zuverlässige MTB-Komponenten, guten Service und spürbare Qualität auf jede Ausfahrt zu bringen.
     image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
     layout: stacked
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Unsere Geschichte
+    text: |
+      715IND entstand aus einer einfachen Idee: Mountainbiken sollte nicht bedeuten, für vertrauenswürdige Komponenten zu viel zu bezahlen. Wir sind eine chilenische Marke von und für Menschen, die in den Bergen zu Hause sind und wissen, was jeder Trail verlangt.
+
+      Ein wichtiger Meilenstein war 2021 der Start unseres **Enduro HT**-Rahmens, entwickelt und getestet in Chile. Dieses Projekt hat unsere Arbeitsweise geprägt: Fahrern zuhören, praktische Lösungen suchen und Produkte für den echten Einsatz bauen – nicht nur fürs Datenblatt.
+
+      Heute führen wir diese Idee mit Komponenten für Trail, Enduro und Downhill fort. Wir sind eine Marke aus Chile mit Fertigung in Taiwan, die Geländekenntnis, durchdachte Spezifikationen und den ständigen Anspruch an Qualität verbindet.
+    image: /uploads/about/historia-7.webp
+    cta_label: ''
+    cta_link: ''
   - type: gallery
-    heading: Team und Werkstatt
+    heading: Das Team und die Werkstatt
     images:
     - /uploads/about/equipo-1.webp
     - /uploads/about/equipo-2.webp
     - /uploads/about/equipo-3.webp
     - /uploads/about/taller-maza.webp
-  - type: feature
-    theme: light
-    image_side: right
-    heading: Entwickelt in Chile, gefertigt in Taiwan
-    text: |
-      Jedes Teil wird in Chile definiert und auf echtem Bergterrain getestet. Gefertigt wird in taiwanischen Werken, die auf Fahrradkomponenten spezialisiert sind, aus 6061- und 7075-T6-Aluminium.
-    image: /uploads/about/diseno-planos.webp
-    cta_label: ''
-    cta_link: ''
+    - /uploads/about/taller-tension.webp
+    - /uploads/about/historia-6.webp
   - type: feature
     theme: sage
     image_side: left
-    heading: Handgebaute Laufräder
+    heading: 'Qualität und Preis: eine Kombination, die zählt'
     text: |
-      715 Laufräder werden in unserer Werkstatt in Santiago von Hand eingespeicht und gespannt. Wir kennen jede Kombination aus Felge, Nabe und Speichenlänge.
+      Wir finden, dass ein gutes Fahrerlebnis für mehr Menschen erreichbar sein sollte. Deshalb setzen wir auf ein ehrliches Preis-Leistungs-Verhältnis: zuverlässige, gut gelöste Komponenten für deine Touren, ohne dass der Preis zur unnötigen Hürde wird.
+
+      Es geht nicht nur um den Preis. Es geht darum, das Wichtige richtig zu machen: Material, Funktion, Kompatibilität und Haltbarkeit. Wer 715IND wählt, soll das Gefühl haben, eine gute Entscheidung getroffen zu haben.
+    image: /uploads/about/historia-8.webp
+    cta_label: ''
+    cta_link: ''
+  - type: feature
+    theme: light
+    image_side: right
+    heading: 'Mehr als Komponenten: Menschen und Service'
+    text: |
+      Für uns endet die Beziehung zum Kunden nicht mit der Lieferung. Jeder Fahrer soll sich gut beraten und sicher mit dem fühlen, was er an sein Bike baut.
+
+      Dieselbe Idee steckt in unserem Werkstattservice, vor allem im Laufradbau. Ein gut gebautes Laufrad braucht Liebe zum Detail: passende Komponenten, präzises Zentrieren und die richtige Speichenspannung.
+
+      **715IND: Komponenten, denen du vertrauen kannst, persönlicher Service und Leidenschaft fürs MTB.**
     image: /uploads/about/ruedas-a-mano.webp
-    cta_label: Konfigurator öffnen
+    cta_label: Zum Konfigurator
     cta_link: /wheel-builder/
   - type: dealer_cta
     heading: Lass uns zusammenarbeiten
@@ -175,14 +259,27 @@ fr:
   seo_description: 'Qui sommes-nous : une marque chilienne de composants VTT conçus à Santiago et fabriqués à Taïwan.'
   blocks:
   - type: hero
-    heading: Fait par des riders à Santiago du Chili.
-    text: 715IND est né dans un atelier vélo. Nous concevons ce dont nous avions besoin pour nos propres sentiers.
+    heading: À propos
+    text: Nés au Chili pour proposer des composants VTT fiables, un bon service et une qualité qui se ressent à chaque sortie.
     image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
     layout: stacked
+  - type: feature
+    theme: light
+    image_side: right
+    heading: Notre histoire
+    text: |
+      715IND part d'une idée simple : profiter du VTT ne devrait pas obliger à payer trop cher des composants fiables. Nous sommes une marque chilienne créée par et pour ceux qui vivent la montagne et connaissent les exigences de chaque sentier.
+
+      Une étape clé a été le lancement en 2021 de notre cadre **Enduro HT**, conçu et testé au Chili. Ce projet a défini notre façon de travailler : écouter les riders, chercher des solutions concrètes et créer des produits pensés pour l'usage réel, pas seulement pour briller sur une fiche technique.
+
+      Aujourd'hui, nous poursuivons cette idée avec des composants pour le trail, l'enduro et la descente. Nous sommes une marque née au Chili et fabriquée à Taïwan, qui allie connaissance du terrain, bonnes spécifications et recherche constante de qualité.
+    image: /uploads/about/historia-7.webp
+    cta_label: ''
+    cta_link: ''
   - type: gallery
     heading: L'équipe et l'atelier
     images:
@@ -190,21 +287,29 @@ fr:
     - /uploads/about/equipo-2.webp
     - /uploads/about/equipo-3.webp
     - /uploads/about/taller-maza.webp
-  - type: feature
-    theme: light
-    image_side: right
-    heading: Conçu au Chili, fabriqué à Taïwan
-    text: |
-      Chaque pièce est définie et testée au Chili, sur de vrais terrains de montagne. La fabrication est confiée à des usines taïwanaises spécialisées dans les composants de vélo, en aluminium 6061 et 7075-T6.
-    image: /uploads/about/diseno-planos.webp
-    cta_label: ''
-    cta_link: ''
+    - /uploads/about/taller-tension.webp
+    - /uploads/about/historia-6.webp
   - type: feature
     theme: sage
     image_side: left
-    heading: Roues montées à la main
+    heading: 'Qualité et prix : une combinaison qui compte'
     text: |
-      Les roues 715 sont rayonnées et tendues à la main dans notre atelier de Santiago. Nous connaissons chaque combinaison de jante, moyeu et longueur de rayon.
+      Nous pensons qu'une bonne expérience sur le vélo doit être accessible à plus de monde. C'est pourquoi nous misons sur un rapport qualité-prix honnête : des composants fiables, bien conçus et prêts pour vos sorties, sans que le prix soit un obstacle inutile.
+
+      Ce n'est pas qu'une question de prix. Il s'agit de soigner l'essentiel : matériaux, fonctionnement, compatibilité et durabilité. Nous voulons que chaque personne qui choisit 715IND sente qu'elle a fait le bon choix.
+    image: /uploads/about/historia-8.webp
+    cta_label: ''
+    cta_link: ''
+  - type: feature
+    theme: light
+    image_side: right
+    heading: 'Bien plus que des composants : des personnes et du service'
+    text: |
+      Pour nous, la relation avec le client ne s'arrête pas à la livraison. Nous voulons que chaque rider se sente bien conseillé et confiant dans ce qu'il monte sur son vélo.
+
+      La même idée guide notre service atelier, surtout le montage de roues. Une roue bien montée demande de l'attention aux détails : composants compatibles, dévoilage précis et bonne tension des rayons.
+
+      **715IND : des composants fiables, un service proche et la passion du VTT.**
     image: /uploads/about/ruedas-a-mano.webp
     cta_label: Ouvrir le configurateur
     cta_link: /wheel-builder/
@@ -218,14 +323,27 @@ it:
   seo_description: 'Chi siamo: un marchio cileno di componenti MTB progettati a Santiago e prodotti a Taiwan.'
   blocks:
   - type: hero
-    heading: Fatto da rider a Santiago del Cile.
-    text: 715IND nasce in un'officina di bici. Progettiamo ciò che ci serviva per i nostri sentieri.
+    heading: Chi siamo
+    text: Nati in Cile per offrire componenti MTB affidabili, un buon servizio e una qualità che si sente in ogni uscita.
     image: /uploads/about/portada-715.webp
     cta_label: ''
     cta_link: ''
     cta2_label: ''
     cta2_link: ''
     layout: stacked
+  - type: feature
+    theme: light
+    image_side: right
+    heading: La nostra storia
+    text: |
+      715IND nasce da un'idea semplice: godersi la mountain bike non dovrebbe voler dire pagare troppo per componenti di cui fidarsi. Siamo un marchio cileno creato da e per chi vive la montagna e conosce le esigenze di ogni sentiero.
+
+      Una tappa importante è arrivata nel 2021 con il lancio del nostro telaio **Enduro HT**, progettato e testato in Cile. Quel progetto ha definito il nostro modo di lavorare: ascoltare i rider, cercare soluzioni pratiche e creare prodotti pensati per l'uso reale, non solo per figurare su una scheda tecnica.
+
+      Oggi portiamo avanti questa idea con componenti per trail, enduro e downhill. Siamo un marchio nato in Cile e prodotto a Taiwan, che unisce conoscenza del terreno, buone specifiche e una ricerca costante della qualità.
+    image: /uploads/about/historia-7.webp
+    cta_label: ''
+    cta_link: ''
   - type: gallery
     heading: Il team e l'officina
     images:
@@ -233,21 +351,29 @@ it:
     - /uploads/about/equipo-2.webp
     - /uploads/about/equipo-3.webp
     - /uploads/about/taller-maza.webp
-  - type: feature
-    theme: light
-    image_side: right
-    heading: Progettato in Cile, prodotto a Taiwan
-    text: |
-      Ogni pezzo viene definito e testato in Cile, su vero terreno di montagna. La produzione è affidata a fabbriche di Taiwan specializzate in componenti per bici, con alluminio 6061 e 7075-T6.
-    image: /uploads/about/diseno-planos.webp
-    cta_label: ''
-    cta_link: ''
+    - /uploads/about/taller-tension.webp
+    - /uploads/about/historia-6.webp
   - type: feature
     theme: sage
     image_side: left
-    heading: Ruote montate a mano
+    heading: 'Qualità e prezzo: una combinazione che conta'
     text: |
-      Le ruote 715 vengono raggiate e tensionate a mano nella nostra officina di Santiago. Conosciamo ogni combinazione di cerchio, mozzo e lunghezza dei raggi.
+      Crediamo che una buona esperienza in bici debba essere alla portata di più persone. Per questo lavoriamo con un rapporto qualità-prezzo onesto: componenti affidabili, ben fatti e pronti per i tuoi giri, senza che il prezzo sia un ostacolo inutile.
+
+      Non è solo una questione di prezzo. Si tratta di curare ciò che conta: materiali, funzionamento, compatibilità e durata. Vogliamo che chi sceglie 715IND senta di aver fatto la scelta giusta.
+    image: /uploads/about/historia-8.webp
+    cta_label: ''
+    cta_link: ''
+  - type: feature
+    theme: light
+    image_side: right
+    heading: 'Molto più che componenti: persone e servizio'
+    text: |
+      Per noi il rapporto con il cliente non finisce con la consegna. Vogliamo che ogni rider si senta ben consigliato e sicuro di ciò che monta sulla sua bici.
+
+      La stessa idea guida il nostro servizio d'officina, soprattutto il montaggio delle ruote. Una ruota ben montata richiede attenzione ai dettagli: componenti compatibili, centratura precisa e giusta tensione dei raggi.
+
+      **715IND: componenti di cui fidarsi, servizio vicino e passione per la MTB.**
     image: /uploads/about/ruedas-a-mano.webp
     cta_label: Apri il configuratore
     cta_link: /wheel-builder/
